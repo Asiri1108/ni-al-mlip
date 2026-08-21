@@ -1,0 +1,52 @@
+LAMMPS STAGE D-2 -- SUPERCELL NPT MD (small-cell remediation: AlNi, AlNi3, Al3Ni2)
+
+=== AlNi (128 atoms: 64 Al, 64 Ni, replication [4, 4, 4]) ===
+  samples=601  finite_ok=True
+  T back-70% mean/std: 301.3 / 23.2 K
+  volume/atom: 0K=12.1371 A^3  300K mean=12.3047+/-0.0763 A^3  thermal expansion=+1.381%
+  Model (this run): linear CTE (from volumetric/3, isotropic-expansion assumption) = 15.341 x10^-6 /K (volumetric = 46.023 x10^-6 /K, thermal expansion 0K->300K = +1.381%)
+  vs NiAl-Mo eutectic composite, perpendicular to fiber direction, RT-800C average (NOT pure single-crystal stoichiometric B2 NiAl, and spans a much wider T range than this run's 0->300 K): literature alpha=16.00 x10^-6 /K -- model % dev = -4.1%
+    provenance: VERIFIED via live web search this session (2026-08-19): 'Thermal-expansion behavior of a directionally solidified NiAl-Mo composite investigated by neutron diffraction and dilatometry' (ResearchGate/ScienceDirect).
+  vs near-stoichiometric B2 NiAl, commonly cited near room temperature in the intermetallics literature (e.g. the Miracle 1993 NiAl review lineage): literature alpha=13.00 x10^-6 /K -- model % dev = +18.0%
+    provenance: RECALLED, NOT independently verified this session -- the primary source (Miracle, Int. Mater. Rev. 1993) was paywalled/bot-blocked when fetched this session; treat as background domain knowledge, not a session-verified citation.
+  alpha: start=90.0000  final=90.0662  max|drift|=0.8933 deg
+  beta:  start=90.0000  final=89.9009  max|drift|=0.7410 deg
+  gamma: start=90.0000  final=89.9034  max|drift|=0.5613 deg
+  MSD Al: final=0.0123 A^2  back-half mean=0.0175 A^2  back-half slope=0.0002526049593240452 A^2/ps
+  MSD Ni: final=0.0191 A^2  back-half mean=0.0224 A^2  back-half slope=0.00029246578199695374 A^2/ps
+  no flags
+  VERDICT: STABLE
+
+=== AlNi3 (108 atoms: 27 Al, 81 Ni, replication [3, 3, 3]) ===
+  samples=601  finite_ok=True
+  T back-70% mean/std: 302.7 / 25.3 K
+  volume/atom: 0K=11.3499 A^3  300K mean=11.4789+/-0.0988 A^3  thermal expansion=+1.137%
+  Model (this run): linear CTE (from volumetric/3, isotropic-expansion assumption) = 12.634 x10^-6 /K (volumetric = 37.901 x10^-6 /K, thermal expansion 0K->300K = +1.137%)
+  vs Ni3Al (gamma-prime, L1_2), commonly reported near room temperature, consistent with its close CTE match to the Ni-rich gamma matrix in superalloys (the physical basis of gamma/gamma-prime coherency): literature alpha=12.50 x10^-6 /K -- model % dev = +1.1%
+    provenance: RECALLED, NOT independently verified this session -- a live web search this session found only an unsourced aggregator paraphrase (~12e-6/K, no retrievable primary citation), and the one directly on-topic paper found (Ni3Al thermal expansion by XRD/dilatometry, IOPscience 1989) was blocked by an anti-bot redirect before its content could be retrieved. Treat as background domain knowledge, not a session-verified citation.
+  alpha: start=90.0000  final=89.8151  max|drift|=0.6926 deg
+  beta:  start=90.0000  final=90.2116  max|drift|=0.5793 deg
+  gamma: start=90.0000  final=90.1787  max|drift|=0.6505 deg
+  MSD Al: final=0.0189 A^2  back-half mean=0.0162 A^2  back-half slope=-5.2806181169700744e-05 A^2/ps
+  MSD Ni: final=0.0120 A^2  back-half mean=0.0150 A^2  back-half slope=-0.00015313948651838103 A^2/ps
+  no flags
+  VERDICT: STABLE
+
+=== Al3Ni2 (135 atoms: 81 Al, 54 Ni, replication [3, 3, 3]) ===
+  samples=601  finite_ok=True
+  T back-70% mean/std: 299.9 / 21.6 K
+  volume/atom: 0K=13.9247 A^3  300K mean=14.0645+/-0.0707 A^3  thermal expansion=+1.004%
+  REFERENCE: UNVALIDATED -- no literature thermal-expansion reference found or recalled for this phase (same convention as Stage C's Al3Ni/Al3Ni2/Al3Ni5 elastic constants). Reported as a model prediction only.
+  alpha: start=90.0000  final=90.1537  max|drift|=0.9670 deg
+  beta:  start=90.0000  final=89.7757  max|drift|=0.6581 deg
+  gamma: start=120.0000  final=119.8661  max|drift|=0.6499 deg
+  MSD Al: final=0.0167 A^2  back-half mean=0.0230 A^2  back-half slope=-0.00031540950822508805 A^2/ps
+  MSD Ni: final=0.0148 A^2  back-half mean=0.0187 A^2  back-half slope=-0.00018282381894094257 A^2/ps
+  no flags
+  VERDICT: STABLE
+
+SUMMARY
+  AlNi: STABLE
+  AlNi3: STABLE
+  Al3Ni2: STABLE
+

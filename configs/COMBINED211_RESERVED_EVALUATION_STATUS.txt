@@ -1,0 +1,31 @@
+COMBINED-211 RESERVED-SET (TEST+BLIND_HOLDOUT) EVALUATION
+
+Generated UTC: 2026-08-16T18:13:00.972317+00:00
+First reserved-set evaluation run against any checkpoint since Dataset-100.
+
+DATA: /workspace/ni_al/data/datasets/ni_al_combined211_dft.extxyz sha256=ccca8cbb76576ebfcace5702d3763cc04b1f0fc2b45ab0ea4b921a49c813d4a9
+TRAIN (leakage check source): /workspace/ni_al/data/datasets/ni_al_combined211_train_173.extxyz sha256=c1ed24fd236c61a4752b5b6d999fab2dd65ce772f014360061b80bfb442fbe6b
+TEST membership: /workspace/ni_al/data/datasets/ni_al_dataset100_test_manifest.csv (5)  BLIND_HOLDOUT membership: /workspace/ni_al/data/datasets/ni_al_dataset100_blind_holdout_manifest.csv (15)
+OLD model: /workspace/ni_al/models/dataset100_matpes_pbe_lora_v1/dataset100_matpes_pbe_lora_v1.model sha256=745f02582e604fed390d567198e4e4dfa783c71a61d749c58419659bc784a0d9
+NEW model: /workspace/ni_al/models/al3ni_combined211_lora_v1/al3ni_combined211_lora_v1.model sha256=e859554a0e0cdd32c137c56be0ec5feebdaf466a01ce7b45b8a9177b67bdd46f
+
+LEAKAGE CHECK: PASS -- 0/20 reserved eval config_ids found in combined-211 TRAIN (173).
+
+=== TEST (n=5) ===
+  dataset100: energy MAE/RMSE=0.723/0.837 meV/atom | rel-energy MAE/RMSE=0.068/0.096 meV/atom | force MAE/RMSE=4.70/6.70 meV/A | stress MAE/RMSE=0.2112/0.3457 GPa
+  combined211: energy MAE/RMSE=0.768/0.911 meV/atom | rel-energy MAE/RMSE=0.069/0.085 meV/atom | force MAE/RMSE=3.42/5.17 meV/A | stress MAE/RMSE=0.1635/0.2611 GPa
+  CHANGE (combined211 - dataset100), negative=improvement: rel-energy RMSE -0.012 meV/atom, force RMSE -1.54 meV/A, stress RMSE -0.0845 GPa
+
+=== BLIND_HOLDOUT (n=15) ===
+  dataset100: energy MAE/RMSE=1.341/1.862 meV/atom | rel-energy MAE/RMSE=1.339/2.180 meV/atom | force MAE/RMSE=4.21/7.17 meV/A | stress MAE/RMSE=0.2719/0.4584 GPa
+  combined211: energy MAE/RMSE=0.987/1.155 meV/atom | rel-energy MAE/RMSE=0.994/1.325 meV/atom | force MAE/RMSE=2.89/5.38 meV/A | stress MAE/RMSE=0.2034/0.3439 GPa
+  CHANGE (combined211 - dataset100), negative=improvement: rel-energy RMSE -0.855 meV/atom, force RMSE -1.80 meV/A, stress RMSE -0.1145 GPa
+
+=== ALL_20 (n=20) ===
+  dataset100: energy MAE/RMSE=1.186/1.666 meV/atom | rel-energy MAE/RMSE=1.021/1.888 meV/atom | force MAE/RMSE=4.32/7.07 meV/A | stress MAE/RMSE=0.2568/0.4330 GPa
+  combined211: energy MAE/RMSE=0.933/1.099 meV/atom | rel-energy MAE/RMSE=0.763/1.148 meV/atom | force MAE/RMSE=3.01/5.33 meV/A | stress MAE/RMSE=0.1934/0.3252 GPa
+  CHANGE (combined211 - dataset100), negative=improvement: rel-energy RMSE -0.740 meV/atom, force RMSE -1.74 meV/A, stress RMSE -0.1078 GPa
+
+STATUS
+COMBINED-211 RESERVED-SET EVALUATION COMPLETE
+cfg109/cfg110 NOT part of TEST/BLIND_HOLDOUT, not evaluated, not touched.

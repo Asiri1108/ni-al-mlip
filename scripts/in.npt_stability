@@ -1,0 +1,43 @@
+# in.npt_stability -- Stage D worker fragment: NPT production MD.
+#
+# NOT standalone-runnable -- see in.nvt_stability's header for why (same
+# pair_style mliap unified EXISTS / Python-side model-load requirement;
+# verified empirically 2026-08-19, not assumed).
+#
+# Intended to run via lmp.file() immediately after in.nvt_stability, in the
+# SAME lammps.lammps() process/instance, continuing in-memory from the NVT
+# run's final positions/velocities/box -- deliberately no re-read_data and
+# no re-velocity-create, so NPT starts from an already-thermalized state
+# rather than a cold restart.
+#
+# `tri` couples all 6 stress components (Pxx,Pyy,Pzz,Pyz,Pxz,Pxy) to the
+# SAME target pressure, each with independent barostat dynamics -- i.e. a
+# fully flexible triclinic barostat, deliberately NOT `iso`/`aniso` (which
+# would hold the box angles fixed). Monitoring the alpha angle / yz shear
+# response under load is the explicit purpose of this run: Al3Ni5 has this
+# model's softest shear constant (C44=33.15 GPa, ~3x softer than its own
+# C55/C66 and every other phase's shear constants -- see
+# configs/LAMMPS_STAGE_C_ELASTIC_STATUS.txt), and C44 is precisely the yz/
+# alpha-tilt mode. A barostat that could not move the angle would silently
+# hide the risk this run exists to check for.
+#
+# Driver must set/reuse these LAMMPS variables before lmp.file()'ing this
+# script (temp/tdamp typically reused unchanged from the NVT stage):
+#   temp          target temperature, K
+#   tdamp         Nose-Hoover thermostat damping time, ps
+#   pressure      target external pressure, bar (0.0 = ambient)
+#   pdamp         barostat damping time, ps
+#   npt_steps     number of 1-fs steps to run
+#   thermo_every  thermo/log sampling interval, steps (reused from NVT)
+#   final_data    path to write the post-NPT LAMMPS data file (provenance)
+
+thermo_style custom step temp pe ke etotal press pxx pyy pzz pxy pxz pyz lx ly lz xy xz yz vol
+thermo_modify flush yes
+
+print "=== STAGE D NPT PRODUCTION START ==="
+fix mdintegrate all npt temp ${temp} ${temp} ${tdamp} tri ${pressure} ${pressure} ${pdamp}
+run ${npt_steps}
+print "=== STAGE D NPT PRODUCTION END ==="
+unfix mdintegrate
+
+write_data ${final_data} nocoeff

@@ -1,0 +1,22 @@
+CANONICAL DATASET-100 PROVENANCE SUMMARY
+
+Canonical dataset: /workspace/ni_al/data/datasets/ni_al_dataset100_dft.extxyz
+Canonical dataset SHA256: 12fabd203b91e31e9a602bbaa3a2a3f14341e6fa366b128903099e196b59a3aa
+
+INPUT A — PILOT-25
+Path: /workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz
+SHA256: 35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+Frames: 25
+Permanent provenance: /workspace/ni_al/configs/PILOT25_PROVENANCE.txt
+
+INPUT B — EXPANSION-75
+Path: /workspace/ni_al/data/processed/ni_al_expansion_dft_75.extxyz
+SHA256: ff69c2bfed14bfcf48931949647d8f1b3c9353a89c20378c9113155940792137
+Frames: 75
+Per-frame QE provenance: /workspace/ni_al/data/processed/ni_al_expansion_dft_75_manifest.csv
+
+ASSEMBLY GUARANTEES
+Inputs were read only. No DFT was recalculated. Energies were not shifted or normalized.
+Every read-back energy, force array, and ASE stress vector is exactly equal to its source value.
+Units match Pilot-25: eV, Angstrom, eV/Angstrom, eV/Angstrom^3.
+All frames use one metadata schema and identify their immutable source dataset and source record.

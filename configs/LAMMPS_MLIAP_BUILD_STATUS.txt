@@ -1,0 +1,59 @@
+LAMMPS ML-IAP BUILD STATUS
+
+Completed UTC: 2026-08-19T08:44:04Z
+
+SOURCE
+  Repo: https://github.com/lammps/lammps.git
+  Branch: stable
+  Commit: 9e42b6f0f2c68a092d5847d4127a053dc50e126a
+  Describe: stable_22Jul2025_update5
+  Checkout: /workspace/ni_al/tools/lammps/sources/lammps
+
+BUILD FLAGS (cmake)
+  PKG_PYTHON=ON
+  PKG_ML-IAP=ON
+  MLIAP_ENABLE_PYTHON=ON
+  BUILD_SHARED_LIBS=ON
+  Python_EXECUTABLE=/workspace/ni_al/envs/mace-py312-cu128/bin/python
+  BUILD_MPI=OFF
+  CMAKE_BUILD_TYPE=Release
+  CMAKE_INSTALL_PREFIX=/workspace/ni_al/tools/lammps/install/mliap_python
+  (source dir: /workspace/ni_al/tools/lammps/sources/lammps/cmake)
+
+TOOLCHAIN
+  Python (target venv): /workspace/ni_al/envs/mace-py312-cu128/bin/python
+  Cython: 3.2.9
+  nproc used: 32
+
+INSTALL
+  Prefix: /workspace/ni_al/tools/lammps/install/mliap_python
+  lmp binary: /workspace/ni_al/tools/lammps/install/mliap_python/bin/lmp
+  lmp sha256: f5e39f9b9bbf4a81a8c6d81914085efe9a0d1fe975bf7aba3812f752d0555412
+  lmp -h (first line): /workspace/ni_al/tools/lammps/install/mliap_python/bin/lmp: error while loading shared libraries: liblammps.so.0: cannot open shared object file: No such file or directory
+
+POST-BUILD FIXES (2026-08-19, same day)
+  1. `lmp` binary initially failed with "liblammps.so.0: cannot open shared
+     object file" -- CMake install set an empty runtime path (no RPATH) for
+     the executable. Fix: run with LD_LIBRARY_PATH=<prefix>/lib. This is a
+     runtime environment requirement, not a rebuild; documented here so it
+     is not rediscovered as a mystery failure later.
+  2. Python `lammps` module was never installed by the default `cmake --build .`
+     -- `install-python` is a separate, non-ALL CMake target (only runs via
+     `make install-python` / `cmake --build . --target install-python`), not
+     included by the plain build. Ran it explicitly; it builds a wheel
+     bundling its own copy of liblammps.so (see LAMMPS_PYTHON_MODULE row
+     below) and installs into the target venv's site-packages.
+
+VERIFICATION (re-run after both fixes, 2026-08-19)
+  python -c 'import lammps': YES (/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/lammps/__init__.py)
+  lammps.__version__ / l.version(): 20250722
+  MLIAPUnified importable: YES
+  lmp -h (with LD_LIBRARY_PATH=<prefix>/lib): runs, prints
+    "Large-scale Atomic/Molecular Massively Parallel Simulator - 22 Jul 2025 - Update 5"
+  LAMMPS_PYTHON_MODULE: installed as pip package lammps==2025.7.22 in
+    envs/mace-py312-cu128 (bundles its own lammps/liblammps.so copy, so the
+    Python import path does NOT need LD_LIBRARY_PATH; only the standalone
+    `lmp` CLI binary does)
+
+STATUS
+BUILD COMPLETE, ML-IAP PYTHON PATH VERIFIED USABLE

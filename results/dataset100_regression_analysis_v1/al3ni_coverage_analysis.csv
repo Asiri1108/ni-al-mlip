@@ -1,0 +1,30 @@
+record_type,split,config_id,dataset_origin,perturbation_family,scientific_family_category,strain_type,strain_value,rattle_sigma_A,shear_value,combined_perturbation,note
+configuration,TRAIN,Al3Ni_iso_m02,Pilot-25,iso_m02,volume_isotropic_strain,historical_not_recorded,historical_not_recorded,historical_not_recorded,historical_not_recorded,NO,historical magnitude unavailable
+configuration,TRAIN,Al3Ni_iso_p02,Pilot-25,iso_p02,volume_isotropic_strain,historical_not_recorded,historical_not_recorded,historical_not_recorded,historical_not_recorded,NO,historical magnitude unavailable
+configuration,TRAIN,Al3Ni_relaxed,Pilot-25,relaxed,other_established_families,historical_not_recorded,historical_not_recorded,historical_not_recorded,historical_not_recorded,NO,historical magnitude unavailable
+configuration,TRAIN,cfg026_Al3Ni_iso_compression,Expansion-75,iso_compression,volume_isotropic_strain,isotropic,-0.01,0,0,NO,
+configuration,TRAIN,cfg027_Al3Ni_iso_expansion,Expansion-75,iso_expansion,volume_isotropic_strain,isotropic,0.01,0,0,NO,
+configuration,TRAIN,cfg028_Al3Ni_iso_compression,Expansion-75,iso_compression,volume_isotropic_strain,isotropic,-0.03,0,0,NO,
+configuration,TRAIN,cfg029_Al3Ni_iso_expansion,Expansion-75,iso_expansion,volume_isotropic_strain,isotropic,0.03,0,0,NO,
+configuration,TRAIN,cfg030_Al3Ni_uniaxial_x_compression,Expansion-75,uniaxial_x_compression,other_established_families,uniaxial_x,-0.015,0,0,NO,
+configuration,TRAIN,cfg031_Al3Ni_uniaxial_y_expansion,Expansion-75,uniaxial_y_expansion,other_established_families,uniaxial_y,0.015,0,0,NO,
+configuration,TRAIN,cfg032_Al3Ni_orthorhombic_xy,Expansion-75,orthorhombic_xy,other_established_families,orthorhombic_xy,0.015,0,0,NO,
+configuration,TRAIN,cfg033_Al3Ni_shear_xy_negative,Expansion-75,shear_xy_negative,shear,shear_xy,0,0,-0.01,NO,
+configuration,TRAIN,cfg034_Al3Ni_shear_xz_positive,Expansion-75,shear_xz_positive,shear,shear_xz,0,0,0.01,NO,
+configuration,TRAIN,cfg035_Al3Ni_rattle_small,Expansion-75,rattle_small,rattle,none,0,0.01,0,NO,
+configuration,TRAIN,cfg036_Al3Ni_rattle_large,Expansion-75,rattle_large,rattle,none,0,0.04,0,NO,
+configuration,TRAIN,cfg037_Al3Ni_volume_rattle_compression,Expansion-75,volume_rattle_compression,combined_perturbations,isotropic,-0.025,0.02,0,YES,
+configuration,TRAIN,cfg038_Al3Ni_shear_rattle_yz,Expansion-75,shear_rattle_yz,combined_perturbations,shear_yz,0,0.025,0.02,YES,
+configuration,VALIDATION,Al3Ni_rattle_003,Pilot-25,rattle_003,rattle,historical_not_recorded,historical_not_recorded,historical_not_recorded,historical_not_recorded,NO,historical magnitude unavailable
+configuration,VALIDATION,cfg039_Al3Ni_biaxial_xy_expansion,Expansion-75,biaxial_xy_expansion,other_established_families,biaxial_xy,0.012,0,0,NO,
+configuration,VALIDATION,cfg040_Al3Ni_rattle_medium,Expansion-75,rattle_medium,rattle,none,0,0.025,0,NO,
+category_summary,TRAIN,,ALL,ALL,volume_isotropic_strain,,range=-0.029999999999999999..0.029999999999999999,range=0..0,range=0..0,0,count=6
+category_summary,TRAIN,,ALL,ALL,rattle,,range=0..0,range=0.01..0.040000000000000001,range=0..0,0,count=2
+category_summary,TRAIN,,ALL,ALL,shear,,range=0..0,range=0..0,range=-0.01..0.01,0,count=2
+category_summary,TRAIN,,ALL,ALL,combined_perturbations,,range=-0.025000000000000001..0,range=0.02..0.025000000000000001,range=0..0.02,2,count=2
+category_summary,TRAIN,,ALL,ALL,other_established_families,,range=-0.014999999999999999..0.014999999999999999,range=0..0,range=0..0,0,count=4
+category_summary,VALIDATION,,ALL,ALL,volume_isotropic_strain,,not_recorded,not_recorded,not_recorded,0,count=0
+category_summary,VALIDATION,,ALL,ALL,rattle,,range=0..0,range=0.025000000000000001..0.025000000000000001,range=0..0,0,count=2
+category_summary,VALIDATION,,ALL,ALL,shear,,not_recorded,not_recorded,not_recorded,0,count=0
+category_summary,VALIDATION,,ALL,ALL,combined_perturbations,,not_recorded,not_recorded,not_recorded,0,count=0
+category_summary,VALIDATION,,ALL,ALL,other_established_families,,range=0.012..0.012,range=0..0,range=0..0,0,count=1

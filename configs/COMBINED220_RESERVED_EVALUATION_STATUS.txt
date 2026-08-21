@@ -1,0 +1,71 @@
+COMBINED-220 RESERVED-SET + PROBE EVALUATION (evidence-gathering, NOT the acceptance test)
+
+Generated UTC: 2026-08-17T14:53:30.053436+00:00
+Purpose: derive the acceptance threshold from real held-out error, PRE-REGISTERED
+before cfg109/cfg110 are ever opened. This run does NOT unseal, read, or evaluate
+cfg109/cfg110 in any way.
+
+DATA: /workspace/ni_al/data/datasets/ni_al_combined220_dft.extxyz sha256=ad2331f709c10212ce764894246ae006bc19518e6dabf0a3081c2f6f257fb150
+TRAIN (leakage check source): /workspace/ni_al/data/datasets/ni_al_combined220_train_182.extxyz sha256=65ced37b1c61eeda780cfb024d2b4947d4424ecd9d4cc42bf7394275c0976a6b
+VALIDATION (leakage check source): /workspace/ni_al/data/datasets/ni_al_combined220_validation_18.extxyz sha256=079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff
+TEST membership: /workspace/ni_al/data/datasets/ni_al_dataset100_test_manifest.csv (5)  BLIND_HOLDOUT membership: /workspace/ni_al/data/datasets/ni_al_dataset100_blind_holdout_manifest.csv (15)
+MODEL (frozen): /workspace/ni_al/models/al3ni_combined220_lora_v1/al3ni_combined220_lora_v1.model sha256=1c39751f9b0cc5cb3ecd0687e1d2fb5c6ee9f174256654a90b3e66d79f2dc6ee
+
+LEAKAGE CHECK: PASS -- 0/20 reserved eval config_ids found in combined-220 TRAIN (182) or VALIDATION (18).
+
+=== 1. Continuity probes (cfg043, cfg115) -- CONTEXT ONLY, NOT THRESHOLD BASIS ===
+
+  cfg043_Al3Ni_volume_rattle_expansion (Al3Ni): DFT_relative=53.3831 meV/atom, pred_relative=56.4232 meV/atom, relative_energy_error=3.0402 meV/atom (|error|=3.0402)
+  cfg115_Al3Ni_iso_expansion (Al3Ni): DFT_relative=111.2299 meV/atom, pred_relative=117.1211 meV/atom, relative_energy_error=5.8912 meV/atom (|error|=5.8912)
+
+=== 2. HELD-OUT-20 (Dataset-100 TEST+BLIND_HOLDOUT) -- THE REAL EVIDENCE ===
+
+Absolute relative-energy error distribution, n=20, meV/atom:
+  min=0.0197  median=0.2499  p75=0.9799  p90=2.2131  max=3.0402
+
+Per-config detail:
+  [TEST] Al3Ni2_shear015_rattle002 (Al3Ni2): DFT_relative=6.6570, pred_relative=6.5892, error=-0.0679, |error|=0.0679 meV/atom
+  [TEST] Al3Ni5_shear015_rattle002 (Al3Ni5): DFT_relative=7.1577, pred_relative=7.2545, error=0.0968, |error|=0.0968 meV/atom
+  [TEST] Al3Ni_shear015_rattle002 (Al3Ni): DFT_relative=4.0670, pred_relative=3.9225, error=-0.1446, |error|=0.1446 meV/atom
+  [TEST] AlNi3_shear015_rattle002 (AlNi3): DFT_relative=9.6800, pred_relative=9.6448, error=-0.0353, |error|=0.0353 meV/atom
+  [TEST] AlNi_shear015_rattle002 (AlNi): DFT_relative=5.7782, pred_relative=5.7178, error=-0.0604, |error|=0.0604 meV/atom
+  [BLIND_HOLDOUT] cfg041_Al3Ni_uniaxial_z_compression (Al3Ni): DFT_relative=4.8751, pred_relative=5.9837, error=1.1086, |error|=1.1086 meV/atom
+  [BLIND_HOLDOUT] cfg042_Al3Ni_shear_xz_negative (Al3Ni): DFT_relative=1.1267, pred_relative=1.1070, error=-0.0197, |error|=0.0197 meV/atom
+  [BLIND_HOLDOUT] cfg043_Al3Ni_volume_rattle_expansion (Al3Ni): DFT_relative=53.3831, pred_relative=56.4232, error=3.0402, |error|=3.0402 meV/atom
+  [BLIND_HOLDOUT] cfg044_Al3Ni_shear_rattle_xy_negative (Al3Ni): DFT_relative=17.2718, pred_relative=17.0465, error=-0.2252, |error|=0.2252 meV/atom
+  [BLIND_HOLDOUT] cfg058_Al3Ni5_biaxial_xz_compression (Al3Ni5): DFT_relative=8.1331, pred_relative=9.0364, error=0.9034, |error|=0.9034 meV/atom
+  [BLIND_HOLDOUT] cfg059_Al3Ni5_shear_yz_negative (Al3Ni5): DFT_relative=0.5226, pred_relative=-0.4145, error=-0.9370, |error|=0.9370 meV/atom
+  [BLIND_HOLDOUT] cfg060_Al3Ni5_volume_rattle_expansion (Al3Ni5): DFT_relative=62.0121, pred_relative=59.6256, error=-2.3865, |error|=2.3865 meV/atom
+  [BLIND_HOLDOUT] cfg061_Al3Ni5_rattle_xlarge (Al3Ni5): DFT_relative=26.6039, pred_relative=26.9213, error=0.3173, |error|=0.3173 meV/atom
+  [BLIND_HOLDOUT] cfg073_Al3Ni2_biaxial_xy_compression (Al3Ni2): DFT_relative=9.2946, pred_relative=10.7345, error=1.4400, |error|=1.4400 meV/atom
+  [BLIND_HOLDOUT] cfg074_Al3Ni2_shear_xz_negative (Al3Ni2): DFT_relative=1.6847, pred_relative=1.7435, error=0.0589, |error|=0.0589 meV/atom
+  [BLIND_HOLDOUT] cfg075_Al3Ni2_volume_rattle_expansion (Al3Ni2): DFT_relative=59.3763, pred_relative=61.5701, error=2.1938, |error|=2.1938 meV/atom
+  [BLIND_HOLDOUT] cfg087_AlNi_biaxial_xz_compression (AlNi): DFT_relative=8.8977, pred_relative=8.2518, error=-0.6458, |error|=0.6458 meV/atom
+  [BLIND_HOLDOUT] cfg088_AlNi_shear_rattle_yz_negative (AlNi): DFT_relative=4.5601, pred_relative=4.6376, error=0.0776, |error|=0.0776 meV/atom
+  [BLIND_HOLDOUT] cfg099_AlNi3_biaxial_yz_expansion (AlNi3): DFT_relative=8.1950, pred_relative=8.4474, error=0.2524, |error|=0.2524 meV/atom
+  [BLIND_HOLDOUT] cfg100_AlNi3_shear_rattle_xz_negative (AlNi3): DFT_relative=7.1121, pred_relative=7.3595, error=0.2474, |error|=0.2474 meV/atom
+
+Per-phase breakdown (HELD-OUT-20, |relative-energy error|, meV/atom):
+
+  Al3Ni (n=5): min=0.0197 median=0.2252 p75=1.1086 p90=2.2675 max=3.0402
+  Al3Ni2 (n=4): min=0.0589 median=0.7539 p75=1.6284 p90=1.9677 max=2.1938
+  Al3Ni5 (n=5): min=0.0968 median=0.9034 p75=0.9370 p90=1.8067 max=2.3865
+  AlNi (n=3): min=0.0604 median=0.0776 p75=0.3617 p90=0.5322 max=0.6458
+  AlNi3 (n=3): min=0.0353 median=0.2474 p75=0.2499 p90=0.2514 max=0.2524
+
+=== Combined 22-point distribution (probes + held-out-20), for reference only ===
+
+  min=0.0197  median=0.2849  p75=1.3571  p90=2.9748  max=5.8912
+
+Per-phase breakdown (all 22, |relative-energy error|, meV/atom):
+
+  Al3Ni (n=7): min=0.0197 median=1.1086 p75=3.0402 p90=4.1806 max=5.8912
+  Al3Ni2 (n=4): min=0.0589 median=0.7539 p75=1.6284 p90=1.9677 max=2.1938
+  Al3Ni5 (n=5): min=0.0968 median=0.9034 p75=0.9370 p90=1.8067 max=2.3865
+  AlNi (n=3): min=0.0604 median=0.0776 p75=0.3617 p90=0.5322 max=0.6458
+  AlNi3 (n=3): min=0.0353 median=0.2474 p75=0.2499 p90=0.2514 max=0.2524
+
+STATUS
+COMBINED-220 RESERVED-SET + PROBE EVALUATION COMPLETE
+This is EVIDENCE-GATHERING, not the acceptance test. No threshold applied here.
+cfg109/cfg110 NOT part of TEST/BLIND_HOLDOUT, NOT read, NOT evaluated, NOT unsealed.

@@ -1,0 +1,26 @@
+ROUND3 POD02 PRODUCTION DFT STATUS
+
+Updated UTC: 2026-08-15T19:48:11Z
+State: COMPLETE
+tmux session: ni_al_round3_pod02
+Production root: /workspace/ni_al/data/al3ni_remediation_v1/round3_production_dft/pod02
+Source: configs/ROUND3_POD_ASSIGNMENT.csv (pod_number 6-10 rows only)
+QE binary: /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x
+QE binary SHA256: 66b7ea9f173b006854fc9e27dc9982c332dad295384803d612da7dad3edc7f8e
+
+PER-CONFIG TECHNICAL STATUS
+cfg125_AlNi_biaxial_xz_compression | COMPLETE
+cfg127_Al3Ni2_shear_rattle_yz_positive | COMPLETE
+cfg129_Al3Ni5_shear_rattle_xz_positive | COMPLETE
+cfg131_AlNi_shear_rattle_xz_positive | COMPLETE
+cfg133_AlNi_shear_rattle_yz_negative | COMPLETE
+
+PROTECTION ASSERTIONS
+Pods 1-5 (pod01 run) modified: NO
+round1/round2 production trees modified: NO
+cfg109/cfg110 sealed confirmation data touched: NO
+
+FINAL ACQUISITION AUDIT
+TOTAL EXPECTED: 5
+COMPLETED: 5
+FAILED: 0

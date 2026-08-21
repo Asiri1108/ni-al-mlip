@@ -1,0 +1,63 @@
+DATASET-100 10-CHUNK GPU PRODUCTION PLAN
+State: READY_NOT_STARTED
+Generated UTC: 2026-08-12
+Assignment: supplied balanced phase compositions; canonical IDs allocated in manifest order
+Execution order within chunks: descending representative phase time, stable manifest order
+Production configs run: 0/75
+QE topology: 1 MPI rank, 8 OpenMP threads, 1 pool, OMP_PROC_BIND=close, OMP_PLACES=cores
+Multi-Pod rule: exactly one explicit CHUNK_ID per Pod; no work stealing; atomic persistent chunk lock
+
+chunk_01: configs=6; AlNi=0, Al3Ni2=1, AlNi3=1, Al3Ni5=2, Al3Ni=2; estimated=2639.68 s
+chunk_02: configs=6; AlNi=0, Al3Ni2=1, AlNi3=1, Al3Ni5=2, Al3Ni=2; estimated=2639.68 s
+chunk_03: configs=6; AlNi=0, Al3Ni2=1, AlNi3=1, Al3Ni5=2, Al3Ni=2; estimated=2639.68 s
+chunk_04: configs=8; AlNi=2, Al3Ni2=2, AlNi3=0, Al3Ni5=2, Al3Ni=2; estimated=2676.08 s
+chunk_05: configs=8; AlNi=2, Al3Ni2=2, AlNi3=0, Al3Ni5=2, Al3Ni=2; estimated=2676.08 s
+chunk_06: configs=7; AlNi=0, Al3Ni2=2, AlNi3=2, Al3Ni5=1, Al3Ni=2; estimated=2779.02 s
+chunk_07: configs=7; AlNi=0, Al3Ni2=2, AlNi3=2, Al3Ni5=1, Al3Ni=2; estimated=2779.02 s
+chunk_08: configs=9; AlNi=3, Al3Ni2=1, AlNi3=2, Al3Ni5=1, Al3Ni=2; estimated=2672.34 s
+chunk_09: configs=9; AlNi=3, Al3Ni2=1, AlNi3=2, Al3Ni5=1, Al3Ni=2; estimated=2672.34 s
+chunk_10: configs=9; AlNi=3, Al3Ni2=1, AlNi3=1, Al3Ni5=3, Al3Ni=1; estimated=2674.27 s
+
+Benchmark-based planning estimates; actual production can differ because SCF iteration counts vary.
+One Pod: 7.458 h ideal QE time
+Two Pods: 3.73 h ideal compute time
+Five Pods: 1.51 h ideal compute time
+Ten Pods: 46.32 min ideal compute time (maximum planned chunk 2779.02 s)
+
+PRODUCTION NOT STARTED
+PRODUCTION CONFIGS RUN: 0/75
+
+
+VERIFIED INTEGRITY GATE
+Master plan SHA256: 4b6be42f60fdaad1a61b0d7b8102a29b86a4447d87d7e48e41c05150c7f21a4d
+Chunk runner SHA256: 19f7bc950c98f89653efbd4f3487d19ca9d8f479638da0ea8bfeb36f484147fa
+One-Pod master runner SHA256: 6c7396c3c2b596ecef1b2216764a2684f8451505e9b6a13eb85239315387be53
+Total configs: 75
+Duplicates: 0
+Omissions: 0
+Phase totals: AlNi=13, Al3Ni2=14, AlNi3=12, Al3Ni5=17, Al3Ni=19
+Canonical inputs: 75/75 hashes match canonical manifest
+QE binary and pseudopotentials: hashes match GPU-QE validation
+Pilot-25, fine-tuned model, and test evaluation: final manifest hashes match
+Production output files: 0
+Production pw.x processes: 0
+MACE training processes: 0
+LAMMPS processes: 0
+
+CONTROLLED MULTI-POD LAUNCH COMMANDS — PREPARED, NOT EXECUTED
+tmux has-session -t ni_al_prod_chunk_01 2>/dev/null || tmux new-session -d -s ni_al_prod_chunk_01 "env CHUNK_ID=01 /workspace/ni_al/scripts/run_dataset100_gpu_chunk.sh"
+tmux has-session -t ni_al_prod_chunk_02 2>/dev/null || tmux new-session -d -s ni_al_prod_chunk_02 "env CHUNK_ID=02 /workspace/ni_al/scripts/run_dataset100_gpu_chunk.sh"
+tmux has-session -t ni_al_prod_chunk_03 2>/dev/null || tmux new-session -d -s ni_al_prod_chunk_03 "env CHUNK_ID=03 /workspace/ni_al/scripts/run_dataset100_gpu_chunk.sh"
+tmux has-session -t ni_al_prod_chunk_04 2>/dev/null || tmux new-session -d -s ni_al_prod_chunk_04 "env CHUNK_ID=04 /workspace/ni_al/scripts/run_dataset100_gpu_chunk.sh"
+tmux has-session -t ni_al_prod_chunk_05 2>/dev/null || tmux new-session -d -s ni_al_prod_chunk_05 "env CHUNK_ID=05 /workspace/ni_al/scripts/run_dataset100_gpu_chunk.sh"
+tmux has-session -t ni_al_prod_chunk_06 2>/dev/null || tmux new-session -d -s ni_al_prod_chunk_06 "env CHUNK_ID=06 /workspace/ni_al/scripts/run_dataset100_gpu_chunk.sh"
+tmux has-session -t ni_al_prod_chunk_07 2>/dev/null || tmux new-session -d -s ni_al_prod_chunk_07 "env CHUNK_ID=07 /workspace/ni_al/scripts/run_dataset100_gpu_chunk.sh"
+tmux has-session -t ni_al_prod_chunk_08 2>/dev/null || tmux new-session -d -s ni_al_prod_chunk_08 "env CHUNK_ID=08 /workspace/ni_al/scripts/run_dataset100_gpu_chunk.sh"
+tmux has-session -t ni_al_prod_chunk_09 2>/dev/null || tmux new-session -d -s ni_al_prod_chunk_09 "env CHUNK_ID=09 /workspace/ni_al/scripts/run_dataset100_gpu_chunk.sh"
+tmux has-session -t ni_al_prod_chunk_10 2>/dev/null || tmux new-session -d -s ni_al_prod_chunk_10 "env CHUNK_ID=10 /workspace/ni_al/scripts/run_dataset100_gpu_chunk.sh"
+
+OPTIONAL ONE-POD MASTER — PREPARED, NOT EXECUTED
+/workspace/ni_al/scripts/run_dataset100_gpu_all_chunks.sh
+
+Persistent lock policy: each chunk creates production_gpu/chunk_NN/.chunk_lock atomically. If a lock exists, the runner refuses to start. Inspect/adopt the recorded owner; stale locks require explicit human review and are never stolen automatically.
+SAFE TO LAUNCH CONTROLLED DATASET-100 GPU PRODUCTION

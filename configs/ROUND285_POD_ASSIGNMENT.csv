@@ -1,0 +1,10 @@
+config_id,pod_number,role,status
+cfg287_Al3Ni_iso_expansion,1,TRAIN,PENDING
+cfg292_Al3Ni_volume_rattle_expansion,1,TRAIN,PENDING
+cfg294_Al3Ni_volume_rattle_expansion,1,TRAIN,PENDING
+cfg288_Al3Ni_iso_expansion,2,TRAIN,PENDING
+cfg289_Al3Ni_iso_expansion,2,TRAIN,PENDING
+cfg293_Al3Ni_volume_rattle_expansion,2,TRAIN,PENDING
+cfg290_Al3Ni_volume_rattle_expansion,3,TRAIN,PENDING
+cfg297_Al3Ni_iso_expansion,3,SEALED,PENDING
+cfg299_Al3Ni_volume_rattle_expansion,3,SEALED,PENDING

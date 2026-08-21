@@ -1,0 +1,47 @@
+name: al3ni_combined220_seed20260812_lora_v1
+seed: 20260812
+
+train_file: /workspace/ni_al/data/datasets/ni_al_combined220_train_182.extxyz
+valid_file: /workspace/ni_al/data/datasets/ni_al_combined220_validation_18.extxyz
+energy_key: energy
+forces_key: forces
+stress_key: stress
+
+foundation_model: mace-matpes-pbe-0
+lora: true
+lora_rank: 4
+lora_alpha: 1.0
+multiheads_finetuning: false
+E0s: estimated
+
+compute_forces: true
+compute_stress: true
+loss: stress
+energy_weight: 1.0
+forces_weight: 10.0
+stress_weight: 1.0
+
+default_dtype: float64
+device: cuda
+lr: 0.001
+weight_decay: 0.0
+batch_size: 2
+valid_batch_size: 2
+max_num_epochs: 100
+patience: 20
+eval_interval: 1
+ema: true
+ema_decay: 0.995
+amsgrad: true
+clip_grad: 10.0
+
+work_dir: /workspace/ni_al/runs/al3ni_combined220_seed20260812_lora_v1
+log_dir: /workspace/ni_al/logs/al3ni_combined220_seed20260812_lora_v1
+model_dir: /workspace/ni_al/models/al3ni_combined220_seed20260812_lora_v1
+checkpoints_dir: /workspace/ni_al/checkpoints/al3ni_combined220_seed20260812_lora_v1
+downloads_dir: /workspace/ni_al/runs/al3ni_combined220_seed20260812_lora_v1/downloads
+results_dir: /workspace/ni_al/results/al3ni_combined220_seed20260812_lora_v1
+keep_checkpoints: true
+save_cpu: true
+restart_latest: false
+wandb: false

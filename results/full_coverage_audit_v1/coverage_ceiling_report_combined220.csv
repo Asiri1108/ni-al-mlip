@@ -1,0 +1,67 @@
+phase,family,config_id,role,axis_name,axis_value,train_min,train_max,flag,detail
+Al3Ni,biaxial,(internal gap),TRAIN,strain_value,,-0.027,0.026999999999999996,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0255 and 0.0180 (size 0.0435 vs median 0.0015, 29.00x)"
+Al3Ni,biaxial,cfg039_Al3Ni_biaxial_xy_expansion,VALIDATION,strain_value,0.012,-0.027,0.026999999999999996,OK_IN_RANGE,
+Al3Ni,isotropic,(internal gap),TRAIN,strain_value,,-0.04,0.056,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0100 and 0.0100 (size 0.0200 vs median 0.0100, 2.00x)"
+Al3Ni,isotropic,cfg115_Al3Ni_iso_expansion,VALIDATION,strain_value,0.053,-0.04,0.056,OK_IN_RANGE,
+Al3Ni,orthorhombic,(internal gap),TRAIN,strain_value,,-0.024,0.024,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0195 and 0.0150 (size 0.0345 vs median 0.0045, 7.67x)"
+Al3Ni,rattle,Al3Ni_rattle_003,VALIDATION,rattle_sigma_A,,0.01,0.04,METADATA_GAP_NOT_EVALUABLE,historical_not_recorded (Pilot-25 provenance)
+Al3Ni,rattle,cfg040_Al3Ni_rattle_medium,VALIDATION,rattle_sigma_A,0.025,0.01,0.04,OK_IN_RANGE,
+Al3Ni,rattle,cfg108_Al3Ni_rattle_030,VALIDATION,rattle_sigma_A,0.03,0.01,0.04,OK_IN_RANGE,
+Al3Ni,shear,cfg042_Al3Ni_shear_xz_negative,BLIND_HOLDOUT,shear_value,-0.018,-0.034,0.01,OK_IN_RANGE,
+Al3Ni,shear_rattle,(internal gap),TRAIN,shear_value,,-0.045,0.027,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0290 and 0.0200 (size 0.0490 vs median 0.0160, 3.06x)"
+Al3Ni,shear_rattle,Al3Ni_shear015_rattle002,TEST,shear_value,,-0.045,0.027,METADATA_GAP_NOT_EVALUABLE,historical_not_recorded (Pilot-25 provenance)
+Al3Ni,shear_rattle,cfg044_Al3Ni_shear_rattle_xy_negative,BLIND_HOLDOUT,shear_value,-0.025,-0.045,0.027,OK_IN_RANGE,
+Al3Ni,uniaxial,(internal gap),TRAIN,strain_value,,-0.030799999999999998,0.0195,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0150 and 0.0150 (size 0.0300 vs median 0.0045, 6.67x)"
+Al3Ni,uniaxial,cfg041_Al3Ni_uniaxial_z_compression,BLIND_HOLDOUT,strain_value,-0.022,-0.030799999999999998,0.0195,OK_IN_RANGE,
+Al3Ni,volume_rattle,cfg043_Al3Ni_volume_rattle_expansion,BLIND_HOLDOUT,strain_value,0.035,-0.048,0.056,OK_IN_RANGE,
+Al3Ni,volume_rattle,cfg107_Al3Ni_volume_rattle_compression,VALIDATION,strain_value,-0.04,-0.048,0.056,OK_IN_RANGE,
+Al3Ni2,biaxial,(internal gap),TRAIN,strain_value,,-0.027,0.026999999999999996,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0255 and 0.0255 (size 0.0510 vs median 0.0015, 34.00x)"
+Al3Ni2,biaxial,cfg073_Al3Ni2_biaxial_xy_compression,BLIND_HOLDOUT,strain_value,-0.018,-0.027,0.026999999999999996,OK_IN_RANGE,
+Al3Ni2,isotropic,(internal gap),TRAIN,strain_value,,-0.03,0.03,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0100 and 0.0100 (size 0.0200 vs median 0.0100, 2.00x)"
+Al3Ni2,orthorhombic,(internal gap),TRAIN,strain_value,,-0.024,0.024,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0195 and 0.0195 (size 0.0390 vs median 0.0045, 8.67x)"
+Al3Ni2,orthorhombic,cfg071_Al3Ni2_orthorhombic_xy,VALIDATION,strain_value,0.016,-0.024,0.024,OK_IN_RANGE,
+Al3Ni2,rattle,(insufficient TRAIN density),TRAIN,rattle_sigma_A,,0.01,0.04,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni2,rattle,Al3Ni2_rattle_003,VALIDATION,rattle_sigma_A,,0.01,0.04,METADATA_GAP_NOT_EVALUABLE,historical_not_recorded (Pilot-25 provenance)
+Al3Ni2,shear,(insufficient TRAIN density),TRAIN,shear_value,,-0.045,-0.01,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni2,shear,cfg074_Al3Ni2_shear_xz_negative,BLIND_HOLDOUT,shear_value,-0.022,-0.045,-0.01,OK_IN_RANGE,
+Al3Ni2,shear_rattle,(internal gap),TRAIN,shear_value,,-0.045,0.027,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0290 and 0.0270 (size 0.0560 vs median 0.0160, 3.50x)"
+Al3Ni2,shear_rattle,cfg072_Al3Ni2_shear_rattle_yz_positive,VALIDATION,shear_value,0.018,-0.045,0.027,OK_IN_RANGE,
+Al3Ni2,shear_rattle,Al3Ni2_shear015_rattle002,TEST,shear_value,,-0.045,0.027,METADATA_GAP_NOT_EVALUABLE,historical_not_recorded (Pilot-25 provenance)
+Al3Ni2,volume_rattle,(insufficient TRAIN density),TRAIN,strain_value,,-0.025,0.046,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni2,volume_rattle,cfg075_Al3Ni2_volume_rattle_expansion,BLIND_HOLDOUT,strain_value,0.035,-0.025,0.046,OK_IN_RANGE,
+Al3Ni5,biaxial,(internal gap),TRAIN,strain_value,,-0.027,0.026999999999999996,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0240 and 0.0255 (size 0.0495 vs median 0.0030, 16.50x)"
+Al3Ni5,biaxial,cfg058_Al3Ni5_biaxial_xz_compression,BLIND_HOLDOUT,strain_value,-0.016,-0.027,0.026999999999999996,OK_IN_RANGE,
+Al3Ni5,isotropic,(internal gap),TRAIN,strain_value,,-0.03,0.03,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0100 and 0.0100 (size 0.0200 vs median 0.0100, 2.00x)"
+Al3Ni5,orthorhombic,(internal gap),TRAIN,strain_value,,-0.024,0.024,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0195 and 0.0150 (size 0.0345 vs median 0.0045, 7.67x)"
+Al3Ni5,rattle,Al3Ni5_rattle_003,VALIDATION,rattle_sigma_A,,0.01,0.05500000000000001,METADATA_GAP_NOT_EVALUABLE,historical_not_recorded (Pilot-25 provenance)
+Al3Ni5,rattle,cfg061_Al3Ni5_rattle_xlarge,BLIND_HOLDOUT,rattle_sigma_A,0.05,0.01,0.05500000000000001,OK_IN_RANGE,
+Al3Ni5,shear,cfg059_Al3Ni5_shear_yz_negative,BLIND_HOLDOUT,shear_value,-0.022,-0.026399999999999996,0.01,OK_IN_RANGE,
+Al3Ni5,shear_rattle,cfg057_Al3Ni5_shear_rattle_xz_positive,VALIDATION,shear_value,0.018,-0.045,0.027,OK_IN_RANGE,
+Al3Ni5,shear_rattle,Al3Ni5_shear015_rattle002,TEST,shear_value,,-0.045,0.027,METADATA_GAP_NOT_EVALUABLE,historical_not_recorded (Pilot-25 provenance)
+Al3Ni5,uniaxial,(internal gap),TRAIN,strain_value,,-0.015,0.024,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0150 and 0.0150 (size 0.0300 vs median 0.0090, 3.33x)"
+Al3Ni5,uniaxial,cfg056_Al3Ni5_uniaxial_x_expansion,VALIDATION,strain_value,0.018,-0.015,0.024,OK_IN_RANGE,
+Al3Ni5,volume_rattle,(insufficient TRAIN density),TRAIN,strain_value,,-0.025,0.046,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni5,volume_rattle,cfg060_Al3Ni5_volume_rattle_expansion,BLIND_HOLDOUT,strain_value,0.035,-0.025,0.046,OK_IN_RANGE,
+AlNi,biaxial,(internal gap),TRAIN,strain_value,,-0.027,0.026999999999999996,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0270 and 0.0255 (size 0.0525 vs median 0.0015, 35.00x)"
+AlNi,biaxial,cfg087_AlNi_biaxial_xz_compression,BLIND_HOLDOUT,strain_value,-0.018,-0.027,0.026999999999999996,OK_IN_RANGE,
+AlNi,isotropic,(internal gap),TRAIN,strain_value,,-0.03,0.03,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0100 and 0.0100 (size 0.0200 vs median 0.0100, 2.00x)"
+AlNi,orthorhombic,(internal gap),TRAIN,strain_value,,-0.024,0.024,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0195 and 0.0195 (size 0.0390 vs median 0.0045, 8.67x)"
+AlNi,orthorhombic,cfg085_AlNi_orthorhombic_yz,VALIDATION,strain_value,0.016,-0.024,0.024,OK_IN_RANGE,
+AlNi,rattle,(insufficient TRAIN density),TRAIN,rattle_sigma_A,,0.01,0.04,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+AlNi,rattle,AlNi_rattle_003,VALIDATION,rattle_sigma_A,,0.01,0.04,METADATA_GAP_NOT_EVALUABLE,historical_not_recorded (Pilot-25 provenance)
+AlNi,shear_rattle,cfg086_AlNi_shear_rattle_xz_positive,VALIDATION,shear_value,0.018,-0.045,0.027,OK_IN_RANGE,
+AlNi,shear_rattle,AlNi_shear015_rattle002,TEST,shear_value,,-0.045,0.027,METADATA_GAP_NOT_EVALUABLE,historical_not_recorded (Pilot-25 provenance)
+AlNi,shear_rattle,cfg088_AlNi_shear_rattle_yz_negative,BLIND_HOLDOUT,shear_value,-0.022,-0.045,0.027,OK_IN_RANGE,
+AlNi,volume_rattle,(insufficient TRAIN density),TRAIN,strain_value,,-0.025,0.046,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+AlNi3,biaxial,(internal gap),TRAIN,strain_value,,-0.027,0.026999999999999996,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0255 and 0.0180 (size 0.0435 vs median 0.0015, 29.00x)"
+AlNi3,biaxial,cfg099_AlNi3_biaxial_yz_expansion,BLIND_HOLDOUT,strain_value,0.018,-0.027,0.026999999999999996,OK_IN_RANGE,
+AlNi3,isotropic,(internal gap),TRAIN,strain_value,,-0.03,0.03,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0100 and 0.0100 (size 0.0200 vs median 0.0100, 2.00x)"
+AlNi3,orthorhombic,(internal gap),TRAIN,strain_value,,-0.024,0.024,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0195 and 0.0195 (size 0.0390 vs median 0.0045, 8.67x)"
+AlNi3,orthorhombic,cfg097_AlNi3_orthorhombic_xz,VALIDATION,strain_value,0.016,-0.024,0.024,OK_IN_RANGE,
+AlNi3,rattle,(insufficient TRAIN density),TRAIN,rattle_sigma_A,,0.01,0.04,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+AlNi3,rattle,AlNi3_rattle_003,VALIDATION,rattle_sigma_A,,0.01,0.04,METADATA_GAP_NOT_EVALUABLE,historical_not_recorded (Pilot-25 provenance)
+AlNi3,shear,(insufficient TRAIN density),TRAIN,shear_value,,-0.01,-0.01,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+AlNi3,shear_rattle,(internal gap),TRAIN,shear_value,,-0.045,0.027,SPARSE_INTERNAL_GAP,"consecutive TRAIN gap between -0.0290 and 0.0235 (size 0.0525 vs median 0.0160, 3.28x)"
+AlNi3,shear_rattle,AlNi3_shear015_rattle002,TEST,shear_value,,-0.045,0.027,METADATA_GAP_NOT_EVALUABLE,historical_not_recorded (Pilot-25 provenance)
+AlNi3,shear_rattle,cfg100_AlNi3_shear_rattle_xz_negative,BLIND_HOLDOUT,shear_value,-0.022,-0.045,0.027,OK_IN_RANGE,
+AlNi3,volume_rattle,cfg098_AlNi3_volume_rattle_compression,VALIDATION,strain_value,-0.025,-0.035,0.046,OK_IN_RANGE,

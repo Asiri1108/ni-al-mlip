@@ -1,0 +1,44 @@
+AL3NI COMBINED-227 MERGE STATUS (combined-220 + round285, 7 configs, all TRAIN)
+
+Generated UTC: 2026-08-18T17:12:25.917316+00:00
+
+SOURCES (all read-only, none modified)
+  combined-220 all/train/val: ni_al_combined220_dft.extxyz (220) / ni_al_combined220_train_182.extxyz (182) / ni_al_combined220_validation_18.extxyz (18)
+  round285 (7, all TRAIN role): round285_dft.extxyz (7) -- cfg287,288,289,290,292,293,294
+  cfg297/cfg299 (sealed): NOT READ, NOT REFERENCED, verified physically absent from all 3 output files (grep-equivalent text search, not just object exclusion)
+  cfg109/cfg110 (consumed, unsealed 2026-08-17): NOT READ, NOT REFERENCED
+
+INTEGRITY CHECKS
+  config_id collision vs combined-220: NONE
+  geometry duplicate vs combined-220 (all roles): NONE
+  geometry duplicate vs combined-220 TRAIN only: NONE
+  internal round285 geometry duplicate: NONE
+  cfg297/cfg299 physical absence (raw text search, all 3 output files): CONFIRMED ABSENT
+
+OUTPUT
+  All 227:       /workspace/ni_al/data/datasets/ni_al_combined227_dft.extxyz  sha256=9051860ae83dea782d9e5e49e4bf68f992103eed703ad81ca1ded5ea98db29eb
+  TRAIN 189:     /workspace/ni_al/data/datasets/ni_al_combined227_train_189.extxyz  sha256=41e4baf136bb430d39101acc3f3939c4390645fb355c509dd2b8e3ea310fe3f4
+  VALIDATION 18: /workspace/ni_al/data/datasets/ni_al_combined227_validation_18.extxyz  sha256=079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff
+
+Round-trip: 227/227 all, 189/189 train, 18/18 validation
+
+BEFORE (combined-220) / AFTER (combined-227)
+  TOTAL:      220 -> 227
+  TRAIN:      182 -> 189
+  VALIDATION: 18 -> 18 (unchanged)
+  Phase composition, all (before):  {'Al3Ni': 58, 'Al3Ni2': 38, 'Al3Ni5': 42, 'AlNi': 41, 'AlNi3': 41}
+  Phase composition, all (after):   {'Al3Ni': 65, 'Al3Ni2': 38, 'Al3Ni5': 42, 'AlNi': 41, 'AlNi3': 41}
+  Phase composition, TRAIN (before): {'Al3Ni': 47, 'Al3Ni2': 31, 'Al3Ni5': 34, 'AlNi': 35, 'AlNi3': 35}
+  Phase composition, TRAIN (after):  {'Al3Ni': 54, 'Al3Ni2': 31, 'Al3Ni5': 34, 'AlNi': 35, 'AlNi3': 35}
+TEST/BLIND_HOLDOUT (Dataset-100's 20): UNCHANGED.
+
+COVERAGE IMPACT
+Densifies Al3Ni iso_expansion/volume_rattle_expansion TRAIN rungs across +3.0%..+5.0%:
+s=4.0%, 4.5%, 5.0% now have both families (previously only s=2.0%/4.6%/5.6% did, with
+s=3.0% iso-only). s=3.0% volume_rattle_expansion added (cfg290), completing that rung's pair.
+Largest remaining TRAIN gap in +3.0%..+5.0%: 1.0 point (3.0%->4.0%), by design -- the only
+interval that could not be densified to 0.5 points without leaking against cfg043 (the
+design-contaminated feedback probe). See configs/ROUND285_HIGH_EXPANSION_DENSIFY_DESIGN_STATUS.md.
+
+STATUS
+AL3NI COMBINED-227 MERGE COMPLETE

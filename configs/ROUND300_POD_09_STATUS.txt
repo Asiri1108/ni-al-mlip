@@ -1,0 +1,30 @@
+ROUND300 POD09 PRODUCTION DFT STATUS
+
+Updated UTC: 2026-08-16T15:54:19Z
+State: COMPLETE
+tmux session: ni_al_round300_pod09
+Production root: /workspace/ni_al/data/al3ni_remediation_v1/round300_production_dft/pod09
+Source: configs/ROUND300_POD_ASSIGNMENT.csv (pod_number 9 rows only)
+QE binary: /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x
+QE binary SHA256: 66b7ea9f173b006854fc9e27dc9982c332dad295384803d612da7dad3edc7f8e
+
+PER-CONFIG TECHNICAL STATUS
+cfg244_Al3Ni5_shear_rattle_yz_negative | COMPLETE
+cfg173_Al3Ni_uniaxial_y_compression | COMPLETE
+cfg176_Al3Ni_biaxial_xy_compression | COMPLETE
+cfg214_Al3Ni2_shear_rattle_xz_positive | COMPLETE
+cfg252_AlNi3_biaxial_xy_expansion | COMPLETE
+cfg222_Al3Ni5_uniaxial_x_compression | COMPLETE
+cfg234_Al3Ni5_orthorhombic_xz_compression | COMPLETE
+cfg147_AlNi_uniaxial_y_expansion | COMPLETE
+cfg158_AlNi_orthorhombic_xz_expansion | COMPLETE
+
+PROTECTION ASSERTIONS
+Other round300 pods modified: NO
+round1/round2/round3/round4 production trees modified: NO
+cfg109/cfg110 sealed confirmation data touched: NO
+
+FINAL ACQUISITION AUDIT
+TOTAL EXPECTED: 9
+COMPLETED: 9
+FAILED: 0

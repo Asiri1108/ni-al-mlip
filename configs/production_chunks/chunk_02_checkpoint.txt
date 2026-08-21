@@ -1,0 +1,23 @@
+DATASET-100 GPU PRODUCTION CHUNK CHECKPOINT
+Chunk ID: chunk_02
+Overall state: COMPLETE
+Current config: NONE
+Completed configs: 6
+Pending configs: 0
+Failed configs: 0
+Start timestamp: 2026-08-12T10:08:51Z
+Finish timestamp: 2026-08-12T11:19:01Z
+QE executable: /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x
+QE binary SHA256: 66b7ea9f173b006854fc9e27dc9982c332dad295384803d612da7dad3edc7f8e
+Al pseudopotential SHA256: fd7b78921e6d0939095b681c328732668eaefd1dee6882fdbc03be463550cc97
+Ni pseudopotential SHA256: f76b86ce60cde3d83dfcc8df79ba05478db573d158289f1b226919442d977d25
+Topology: MPI ranks=1; OpenMP threads=8; QE pools=1; OMP_PROC_BIND=close; OMP_PLACES=cores
+Chunk output path: /workspace/ni_al/data/expansion_026_100/production_gpu/chunk_02
+
+CONFIG STATES
+cfg028_Al3Ni_iso_compression | phase=Al3Ni | state=COMPLETE | canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg028_Al3Ni_iso_compression.in | input_sha256=5a0c2ec15b0a4b5f8949c7502be92845d74a517e8c6d05fde8ce41f710adb6a8 | output=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_02/cfg028_Al3Ni_iso_compression | JOB_DONE=YES | SCF=YES | QE_WALL= PWSCF : 8m34.21s CPU 9m24.52s WALL | GPU=82.1%/87.0%/98%
+cfg029_Al3Ni_iso_expansion | phase=Al3Ni | state=COMPLETE | canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg029_Al3Ni_iso_expansion.in | input_sha256=cf4cfef7399ba84b0205fdc517cd12115e6b007dddb456e79bb1e875be0b9591 | output=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_02/cfg029_Al3Ni_iso_expansion | JOB_DONE=YES | SCF=YES | QE_WALL= PWSCF : 10m33.64s CPU 11m36.62s WALL | GPU=82.1%/86.2%/99%
+cfg047_Al3Ni5_iso_compression | phase=Al3Ni5 | state=COMPLETE | canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg047_Al3Ni5_iso_compression.in | input_sha256=914d7918f7fefc00f1ddb8adb097809b2d33e51324dfff938caf2395513f3403 | output=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_02/cfg047_Al3Ni5_iso_compression | JOB_DONE=YES | SCF=YES | QE_WALL= PWSCF : 6m 6.92s CPU 7m36.30s WALL | GPU=70.3%/77.3%/97%
+cfg048_Al3Ni5_iso_expansion | phase=Al3Ni5 | state=COMPLETE | canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg048_Al3Ni5_iso_expansion.in | input_sha256=7c7dbef03b25c1787e7a98a8884b8aca67f3c555883147f4185b332de988c30d | output=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_02/cfg048_Al3Ni5_iso_expansion | JOB_DONE=YES | SCF=YES | QE_WALL= PWSCF : 7m24.73s CPU 9m12.60s WALL | GPU=71.2%/78.0%/97%
+cfg090_AlNi3_iso_expansion | phase=AlNi3 | state=COMPLETE | canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg090_AlNi3_iso_expansion.in | input_sha256=9ea47e929747a1c4f912404b4c5f2ea0c70b4f9e5ddb5b33e417f411b72ecc03 | output=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_02/cfg090_AlNi3_iso_expansion | JOB_DONE=YES | SCF=YES | QE_WALL= PWSCF : 4m16.99s CPU 6m32.36s WALL | GPU=55.0%/64.2%/92%
+cfg063_Al3Ni2_iso_expansion | phase=Al3Ni2 | state=COMPLETE | canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg063_Al3Ni2_iso_expansion.in | input_sha256=5b873a5ed5cd01f132ae7ab6f8be71320bd6098abaf134705ecf7593655819e9 | output=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_02/cfg063_Al3Ni2_iso_expansion | JOB_DONE=YES | SCF=YES | QE_WALL= PWSCF : 1m44.97s CPU 2m30.35s WALL | GPU=56.4%/68.5%/97%

@@ -1,0 +1,30 @@
+AL3NI FINAL UNSEALING RESULT -- IRREVERSIBLE, RUNS EXACTLY ONCE
+
+Generated UTC: 2026-08-17T15:18:57.931683+00:00
+cfg109/cfg110 labels (energy, forces, stress) read for the FIRST TIME ever in this
+project's history, at this timestamp. This event does not repeat.
+
+Acceptance criterion file: /workspace/ni_al/configs/AL3NI_REMEDIATION_ACCEPTANCE_CRITERION.txt sha256=8e38968a1ce2b2e1213a2ce3d5ad60cdb127b17f1e5c99e44f64a36defbefd6a (PRECONDITION VERIFIED)
+Model (frozen): /workspace/ni_al/models/al3ni_combined220_lora_v1/al3ni_combined220_lora_v1.model sha256=1c39751f9b0cc5cb3ecd0687e1d2fb5c6ee9f174256654a90b3e66d79f2dc6ee (PRECONDITION VERIFIED)
+THRESHOLD (locked, verbatim from acceptance criterion): 2.3865 meV/atom, per-config, both must pass
+
+DFT relaxed reference (Al3Ni_relaxed): -25138.175258 eV
+
+=== cfg109_Al3Ni_iso_expansion ===
+  DFT relative energy:  66.130933 meV/atom
+  Pred relative energy: 69.898049 meV/atom
+  Relative-energy error: 3.767116 meV/atom  |error|=3.767116 meV/atom
+  Threshold: 2.3865 meV/atom -> FAIL
+
+=== cfg110_Al3Ni_volume_rattle_expansion ===
+  DFT relative energy:  67.719835 meV/atom
+  Pred relative energy: 71.451838 meV/atom
+  Relative-energy error: 3.732003 meV/atom  |error|=3.732003 meV/atom
+  Threshold: 2.3865 meV/atom -> FAIL
+
+OVERALL RESULT: FAIL
+
+STATUS
+AL3NI FINAL UNSEALING COMPLETE. This evaluation is final and will not be repeated
+or revised. cfg109/cfg110 were NOT merged into any TRAIN/VALIDATION split and no
+retraining occurred as part of this event.

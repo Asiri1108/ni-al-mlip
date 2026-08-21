@@ -1,0 +1,255 @@
+{
+  "macemp0_zeroshot": {
+    "relative_energy_mae_mev_atom": 3.738261073587079,
+    "relative_energy_rmse_mev_atom": 4.506172237220008,
+    "relative_energy_max_abs_error_mev_atom": 9.33829591163704,
+    "relative_energy_max_config": "AlNi_iso_p02",
+    "force_mae_evA_overall": 0.052481585115966636,
+    "force_rmse_evA_overall": 0.07860273706715122,
+    "force_mae_evA_by_phase": {
+      "AlNi": 0.019647118421332176,
+      "Al3Ni": 0.08285655418227451,
+      "Al3Ni2": 0.022946257173080884,
+      "Al3Ni5": 0.032452678420982976,
+      "AlNi3": 0.024375915516626868
+    }
+  },
+  "matpes_pbe0_zeroshot_recorded": {
+    "relative_energy_mae_mev_atom": 4.023,
+    "relative_energy_rmse_mev_atom": 6.634,
+    "relative_energy_max_abs_error_mev_atom": 21.228,
+    "relative_energy_max_config": "AlNi_iso_m02",
+    "force_mae_evA_by_phase": {
+      "AlNi": 0.000441,
+      "AlNi3": 0.000879,
+      "Al3Ni5": 0.006676,
+      "Al3Ni2": 0.015993,
+      "Al3Ni": 0.054216
+    }
+  },
+  "per_config": [
+    {
+      "config_id": "AlNi_iso_m02",
+      "phase": "AlNi",
+      "config_type": "iso_m02",
+      "n_atoms": 2,
+      "dft_relative_energy_mev_atom": 23.47600917391901,
+      "macemp0_relative_energy_mev_atom": 16.73251995882641,
+      "macemp0_relative_energy_error_mev_atom": -6.743489215092602,
+      "macemp0_force_mae_evA": 1.882380296240026e-08,
+      "macemp0_force_rmse_evA": 1.8823802962400264e-08
+    },
+    {
+      "config_id": "AlNi_iso_p02",
+      "phase": "AlNi",
+      "config_type": "iso_p02",
+      "n_atoms": 2,
+      "dft_relative_energy_mev_atom": 20.132954608925502,
+      "macemp0_relative_energy_mev_atom": 29.471250520562542,
+      "macemp0_relative_energy_error_mev_atom": 9.33829591163704,
+      "macemp0_force_mae_evA": 6.0998937519658155e-09,
+      "macemp0_force_rmse_evA": 6.099893751965818e-09
+    },
+    {
+      "config_id": "AlNi_rattle_003",
+      "phase": "AlNi",
+      "config_type": "rattle_003",
+      "n_atoms": 2,
+      "dft_relative_energy_mev_atom": 15.26592649088343,
+      "macemp0_relative_energy_mev_atom": 12.79090027111085,
+      "macemp0_relative_energy_error_mev_atom": -2.4750262197725803,
+      "macemp0_force_mae_evA": 0.048197803414156526,
+      "macemp0_force_rmse_evA": 0.054535153558156246
+    },
+    {
+      "config_id": "AlNi_shear015_rattle002",
+      "phase": "AlNi",
+      "config_type": "shear015_rattle002",
+      "n_atoms": 2,
+      "dft_relative_energy_mev_atom": 5.778201306839037,
+      "macemp0_relative_energy_mev_atom": 4.708164549243499,
+      "macemp0_relative_energy_error_mev_atom": -1.0700367575955383,
+      "macemp0_force_mae_evA": 0.030390645347475473,
+      "macemp0_force_rmse_evA": 0.031240031137267633
+    },
+    {
+      "config_id": "Al3Ni_iso_m02",
+      "phase": "Al3Ni",
+      "config_type": "iso_m02",
+      "n_atoms": 16,
+      "dft_relative_energy_mev_atom": 20.270440126068934,
+      "macemp0_relative_energy_mev_atom": 15.238360258077677,
+      "macemp0_relative_energy_error_mev_atom": -5.032079867991257,
+      "macemp0_force_mae_evA": 0.07899710299107489,
+      "macemp0_force_rmse_evA": 0.10463775184219988
+    },
+    {
+      "config_id": "Al3Ni_iso_p02",
+      "phase": "Al3Ni",
+      "config_type": "iso_p02",
+      "n_atoms": 16,
+      "dft_relative_energy_mev_atom": 17.723327042858728,
+      "macemp0_relative_energy_mev_atom": 19.693504025127595,
+      "macemp0_relative_energy_error_mev_atom": 1.9701769822688675,
+      "macemp0_force_mae_evA": 0.06752358779135657,
+      "macemp0_force_rmse_evA": 0.08930853354268056
+    },
+    {
+      "config_id": "Al3Ni_rattle_003",
+      "phase": "Al3Ni",
+      "config_type": "rattle_003",
+      "n_atoms": 16,
+      "dft_relative_energy_mev_atom": 7.839497648774341,
+      "macemp0_relative_energy_mev_atom": 5.261787361029668,
+      "macemp0_relative_energy_error_mev_atom": -2.5777102877446723,
+      "macemp0_force_mae_evA": 0.09562122338323535,
+      "macemp0_force_rmse_evA": 0.11812564082046426
+    },
+    {
+      "config_id": "Al3Ni_shear015_rattle002",
+      "phase": "Al3Ni",
+      "config_type": "shear015_rattle002",
+      "n_atoms": 16,
+      "dft_relative_energy_mev_atom": 4.067047446596916,
+      "macemp0_relative_energy_mev_atom": 1.8654654633323275,
+      "macemp0_relative_energy_error_mev_atom": -2.201581983264589,
+      "macemp0_force_mae_evA": 0.08928430256343127,
+      "macemp0_force_rmse_evA": 0.10939380244244691
+    },
+    {
+      "config_id": "Al3Ni2_iso_m02",
+      "phase": "Al3Ni2",
+      "config_type": "iso_m02",
+      "n_atoms": 5,
+      "dft_relative_energy_mev_atom": 22.390723945136415,
+      "macemp0_relative_energy_mev_atom": 16.914395909535074,
+      "macemp0_relative_energy_error_mev_atom": -5.476328035601341,
+      "macemp0_force_mae_evA": 0.011312797735571733,
+      "macemp0_force_rmse_evA": 0.022185446675295678
+    },
+    {
+      "config_id": "Al3Ni2_iso_p02",
+      "phase": "Al3Ni2",
+      "config_type": "iso_p02",
+      "n_atoms": 5,
+      "dft_relative_energy_mev_atom": 19.349525261714007,
+      "macemp0_relative_energy_mev_atom": 23.51846189265956,
+      "macemp0_relative_energy_error_mev_atom": 4.168936630945552,
+      "macemp0_force_mae_evA": 0.00974580212525012,
+      "macemp0_force_rmse_evA": 0.0219531572437482
+    },
+    {
+      "config_id": "Al3Ni2_rattle_003",
+      "phase": "Al3Ni2",
+      "config_type": "rattle_003",
+      "n_atoms": 5,
+      "dft_relative_energy_mev_atom": 6.209392895470955,
+      "macemp0_relative_energy_mev_atom": 4.885400824807107,
+      "macemp0_relative_energy_error_mev_atom": -1.3239920706638486,
+      "macemp0_force_mae_evA": 0.03485180937437611,
+      "macemp0_force_rmse_evA": 0.04633578919854949
+    },
+    {
+      "config_id": "Al3Ni2_shear015_rattle002",
+      "phase": "Al3Ni2",
+      "config_type": "shear015_rattle002",
+      "n_atoms": 5,
+      "dft_relative_energy_mev_atom": 6.6570473714818945,
+      "macemp0_relative_energy_mev_atom": 5.077381456733576,
+      "macemp0_relative_energy_error_mev_atom": -1.5796659147483183,
+      "macemp0_force_mae_evA": 0.035874619457125556,
+      "macemp0_force_rmse_evA": 0.04567571627379242
+    },
+    {
+      "config_id": "Al3Ni5_iso_m02",
+      "phase": "Al3Ni5",
+      "config_type": "iso_m02",
+      "n_atoms": 8,
+      "dft_relative_energy_mev_atom": 24.318813760601188,
+      "macemp0_relative_energy_mev_atom": 20.23784572252385,
+      "macemp0_relative_energy_error_mev_atom": -4.080968038077337,
+      "macemp0_force_mae_evA": 0.016025748309618552,
+      "macemp0_force_rmse_evA": 0.03598387687484652
+    },
+    {
+      "config_id": "Al3Ni5_iso_p02",
+      "phase": "Al3Ni5",
+      "config_type": "iso_p02",
+      "n_atoms": 8,
+      "dft_relative_energy_mev_atom": 20.503947813722334,
+      "macemp0_relative_energy_mev_atom": 26.937829128599766,
+      "macemp0_relative_energy_error_mev_atom": 6.433881314877432,
+      "macemp0_force_mae_evA": 0.023934472904308963,
+      "macemp0_force_rmse_evA": 0.051723584955291814
+    },
+    {
+      "config_id": "Al3Ni5_rattle_003",
+      "phase": "Al3Ni5",
+      "config_type": "rattle_003",
+      "n_atoms": 8,
+      "dft_relative_energy_mev_atom": 7.042170087515842,
+      "macemp0_relative_energy_mev_atom": 5.780031860571633,
+      "macemp0_relative_energy_error_mev_atom": -1.2621382269442094,
+      "macemp0_force_mae_evA": 0.048430235367947355,
+      "macemp0_force_rmse_evA": 0.05905896949720999
+    },
+    {
+      "config_id": "Al3Ni5_shear015_rattle002",
+      "phase": "Al3Ni5",
+      "config_type": "shear015_rattle002",
+      "n_atoms": 8,
+      "dft_relative_energy_mev_atom": 7.1576824120711535,
+      "macemp0_relative_energy_mev_atom": 6.464816310256971,
+      "macemp0_relative_energy_error_mev_atom": -0.6928661018141824,
+      "macemp0_force_mae_evA": 0.041420257102057045,
+      "macemp0_force_rmse_evA": 0.05817201101481967
+    },
+    {
+      "config_id": "AlNi3_iso_m02",
+      "phase": "AlNi3",
+      "config_type": "iso_m02",
+      "n_atoms": 4,
+      "dft_relative_energy_mev_atom": 25.29804942332703,
+      "macemp0_relative_energy_mev_atom": 18.336810093195766,
+      "macemp0_relative_energy_error_mev_atom": -6.961239330131264,
+      "macemp0_force_mae_evA": 3.104259939282995e-06,
+      "macemp0_force_rmse_evA": 4.020010718116268e-06
+    },
+    {
+      "config_id": "AlNi3_iso_p02",
+      "phase": "AlNi3",
+      "config_type": "iso_p02",
+      "n_atoms": 4,
+      "dft_relative_energy_mev_atom": 21.365358184993966,
+      "macemp0_relative_energy_mev_atom": 28.99577093656358,
+      "macemp0_relative_energy_error_mev_atom": 7.630412751569615,
+      "macemp0_force_mae_evA": 1.7968307346062316e-06,
+      "macemp0_force_rmse_evA": 2.3220702103690246e-06
+    },
+    {
+      "config_id": "AlNi3_rattle_003",
+      "phase": "AlNi3",
+      "config_type": "rattle_003",
+      "n_atoms": 4,
+      "dft_relative_energy_mev_atom": 7.775584911541955,
+      "macemp0_relative_energy_mev_atom": 6.0189127250183105,
+      "macemp0_relative_energy_error_mev_atom": -1.7566721865236445,
+      "macemp0_force_mae_evA": 0.056080077177283666,
+      "macemp0_force_rmse_evA": 0.06319619678906958
+    },
+    {
+      "config_id": "AlNi3_shear015_rattle002",
+      "phase": "AlNi3",
+      "config_type": "shear015_rattle002",
+      "n_atoms": 4,
+      "dft_relative_energy_mev_atom": 9.680041639512638,
+      "macemp0_relative_energy_mev_atom": 7.690317995034945,
+      "macemp0_relative_energy_error_mev_atom": -1.9897236444776922,
+      "macemp0_force_mae_evA": 0.041418683798549905,
+      "macemp0_force_rmse_evA": 0.05194632406851161
+    }
+  ],
+  "dataset": "/workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz",
+  "n_configs_evaluated": 20,
+  "model_checkpoint": "MACE-MP-0 Small, 2023-12-10-mace-128-L0_energy_epoch-249.model (public, via mace_mp(model='small'))"
+}

@@ -1,0 +1,109 @@
+LAMMPS STAGE D -- NVT/NPT MD STABILITY
+
+=== AlNi ===
+  --- NVT: status=OK ---
+    samples=602  finite_ok=True
+    T back-70% mean/std: 329.7 / 312.7 K
+    alpha: start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg  final_drift=+0.0000 deg  back-half slope=-7.714843678973976e-16
+    beta:  start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg
+    gamma: start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg
+    volume/cell: start=24.2743 A^3  final=24.2743 A^3  drift=+0.00%
+    no flags
+  --- NPT: status=OK ---
+    samples=602  finite_ok=True
+    T back-70% mean/std: 323.0 / 288.5 K
+    alpha: start=90.0000 deg  final=89.5677 deg  max|drift|=6.7749 deg  final_drift=-0.4323 deg  back-half slope=-0.04773742767943245
+    beta:  start=90.0000 deg  final=83.5304 deg  max|drift|=6.5098 deg
+    gamma: start=90.0000 deg  final=89.5351 deg  max|drift|=8.1937 deg
+    volume/cell: start=24.2743 A^3  final=25.3947 A^3  drift=+4.62%
+    no flags
+  overall alpha drift (NVT start -> NPT end): -0.4323 deg
+  VERDICT: STABLE
+
+=== Al3Ni ===
+  --- NVT: status=OK ---
+    samples=602  finite_ok=True
+    T back-70% mean/std: 304.0 / 64.6 K
+    alpha: start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg  final_drift=+0.0000 deg  back-half slope=1.280515373891076e-15
+    beta:  start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg
+    gamma: start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg
+    volume/cell: start=236.0366 A^3  final=236.0366 A^3  drift=+0.00%
+    no flags
+  --- NPT: status=OK ---
+    samples=602  finite_ok=True
+    T back-70% mean/std: 297.3 / 64.4 K
+    alpha: start=90.0000 deg  final=91.5701 deg  max|drift|=3.7975 deg  final_drift=+1.5701 deg  back-half slope=0.004068697214540659
+    beta:  start=90.0000 deg  final=89.9218 deg  max|drift|=2.1140 deg
+    gamma: start=90.0000 deg  final=90.3399 deg  max|drift|=3.3491 deg
+    volume/cell: start=236.0366 A^3  final=237.6867 A^3  drift=+0.70%
+    no flags
+  overall alpha drift (NVT start -> NPT end): +1.5701 deg
+  VERDICT: STABLE
+
+=== Al3Ni2 ===
+  --- NVT: status=OK ---
+    samples=602  finite_ok=True
+    T back-70% mean/std: 286.5 / 117.7 K
+    alpha: start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg  final_drift=+0.0000 deg  back-half slope=3.1913626692795682e-15
+    beta:  start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg
+    gamma: start=120.0000 deg  final=120.0000 deg  max|drift|=0.0000 deg
+    volume/cell: start=69.6234 A^3  final=69.6234 A^3  drift=+0.00%
+    no flags
+  --- NPT: status=OK ---
+    samples=602  finite_ok=True
+    T back-70% mean/std: 303.4 / 117.5 K
+    alpha: start=90.0000 deg  final=86.7605 deg  max|drift|=4.3306 deg  final_drift=-3.2395 deg  back-half slope=-0.015505570827788534
+    beta:  start=90.0000 deg  final=91.3056 deg  max|drift|=3.9097 deg
+    gamma: start=120.0000 deg  final=121.5655 deg  max|drift|=2.9709 deg
+    volume/cell: start=69.6234 A^3  final=68.8822 A^3  drift=-1.06%
+    no flags
+  overall alpha drift (NVT start -> NPT end): -3.2395 deg
+  VERDICT: STABLE
+
+=== Al3Ni5 ===
+  --- NVT: status=OK ---
+    samples=602  finite_ok=True
+    T back-70% mean/std: 291.2 / 90.5 K
+    alpha: start=98.2788 deg  final=98.2788 deg  max|drift|=0.0000 deg  final_drift=+0.0000 deg  back-half slope=1.297304555555218e-15
+    beta:  start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg
+    gamma: start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg
+    volume/cell: start=94.1009 A^3  final=94.1009 A^3  drift=+0.00%
+    no flags
+  --- NPT: status=OK ---
+    samples=602  finite_ok=True
+    T back-70% mean/std: 308.4 / 93.7 K
+    alpha: start=98.2788 deg  final=97.0097 deg  max|drift|=2.7855 deg  final_drift=-1.2691 deg  back-half slope=-0.09705523097555108
+    beta:  start=90.0000 deg  final=89.8377 deg  max|drift|=2.0372 deg
+    gamma: start=90.0000 deg  final=89.7964 deg  max|drift|=2.1456 deg
+    volume/cell: start=94.1009 A^3  final=96.4662 A^3  drift=+2.51%
+    no flags
+  overall alpha drift (NVT start -> NPT end): -1.2691 deg
+  VERDICT: STABLE
+
+=== AlNi3 ===
+  --- NVT: status=OK ---
+    samples=602  finite_ok=True
+    T back-70% mean/std: 275.8 / 151.4 K
+    alpha: start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg  final_drift=+0.0000 deg  back-half slope=-2.9122500666930568e-15
+    beta:  start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg
+    gamma: start=90.0000 deg  final=90.0000 deg  max|drift|=0.0000 deg
+    volume/cell: start=45.3995 A^3  final=45.3995 A^3  drift=+0.00%
+    no flags
+  --- NPT: status=OK ---
+    samples=602  finite_ok=True
+    T back-70% mean/std: 326.3 / 163.7 K
+    alpha: start=90.0000 deg  final=92.4746 deg  max|drift|=5.4094 deg  final_drift=+2.4746 deg  back-half slope=0.02107852923942297
+    beta:  start=90.0000 deg  final=90.7802 deg  max|drift|=4.0219 deg
+    gamma: start=90.0000 deg  final=90.2751 deg  max|drift|=5.9434 deg
+    volume/cell: start=45.3995 A^3  final=46.0365 A^3  drift=+1.40%
+    no flags
+  overall alpha drift (NVT start -> NPT end): +2.4746 deg
+  VERDICT: STABLE
+
+SUMMARY
+  AlNi: STABLE
+  Al3Ni: STABLE
+  Al3Ni2: STABLE
+  Al3Ni5: STABLE
+  AlNi3: STABLE
+

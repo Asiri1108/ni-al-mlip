@@ -1,0 +1,6 @@
+4
+Lattice="3.5672608213836416 0.0 -0.0 0.0 3.5673856755123903 0.0 0.0 0.0 3.5673856755123903" Properties=species:S:1:pos:R:3 config_id=AlNi3_dft_relaxed phase=AlNi3 config_type=relaxed source="DFT (QE 7.6, PBE) relaxed reference cell, data/datasets/ni_al_combined227_dft.extxyz" dataset_origin=Pilot-25 source_record=Pilot-25:AlNi3_relaxed original_dataset=/workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz original_dataset_sha256=35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b provenance=/workspace/ni_al/configs/PILOT25_PROVENANCE.txt qe_output_sha256=historical_not_recorded canonical_input=historical_not_recorded canonical_input_sha256=historical_not_recorded pbc="T T T"
+Al       0.00000000       0.00000000       0.00000000
+Ni       0.00000000       1.78369248       1.78369212
+Ni       1.78363041       0.00000000       1.78369212
+Ni       1.78363041       1.78369248       0.00000000

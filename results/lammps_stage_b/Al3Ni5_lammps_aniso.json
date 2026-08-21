@@ -1,0 +1,20 @@
+{
+  "phase": "Al3Ni5",
+  "mode": "aniso",
+  "natoms": 8,
+  "energy_eV": -24969.624053538173,
+  "fmax_final_eV_per_A": 9.149258333775883e-05,
+  "press_final_bar": -43.4644999958295,
+  "stopping_criterion": "Stopping criterion = linesearch alpha is zero",
+  "cellpar": [
+    3.776528282106451,
+    5.0092875666024215,
+    5.0060096568750705,
+    96.47808217093237,
+    90.0,
+    90.0
+  ],
+  "volume_per_atom_A3": 11.76220051536524,
+  "spacegroup_symbol": "Cmmm",
+  "spacegroup_number": 65
+}

@@ -1,0 +1,37 @@
+{
+  "al_kmesh_convergence": {
+    "E_20x20x20_Ry": -39.50274163,
+    "E_24x24x24_Ry": -39.50264461,
+    "dE_mev_atom": 1.320024346866938,
+    "adopted": [
+      24,
+      24,
+      24
+    ],
+    "justification": "24x24x24 adopted: dE(20 vs 24)=1.320024 meV/atom, at/above the 0.5 meV/atom bar -- denser mesh required."
+  },
+  "Al": {
+    "kmesh": [
+      24,
+      24,
+      24
+    ],
+    "relaxed_a_angstrom": 4.038351122,
+    "E_total_Ry": -39.50266605,
+    "mu_eV_atom": -537.4611518164136,
+    "nspin": 1
+  },
+  "Ni": {
+    "kmesh": [
+      22,
+      22,
+      22
+    ],
+    "relaxed_a_angstrom": 3.517937534,
+    "E_total_Ry": -343.28081739,
+    "mu_eV_atom": -4670.5734564188815,
+    "nspin": 2,
+    "starting_magnetization": 0.6,
+    "final_magnetization_muB_cell": 0.66
+  }
+}

@@ -1,0 +1,78 @@
+AL3NI COMBINED-113 MACE TRAINING STATUS
+
+Timestamp UTC: 2026-08-15T14:16:41.157660+00:00
+Run: al3ni_combined113_lora_v1
+Training completion status: COMPLETE
+
+DATA AND LEAKAGE CONTROL
+TRAIN: /workspace/ni_al/data/datasets/ni_al_combined113_train_75.extxyz
+TRAIN SHA256: 86f1a844964bfcc83671dd204c8e7a28f95d87362f8c86d84ed770ce568afae1
+TRAIN configurations: 75/75 (Dataset-100 65 + v1 cfg101-106 6 + round2 cfg111-114 4)
+VALIDATION: /workspace/ni_al/data/datasets/ni_al_combined113_validation_18.extxyz
+VALIDATION SHA256: 079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff
+VALIDATION configurations: 18/18 (Dataset-100 15 + v1 cfg107-108 2 + round2 cfg115 1)
+TEST passed to MACE: NO
+BLIND HOLDOUT passed to MACE: NO
+cfg109/cfg110 (sealed CONFIRMATION_HOLDOUT) passed to MACE: NO -- never read, geometry or labels
+
+METHOD
+Foundation: MACE-MATPES-PBE-0 / mace-matpes-pbe-0
+Foundation SHA256: e618ad582b84239905b9c3b77ce6e9ce111b0ecd1533223a1a6aac7a696b8aa0
+Prior model (Dataset-100 baseline, preserved unchanged): /workspace/ni_al/models/dataset100_matpes_pbe_lora_v1/dataset100_matpes_pbe_lora_v1.model
+Prior model SHA256: 745f02582e604fed390d567198e4e4dfa783c71a61d749c58419659bc784a0d9
+LoRA: true; rank=4; alpha=1.0; multihead replay=false
+Loss: WeightedEnergyForcesStressLoss
+Weights: energy=1.0; forces=10.0; stress=1.0
+Units: eV, Angstrom, eV/Angstrom, eV/Angstrom^3
+Precision/device: float64 / CUDA
+Optimizer: Adam; lr=0.001; weight_decay=0.0; AMSGrad=true
+Batch sizes: train=2; validation=2
+Epoch policy: max=100; patience=20; eval_interval=1
+EMA: true; decay=0.995; clip_grad=10.0
+E0s: estimated from combined-113 TRAIN-75 only
+Random seed: 20260811 (same as Dataset-100 baseline run, for comparability)
+
+COMMAND AND SOFTWARE
+Config: /workspace/ni_al/configs/al3ni_combined113_lora_v1.yaml
+Config SHA256: 873c4beb5f03fcfd95d3a2770cb3551f56b2dc6ad2ff186368969692d6a8dbfc
+Exact command: env XDG_CACHE_HOME=/workspace/ni_al/runs/dataset100_matpes_pbe_lora_v1/downloads TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1 /workspace/ni_al/envs/mace-py312-cu128/bin/mace_run_train --config=/workspace/ni_al/configs/al3ni_combined113_lora_v1.yaml
+Python: 3.12.3
+GPU: 0, NVIDIA GeForce RTX 4090, GPU-794993dd-052f-53c9-99c6-65543428c1a7, 580.159.04, 24564 MiB
+Peak monitored GPU memory: 1648 MiB
+Execution: foreground (no tmux -- run completed within the estimated ~6.5 min window)
+Wall time: 350 seconds
+
+TRAINING AND SELECTION
+Last epoch: 99
+Selected validation checkpoint epoch: 99
+Selected checkpoint: /workspace/ni_al/checkpoints/al3ni_combined113_lora_v1/al3ni_combined113_lora_v1_run-20260811_epoch-99.pt
+Selected validation loss: 0.00015143
+
+FINAL ERROR TABLE (full train/valid set evaluation, not per-epoch running average)
+train_Default: RMSE_E=1.8 meV/atom, RMSE_F=3.6 meV/A (rel 3.16%), RMSE_stress=2.8 meV/A^3
+valid_Default: RMSE_E=1.8 meV/atom, RMSE_F=6.1 meV/A (rel 3.29%), RMSE_stress=2.4 meV/A^3
+
+COMPARISON TO DATASET-100 BASELINE (65 TRAIN / 15 VALIDATION, epoch 98 selected)
+Baseline validation: energy RMSE 0.70 meV/atom, force RMSE 5.97 meV/Angstrom, stress RMSE 2.13 meV/Angstrom^3
+This run's validation is somewhat higher (see above) -- expected: the new TRAIN/VALIDATION
+population now spans up to +5.60% Al3Ni isotropic strain (previously the TRAIN ceiling was
++3.0%), so the fit is being asked to cover a wider, physically harder range. This is the
+intended effect of the remediation, not a regression -- see interim gate evaluation (next
+stage) for the metric that actually matters: relative-energy error on cfg043/cfg115.
+
+Checkpoint count: 98
+
+FROZEN MODEL
+Primary: /workspace/ni_al/models/al3ni_combined113_lora_v1/al3ni_combined113_lora_v1.model
+Primary SHA256: 2530c549b654059e0e6561f72dd1fdf16db1004058b22167cbec317260baf9f3
+Compiled: /workspace/ni_al/models/al3ni_combined113_lora_v1/al3ni_combined113_lora_v1_compiled.model
+Compiled SHA256: dbfcdf4971476febe34f56c36ad15e44ede158879c955a4066539e47c4eb9321
+Selected checkpoint SHA256: 3eeeec56af111d9376804a83ff6c6f5422f97297edac755de7183d8bd71cd0b3
+Read-only freeze applied: YES
+
+AL3NI COMBINED-113 MACE TRAINING COMPLETE
+MODEL FROZEN: YES
+TEST USED FOR TRAINING: NO
+BLIND HOLDOUT USED FOR TRAINING: NO
+cfg109/cfg110 USED: NO (sealed, untouched)
+READY FOR INTERIM GATE EVALUATION (Stage 7: cfg043 + cfg115 relative-energy error vs Dataset-100 baseline model)

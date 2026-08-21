@@ -1,0 +1,34 @@
+AL3NI INTERIM GATE STATUS -- COMBINED-211 CHECKPOINT (round300 merged in, 82 configs, 10 pods)
+
+NOT a pass/fail gate. No threshold. Progress signal only, per
+configs/AL3NI_REMEDIATION_ACCEPTANCE_CRITERION.txt.
+
+METHOD (identical to every prior interim check)
+relative_energy_mev_atom = (E_pred(config) - E_pred(Al3Ni_relaxed)) / natoms * 1000
+
+OLD model (prior checkpoint): /workspace/ni_al/models/al3ni_combined129_lora_v1/al3ni_combined129_lora_v1.model
+NEW model (this checkpoint):  /workspace/ni_al/models/al3ni_combined211_lora_v1/al3ni_combined211_lora_v1.model
+
+DFT relative energy, cfg043_Al3Ni_volume_rattle_expansion: 53.383058 meV/atom
+DFT relative energy, cfg115_Al3Ni_iso_expansion: 111.229904 meV/atom
+
+=== combined129 (OLD) ===
+cfg043_Al3Ni_volume_rattle_expansion: pred_relative=55.747650 meV/atom  relative_energy_error=2.364592 meV/atom  (raw energy error=0.675208 meV/atom)
+cfg115_Al3Ni_iso_expansion: pred_relative=116.524570 meV/atom  relative_energy_error=5.294666 meV/atom  (raw energy error=3.605281 meV/atom)
+
+=== combined211 (NEW) ===
+cfg043_Al3Ni_volume_rattle_expansion: pred_relative=55.429195 meV/atom  relative_energy_error=2.046136 meV/atom  (raw energy error=1.212389 meV/atom)
+cfg115_Al3Ni_iso_expansion: pred_relative=115.762746 meV/atom  relative_energy_error=4.532842 meV/atom  (raw energy error=3.699095 meV/atom)
+
+=== CHANGE (combined211 - combined129), negative = improvement ===
+cfg043_Al3Ni_volume_rattle_expansion relative_energy_error change: -0.318455 meV/atom
+cfg115_Al3Ni_iso_expansion relative_energy_error change: -0.761823 meV/atom
+
+Note: round300 added 44 Al3Ni TRAIN structures (17->44 TRAIN vs combined-129's 27 total
+population), the largest phase gain in this round -- unlike round4's Al3Ni5/AlNi3-only
+addition, this probe (both cfg043/cfg115 are Al3Ni) IS directly relevant this time.
+
+cfg109/cfg110 NOT evaluated -- sealed, no labels read.
+
+STATUS
+AL3NI INTERIM GATE EVALUATION COMPLETE (combined-211 checkpoint)

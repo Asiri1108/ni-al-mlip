@@ -1,0 +1,167 @@
+NI-AL CANONICAL PILOT-25 TEST EVALUATION STATUS
+================================================
+Timestamp (UTC): 2026-08-11T08:14:56Z
+Hostname: e376e8543d5f
+GPU: NVIDIA GeForce RTX 4090
+Evaluation: pilot25_test_evaluation_v1
+Completion status: COMPLETE
+
+Models
+------
+Zero-shot identity: MACE-MATPES-PBE-0 (mace-matpes-pbe-0), float64 CUDA
+Zero-shot checkpoint:
+/workspace/ni_al/runs/pilot25_matpes_pbe_lora_v1/downloads/mace/MACEmatpespbeomatftmodel
+Size: 79471284 bytes
+SHA256: e618ad582b84239905b9c3b77ce6e9ce111b0ecd1533223a1a6aac7a696b8aa0
+
+Fine-tuned identity: pilot25_matpes_pbe_lora_v1, selected training epoch 88,
+float64 CUDA
+Fine-tuned model:
+/workspace/ni_al/models/pilot25_matpes_pbe_lora_v1/pilot25_matpes_pbe_lora_v1.model
+Size: 12211781 bytes
+SHA256: 94d8d4dade7322077d6d2343820a32678eafd7499d1762ee7f180b4ce4fc7719
+Both models loaded successfully as ASE MACECalculator instances.
+
+Frozen TEST integrity
+---------------------
+Path: /workspace/ni_al/data/datasets/ni_al_pilot_test_5.extxyz
+Size: 6183 bytes
+SHA256: fff925984d04f51cfc0d8add614a8287605c2539b14b72e0784e65ca6c132705
+Configurations: exactly 5; unique config_ids: 5
+Config type: shear015_rattle002
+Phases/config_ids:
+- AlNi: AlNi_shear015_rattle002
+- Al3Ni: Al3Ni_shear015_rattle002
+- Al3Ni2: Al3Ni2_shear015_rattle002
+- Al3Ni5: Al3Ni5_shear015_rattle002
+- AlNi3: AlNi3_shear015_rattle002
+Overlap with canonical TRAIN-15: none
+Overlap with canonical VALIDATION-5: none
+All DFT energies, forces, and six-component ASE stresses are finite.
+TEST used during training: NO. Training logs recorded tests=[].
+
+Method
+------
+Force errors use every Cartesian component in eV/A. Aggregate metrics pool all
+TEST force components. Stress errors use all six ASE Voigt components with the
+same ASE sign convention for references and predictions. Aggregate stress pools
+all 30 TEST components. Conversion: 1 eV/A^3 = 160.21766208 GPa.
+
+Raw absolute QE energies were not compared with foundation energies. For every
+phase, the evaluated quantity is:
+  [E(test shear+rattle) - E(corresponding relaxed phase reference)] / atom.
+The same exact relaxed structure is used for both models. These relaxed phase
+references belong to canonical TRAIN-15. Therefore the energy metric is:
+"held-out perturbation relative-energy error anchored to the corresponding
+relaxed phase reference". It is not a fully independent absolute-energy test.
+
+Aggregate TEST-5 before/after
+-----------------------------
+Metric                         Zero-shot       Fine-tuned      Improvement
+Relative Energy MAE            0.375614        0.209699        +44.1716% meV/atom
+Relative Energy RMSE           0.585652        0.233392        +60.1483% meV/atom
+Relative Energy max abs error  1.235564        0.400921        (meV/atom)
+Force MAE                      0.0318501       0.00944828      +70.3351% eV/A
+Force RMSE                     0.0506374       0.0122674       +75.7739% eV/A
+Stress MAE                     0.847641        0.257826        +69.5831% GPa
+Stress RMSE                    1.364531        0.388304        +71.5431% GPa
+
+Positive improvement means 100*(zero-shot error - fine-tuned error)/zero-shot
+error. No aggregate degradation was hidden.
+
+Per-phase TEST metrics
+----------------------
+Values are zero-shot -> fine-tuned.
+
+AlNi / AlNi_shear015_rattle002 (2 atoms)
+- Relative-energy error: -0.105618 -> +0.119289 meV/atom
+  (absolute error 0.105618 -> 0.119289; degradation)
+- Force MAE: 0.000733561 -> 0.00677758 eV/A (degradation)
+- Force RMSE: 0.000757217 -> 0.00695139 eV/A (degradation)
+- Stress MAE: 1.788219 -> 0.170284 GPa (major improvement)
+- Stress RMSE: 2.493568 -> 0.218353 GPa (major improvement)
+
+Al3Ni / Al3Ni_shear015_rattle002 (16 atoms)
+- Relative-energy error: -0.402313 -> -0.400921 meV/atom (slight improvement)
+- Force MAE: 0.0580107 -> 0.0111712 eV/A (major improvement)
+- Force RMSE: 0.0711581 -> 0.0144311 eV/A (major improvement)
+- Stress MAE: 0.597045 -> 0.157989 GPa (major improvement)
+- Stress RMSE: 0.819214 -> 0.206174 GPa (major improvement)
+
+Al3Ni2 / Al3Ni2_shear015_rattle002 (5 atoms)
+- Relative-energy error: -1.235564 -> -0.224038 meV/atom (major improvement)
+- Force MAE: 0.0224575 -> 0.00972918 eV/A (improvement)
+- Force RMSE: 0.0388630 -> 0.0120729 eV/A (improvement)
+- Stress MAE: 0.511951 -> 0.362589 GPa (improvement)
+- Stress RMSE: 0.776199 -> 0.513939 GPa (improvement)
+
+Al3Ni5 / Al3Ni5_shear015_rattle002 (8 atoms)
+- Relative-energy error: -0.0113552 -> +0.173513 meV/atom (degradation)
+- Force MAE: 0.00818368 -> 0.00821068 eV/A (essentially unchanged/slight degradation)
+- Force RMSE: 0.0120290 -> 0.0104321 eV/A (improvement)
+- Stress MAE: 0.988475 -> 0.420378 GPa (improvement)
+- Stress RMSE: 1.268079 -> 0.589681 GPa (improvement)
+
+AlNi3 / AlNi3_shear015_rattle002 (4 atoms)
+- Relative-energy error: -0.123219 -> +0.130735 meV/atom
+  (absolute error 0.123219 -> 0.130735; slight degradation)
+- Force MAE: 0.00183931 -> 0.00601612 eV/A (degradation)
+- Force RMSE: 0.00218117 -> 0.00772972 eV/A (degradation)
+- Stress MAE: 0.352517 -> 0.177889 GPa (improvement)
+- Stress RMSE: 0.458509 -> 0.227718 GPa (improvement)
+
+Scientific analysis
+-------------------
+Classification: A. CLEAR IMPROVEMENT.
+Rationale: all six aggregate metrics improve substantially (44-76%), including
+both MAE and RMSE for relative energy, forces, and stress. No aggregate property
+regresses. This classification does not erase phase-level regressions and is
+necessarily provisional because TEST contains only five configurations.
+
+Strongest aggregate improvement: Force RMSE, reduced 75.77%.
+Largest important phase improvement: Al3Ni force MAE, 0.05801 -> 0.01117 eV/A;
+Al3Ni force behavior clearly improved. Al3Ni2 relative energy also improved
+strongly, 1.23556 -> 0.22404 meV/atom absolute error.
+
+AlNi stress behavior clearly improved: MAE 1.78822 -> 0.17028 GPa and RMSE
+2.49357 -> 0.21835 GPa. Stress improves in every phase, so the held-out
+shear/strain response improved broadly on this TEST-5 sample.
+
+Largest phase-level degradations: AlNi and AlNi3 force errors increased from
+exceptionally small zero-shot values, though their fine-tuned absolute MAEs
+remain 0.00678 and 0.00602 eV/A. Al3Ni5 relative-energy absolute error increased
+from 0.01136 to 0.17351 meV/atom.
+
+Remaining worst phase: Al3Ni is the fine-tuned worst phase for relative-energy
+absolute error (0.40092 meV/atom) and force MAE (0.01117 eV/A). Al3Ni5 is the
+remaining worst phase for stress MAE/RMSE (0.42038/0.58968 GPa). These distinct
+property weaknesses should not be collapsed into one phase ranking.
+
+Recommended data collection direction for configurations 26-100
+---------------------------------------------------------------
+Fix the new DFT plan before any retraining. Add balanced, phase-stratified
+volume, normal-strain, multiple-sign/magnitude shear, and independently rattled
+structures for all five phases. Emphasize: (1) Al3Ni perturbations to reduce its
+remaining energy/force errors, (2) Al3Ni5 strain/shear states to reduce the
+remaining stress weakness while preserving energy, and (3) AlNi and AlNi3
+low-force perturbations to prevent the observed force regressions. Include more
+than one perturbation geometry per phase so conclusions are not driven by one
+TEST structure, and reserve a new untouched evaluation subset before fitting.
+
+Artifacts
+---------
+Machine-readable per-config results:
+/workspace/ni_al/results/pilot25_test_evaluation_v1/pilot25_test_per_config.csv
+Aggregate comparison:
+/workspace/ni_al/results/pilot25_test_evaluation_v1/pilot25_test_summary.csv
+Full JSON:
+/workspace/ni_al/results/pilot25_test_evaluation_v1/pilot25_test_metrics.json
+Plots: pilot25_test_force_before_after.png,
+pilot25_test_stress_before_after.png,
+pilot25_test_relative_energy_before_after.png,
+pilot25_test_metric_improvement.png
+Evaluation log:
+/workspace/ni_al/logs/pilot25_test_evaluation_v1/evaluation_console.log
+
+No retraining was launched. No configuration generation, Quantum ESPRESSO, or
+LAMMPS task was launched.

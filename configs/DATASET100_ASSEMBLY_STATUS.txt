@@ -1,0 +1,36 @@
+CANONICAL Ni-Al DATASET-100 ASSEMBLY STATUS
+
+Dataset: /workspace/ni_al/data/datasets/ni_al_dataset100_dft.extxyz
+SHA256: 12fabd203b91e31e9a602bbaa3a2a3f14341e6fa366b128903099e196b59a3aa
+Manifest: /workspace/ni_al/data/datasets/ni_al_dataset100_dft_manifest.csv
+
+VALIDATION
+Structures: 100/100
+Pilot frames: 25/25
+Expansion frames: 75/75
+Unique config IDs: 100/100
+Unique source records: 100/100
+Missing expansion IDs 026-100: 0
+Energy labels: 100/100
+Force arrays: 100/100
+Stress tensors: 100/100
+Consistent metadata schema: YES
+Consistent Pilot-compatible units: YES
+Canonical phase labels: YES
+Source DFT labels exactly preserved on read-back: YES
+
+PHASE COUNTS
+AlNi = 18
+Al3Ni2 = 19
+AlNi3 = 17
+Al3Ni5 = 22
+Al3Ni = 24
+TOTAL = 100
+
+CANONICAL DATASET-100 ASSEMBLY COMPLETE
+PILOT: 25
+EXPANSION: 75
+TOTAL: 100
+DUPLICATES: 0
+MISSING LABELS: 0
+READY FOR SPLIT AUDIT

@@ -1,0 +1,33 @@
+AL3NI INTERIM GATE STATUS (Section 11/AL3NI_REMEDIATION_ACCEPTANCE_CRITERION.txt)
+
+Generated UTC: 2026-08-15T14:20:54.918170+00:00
+NOT a pass/fail gate. No threshold. Progress signal only, per policy.
+
+METHOD (identical to scripts/evaluate_dataset100_final.py)
+relative_energy_mev_atom = (E_pred(config) - E_pred(Al3Ni_relaxed)) / natoms * 1000
+relative_energy_error_mev_atom = model_relative_energy - dft_relative_energy
+
+OLD model: /workspace/ni_al/models/dataset100_matpes_pbe_lora_v1/dataset100_matpes_pbe_lora_v1.model
+OLD model SHA256: 745f02582e604fed390d567198e4e4dfa783c71a61d749c58419659bc784a0d9
+NEW model: /workspace/ni_al/models/al3ni_combined113_lora_v1/al3ni_combined113_lora_v1.model
+NEW model SHA256: 2530c549b654059e0e6561f72dd1fdf16db1004058b22167cbec317260baf9f3
+
+DFT relative energy, cfg043: 53.383058 meV/atom
+DFT relative energy, cfg115: 111.229904 meV/atom
+
+=== dataset100_baseline ===
+cfg043: pred_relative=59.981569 meV/atom  relative_energy_error=6.598511 meV/atom  (raw energy error=5.482328 meV/atom)
+cfg115: pred_relative=123.578065 meV/atom  relative_energy_error=12.348161 meV/atom  (raw energy error=11.231979 meV/atom)
+
+=== combined113 ===
+cfg043: pred_relative=56.258101 meV/atom  relative_energy_error=2.875043 meV/atom  (raw energy error=0.950692 meV/atom)
+cfg115: pred_relative=117.368347 meV/atom  relative_energy_error=6.138443 meV/atom  (raw energy error=4.214092 meV/atom)
+
+=== CHANGE (combined113 - dataset100_baseline), negative = improvement ===
+cfg043 relative_energy_error change: -3.723468 meV/atom
+cfg115 relative_energy_error change: -6.209718 meV/atom
+
+cfg109/cfg110 NOT evaluated -- sealed, no labels read.
+
+STATUS
+AL3NI INTERIM GATE EVALUATION COMPLETE

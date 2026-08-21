@@ -1,0 +1,150 @@
+AL3NI ROUND285 SEALED PAIR (cfg297/cfg299) - ACCEPTANCE CRITERION
+NUMERIC THRESHOLD LOCKED 2026-08-18
+
+STATUS: LOCKED. Will NOT be revised after cfg297/cfg299 are unsealed --
+revising a threshold after seeing the sealed result it is meant to judge
+would defeat the entire pre-registration discipline this file exists to
+enforce (same rule as AL3NI_REMEDIATION_ACCEPTANCE_CRITERION.txt for
+cfg109/cfg110). This file was written, and cfg297/cfg299 remain fully
+sealed, before it is applied to anything.
+
+BACKGROUND
+cfg109/cfg110 (combined-220's confirmation-holdout pair) were unsealed
+2026-08-17 against al3ni_combined220_lora_v1 using a threshold (2.3865
+meV/atom) derived from a SINGLE seed's reserved-20 distribution. A later
+seed-variance investigation found that single-seed threshold was fragile:
+across seeds 20260811/812/813, the reserved-19 (excl. cfg043) max moved
+0.808 meV/atom and its anchoring config changed identity (cfg060 ->
+cfg075 -> cfg060) -- a real weakness in how that threshold was derived,
+even though it did not change the FAIL verdict on cfg109/cfg110 itself.
+Round285 replaced cfg109/cfg110 with a new confirmation-holdout pair
+(cfg297_Al3Ni_iso_expansion, s=3.5%; cfg299_Al3Ni_volume_rattle_expansion,
+s=3.6%) after retraining on combined-227 (combined-220 + round285's 7 new
+TRAIN structures) produced a SUCCESS verdict against the pre-registered
+round285 success criteria (configs/ROUND285_SUCCESS_CRITERIA.txt): cfg109
+error dropped 3.7671->2.2674 meV/atom (delta +1.4997), cfg110 dropped
+3.7320->2.2420 (delta +1.4900), both deltas ~3.5x the measured 0.43
+meV/atom noise floor.
+
+This file derives the acceptance threshold cfg297/cfg299 will be judged
+against at their own future unsealing event, applying BOTH lessons from
+the combined-220 threshold's history:
+
+LESSON 1 -- EXCLUDE cfg043 FROM THE DERIVATION BASIS
+cfg043 is design-contaminated: it has been evaluated at every checkpoint
+in this project since round 1 and every remediation round's design was
+explicitly steered by driving its error down (see
+AL3NI_REMEDIATION_ACCEPTANCE_CRITERION.txt, CFG043 EXCLUSION RATIONALE,
+for the full argument -- unchanged and still binding here). It remains a
+legitimate member of the reserved-20 for aggregate reporting, but is
+excluded from anchoring a threshold. Basis population: reserved-19
+(Dataset-100 TEST(5)+BLIND_HOLDOUT(15) minus cfg043).
+
+LESSON 2 -- DO NOT DERIVE FROM A SINGLE SEED
+ROUTE TAKEN: retrained combined-227 twice more (seed 20260812, seed
+20260813; identical data, identical hyperparameters -- LoRA rank 4, lr
+0.001, 100 epochs/patience 20 -- to the existing seed-20260811 checkpoint,
+seed changed only), rather than widening a single-seed threshold by the
+0.43 meV/atom noise floor.
+
+WHY THIS ROUTE, NOT THE NOISE-FLOOR-WIDENING FALLBACK: retraining was
+already proven cheap in this exact project -- the equivalent combined-220
+seed-variance pair (seeds 812/813) completed in under 20 minutes total on
+a single GPU, and this round's two additional combined-227 runs completed
+in comparable time (seed 812: ~10 min; seed 813: ~10 min; both confirmed
+complete via configs/ROUND285_SEALED_ACCEPTANCE_CRITERION derivation run,
+results/round285_sealed_threshold_v1/console.log). At that cost, actually
+measuring the multi-seed distribution is strictly better evidence than
+inflating a single-seed number by a flat noise-floor margin, which would
+still not tell us whether the anchoring config is stable across seeds --
+exactly the property that broke down last time (cfg060 -> cfg075 ->
+cfg060). The noise-floor-widening fallback was not needed and was not
+used.
+
+DERIVATION
+For each of seeds {20260811, 20260812, 20260813} (identical combined-227
+data/hyperparameters, seed-only variation), computed the |relative-energy
+error| -- (E_pred(config) - E_pred(phase_relaxed)) / natoms, vs the
+DFT-derived equivalent, same formula used throughout this project -- for
+all 19 reserved-19 members, and took each seed's own maximum:
+
+  seed 20260811: max = 2.5232 meV/atom (cfg060_Al3Ni5_volume_rattle_expansion)
+  seed 20260812: max = 2.4333 meV/atom (cfg060_Al3Ni5_volume_rattle_expansion)
+  seed 20260813: max = 2.6183 meV/atom (cfg060_Al3Ni5_volume_rattle_expansion)
+
+  Spread across 3 seeds: 0.1850 meV/atom (vs. 0.8080 for the combined-220
+  single-seed-derived threshold's equivalent cross-seed spread) -- a real
+  improvement in stability, and the anchoring config (cfg060) is IDENTICAL
+  across all 3 seeds this time, unlike the prior derivation where it
+  changed identity. Not assumed to generalize further without evidence;
+  recorded as observed for this specific model/data combination.
+
+  Full per-seed distribution (reserved-19, meV/atom):
+    seed 20260811: min=0.0035 median=0.2662 p75=0.9297 p90=1.6306 max=2.5232
+    seed 20260812: min=0.0016 median=0.2958 p75=0.8253 p90=1.7838 max=2.4333
+    seed 20260813: min=0.0048 median=0.3030 p75=1.0184 p90=1.5013 max=2.6183
+
+THRESHOLD: 2.6183 meV/atom
+
+BASIS: the MAX of the three seeds' own per-seed maxima over the reserved-19
+(19 genuinely independent Dataset-100 TEST+BLIND_HOLDOUT members, cfg043
+excluded), evaluated on combined-227 (TRAIN 189/VALIDATION 18) under seeds
+20260811/20260812/20260813 -- n=19 configs x n=3 seeds. Locking the
+cross-seed MAX (not the mean) means the threshold is set so that ALL
+THREE tested seeds' own worst reserved point would pass it -- robust to
+whichever seed happens to produce the model actually used at unsealing
+time, not just the one seed that happened to train first. This mirrors
+the original derivation philosophy (a real observed extreme sets the
+bar, not a computed percentile or invented round number), extended across
+seeds the way the original was only extended across configs.
+
+EXCLUSIONS AND RATIONALE (explicit, not silent)
+  cfg043_Al3Ni_volume_rattle_expansion: EXCLUDED. Design-contaminated
+    feedback probe (see LESSON 1 above and
+    AL3NI_REMEDIATION_ACCEPTANCE_CRITERION.txt CFG043 EXCLUSION RATIONALE).
+    Also independently disqualified from ANY role near cfg299 by
+    descriptor-degeneracy (configs/project_knowledge.md Section 5,
+    round285 sealed-pair revision 2) -- cfg299 was deliberately placed off
+    cfg043's exact strain for that reason, unrelated to this threshold
+    exclusion but consistent with it.
+  cfg109_Al3Ni_iso_expansion, cfg110_Al3Ni_volume_rattle_expansion:
+    EXCLUDED. Both are consumed (unsealed 2026-08-17, labels already
+    read) and were round285's explicit optimization target -- their error
+    was the reason round285's TRAIN densification was designed in the
+    first place. Including them in a threshold meant to judge a DIFFERENT
+    confirmation pair (cfg297/cfg299) on the SAME model would bias the
+    threshold toward exactly the points the new data was added to fix,
+    understating the true worst-case error elsewhere in the reserved
+    population.
+  cfg115_Al3Ni_iso_expansion: EXCLUDED (unchanged from the combined-220
+    precedent) -- VALIDATION-role, seen during training-time model
+    selection, not reserved data.
+  cfg297_Al3Ni_iso_expansion, cfg299_Al3Ni_volume_rattle_expansion:
+    NOT READ, NOT EVALUATED, NOT REFERENCED anywhere in this derivation.
+    Their geometry and labels remain fully sealed; this threshold was
+    computed entirely from already-reserved, already-non-sealed data.
+
+RULE: at unsealing, compute the same relative-energy error for
+cfg297_Al3Ni_iso_expansion and cfg299_Al3Ni_volume_rattle_expansion
+against whichever model is final at that time. PASS requires BOTH
+configs' absolute relative-energy error <= 2.6183 meV/atom. Per-config
+threshold, not an average -- consistent with using a max (worst-case),
+not a mean, as the derivation basis, and consistent with
+AL3NI_REMEDIATION_ACCEPTANCE_CRITERION.txt's rule for cfg109/cfg110.
+
+CROSS-REFERENCES
+  configs/AL3NI_REMEDIATION_ACCEPTANCE_CRITERION.txt
+    Original threshold derivation and correction history; CFG043
+    EXCLUSION RATIONALE (Lesson 1's source).
+  configs/AL3NI_FINAL_UNSEALING_RESULT.txt
+    cfg109/cfg110's actual unsealing result (both FAILED at 2.3865).
+  configs/ROUND285_SUCCESS_CRITERIA.txt
+  configs/project_knowledge.md Section 5
+    Seed-variance measurement (0.43 meV/atom noise floor; 0.808 meV/atom
+    cross-seed threshold spread for combined-220) that this file's
+    "Lesson 2" route was designed to fix.
+  configs/AL3NI_ROUND285_SEALED_CONFIRMATION_POLICY.txt
+    cfg297/cfg299 sealing rule (geometry readable any time; labels never
+    read until a single future unsealing event).
+  results/round285_sealed_threshold_v1/console.log
+    Full evaluation output backing the numbers above.

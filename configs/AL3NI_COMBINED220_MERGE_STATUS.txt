@@ -1,0 +1,40 @@
+AL3NI COMBINED-220 MERGE STATUS (combined-218 + round220, 2 configs, both TRAIN)
+
+Generated UTC: 2026-08-17T14:32:23.359433+00:00
+
+SOURCES (all read-only, none modified)
+  combined-218 all/train/val: ni_al_combined218_dft.extxyz (218) / ni_al_combined218_train_180.extxyz (180) / ni_al_combined218_validation_18.extxyz (18)
+  round220 (2, both TRAIN role): round220_dft.extxyz (2) -- cfg283 (closes cfg041), cfg284 (closes cfg107)
+  cfg109/cfg110 (sealed): NOT READ, NOT REFERENCED
+
+INTEGRITY CHECKS
+  config_id collision vs combined-218: NONE
+  geometry duplicate vs combined-218 (all roles): NONE
+  geometry duplicate vs combined-218 TRAIN only: NONE
+  internal round220 geometry duplicate: NONE
+  geometry duplicate vs sealed cfg109/cfg110: NOT CHECKED (sealed files not read, per explicit instruction)
+
+OUTPUT
+  All 220:       /workspace/ni_al/data/datasets/ni_al_combined220_dft.extxyz  sha256=ad2331f709c10212ce764894246ae006bc19518e6dabf0a3081c2f6f257fb150
+  TRAIN 182:     /workspace/ni_al/data/datasets/ni_al_combined220_train_182.extxyz  sha256=65ced37b1c61eeda780cfb024d2b4947d4424ecd9d4cc42bf7394275c0976a6b
+  VALIDATION 18: /workspace/ni_al/data/datasets/ni_al_combined220_validation_18.extxyz  sha256=079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff
+
+Round-trip: 220/220 all, 182/182 train, 18/18 validation
+
+BEFORE (combined-218) / AFTER (combined-220)
+  TOTAL:      218 -> 220
+  TRAIN:      180 -> 182
+  VALIDATION: 18 -> 18 (unchanged)
+  Phase composition, all (before):  {'Al3Ni': 56, 'Al3Ni2': 38, 'Al3Ni5': 42, 'AlNi': 41, 'AlNi3': 41}
+  Phase composition, all (after):   {'Al3Ni': 58, 'Al3Ni2': 38, 'Al3Ni5': 42, 'AlNi': 41, 'AlNi3': 41}
+  Phase composition, TRAIN (before): {'Al3Ni': 45, 'Al3Ni2': 31, 'Al3Ni5': 34, 'AlNi': 35, 'AlNi3': 35}
+  Phase composition, TRAIN (after):  {'Al3Ni': 47, 'Al3Ni2': 31, 'Al3Ni5': 34, 'AlNi': 35, 'AlNi3': 35}
+TEST/BLIND_HOLDOUT (Dataset-100's 20): UNCHANGED.
+
+COVERAGE IMPACT
+Closes the last 2 open EXTRAPOLATION flags project-wide (cfg041 Al3Ni uniaxial,
+cfg107 Al3Ni volume_rattle). See results/full_coverage_audit_v1/priority_ranking_combined220.md:
+zero EXTRAPOLATION flags remain anywhere.
+
+STATUS
+AL3NI COMBINED-220 MERGE COMPLETE

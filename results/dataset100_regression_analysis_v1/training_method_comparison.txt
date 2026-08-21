@@ -1,0 +1,35 @@
+TRAINING METHOD COMPARISON
+
+Setting | Pilot-25 | Dataset-100 | Changed
+foundation_model | mace-matpes-pbe-0 | mace-matpes-pbe-0 | NO
+lora | True | True | NO
+lora_rank | 4 | 4 | NO
+lora_alpha | 1.0 | 1.0 | NO
+multiheads_finetuning | False | False | NO
+loss | stress | stress | NO
+energy_weight | 1.0 | 1.0 | NO
+forces_weight | 10.0 | 10.0 | NO
+stress_weight | 1.0 | 1.0 | NO
+lr | 0.001 | 0.001 | NO
+weight_decay | 0.0 | 0.0 | NO
+amsgrad | True | True | NO
+max_num_epochs | 100 | 100 | NO
+patience | 20 | 20 | NO
+eval_interval | 1 | 1 | NO
+seed | 20260811 | 20260811 | NO
+default_dtype | float64 | float64 | NO
+E0s | estimated | estimated | NO
+batch_size | 2 | 2 | NO
+valid_batch_size | 2 | 2 | NO
+ema | True | True | NO
+ema_decay | 0.995 | 0.995 | NO
+clip_grad | 10.0 | 10.0 | NO
+
+Relative-energy treatment: neither run used an explicit relative-energy/difference loss. Both optimized absolute per-structure energy plus force and stress terms.
+Validation/model selection: both used the same weighted validation loss; Dataset-100 selected epoch 98. The criterion did not separately monitor phase-relative energies, volume slopes, or curvature.
+Objective balance: forces_weight=10 versus energy_weight=1 and stress_weight=1. Numerical loss normalization is MACE-internal, so weights alone do not prove displacement of energy learning; however, the objective and checkpoint criterion can favor broad force/absolute-energy improvement without protecting sub-meV relative differences.
+Dataset-100 validation history decreased essentially monotonically to epoch 98; there is no evidence of optimizer instability or classic overfitting in the recorded aggregate validation loss.
+Conclusion: methodology was unchanged. The regression is not caused by an undocumented hyperparameter change. Lack of an explicit relative-energy criterion is a plausible secondary contributor, especially for checkpoint selection.
+
+Pilot config SHA256: 5dd53a04176277302d8494b48912d49893a3ee8fade389dd933e9d186b54c631
+Dataset-100 config SHA256: dfe0954efba7f88fed8a0a021fc12b96aae83263c3e6b2de722faf3a2a3891eb

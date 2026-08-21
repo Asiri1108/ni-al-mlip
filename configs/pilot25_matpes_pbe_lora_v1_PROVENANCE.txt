@@ -1,0 +1,99 @@
+NI-AL CANONICAL PILOT-25 MATPES-PBE LORA PRE-TRAINING PROVENANCE
+================================================================
+Timestamp (UTC): 2026-08-11T07:40:25Z
+Hostname: e376e8543d5f
+Run: pilot25_matpes_pbe_lora_v1
+
+Software and hardware
+---------------------
+GPU: NVIDIA GeForce RTX 4090 (24564 MiB)
+NVIDIA driver: 580.173.02
+CUDA reported by PyTorch: 12.8
+PyTorch: 2.8.0+cu128
+MACE: 0.3.16
+Python: 3.12.3
+Python executable: /workspace/ni_al/envs/mace-py312-cu128/bin/python
+Training executable: /workspace/ni_al/envs/mace-py312-cu128/bin/mace_run_train
+
+Canonical data
+--------------
+TRAIN (USED FOR OPTIMIZATION):
+/workspace/ni_al/data/datasets/ni_al_pilot_train_15.extxyz
+SHA256 b7f3711d565e912f3da12bc24ccddbca59ecdbb7c6cfdced8a7ef09892951c6a
+Configurations: 15; config types relaxed, iso_m02, iso_p02; all five phases.
+
+VALIDATION (USED FOR VALIDATION/EARLY STOPPING):
+/workspace/ni_al/data/datasets/ni_al_pilot_val_5.extxyz
+SHA256 f09e54eceddba7b7d445b46f243f70af328061266773c727a13009718889392d
+Configurations: 5; config type rattle_003; all five phases.
+
+FROZEN TEST (NOT USED FOR TRAINING; NOT PASSED TO mace_run_train):
+/workspace/ni_al/data/datasets/ni_al_pilot_test_5.extxyz
+SHA256 fff925984d04f51cfc0d8add614a8287605c2539b14b72e0784e65ca6c132705
+Configurations: 5; config type shear015_rattle002; all five phases.
+
+FULL PILOT-25:
+/workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz
+SHA256 35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+Configurations: 25 unique config_ids; split overlap: none.
+
+ASE/property verification
+-------------------------
+EXTXYZ/ASE SinglePointCalculator keys: energy, forces, stress
+MACE CLI mapping: energy_key=energy, forces_key=forces, stress_key=stress
+All values finite; forces are N x 3; ASE stress is six-component Voigt.
+Corrected MACE 0.3.16 loss syntax: loss=stress, which dry-run instantiated as
+WeightedEnergyForcesStressLoss(energy_weight=1.000, forces_weight=10.000,
+stress_weight=1.000).
+Dry-run counts: train energy/forces/stress=15/15/15; validation=5/5/5;
+tests=[].
+
+Foundation
+----------
+Identity/alias: MACE-MATPES-PBE-0 / mace-matpes-pbe-0
+Upstream checkpoint filename: MACE-matpes-pbe-omat-ft.model
+Verified local cache path:
+/workspace/ni_al/runs/pilot25_matpes_pbe_lora_v1/downloads/mace/MACEmatpespbeomatftmodel
+Size: 79471284 bytes
+SHA256: e618ad582b84239905b9c3b77ce6e9ce111b0ecd1533223a1a6aac7a696b8aa0
+MACE dry-run loaded this exact checkpoint on CUDA in float64.
+License notice emitted by MACE: Academic Software License (ASL).
+
+Scientific and optimization settings
+------------------------------------
+Foundation: mace-matpes-pbe-0
+Transfer: LoRA; rank=4; alpha=1.0; multihead replay disabled
+E0s: estimated
+Properties: compute_forces=true; compute_stress=true
+Loss: weighted Energy + Forces + Stress via MACE loss=stress
+Weights: energy=1.0; forces=10.0; stress=1.0
+Device: cuda
+Default dtype: float64
+Optimizer: Adam; lr=0.001; weight_decay=0.0; AMSGrad=true
+Batch size: 2; validation batch size: 2
+Maximum epochs: 100; patience: 20; evaluation interval: 1
+EMA: true; EMA decay: 0.995; gradient clip: 10.0
+Seed: 20260811
+Checkpoint retention: enabled; save CPU final model: enabled
+All output directories are under /workspace/ni_al.
+
+Exact launch command
+--------------------
+export XDG_CACHE_HOME=/workspace/ni_al/runs/pilot25_matpes_pbe_lora_v1/downloads
+export TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1
+/workspace/ni_al/envs/mace-py312-cu128/bin/mace_run_train --config=/workspace/ni_al/configs/pilot25_matpes_pbe_lora_v1.yaml
+
+Zero-shot MACE-MATPES-PBE-0 baseline (for later frozen-TEST comparison only)
+---------------------------------------------------------------------------
+Relative-energy MAE: 4.023 meV/atom
+Relative-energy RMSE: 6.634 meV/atom
+Force MAE: 0.015641 eV/A
+Force RMSE: 0.023627 eV/A
+Stress MAE: 0.871511 GPa
+Stress RMSE: 1.234327 GPa
+
+Preflight decision
+------------------
+PASS. CUDA/RTX 4090 visible; foundation loaded; canonical train and validation
+parsed; Energy/Forces/Stress recognized and included in loss; tests=[]; output
+paths persistent; new model/checkpoint/results directories contained no files.

@@ -1,0 +1,59 @@
+# in.npt_stability_supercell -- Stage D-2 worker fragment: single-stage NPT
+# production MD on a SUPERCELL (~100-200 atoms), with per-species (Al vs Ni)
+# MSD tracking to distinguish vibration from diffusion/melting.
+#
+# Deliberately single-stage (NPT only, no separate NVT thermalization) --
+# explicit Stage D-2 instruction, unlike Stage D's NVT-then-NPT protocol.
+#
+# NOT standalone-runnable -- same reason as Stage D's in.nvt_stability /
+# in.npt_stability (pair_style mliap unified EXISTS requires the
+# Python-side lammps.mliap.load_unified_kokkos() call first; confirmed
+# empirically, see those files' headers). Load via lmp.file() from
+# lammps_stage_d2_run_phase.py AFTER read_data/model-load/pair setup on
+# the SUPERCELL -- built by replicating each phase's own zero-stress
+# PRIMITIVE cell (relaxed with the identical recipe Stage B/C/D used). A
+# zero-stress primitive cell replicates to an exact zero-stress supercell
+# by translational symmetry, so no separate supercell-scale relax is
+# needed before this file runs.
+#
+# Driver must set these LAMMPS variables before lmp.file()'ing this script:
+#   temp          target temperature, K
+#   seed          velocity-seed RNG integer
+#   tdamp         Nose-Hoover thermostat damping time, ps
+#   pdamp         barostat damping time, ps
+#   pressure      target external pressure, bar (0.0 = ambient)
+#   npt_steps     number of 1-fs steps to run
+#   thermo_every  thermo/log sampling interval, steps
+#   final_data    path to write the post-NPT LAMMPS data file (provenance)
+#
+# Element order (fixed project-wide, ELEMENT_ORDER=["Al","Ni"], set by the
+# driver's pair_coeff before this file runs): type 1 = Al, type 2 = Ni.
+
+timestep 0.001
+
+group grp_Al type 1
+group grp_Ni type 2
+
+# compute msd captures each group member's position AT THE TIME THIS
+# COMMAND RUNS as x0 -- i.e. the just-relaxed 0 K lattice site, since this
+# is issued before velocity create / before any dynamics -- and correctly
+# unwraps displacement across periodic boundaries (LAMMPS compute msd
+# documentation), so a rising trend reflects real diffusion, not an
+# ordinary periodic-image wrap. c_msdAl[4]/c_msdNi[4] = total MSD
+# (dx^2+dy^2+dz^2), averaged over each species group, in Angstrom^2.
+compute msdAl grp_Al msd
+compute msdNi grp_Ni msd
+
+velocity all create ${temp} ${seed} mom yes rot yes dist gaussian
+
+thermo ${thermo_every}
+thermo_style custom step temp pe ke etotal press pxx pyy pzz pxy pxz pyz lx ly lz xy xz yz vol c_msdAl[4] c_msdNi[4]
+thermo_modify flush yes
+
+print "=== STAGE D-2 NPT PRODUCTION START ==="
+fix mdintegrate all npt temp ${temp} ${temp} ${tdamp} tri ${pressure} ${pressure} ${pdamp}
+run ${npt_steps}
+print "=== STAGE D-2 NPT PRODUCTION END ==="
+unfix mdintegrate
+
+write_data ${final_data} nocoeff

@@ -1,0 +1,246 @@
+AL3NI REMEDIATION - UNSEALING TRIGGER AND ACCEPTANCE CRITERION
+
+Written: 2026-08-15 (design session)
+Updated: 2026-08-17 -- THRESHOLD LOCKED (see FINAL ACCEPTANCE CRITERION
+below). Roadmap superseded the same day: the original 110 -> 300 -> 500 ->
+LAMMPS plan was replaced by the decision to STOP EXPANSION AT ~220
+STRUCTURES (configs/SESSION_STATE_AL3NI_EXPANSION_DESIGN.md Section 13),
+after VALIDATION energy RMSE went flat/noisy across 129->211->218 despite
+TRAIN growing 2.4x. Round220 (cfg283/cfg284) then closed the last 2
+EXTRAPOLATION flags, and combined-220 (TRAIN 182 / VALIDATION 18) was
+retrained with the project's standard fixed hyperparameters (seed
+20260811, LoRA rank 4, lr 0.001, 100 epochs/patience 20) -- unchanged
+from every prior round. There is no 300-structure or 500-structure round.
+combined-220 is now the FINAL pre-unsealing checkpoint referred to
+everywhere below that this file previously called "the 500-structure
+round."
+Status: THRESHOLD LOCKED. This file documents the RULE for when
+cfg109/cfg110 may be unsealed and the final numeric pass/fail threshold
+for that gate, now derived and fixed. See
+configs/SESSION_STATE_AL3NI_EXPANSION_DESIGN.md Section 8 for the history
+of what went wrong when thresholds were invented instead of derived --
+the discipline this final number follows.
+
+ROADMAP -- SUPERSEDED 2026-08-17, kept for history
+
+  Original plan: 110 structures -> train -> 300 structures -> train ->
+  500 structures -> train -> LAMMPS.
+
+  ACTUAL path taken: 110 -> combined-113/127/129 (round3/round4) ->
+  combined-211 (round300, the real ~300-scale gap-fill) -> combined-218
+  (round212/213/214) -> combined-220 (round220, closes the last 2
+  EXTRAPOLATION flags) -> STOP (SESSION_STATE_AL3NI_EXPANSION_DESIGN.md
+  Section 13) -> LAMMPS readiness assessment (next, via unsealing).
+  There was never a discrete "300-structure round" or "500-structure
+  round" as originally planned; round300 (round-numbering only, ~82
+  configs) served the equivalent coverage-closing purpose at the
+  combined-211 stage instead. No 500-structure round occurred or is
+  planned.
+
+  Any future structure-generation round, should one be justified later,
+  must still follow the gate process defined in
+  configs/EXPANSION_BATCH_DESIGN_POLICY.md.
+
+UNSEALING TRIGGER (authoritative)
+
+  cfg109_Al3Ni_iso_expansion and cfg110_Al3Ni_volume_rattle_expansion
+  labels (energy, forces, stress) remain SEALED through:
+    - the 110-structure remediation checkpoint (current)
+    - the 300-structure round, including its training run
+    - the 500-structure round, including its training run
+
+  They are unsealed EXACTLY ONCE: immediately before LAMMPS readiness is
+  assessed, against the FINAL model -- which, per the 2026-08-17
+  stop-expansion decision, is al3ni_combined220_lora_v1 (combined-220,
+  TRAIN 182 / VALIDATION 18), not a 500-structure model. No further
+  expansion round is planned before unsealing absent new justification
+  (configs/SESSION_STATE_AL3NI_EXPANSION_DESIGN.md Section 13).
+
+  They are NEVER unsealed against:
+    - the 110-structure remediation checkpoint model
+    - any 129/211/218 intermediate checkpoint
+    - any other model prior to al3ni_combined220_lora_v1
+
+  Geometry (cell, positions) for cfg109/cfg110 may continue to be read for
+  design/screening purposes at any point (as has already been done this
+  session for gate (b)/(d) descriptor distances) - only energy, forces,
+  and stress are sealed.
+
+FINAL ACCEPTANCE CRITERION - NUMERIC THRESHOLD LOCKED 2026-08-17
+(revised same day -- see CORRECTION HISTORY below; this supersedes an
+earlier same-day locked value of 3.0402 meV/atom, which was found to rest
+on a disqualified point before it was ever used to unseal anything)
+
+  STATUS: LOCKED. Will NOT be revised after cfg109/cfg110 are unsealed --
+  revising a threshold after seeing the sealed result it is meant to
+  judge would defeat the entire pre-registration discipline this file
+  exists to enforce.
+
+  METRIC: relative-energy error, meV/atom, same formula used throughout
+  this project: (E_pred(config) - E_pred(phase_relaxed)) / natoms,
+  compared against the equivalent DFT-derived quantity.
+
+  THRESHOLD: 2.3865 meV/atom
+
+  BASIS: the MAX absolute relative-energy error among the 19 GENUINELY
+  INDEPENDENT members of the Dataset-100 TEST+BLIND_HOLDOUT reserved-20,
+  evaluating the FROZEN al3ni_combined220_lora_v1 checkpoint (fresh
+  leakage check re-run: 0/20 reserved config_ids found in combined-220's
+  TRAIN-182 or VALIDATION-18). "Genuinely independent" excludes
+  cfg043_Al3Ni_volume_rattle_expansion -- see CFG043 EXCLUSION RATIONALE
+  below. The value belongs to cfg060_Al3Ni5_volume_rattle_expansion
+  (BLIND_HOLDOUT). Evidence: results/combined220_reserved_evaluation_v1/
+  combined220_reserved_per_config.csv,
+  configs/COMBINED220_RESERVED_EVALUATION_STATUS.txt,
+  sha256=259667ca61783d1e4985ca219cdd93754f39701ab24a18e6b90d2c4bd3940f82.
+  This is still a real observed extreme, not a computed percentile or a
+  round number -- same derivation philosophy as the leakage threshold
+  0.734644 and gate (d) ceiling/floor 0.628835/0.297055 in
+  configs/SESSION_STATE_AL3NI_EXPANSION_DESIGN.md Section 3 -- with the
+  one change being which population that extreme is drawn from.
+
+  CFG043 EXCLUSION RATIONALE (explicit, not silent):
+  cfg043_Al3Ni_volume_rattle_expansion IS a genuine BLIND_HOLDOUT member
+  of Dataset-100 by the frozen manifest (verified directly, not assumed:
+  data/datasets/ni_al_dataset100_blind_holdout_manifest.csv row 83,
+  split=blind_holdout, target_role=BLIND_HOLDOUT) -- it was never
+  conflated with the set, it is a real member of it. It is excluded from
+  THRESHOLD-SETTING use specifically because it is design-contaminated:
+  it has been evaluated at every single checkpoint in this project since
+  round 1 (hard-coded as REF_IDS[0] in
+  scripts/evaluate_al3ni_interim_gate_{127,129,211,218}.py), and every
+  remediation round's design was explicitly steered by driving its error
+  down (configs/NI_AL_DATA_SHOWCASE.md Section 11: 6.60 -> 2.88 -> 2.15
+  meV/atom, tracked and acted on round by round). It was never
+  gradient-trained on -- no direct TRAIN leakage -- but it has functioned
+  as a de facto human-in-the-loop validation signal across 5+ design
+  rounds. That is a real, documented form of INDIRECT leakage through the
+  design process, distinct from direct training leakage, and it
+  disqualifies cfg043 from anchoring a single-point MAX-based threshold
+  (though it remains a legitimate, undisturbed member of the reserved-20
+  for aggregate reporting, where one point's influence is diluted rather
+  than determinative).
+
+  SENSITIVITY TABLE (supporting evidence, |relative-energy error|,
+  meV/atom, frozen combined-220 checkpoint):
+
+    | Population        | n  | min    | median | p75    | p90    | max              |
+    |--------------------|----|--------|--------|--------|--------|------------------|
+    | WITH cfg043        | 20 | 0.0197 | 0.2499 | 0.9799 | 2.2131 | 3.0402 (cfg043)  |
+    | WITHOUT cfg043     | 19 | 0.0197 | 0.2474 | 0.9202 | 1.5907 | 2.3865 (cfg060)  |
+
+  Dropping the one contaminated point moves max by 22% (3.0402 ->
+  2.3865) and p90 by 28% (2.2131 -> 1.5907); median/p75 barely move.
+  The distortion is concentrated entirely in the upper tail -- exactly
+  where a max-based threshold reads from -- which is direct quantitative
+  confirmation that cfg043 does not belong in the derivation basis.
+
+  AGGREGATE STABILITY CONTEXT: despite cfg043 itself regressing across
+  the two most recent (small, noise-prone) rounds -- 2.046 meV/atom
+  (combined-211) -> 2.681 (combined-218, +7 configs) -> 3.040
+  (combined-220, +2 configs), matching the established
+  small-round-regresses-probes pattern exactly, no exception -- the
+  AGGREGATE held-out-20 relative-energy error actually IMPROVED slightly
+  over the same span: RMSE 1.148 -> 1.129 meV/atom, MAE 0.763 -> 0.713
+  meV/atom (combined-211 evaluation:
+  configs/COMBINED211_RESERVED_EVALUATION_STATUS.txt; combined-220:
+  configs/COMBINED220_RESERVED_EVALUATION_STATUS.txt). This is consistent
+  with cfg043's rise being small-round noise riding on a stable-to-
+  improving underlying model, not a real generalization failure.
+
+  EXPLICIT LIMITATION -- confidence bound, not just a caveat: only TWO
+  full reserved-20 evaluations exist in this project's history
+  (combined-211 and combined-220). The "aggregate is stable" claim above
+  rests on ONE before/after comparison, not a trend line -- there is no
+  dense time series for the full-20 aggregate the way there is for
+  cfg043 alone. Treat the stability claim, and by extension this
+  threshold, as resting on limited longitudinal evidence, not as
+  statistically well-established over multiple independent checkpoints.
+
+  DOCUMENTED FALLBACK (not the primary basis): p90 of the held-out-19
+  (excluding cfg043) = 1.5907 meV/atom. Less sensitive to any single
+  remaining point than a max statistic at this small sample size (n=19),
+  at the cost of moving further from the project's "real accepted
+  extreme, not a computed percentile" precedent. Recorded here for
+  reference; NOT the locked threshold. If a future review finds the
+  max-of-19 basis too fragile, this is the pre-registered next candidate
+  -- not to be adopted after the fact without being written down first.
+
+  JUSTIFICATION (one sentence): 2.3865 meV/atom is the worst observed
+  relative-energy error among the 19 reserved held-out configurations
+  that have never been read, trained on, or used to steer any design
+  decision in this project (cfg060), explicitly excluding the one
+  reserved point (cfg043) with documented indirect design-process
+  leakage, and it remains ~8.9x tighter than the ~21.228 meV/atom
+  zero-shot baseline (configs/NI_AL_DATA_SHOWCASE.md Section 7,
+  `AlNi_iso_m02`) that originally defined "unacceptable" for this
+  project.
+
+  RULE: at unsealing, compute the same relative-energy error for
+  cfg109_Al3Ni_iso_expansion and cfg110_Al3Ni_volume_rattle_expansion
+  against al3ni_combined220_lora_v1. PASS requires BOTH configs' absolute
+  relative-energy error <= 2.3865 meV/atom. This is a per-config
+  threshold, not an average -- consistent with using a max (worst-case
+  among the clean 19), not a mean, as the derivation basis.
+
+  cfg115 (VALIDATION-role, seen during training-time model selection, not
+  reserved data) remains explicitly excluded from this threshold's
+  evidence, same as before. cfg043's own relative-energy error at
+  unsealing time should still be RECORDED for continuity with its time
+  series, but must NOT be used to judge pass/fail -- it is not part of
+  the threshold basis.
+
+  CORRECTION HISTORY: this file originally locked 3.0402 meV/atom (the
+  max INCLUDING cfg043) on 2026-08-17, in direct contradiction of the
+  standing instruction that cfg043/cfg115 were "context only, not
+  threshold basis." The error was caught the same day, before any
+  unsealing occurred, via explicit review of cfg043's true split role and
+  design-contamination history (Sections above). No unsealing was ever
+  performed against the incorrect value.
+
+INTERIM GATE - HISTORICAL (110-STRUCTURE THROUGH COMBINED-218 CHECKPOINTS)
+NOT SEALED. NO PASS/FAIL THRESHOLD APPLIED AT THE TIME. SUPERSEDED BY THE
+LOCKED THRESHOLD ABOVE FOR ALL FUTURE (I.E. UNSEALING) DECISIONS.
+
+  Purpose (as originally written, kept verbatim for history): track
+  whether each remediation round was moving the model in the right
+  direction, without touching sealed data and without forcing a premature
+  go/no-go decision.
+
+  Metrics tracked, non-sealed, every round from 110 through combined-218:
+
+  1. Relative-energy error on cfg043_Al3Ni_volume_rattle_expansion
+     (Dataset-100 HOLDOUT, NOT sealed) - each new checkpoint vs the prior
+     one. This is the same comparison originally used to diagnose the
+     cfg043 failure (configs/SESSION_STATE_AL3NI_EXPANSION_DESIGN.md
+     Section 2).
+
+  2. Relative-energy error on cfg115_Al3Ni_iso_expansion (VALIDATION, NOT
+     sealed; this session's resolved +5.30% design,
+     configs/SESSION_STATE_AL3NI_EXPANSION_DESIGN.md Section 6/7).
+
+  These trend numbers (per SESSION_STATE_AL3NI_EXPANSION_DESIGN.md Section
+  13's decision log) are exactly what showed round-size-correlated swings
+  and fed the 2026-08-17 stop-expansion decision -- they were never a
+  pass/fail gate, and still are not. The FINAL ACCEPTANCE CRITERION above,
+  not these two probes, is what unsealing is judged against.
+
+CROSS-REFERENCES
+
+  configs/SESSION_STATE_AL3NI_EXPANSION_DESIGN.md
+    Section 2  - why cfg043 failed originally (extrapolation diagnosis)
+    Section 3  - threshold derivation methodology (do not invent numbers)
+    Section 6  - current 110-structure design (cfg101-cfg115)
+    Section 7  - cfg115 placement resolution
+    Section 8  - recurring invented-threshold failure pattern
+    Section 9  - invariants, including this unsealing trigger
+    Section 11 - original roadmap and interim gate (superseded, see below)
+    Section 13 - 2026-08-17 decision log: stop expansion at ~220 structures
+
+  results/combined220_reserved_evaluation_v1/
+  configs/COMBINED220_RESERVED_EVALUATION_STATUS.txt
+    Evidence backing the locked threshold above.
+
+  configs/EXPANSION_BATCH_DESIGN_POLICY.md
+    Required gate process for any future expansion round, should one be
+    justified later.

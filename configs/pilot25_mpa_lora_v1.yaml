@@ -1,0 +1,51 @@
+# PROPOSED ONLY. Do not launch without explicit approval.
+# The test dataset is deliberately absent to prevent test-set use in tuning.
+name: pilot25_mpa_lora_v1
+seed: 20260810
+
+train_file: /workspace/ni_al/data/datasets/ni_al_pilot_train_15.extxyz
+valid_file: /workspace/ni_al/data/datasets/ni_al_pilot_val_5.extxyz
+energy_key: energy
+forces_key: forces
+stress_key: stress
+
+foundation_model: medium-mpa-0
+lora: true
+lora_rank: 4
+lora_alpha: 1.0
+multiheads_finetuning: false
+E0s: estimated
+
+device: cuda
+default_dtype: float32
+compute_forces: true
+compute_stress: true
+loss: weighted
+energy_weight: 1.0
+forces_weight: 10.0
+stress_weight: 1.0
+
+batch_size: 2
+valid_batch_size: 5
+lr: 0.005
+optimizer: adam
+amsgrad: true
+scheduler: ReduceLROnPlateau
+lr_factor: 0.8
+scheduler_patience: 10
+max_num_epochs: 200
+patience: 30
+eval_interval: 1
+ema: true
+ema_decay: 0.995
+clip_grad: 10.0
+
+work_dir: /workspace/ni_al/runs/pilot25_mpa_lora_v1
+log_dir: /workspace/ni_al/logs/pilot25_mpa_lora_v1
+model_dir: /workspace/ni_al/models/pilot25_mpa_lora_v1
+checkpoints_dir: /workspace/ni_al/checkpoints/pilot25_mpa_lora_v1
+keep_checkpoints: true
+save_cpu: true
+restart_latest: false
+wandb: false
+

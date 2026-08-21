@@ -1,0 +1,136 @@
+NI-AL RUNPOD SAFE TERMINATION CHECK
+===================================
+
+Timestamp (UTC): 2026-08-10T13:25:06+00:00
+Hostname: 3a24ef2d2d16
+Project root: /workspace/ni_al
+Project root exists: YES
+
+/workspace mount
+----------------
+Mount target: /workspace
+Source: mfs#euro.runpod.net:9421[/networkvolumes/rxseq7it2p]
+Filesystem type: fuse
+Options: rw,nosuid,nodev,relatime,user_id=0,group_id=0,allow_other
+Capacity: 2.3P total, 1.7P used, 597T available (75% used)
+Writable: YES
+Interpretation: /workspace is a writable persistent Network Volume mount.
+
+Project size
+------------
+Total /workspace/ni_al: 3.4G
+data: 30M
+models: 19M
+checkpoints: 20M
+logs: 3.0M
+scripts: 2.0M
+configs: 985K before this report
+envs: 1.7G
+tools: 1.7G
+inbox: 2.2M
+
+Required project directories
+----------------------------
+Present: data, data/raw_dft, data/processed, data/datasets, models,
+checkpoints, logs, scripts, configs, envs, tools, inbox.
+No directory under data/raw_dft was moved, modified, or deleted.
+
+Datasets found
+--------------
+data/processed:
+- ni_al_pilot_dft_25.extxyz — 28755 bytes — 2026-08-10 12:52:40 UTC
+- pilot01_all.extxyz — 16438 bytes — 2026-08-10 11:49:34 UTC
+- pilot01_manifest.csv — 2293 bytes — 2026-08-10 11:49:34 UTC
+- pilot25_validation_report.txt — 5198 bytes — 2026-08-10 13:02:23 UTC
+
+data/datasets:
+- ni_al_pilot_train_15.extxyz — 16530 bytes — 2026-08-10 13:02:23 UTC
+- ni_al_pilot_val_5.extxyz — 6042 bytes — 2026-08-10 13:02:23 UTC
+- ni_al_pilot_test_5.extxyz — 6183 bytes — 2026-08-10 13:02:23 UTC
+- pilot01_ft_train.extxyz — 11354 bytes — 2026-08-10 11:58:45 UTC
+- pilot01_ft_valid.extxyz — 5084 bytes — 2026-08-10 11:58:45 UTC
+- pilot01_train.extxyz — 11413 bytes — 2026-08-10 11:51:23 UTC
+- pilot01_valid.extxyz — 5025 bytes — 2026-08-10 11:51:23 UTC
+
+Pilot 25 status
+---------------
+Expected SHA256:
+35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+
+- inbox/pilot25_upload/ni_al_pilot_dft_25_copy1.extxyz:
+  28755 bytes; SHA256 matches expected.
+- inbox/pilot25_upload/ni_al_pilot_dft_25_copy2.extxyz:
+  28755 bytes; SHA256 matches expected.
+- data/processed/ni_al_pilot_dft_25.extxyz:
+  28755 bytes; SHA256 matches expected.
+- The two uploaded copies are byte-for-byte identical: YES.
+
+Models found under /workspace
+-----------------------------
+models/pilot01_smoke_v1:
+- pilot01_smoke_v1.model — 611675 bytes — 2026-08-10 11:55:10 UTC
+- pilot01_smoke_v1_compiled.model — 701978 bytes — 2026-08-10 11:55:11 UTC
+
+models/pilot01_mpa_lora_v1:
+- pilot01_mpa_lora_v1.model — 6238786 bytes — 2026-08-10 12:01:50 UTC
+- pilot01_mpa_lora_v1_compiled.model — 6338181 bytes — 2026-08-10 12:01:51 UTC
+
+Checkpoints found under /workspace
+----------------------------------
+Checkpoint file count: 4
+Total checkpoint bytes: 14816189
+- pilot01_mpa_lora_v1/pilot01_mpa_lora_v1_run-20260810.model — 6241123 bytes
+- pilot01_mpa_lora_v1/pilot01_mpa_lora_v1_run-20260810_epoch-14.pt — 6593707 bytes
+- pilot01_smoke_v1/pilot01_smoke_v1_run-20260810.model — 613560 bytes
+- pilot01_smoke_v1/pilot01_smoke_v1_run-20260810_epoch-1.pt — 1367799 bytes
+
+Environment status
+------------------
+Path: /workspace/ni_al/envs/mace-py312-cu128
+Size: 1.7G
+Python executable exists and is executable: YES
+mace_run_train exists and is executable: YES
+Reinstallation performed: NO
+
+Scripts, configs, and documentation
+-----------------------------------
+Important persistent files include:
+- configs/mace_environment_freeze.txt
+- configs/PILOT25_PROVENANCE.txt
+- configs/pilot25_mpa_lora_v1.yaml
+- scripts/qe_to_extxyz.py
+- scripts/make_pilot01_ft_split.py
+- scripts/validate_split_pilot01.py
+- scripts/validate_and_split_pilot25.py
+- scripts/run_pilot25_mpa_lora_v1.sh (proposal only; not executed)
+- PROJECT_STATUS.md
+- README.md
+
+Active-process and write-stability check
+----------------------------------------
+Active MACE training process: NONE
+Active project Python conversion/validation process: NONE
+Active rsync/scp/cp/mv/unzip/tar/runpodctl/wget/curl project operation: NONE
+Open file descriptors targeting /workspace/ni_al: NONE found
+Important project files stable across repeated size/mtime snapshots: YES
+Codex processes exist but held no open project file descriptors during the
+check and showed no meaningful project write in progress.
+
+Important files outside /workspace
+----------------------------------
+Unique Ni-Al project datasets, models, checkpoints, scripts, logs, configs, or
+results found only under /root or /tmp: NONE.
+
+/tmp/pilot25_training_processes.txt is a transient process-check diagnostic,
+not unique project data and not required for recovery. Credential, SSH, Codex
+authentication/configuration, package-cache, and generic system locations were
+excluded from inspection and were not exposed.
+
+Filesystem flush and final verification
+---------------------------------------
+Sync completed: YES
+Final artifact readability check: PASS
+
+Final decision
+--------------
+SAFE TO TERMINATE

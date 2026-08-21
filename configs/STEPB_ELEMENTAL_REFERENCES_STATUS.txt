@@ -1,0 +1,17 @@
+STEP B -- QE/PBE ELEMENTAL REFERENCES (mu_Al, mu_Ni)
+
+QE binary SHA256: 66b7ea9f173b006854fc9e27dc9982c332dad295384803d612da7dad3edc7f8e
+Al pseudopotential SHA256: fd7b78921e6d0939095b681c328732668eaefd1dee6882fdbc03be463550cc97
+Ni pseudopotential SHA256: f76b86ce60cde3d83dfcc8df79ba05478db573d158289f1b226919442d977d25
+
+Al k-mesh convergence check:
+  E(20x20x20) = -39.5027416300 Ry
+  E(24x24x24) = -39.5026446100 Ry
+  dE = 1.320024 meV/atom
+  ADOPTED: (24, 24, 24)
+  Justification: 24x24x24 adopted: dE(20 vs 24)=1.320024 meV/atom, at/above the 0.5 meV/atom bar -- denser mesh required.
+
+mu_Al = -537.46115182 eV/atom (nspin=1, kmesh=(24, 24, 24), relaxed a=4.038351 A)
+mu_Ni = -4670.57345642 eV/atom (nspin=2, start_mag=0.60, kmesh=(22, 22, 22), relaxed a=3.517938 A)
+
+STEP B STATUS: COMPLETE

@@ -1,0 +1,97 @@
+LAMMPS ML-IAP KOKKOS(CUDA/ADA89) BUILD STATUS
+
+Completed UTC: 2026-08-19T09:26:42Z
+
+REASON FOR THIS BUILD
+  Existing tools/lammps/install/mliap_python build lacks Kokkos, so its
+  MLIAPDataPy class has no forward_exchange/reverse_exchange methods --
+  mace 0.3.16's ML-IAP ghost-atom feature exchange calls these
+  unconditionally (even single-process, periodic ghost atoms always
+  exist). Stage A single-point check failed with:
+    AttributeError: 'mliap_unified_couple.MLIAPDataPy' object has no
+    attribute 'forward_exchange'
+  Kept the mliap_python build intact as fallback/record -- did NOT
+  modify or delete it.
+
+SOURCE
+  Checkout (reused from mliap_python build): /workspace/ni_al/tools/lammps/sources/lammps
+  Commit: 9e42b6f0f2c68a092d5847d4127a053dc50e126a
+  Describe: stable_22Jul2025_update5
+  Local modifications at build time: none
+
+BUILD FLAGS (cmake)
+  PKG_PYTHON=ON
+  PKG_ML-IAP=ON
+  MLIAP_ENABLE_PYTHON=ON
+  BUILD_SHARED_LIBS=ON
+  Python_EXECUTABLE=/workspace/ni_al/envs/mace-py312-cu128/bin/python
+  BUILD_MPI=OFF
+  CMAKE_BUILD_TYPE=Release
+  CMAKE_INSTALL_PREFIX=/workspace/ni_al/tools/lammps/install/mliap_kokkos
+  PKG_KOKKOS=ON
+  Kokkos_ENABLE_CUDA=ON
+  Kokkos_ARCH_ADA89=ON
+  CMAKE_CXX_COMPILER=/workspace/ni_al/tools/lammps/sources/lammps/lib/kokkos/bin/nvcc_wrapper
+  (source dir: /workspace/ni_al/tools/lammps/sources/lammps/cmake)
+
+TOOLCHAIN
+  Python (target venv): /workspace/ni_al/envs/mace-py312-cu128/bin/python
+  nvcc: Build cuda_12.8.r12.8/compiler.35583870_0
+  gcc: gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  cmake: cmake version 3.28.3
+  nvcc_wrapper: /workspace/ni_al/tools/lammps/sources/lammps/lib/kokkos/bin/nvcc_wrapper
+  nproc used: 32
+
+INSTALL
+  Prefix: /workspace/ni_al/tools/lammps/install/mliap_kokkos
+  lmp binary: /workspace/ni_al/tools/lammps/install/mliap_kokkos/bin/lmp
+  lmp sha256: d9f365fb2faff46be368ed0dad86008aea308fedc1355f48078197d039968f2b
+  lmp runs (with LD_LIBRARY_PATH set): NO ()
+  Python module: isolated install at /workspace/ni_al/tools/lammps/install/mliap_kokkos/pyinstall (NOT global
+    site-packages -- selected via PYTHONPATH, see tools/lammps/setup_lammps_env.sh,
+    so it coexists with the mliap_python build's isolated install)
+
+VERIFICATION
+  python -c 'import lammps' (PYTHONPATH-isolated): YES (/workspace/ni_al/tools/lammps/install/mliap_kokkos/pyinstall/lammps/__init__.py)
+  MLIAPUnified importable: YES (OK)
+  Kokkos ML-IAP python coupling module built (mliap_unified_couple_kokkos*): YES
+
+STAGE A RE-VERIFICATION (2026-08-19, same day, after this build)
+  Re-ran scripts/lammps_stage_a_single_point.py against this build. Required
+  three fixes beyond just switching the install prefix, all now folded into
+  the script and documented inline there:
+    1. cmdargs need '-k on g 1 -sf kk -pk kokkos neigh half newton on' (not
+       'neigh full newton on', which this LAMMPS version rejects: KOKKOS
+       requires newton off with neigh full, but pair_style mliap itself
+       requires newton pair on -- neigh full is simply incompatible with
+       mliap here; half+on is the working combination) and
+       activate_mliappy_kokkos()/load_unified_kokkos() (not the plain
+       non-kokkos functions).
+    2. The Kokkos GPU-array coupling (mliap_unified_couple_kokkos.pyx)
+       hard-requires `cupy` (zero-copy GPU array wrapping of Kokkos device
+       pointers) -- not installed, caused a NameError. Installed
+       cupy-cuda12x into the target venv.
+    3. lmp.finalize() segfaults in-process (Kokkos::Cuda::finalize()
+       conflicting with torch+cupy's own live CUDA contexts) -- confirmed via
+       PYTHONFAULTHANDLER traceback that this happens strictly AFTER `run 0`
+       completes and results are already extracted, i.e. it's a teardown-only
+       bug, not a compute bug. Script no longer calls lmp.finalize() (harmless
+       to skip for a one-shot-per-process script).
+    4. (Not a bug, a real quirk) extract_atom("f"/"id") under the Kokkos
+       array layout returns nlocal+nghost rows (826 vs 16 real atoms here --
+       periodic ghost copies within the 6 Angstrom cutoff), not just owned
+       atoms. Owned atoms are confirmed to occupy the first `natoms` rows in
+       read_data order (atom_modify sort disabled, single process) --
+       verified explicitly via id check, not assumed.
+
+  Result (configs/LAMMPS_STAGE_A_SINGLE_POINT_STATUS.txt):
+    Al3Ni_relaxed:              energy diff 7.3e-12 eV (0.000000 meV/atom), max force diff 1.2e-14 eV/A -- PASS
+    cfg036_Al3Ni_rattle_large:  energy diff 3.6e-12 eV (0.000000 meV/atom), max force diff 1.6e-14 eV/A -- PASS
+    OVERALL: PASS (float64 roundoff-level agreement -- export, units, and
+    LAMMPS integration confirmed correct)
+
+  tools/lammps/setup_lammps_env.sh ACTIVE_BUILD_DEFAULT flipped to "kokkos"
+  following this verification.
+
+STATUS
+BUILD COMPLETE, STAGE A VERIFIED PASS -- THIS IS NOW THE ACTIVE LAMMPS BUILD

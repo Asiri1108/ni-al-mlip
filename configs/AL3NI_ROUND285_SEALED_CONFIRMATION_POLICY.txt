@@ -1,0 +1,29 @@
+AL3NI ROUND285 SEALED CONFIRMATION POLICY (REVISION 2)
+
+Written UTC: 2026-08-18T14:11:29.687340+00:00
+Supersedes the prior policy naming cfg298 -- retired (descriptor-degenerate with cfg043,
+the feedback probe; see data/al3ni_remediation_v1/round285_sealed_retirement_log.txt).
+cfg295/cfg296 remain retired from the first revision (leakage-compromised).
+
+SEALED CONFIG IDS (current):
+  cfg297_Al3Ni_iso_expansion (s=3.50%, family=iso_expansion, rattle_sigma_A=0.0)
+  cfg299_Al3Ni_volume_rattle_expansion (s=3.6%, family=volume_rattle_expansion, rattle_sigma_A=0.015)
+
+cfg299 placed off cfg043's exact strain (3.5%) specifically to avoid the descriptor-
+degeneracy that disqualified cfg298, while staying inside the 3.0%->4.0% under-dense interval and clearing the 0.3269 TRAIN-distance threshold. Verified non-degenerate against cfg043, cfg109, cfg110, cfg115, and cfg297 -- see configs/ROUND285_SEALED_PAIR_REVISION2_STATUS.md.
+
+RULE (unchanged): geometry (cell, positions) may be read for design/screening purposes at
+any point. Energy, forces, and stress must NEVER be read by any script, at any point, until
+a single, explicitly designated future unsealing event -- immediately before the next
+LAMMPS-readiness assessment against whatever model is final at that time.
+
+STATUS UPDATE (2026-08-19): DFT for both cfg297 and cfg299 completed cleanly (round285
+production DFT, pod03; EXIT_CODE=0, JOB_DONE=YES, SCF_CONVERGED=YES for both -- see
+data/al3ni_remediation_v1/round285_production_dft/pod03/*/attempt_001/config_complete.env
+and configs/ROUND285_POD_03_STATUS.txt). Labels (energy, forces, stress) have still NOT
+been read by any script -- DFT completion status only was checked, per the pod script's
+own protection assertions. The "DFT NOT YET RUN" line above was stale and is corrected
+here; it did not mean the seal itself was broken.
+
+STATUS: DFT COMPLETE, SEAL INTACT (labels unread). These two structures must NOT be added
+to TRAIN or VALIDATION at any point before or after unsealing.

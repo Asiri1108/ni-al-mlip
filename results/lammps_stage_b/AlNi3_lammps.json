@@ -1,0 +1,19 @@
+{
+  "phase": "AlNi3",
+  "natoms": 4,
+  "energy_eV": -14550.848930129394,
+  "fmax_final_eV_per_A": 7.344736889797208e-11,
+  "press_final_bar": 2.724318702374824e-08,
+  "stopping_criterion": "Stopping criterion = force tolerance",
+  "cellpar": [
+    3.5673874629736795,
+    3.5673874629950686,
+    3.5673874629950806,
+    89.99999999999777,
+    89.99999999999996,
+    89.99999999999997
+  ],
+  "volume_per_atom_A3": 11.349869128192063,
+  "spacegroup_symbol": "Pm-3m",
+  "spacegroup_number": 221
+}

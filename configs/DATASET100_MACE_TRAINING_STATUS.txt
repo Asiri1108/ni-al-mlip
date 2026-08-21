@@ -1,0 +1,74 @@
+Ni-Al DATASET-100 MACE TRAINING STATUS
+
+Timestamp UTC: 2026-08-13T09:37:43.964975+00:00
+Run: dataset100_matpes_pbe_lora_v1
+Training completion status: COMPLETE
+
+DATA AND LEAKAGE CONTROL
+TRAIN: /workspace/ni_al/data/datasets/ni_al_dataset100_train_65.extxyz
+TRAIN SHA256: fe49d0130665bd8f28582ab32d0fa75da086fa8da93b36a3568ffcada94c025a
+TRAIN configurations/labels: 65/65
+VALIDATION: /workspace/ni_al/data/datasets/ni_al_dataset100_validation_15.extxyz
+VALIDATION SHA256: 215e591a293fe802c5bc90d7f1dd041016fb5c75c1c94b44dab8a45af7250a95
+VALIDATION configurations/labels: 15/15
+Frozen TRAIN manifest SHA256: 87e3b96ebddc95beb910665985821a4df58919351d6f58df7cda8a355ac2047d
+Frozen VALIDATION manifest SHA256: 87fc9debed6a93a8b8b823d188ff43444148a65c855e173c31da264c621bd42f
+Frozen TEST manifest SHA256: 88af05d9bc39658683d940d45fad96422e214d2710af3783c1cdb69f8483e2e3
+Frozen BLIND HOLDOUT manifest SHA256: e7814eda578b09694da546eebc60f3398c7ca85f86763d9b514c0de056fb75bf
+TEST passed to MACE: NO
+BLIND HOLDOUT passed to MACE: NO
+MACE tests: []
+
+METHOD
+Foundation: MACE-MATPES-PBE-0 / mace-matpes-pbe-0
+Foundation SHA256: e618ad582b84239905b9c3b77ce6e9ce111b0ecd1533223a1a6aac7a696b8aa0
+Pilot-25 baseline model preserved: /workspace/ni_al/models/pilot25_matpes_pbe_lora_v1/pilot25_matpes_pbe_lora_v1.model
+Pilot-25 baseline SHA256: 94d8d4dade7322077d6d2343820a32678eafd7499d1762ee7f180b4ce4fc7719
+LoRA: true; rank=4; alpha=1.0; multihead replay=false
+Loss: WeightedEnergyForcesStressLoss
+Weights: energy=1.0; forces=10.0; stress=1.0
+Units: eV, Angstrom, eV/Angstrom, eV/Angstrom^3
+Precision/device: float64 / CUDA
+Optimizer: Adam; lr=0.001; weight_decay=0.0; AMSGrad=true
+Batch sizes: train=2; validation=2
+Epoch policy: max=100; patience=20; eval_interval=1
+EMA: true; decay=0.995; clip_grad=10.0
+E0s: estimated from approved TRAIN-65 only
+Random seed: 20260811
+
+COMMAND AND SOFTWARE
+Config: /workspace/ni_al/configs/dataset100_matpes_pbe_lora_v1.yaml
+Config SHA256: dfe0954efba7f88fed8a0a021fc12b96aae83263c3e6b2de722faf3a2a3891eb
+Exact command: env XDG_CACHE_HOME=/workspace/ni_al/runs/dataset100_matpes_pbe_lora_v1/downloads TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1 /workspace/ni_al/envs/mace-py312-cu128/bin/mace_run_train --config=/workspace/ni_al/configs/dataset100_matpes_pbe_lora_v1.yaml
+Python: 3.12.3
+MACE: 0.3.16
+PyTorch: 2.8.0+cu128; CUDA 12.8
+ASE: 3.29.0
+GPU: 0, NVIDIA GeForce RTX 4090, GPU-079a9917-9f04-5ed5-f7f3-5ec915791836, 570.195.03, 24564 MiB
+Peak monitored GPU memory: 1778 MiB
+tmux session: ni_al_dataset100_mace_training
+Wall time: 339 seconds
+
+TRAINING AND SELECTION
+Last epoch: 99
+Selected validation checkpoint epoch: 98
+Selected checkpoint: /workspace/ni_al/checkpoints/dataset100_matpes_pbe_lora_v1/dataset100_matpes_pbe_lora_v1_run-20260811_epoch-98.pt
+Selected validation loss: 0.00012257
+Selected validation energy RMSE: 0.70 meV/atom
+Selected validation force RMSE: 5.97 meV/Angstrom
+Selected validation stress RMSE: 2.13 meV/Angstrom^3
+Checkpoint count: 97
+
+FROZEN MODEL
+Primary: /workspace/ni_al/models/dataset100_matpes_pbe_lora_v1/dataset100_matpes_pbe_lora_v1.model
+Primary SHA256: 745f02582e604fed390d567198e4e4dfa783c71a61d749c58419659bc784a0d9
+Compiled: /workspace/ni_al/models/dataset100_matpes_pbe_lora_v1/dataset100_matpes_pbe_lora_v1_compiled.model
+Compiled SHA256: 5cb8edea717fd00f5bbfb6e83fb66a3efc542ade5809e67061ede8d07ab4c81c
+Selected checkpoint SHA256: 91ab1990a9d52f7dd120e226a99f748ac33414d3487711d8a7856221ab7c69b7
+Read-only freeze applied: YES
+
+DATASET-100 MACE TRAINING COMPLETE
+MODEL FROZEN: YES
+TEST USED FOR TRAINING: NO
+BLIND HOLDOUT USED FOR TRAINING: NO
+READY FOR FINAL EVALUATION

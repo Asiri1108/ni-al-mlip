@@ -1,0 +1,282 @@
+{
+  "AlNi": {
+    "0K_dft": {
+      "comp": {
+        "n_Al": 1,
+        "n_Ni": 1,
+        "natoms": 2
+      },
+      "shells": {
+        "AlAl": {
+          "peak_r": 2.875,
+          "peak_g": 28.0023818449093,
+          "shell_r": 2.9250000000000003,
+          "coordination_number": 6.0
+        },
+        "AlNi": {
+          "peak_r": 2.5250000000000004,
+          "peak_g": 48.40460084291415,
+          "shell_r": 2.575,
+          "coordination_number": 8.0
+        },
+        "NiNi": {
+          "peak_r": 2.875,
+          "peak_g": 28.0023818449093,
+          "shell_r": 2.9250000000000003,
+          "coordination_number": 6.0
+        }
+      }
+    },
+    "300K_md": {
+      "comp": {
+        "n_Al": 64,
+        "n_Ni": 64,
+        "natoms": 128
+      },
+      "shells": {
+        "AlAl": {
+          "peak_r": 2.875,
+          "peak_g": 6.038941376594215,
+          "shell_r": 3.1750000000000003,
+          "coordination_number": 6.0
+        },
+        "AlNi": {
+          "peak_r": 2.5250000000000004,
+          "peak_g": 11.36179256092726,
+          "shell_r": 2.825,
+          "coordination_number": 8.0
+        },
+        "NiNi": {
+          "peak_r": 2.825,
+          "peak_g": 4.72908853352768,
+          "shell_r": 3.2750000000000004,
+          "coordination_number": 6.0
+        }
+      }
+    }
+  },
+  "Al3Ni": {
+    "0K_dft": {
+      "comp": {
+        "n_Al": 12,
+        "n_Ni": 4,
+        "natoms": 16
+      },
+      "shells": {
+        "AlAl": {
+          "peak_r": 2.875,
+          "peak_g": 12.619570398389325,
+          "shell_r": 2.9250000000000003,
+          "coordination_number": 6.666666666666667
+        },
+        "AlNi": {
+          "peak_r": 2.475,
+          "peak_g": 30.650839030064056,
+          "shell_r": 2.5250000000000004,
+          "coordination_number": 2.6666666666666665
+        },
+        "NiNi": {
+          "peak_r": 3.7750000000000004,
+          "peak_g": 13.175249915953591,
+          "shell_r": 3.825,
+          "coordination_number": 2.0
+        }
+      }
+    },
+    "300K_md": {
+      "comp": {
+        "n_Al": 96,
+        "n_Ni": 32,
+        "natoms": 128
+      },
+      "shells": {
+        "AlAl": {
+          "peak_r": 2.825,
+          "peak_g": 5.505274075349506,
+          "shell_r": 3.125,
+          "coordination_number": 7.770833333333333
+        },
+        "AlNi": {
+          "peak_r": 2.475,
+          "peak_g": 10.27689390229939,
+          "shell_r": 2.625,
+          "coordination_number": 2.6770833333333335
+        },
+        "NiNi": {
+          "peak_r": 3.725,
+          "peak_g": 5.104018592788202,
+          "shell_r": 3.825,
+          "coordination_number": 1.375
+        }
+      }
+    }
+  },
+  "Al3Ni2": {
+    "0K_dft": {
+      "comp": {
+        "n_Al": 3,
+        "n_Ni": 2,
+        "natoms": 5
+      },
+      "shells": {
+        "AlAl": {
+          "peak_r": 2.9250000000000003,
+          "peak_g": 17.248461764211445,
+          "shell_r": 2.975,
+          "coordination_number": 6.0
+        },
+        "AlNi": {
+          "peak_r": 2.4250000000000003,
+          "peak_g": 25.094504526548032,
+          "shell_r": 2.475,
+          "coordination_number": 3.3333333333333335
+        },
+        "NiNi": {
+          "peak_r": 2.725,
+          "peak_g": 22.357416650667183,
+          "shell_r": 2.7750000000000004,
+          "coordination_number": 3.0
+        }
+      }
+    },
+    "300K_md": {
+      "comp": {
+        "n_Al": 81,
+        "n_Ni": 54,
+        "natoms": 135
+      },
+      "shells": {
+        "AlAl": {
+          "peak_r": 2.975,
+          "peak_g": 4.261823303847408,
+          "shell_r": 3.225,
+          "coordination_number": 6.0
+        },
+        "AlNi": {
+          "peak_r": 2.4250000000000003,
+          "peak_g": 9.738709092513913,
+          "shell_r": 2.875,
+          "coordination_number": 5.320987654320987
+        },
+        "NiNi": {
+          "peak_r": 2.725,
+          "peak_g": 5.854021630812988,
+          "shell_r": 2.7750000000000004,
+          "coordination_number": 2.185185185185185
+        }
+      }
+    }
+  },
+  "Al3Ni5": {
+    "0K_dft": {
+      "comp": {
+        "n_Al": 3,
+        "n_Ni": 5,
+        "natoms": 8
+      },
+      "shells": {
+        "AlAl": {
+          "peak_r": 2.825,
+          "peak_g": 16.645145512043285,
+          "shell_r": 2.875,
+          "coordination_number": 2.6666666666666665
+        },
+        "AlNi": {
+          "peak_r": 2.5250000000000004,
+          "peak_g": 25.002473840989786,
+          "shell_r": 2.625,
+          "coordination_number": 9.333333333333334
+        },
+        "NiNi": {
+          "peak_r": 2.6750000000000003,
+          "peak_g": 13.36624520841664,
+          "shell_r": 2.725,
+          "coordination_number": 6.4
+        }
+      }
+    },
+    "300K_md": {
+      "comp": {
+        "n_Al": 54,
+        "n_Ni": 90,
+        "natoms": 144
+      },
+      "shells": {
+        "AlAl": {
+          "peak_r": 2.875,
+          "peak_g": 3.410110318010802,
+          "shell_r": 2.9250000000000003,
+          "coordination_number": 2.111111111111111
+        },
+        "AlNi": {
+          "peak_r": 2.475,
+          "peak_g": 8.650706339832931,
+          "shell_r": 2.825,
+          "coordination_number": 9.333333333333334
+        },
+        "NiNi": {
+          "peak_r": 2.625,
+          "peak_g": 5.00687707589733,
+          "shell_r": 3.0250000000000004,
+          "coordination_number": 6.7555555555555555
+        }
+      }
+    }
+  },
+  "AlNi3": {
+    "0K_dft": {
+      "comp": {
+        "n_Al": 1,
+        "n_Ni": 3,
+        "natoms": 4
+      },
+      "shells": {
+        "AlAl": {
+          "peak_r": 3.575,
+          "peak_g": 33.91987803929731,
+          "shell_r": 3.625,
+          "coordination_number": 6.0
+        },
+        "AlNi": {
+          "peak_r": 2.5250000000000004,
+          "peak_g": 45.33069215603636,
+          "shell_r": 2.575,
+          "coordination_number": 12.0
+        },
+        "NiNi": {
+          "peak_r": 2.5250000000000004,
+          "peak_g": 30.220461437357578,
+          "shell_r": 2.575,
+          "coordination_number": 8.0
+        }
+      }
+    },
+    "300K_md": {
+      "comp": {
+        "n_Al": 27,
+        "n_Ni": 81,
+        "natoms": 108
+      },
+      "shells": {
+        "AlAl": {
+          "peak_r": 3.6750000000000003,
+          "peak_g": 6.0108784653753204,
+          "shell_r": 3.875,
+          "coordination_number": 6.0
+        },
+        "AlNi": {
+          "peak_r": 2.5250000000000004,
+          "peak_g": 13.015929477244242,
+          "shell_r": 2.875,
+          "coordination_number": 12.0
+        },
+        "NiNi": {
+          "peak_r": 2.5250000000000004,
+          "peak_g": 8.771604647708076,
+          "shell_r": 2.7750000000000004,
+          "coordination_number": 8.0
+        }
+      }
+    }
+  }
+}

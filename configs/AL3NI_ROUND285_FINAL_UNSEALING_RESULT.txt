@@ -1,0 +1,35 @@
+AL3NI ROUND285 FINAL UNSEALING RESULT -- IRREVERSIBLE, RUNS EXACTLY ONCE
+
+Generated UTC: 2026-08-19T08:22:16.496488+00:00
+cfg297/cfg299 labels (energy, forces, stress) read for the FIRST TIME ever in this
+project's history, at this timestamp. This event does not repeat.
+
+PRECONDITIONS (all re-verified in-script before any sealed label was read):
+1. Acceptance criterion file: /workspace/ni_al/configs/ROUND285_SEALED_ACCEPTANCE_CRITERION.txt sha256=7e4fc32a8efa49c0a3a322b2165ed62dde36ca56098c5f6d41af2ebaf949600e (PRECONDITION VERIFIED vs sidecar)
+2. cfg297/cfg299 DFT completion: EXIT_CODE=0, JOB_DONE=YES, SCF_CONVERGED=YES, qe.out sha256 unchanged since completion (PRECONDITION VERIFIED, both configs)
+3. cfg297/cfg299 absence from combined-227 TRAIN(189)/VALIDATION(18): PRECONDITION VERIFIED
+4. Model (frozen, seed 20260811): /workspace/ni_al/models/al3ni_combined227_lora_v1/al3ni_combined227_lora_v1.model sha256=e4fd54cc8a4a090fc9e32d6625269142824bfada8315433127b3aa3118c65cee (PRECONDITION VERIFIED -- first pin, no prior independent record)
+
+THRESHOLD (locked, verbatim from acceptance criterion): 2.6183 meV/atom, per-config, both must pass
+
+DFT relaxed reference (Al3Ni_relaxed): -25138.175258 eV
+
+=== cfg297_Al3Ni_iso_expansion ===
+  DFT relative energy:  51.463567 meV/atom
+  Pred relative energy: 53.310138 meV/atom
+  Relative-energy error: 1.846570 meV/atom  |error|=1.846570 meV/atom
+  Threshold: 2.6183 meV/atom -> PASS
+
+=== cfg299_Al3Ni_volume_rattle_expansion ===
+  DFT relative energy:  55.180725 meV/atom
+  Pred relative energy: 57.102808 meV/atom
+  Relative-energy error: 1.922083 meV/atom  |error|=1.922083 meV/atom
+  Threshold: 2.6183 meV/atom -> PASS
+
+OVERALL RESULT: PASS
+LAMMPS AUTHORISED: YES
+
+STATUS
+AL3NI ROUND285 FINAL UNSEALING COMPLETE. This evaluation is final and will not be
+repeated or revised. cfg297/cfg299 were NOT merged into any TRAIN/VALIDATION split
+and no retraining occurred as part of this event.

@@ -1,0 +1,26 @@
+AL3NI COMBINED-127 MERGE STATUS (combined-113 + round3 cfg117-cfg141)
+
+Generated UTC: 2026-08-16T09:39:48.763267+00:00
+
+SOURCES (all read-only, none modified)
+  combined-113 all/train/val: ni_al_combined113_dft.extxyz (113) / ni_al_combined113_train_75.extxyz (75) / ni_al_combined113_validation_18.extxyz (18)
+  round3 (cfg117-cfg141, 14, all TRAIN role): round3_dft.extxyz (14)
+  cfg109/cfg110 (sealed): EXCLUDED, untouched -- geometry-only duplicate check performed, labels never read
+
+INTEGRITY CHECKS
+  config_id collision vs combined-113: NONE
+  geometry duplicate vs combined-113: NONE
+  geometry duplicate vs sealed cfg109/cfg110: NONE
+  internal round3 geometry duplicate: NONE
+
+OUTPUT
+  All 127:      /workspace/ni_al/data/datasets/ni_al_combined127_dft.extxyz  sha256=1981fae5174c6ff057179c066103e5b6c62be71865ece4907c7168c383005832
+  TRAIN 89:     /workspace/ni_al/data/datasets/ni_al_combined127_train_89.extxyz  sha256=1517e9dd13541eec7bc90f695a2b287863ca689ce3989b6dde8f88351aee6f29
+  VALIDATION 18: /workspace/ni_al/data/datasets/ni_al_combined127_validation_18.extxyz  sha256=079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff
+
+Round-trip: 127/127 all, 89/89 train, 18/18 validation
+Phase composition (all 127): {'AlNi': 22, 'Al3Ni2': 22, 'AlNi3': 21, 'Al3Ni5': 24, 'Al3Ni': 38}
+TEST/BLIND_HOLDOUT (Dataset-100's 20): UNCHANGED, not merged, referenced from original Dataset-100 files only.
+
+STATUS
+AL3NI COMBINED-127 MERGE COMPLETE

@@ -1,0 +1,17 @@
+LAMMPS STAGE A -- SINGLE-POINT AGREEMENT CHECK
+
+=== Al3Ni_relaxed (natoms=16) ===
+  MACE  (ASE calculator, cpu, float64): E = -25138.19240948 eV
+  LAMMPS (pair_style mliap unified):    E = -25138.19240948 eV
+  Energy diff: 7.27595761e-12 eV  (0.000000 meV/atom)
+  Max |force diff| (any atom, any component): 1.16495355e-14 eV/Angstrom
+  PASS
+
+=== cfg036_Al3Ni_rattle_large (natoms=16) ===
+  MACE  (ASE calculator, cpu, float64): E = -25137.95768098 eV
+  LAMMPS (pair_style mliap unified):    E = -25137.95768098 eV
+  Energy diff: 3.63797881e-12 eV  (0.000000 meV/atom)
+  Max |force diff| (any atom, any component): 1.59872116e-14 eV/Angstrom
+  PASS
+
+OVERALL: PASS

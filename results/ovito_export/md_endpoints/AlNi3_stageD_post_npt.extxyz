@@ -1,0 +1,6 @@
+4
+Lattice="3.4905998376939396 0.0 0.0 -0.017755970674204775 3.6976909198627337 0.0 -0.04861910729557076 -0.15439026000573652 3.5667419958054065" Properties=species:S:1:pos:R:3:masses:R:1:momenta:R:3:id:I:1:type:I:1 comment="LAMMPS data file via write_data, version 22 Jul 2025, timestep = 30007, units = metal" config_id=AlNi3_stageD_post_npt source="Stage D primitive-cell MD endpoint (300K NPT endpoint (t=30ps, primitive)), 300K/1fs, mliap unified Kokkos" pbc="T T T"
+Al       0.08922444      -0.06005954       0.01917449      26.98153850       0.19039693       0.37594277       0.47496602        1        1
+Ni       0.05061597       1.69389753       1.81324113      58.69340000      -0.11682568      -0.40263738       0.09721563        2        2
+Ni       1.72758026      -0.14362884       1.70023059      58.69340000       0.10714310      -0.93998221      -0.63604266        3        2
+Ni       1.73762393       1.79523221       0.04556793      58.69340000      -0.18071435       0.96667683       0.06386101        4        2

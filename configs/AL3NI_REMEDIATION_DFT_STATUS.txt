@@ -1,0 +1,42 @@
+AL3NI REMEDIATION TARGETED DFT STATUS
+
+Updated UTC: 2026-08-15T15:37:19Z
+State: COMPLETE
+Production root: /workspace/ni_al/data/al3ni_remediation_v1/production_dft
+tmux session: ni_al_al3ni_remediation_dft
+QE binary: /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x
+QE binary SHA256: 66b7ea9f173b006854fc9e27dc9982c332dad295384803d612da7dad3edc7f8e
+Split manifest SHA256: e51afe7df4e15e55bc76222ccd31fcc74a7bfb2310ee99de59f8c3e5424c6599
+Execution order: cfg101-cfg108 development first; cfg109-cfg110 sealed confirmation last
+Confirmation numerical labels: SEALED / NOT REPORTED
+
+PER-CONFIG TECHNICAL STATUS
+cfg101_Al3Ni_iso_compression | TRAIN | COMPLETE | attempt_001
+cfg102_Al3Ni_iso_compression | TRAIN | COMPLETE | attempt_001
+cfg103_Al3Ni_iso_expansion | TRAIN | COMPLETE | attempt_001
+cfg104_Al3Ni_volume_rattle_compression | TRAIN | COMPLETE | attempt_001
+cfg105_Al3Ni_volume_rattle_expansion | TRAIN | COMPLETE | attempt_001
+cfg106_Al3Ni_rattle_020 | TRAIN | COMPLETE | attempt_001
+cfg107_Al3Ni_volume_rattle_compression | VALIDATION | COMPLETE | attempt_001
+cfg108_Al3Ni_rattle_030 | VALIDATION | COMPLETE | attempt_001
+cfg109_Al3Ni_iso_expansion | CONFIRMATION_HOLDOUT | COMPLETE | attempt_001
+cfg110_Al3Ni_volume_rattle_expansion | CONFIRMATION_HOLDOUT | COMPLETE | attempt_001
+
+PROTECTION ASSERTIONS
+Dataset-100 modified: NO
+Dataset-100 blind holdout modified: NO
+Remediation split membership modified: NO
+Retraining started: NO
+LAMMPS started: NO
+cfg109/cfg110 label-access policy: SEALED CONFIRMATION DATA
+
+FINAL ACQUISITION AUDIT
+TOTAL EXPECTED: 10
+COMPLETED: 10
+FAILED: 0
+MISSING: 0
+TRAIN DFT: 6/6
+VALIDATION DFT: 2/2
+CONFIRMATION DFT: 2/2
+CONFIRMATION LABELS SEALED: YES
+Filesystem sync: COMPLETE

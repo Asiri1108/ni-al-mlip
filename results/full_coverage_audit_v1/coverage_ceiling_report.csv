@@ -1,0 +1,60 @@
+phase,family,config_id,role,axis_name,axis_value,train_min,train_max,flag,detail
+Al3Ni,biaxial,cfg039_Al3Ni_biaxial_xy_expansion,VALIDATION,strain_value,0.012,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+Al3Ni,isotropic,cfg115_Al3Ni_iso_expansion,VALIDATION,strain_value,0.053,-0.04,0.056,OK_IN_RANGE,
+Al3Ni,orthorhombic,(insufficient TRAIN density),TRAIN,strain_value,,0.015,0.015,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni,rattle,Al3Ni_rattle_003,VALIDATION,rattle_sigma_A,0.0,0.01,0.04,METADATA_GAP_NOT_EVALUABLE,"config_family='rattle' implies a nonzero historical rattle/shear value, but the frozen Dataset-100 manifest records it as historical_not_recorded (Pilot-25 provenance). NOT a genuine extrapolation finding."
+Al3Ni,rattle,cfg040_Al3Ni_rattle_medium,VALIDATION,rattle_sigma_A,0.025,0.01,0.04,OK_IN_RANGE,
+Al3Ni,rattle,cfg108_Al3Ni_rattle_030,VALIDATION,rattle_sigma_A,0.03,0.01,0.04,OK_IN_RANGE,
+Al3Ni,shear,(insufficient TRAIN density),TRAIN,shear_value,,-0.01,0.01,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni,shear,Al3Ni_shear015_rattle002,TEST,shear_value,0.0,-0.01,0.01,OK_IN_RANGE,
+Al3Ni,shear,cfg042_Al3Ni_shear_xz_negative,BLIND_HOLDOUT,shear_value,-0.018,-0.01,0.01,EXTRAPOLATION,"outside TRAIN range [-0.0100,0.0100] by 0.0080"
+Al3Ni,shear_rattle,(insufficient TRAIN density),TRAIN,shear_value,,0.02,0.02,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni,shear_rattle,cfg044_Al3Ni_shear_rattle_xy_negative,BLIND_HOLDOUT,shear_value,-0.025,0.02,0.02,EXTRAPOLATION,"outside TRAIN range [0.0200,0.0200] by 0.0450"
+Al3Ni,uniaxial,(insufficient TRAIN density),TRAIN,strain_value,,-0.015,0.015,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni,uniaxial,cfg041_Al3Ni_uniaxial_z_compression,BLIND_HOLDOUT,strain_value,-0.022,-0.015,0.015,EXTRAPOLATION,"outside TRAIN range [-0.0150,0.0150] by 0.0070"
+Al3Ni,volume_rattle,GAP[-0.0200-0.0200],TRAIN_INTERNAL_GAP,strain_value,,-0.025,0.056,SPARSE_INTERNAL_GAP,gap=0.0400 vs median_consecutive=0.0180 (2.22x)
+Al3Ni,volume_rattle,cfg043_Al3Ni_volume_rattle_expansion,BLIND_HOLDOUT,strain_value,0.035,-0.025,0.056,OK_IN_RANGE,
+Al3Ni,volume_rattle,cfg107_Al3Ni_volume_rattle_compression,VALIDATION,strain_value,-0.04,-0.025,0.056,EXTRAPOLATION,"outside TRAIN range [-0.0250,0.0560] by 0.0150"
+Al3Ni2,biaxial,cfg073_Al3Ni2_biaxial_xy_compression,BLIND_HOLDOUT,strain_value,-0.018,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+Al3Ni2,orthorhombic,cfg071_Al3Ni2_orthorhombic_xy,VALIDATION,strain_value,0.016,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+Al3Ni2,rattle,(insufficient TRAIN density),TRAIN,rattle_sigma_A,,0.01,0.04,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni2,rattle,Al3Ni2_rattle_003,VALIDATION,rattle_sigma_A,0.0,0.01,0.04,METADATA_GAP_NOT_EVALUABLE,"config_family='rattle' implies a nonzero historical rattle/shear value, but the frozen Dataset-100 manifest records it as historical_not_recorded (Pilot-25 provenance). NOT a genuine extrapolation finding."
+Al3Ni2,shear,(insufficient TRAIN density),TRAIN,shear_value,,-0.01,-0.01,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni2,shear,Al3Ni2_shear015_rattle002,TEST,shear_value,0.0,-0.01,-0.01,METADATA_GAP_NOT_EVALUABLE,"config_family='shear' implies a nonzero historical rattle/shear value, but the frozen Dataset-100 manifest records it as historical_not_recorded (Pilot-25 provenance). NOT a genuine extrapolation finding."
+Al3Ni2,shear,cfg074_Al3Ni2_shear_xz_negative,BLIND_HOLDOUT,shear_value,-0.022,-0.01,-0.01,EXTRAPOLATION,"outside TRAIN range [-0.0100,-0.0100] by 0.0120"
+Al3Ni2,shear_rattle,cfg072_Al3Ni2_shear_rattle_yz_positive,VALIDATION,shear_value,0.018,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+Al3Ni2,uniaxial,(insufficient TRAIN density),TRAIN,strain_value,,0.015,0.015,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni2,volume_rattle,(insufficient TRAIN density),TRAIN,strain_value,,-0.025,-0.025,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni2,volume_rattle,cfg075_Al3Ni2_volume_rattle_expansion,BLIND_HOLDOUT,strain_value,0.035,-0.025,-0.025,EXTRAPOLATION,"outside TRAIN range [-0.0250,-0.0250] by 0.0600"
+Al3Ni5,biaxial,cfg058_Al3Ni5_biaxial_xz_compression,BLIND_HOLDOUT,strain_value,-0.016,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+Al3Ni5,orthorhombic,(insufficient TRAIN density),TRAIN,strain_value,,0.015,0.015,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni5,rattle,(insufficient TRAIN density),TRAIN,rattle_sigma_A,,0.01,0.04,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni5,rattle,Al3Ni5_rattle_003,VALIDATION,rattle_sigma_A,0.0,0.01,0.04,METADATA_GAP_NOT_EVALUABLE,"config_family='rattle' implies a nonzero historical rattle/shear value, but the frozen Dataset-100 manifest records it as historical_not_recorded (Pilot-25 provenance). NOT a genuine extrapolation finding."
+Al3Ni5,rattle,cfg061_Al3Ni5_rattle_xlarge,BLIND_HOLDOUT,rattle_sigma_A,0.05,0.01,0.04,EXTRAPOLATION,"outside TRAIN range [0.0100,0.0400] by 0.0100"
+Al3Ni5,shear,(insufficient TRAIN density),TRAIN,shear_value,,-0.01,0.01,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni5,shear,Al3Ni5_shear015_rattle002,TEST,shear_value,0.0,-0.01,0.01,OK_IN_RANGE,
+Al3Ni5,shear,cfg059_Al3Ni5_shear_yz_negative,BLIND_HOLDOUT,shear_value,-0.022,-0.01,0.01,EXTRAPOLATION,"outside TRAIN range [-0.0100,0.0100] by 0.0120"
+Al3Ni5,shear_rattle,cfg057_Al3Ni5_shear_rattle_xz_positive,VALIDATION,shear_value,0.018,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+Al3Ni5,uniaxial,(insufficient TRAIN density),TRAIN,strain_value,,-0.015,-0.015,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni5,uniaxial,cfg056_Al3Ni5_uniaxial_x_expansion,VALIDATION,strain_value,0.018,-0.015,-0.015,EXTRAPOLATION,"outside TRAIN range [-0.0150,-0.0150] by 0.0330"
+Al3Ni5,volume_rattle,(insufficient TRAIN density),TRAIN,strain_value,,-0.025,-0.025,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+Al3Ni5,volume_rattle,cfg060_Al3Ni5_volume_rattle_expansion,BLIND_HOLDOUT,strain_value,0.035,-0.025,-0.025,EXTRAPOLATION,"outside TRAIN range [-0.0250,-0.0250] by 0.0600"
+AlNi,biaxial,cfg087_AlNi_biaxial_xz_compression,BLIND_HOLDOUT,strain_value,-0.018,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+AlNi,orthorhombic,cfg085_AlNi_orthorhombic_yz,VALIDATION,strain_value,0.016,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+AlNi,rattle,(insufficient TRAIN density),TRAIN,rattle_sigma_A,,0.01,0.04,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+AlNi,rattle,AlNi_rattle_003,VALIDATION,rattle_sigma_A,0.0,0.01,0.04,METADATA_GAP_NOT_EVALUABLE,"config_family='rattle' implies a nonzero historical rattle/shear value, but the frozen Dataset-100 manifest records it as historical_not_recorded (Pilot-25 provenance). NOT a genuine extrapolation finding."
+AlNi,shear,(insufficient TRAIN density),TRAIN,shear_value,,-0.01,-0.01,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+AlNi,shear,AlNi_shear015_rattle002,TEST,shear_value,0.0,-0.01,-0.01,METADATA_GAP_NOT_EVALUABLE,"config_family='shear' implies a nonzero historical rattle/shear value, but the frozen Dataset-100 manifest records it as historical_not_recorded (Pilot-25 provenance). NOT a genuine extrapolation finding."
+AlNi,shear_rattle,cfg086_AlNi_shear_rattle_xz_positive,VALIDATION,shear_value,0.018,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+AlNi,shear_rattle,cfg088_AlNi_shear_rattle_yz_negative,BLIND_HOLDOUT,shear_value,-0.022,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+AlNi,uniaxial,(insufficient TRAIN density),TRAIN,strain_value,,0.015,0.015,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+AlNi,volume_rattle,(insufficient TRAIN density),TRAIN,strain_value,,-0.025,-0.025,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+AlNi3,biaxial,cfg099_AlNi3_biaxial_yz_expansion,BLIND_HOLDOUT,strain_value,0.018,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+AlNi3,orthorhombic,cfg097_AlNi3_orthorhombic_xz,VALIDATION,strain_value,0.016,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+AlNi3,rattle,(insufficient TRAIN density),TRAIN,rattle_sigma_A,,0.01,0.04,INFO_LOW_TRAIN_COUNT,only 2 TRAIN member(s) -- gap analysis not meaningful
+AlNi3,rattle,AlNi3_rattle_003,VALIDATION,rattle_sigma_A,0.0,0.01,0.04,METADATA_GAP_NOT_EVALUABLE,"config_family='rattle' implies a nonzero historical rattle/shear value, but the frozen Dataset-100 manifest records it as historical_not_recorded (Pilot-25 provenance). NOT a genuine extrapolation finding."
+AlNi3,shear,(insufficient TRAIN density),TRAIN,shear_value,,-0.01,-0.01,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+AlNi3,shear,AlNi3_shear015_rattle002,TEST,shear_value,0.0,-0.01,-0.01,METADATA_GAP_NOT_EVALUABLE,"config_family='shear' implies a nonzero historical rattle/shear value, but the frozen Dataset-100 manifest records it as historical_not_recorded (Pilot-25 provenance). NOT a genuine extrapolation finding."
+AlNi3,shear_rattle,cfg100_AlNi3_shear_rattle_xz_negative,BLIND_HOLDOUT,shear_value,-0.022,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket
+AlNi3,uniaxial,(insufficient TRAIN density),TRAIN,strain_value,,-0.015,-0.015,INFO_LOW_TRAIN_COUNT,only 1 TRAIN member(s) -- gap analysis not meaningful
+AlNi3,volume_rattle,cfg098_AlNi3_volume_rattle_compression,VALIDATION,strain_value,-0.025,NONE,NONE,EXTRAPOLATION_NO_TRAIN_SUPPORT,zero TRAIN members in this phase/family bucket

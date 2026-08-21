@@ -1,0 +1,35 @@
+AL3NI COMBINED-218 MERGE STATUS (combined-211 + round214, 7 configs, pods A/B/C)
+
+Generated UTC: 2026-08-16T19:02:56.816971+00:00
+
+SOURCES (all read-only, none modified)
+  combined-211 all/train/val: ni_al_combined211_dft.extxyz (211) / ni_al_combined211_train_173.extxyz (173) / ni_al_combined211_validation_18.extxyz (18)
+  round214 (7, all TRAIN role, pods A/B/C): round214_dft.extxyz (7)
+  cfg109/cfg110 (sealed): EXCLUDED, untouched
+
+INTEGRITY CHECKS
+  config_id collision vs combined-211: NONE
+  geometry duplicate vs combined-211: NONE
+  geometry duplicate vs sealed cfg109/cfg110: NONE
+  internal round214 geometry duplicate: NONE
+
+OUTPUT
+  All 218:      /workspace/ni_al/data/datasets/ni_al_combined218_dft.extxyz  sha256=54125b8966c2721212c936f3907fcd680ad839a7d2f72d00f1f18f000ef3f401
+  TRAIN 180:    /workspace/ni_al/data/datasets/ni_al_combined218_train_180.extxyz  sha256=32da74200514506cf1f2f3eb9ec0a90f09d6c6281092e936fabeef76b293e6cf
+  VALIDATION 18: /workspace/ni_al/data/datasets/ni_al_combined218_validation_18.extxyz  sha256=079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff
+
+Round-trip: 218/218 all, 180/180 train, 18/18 validation
+Phase composition (all 218): {'AlNi': 41, 'Al3Ni2': 38, 'AlNi3': 41, 'Al3Ni5': 42, 'Al3Ni': 56}
+Phase composition (TRAIN 180): {'AlNi': 35, 'Al3Ni2': 31, 'AlNi3': 35, 'Al3Ni5': 34, 'Al3Ni': 45}
+TEST/BLIND_HOLDOUT (Dataset-100's 20): UNCHANGED.
+
+COVERAGE IMPACT
+Closes the last 4 EXTRAPOLATION flags after round300 (cfg042 Al3Ni, cfg074 Al3Ni2,
+cfg059/cfg061 Al3Ni5) plus AlNi's 2 remaining thin buckets (shear n=1->3,
+volume_rattle n=2->3). CORRECTED after actual re-audit (see
+results/full_coverage_audit_v1/priority_ranking_combined218.md): 2 EXTRAPOLATION
+flags remain open (cfg041_Al3Ni_uniaxial_z_compression, cfg107_Al3Ni_volume_rattle_compression),
+neither targeted by round212/213/214. Zero Tier-1 (zero-TRAIN-support) buckets remain.
+
+STATUS
+AL3NI COMBINED-218 MERGE COMPLETE

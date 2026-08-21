@@ -1,0 +1,164 @@
+{
+  "pun_mishin_2009": {
+    "method": "pun_mishin_2009",
+    "mu_Al_eV_atom": -3.3599829942026638,
+    "mu_Al_relaxed_a_A": 4.052752013223278,
+    "mu_Ni_eV_atom": -4.449450094238693,
+    "mu_Ni_relaxed_a_A": 3.531147574744301,
+    "phases": {
+      "AlNi": {
+        "natoms": 2,
+        "n_Al": 1,
+        "n_Ni": 1,
+        "relaxed_energy_eV": -9.02174203299656,
+        "relaxed_volume_A3": 22.71303178032612,
+        "relaxed_volume_per_atom_A3": 11.35651589016306,
+        "formation_energy_eV_atom": -0.6061544722776016
+      },
+      "Al3Ni2": {
+        "natoms": 5,
+        "n_Al": 3,
+        "n_Ni": 2,
+        "relaxed_energy_eV": -20.79464591460045,
+        "relaxed_volume_A3": 67.15308020808276,
+        "relaxed_volume_per_atom_A3": 13.43061604161655,
+        "formation_energy_eV_atom": -0.3631593487030148
+      },
+      "AlNi3": {
+        "natoms": 4,
+        "n_Al": 1,
+        "n_Ni": 3,
+        "relaxed_energy_eV": -18.525911832975872,
+        "relaxed_volume_A3": 44.10557259465511,
+        "relaxed_volume_per_atom_A3": 11.026393148663777,
+        "formation_energy_eV_atom": -0.4543946390142821
+      },
+      "Al3Ni5": {
+        "natoms": 8,
+        "n_Al": 3,
+        "n_Ni": 5,
+        "relaxed_energy_eV": -36.61327675742939,
+        "relaxed_volume_A3": 89.63952573448357,
+        "relaxed_volume_per_atom_A3": 11.204940716810446,
+        "formation_energy_eV_atom": -0.5357596629534918
+      },
+      "Al3Ni": {
+        "natoms": 16,
+        "n_Al": 12,
+        "n_Ni": 4,
+        "relaxed_energy_eV": -62.003323883715446,
+        "relaxed_volume_A3": 237.72200904082925,
+        "relaxed_volume_per_atom_A3": 14.857625565051828,
+        "formation_energy_eV_atom": -0.24285797352054428
+      }
+    }
+  },
+  "mishin_2004_ipr2": {
+    "method": "mishin_2004_ipr2",
+    "mu_Al_eV_atom": -3.3596768460122384,
+    "mu_Al_relaxed_a_A": 4.062051391392433,
+    "mu_Ni_eV_atom": -4.449450093814029,
+    "mu_Ni_relaxed_a_A": 3.5311475749735917,
+    "phases": {
+      "AlNi": {
+        "natoms": 2,
+        "n_Al": 1,
+        "n_Ni": 1,
+        "relaxed_energy_eV": -8.990840100439,
+        "relaxed_volume_A3": 23.440897073362436,
+        "relaxed_volume_per_atom_A3": 11.720448536681218,
+        "formation_energy_eV_atom": -0.5908565803063661
+      },
+      "Al3Ni2": {
+        "natoms": 5,
+        "n_Al": 3,
+        "n_Ni": 2,
+        "relaxed_energy_eV": -20.741054184677896,
+        "relaxed_volume_A3": 69.76013948135268,
+        "relaxed_volume_per_atom_A3": 13.952027896270536,
+        "formation_energy_eV_atom": -0.35262469180262457
+      },
+      "AlNi3": {
+        "natoms": 4,
+        "n_Al": 1,
+        "n_Ni": 3,
+        "relaxed_energy_eV": -18.50087955441542,
+        "relaxed_volume_A3": 45.55152013669842,
+        "relaxed_volume_per_atom_A3": 11.387880034174605,
+        "formation_energy_eV_atom": -0.4482131067402735
+      },
+      "Al3Ni5": {
+        "natoms": 8,
+        "n_Al": 3,
+        "n_Ni": 5,
+        "relaxed_energy_eV": -36.29342746198816,
+        "relaxed_volume_A3": 93.35094295357673,
+        "relaxed_volume_per_atom_A3": 11.668867869197092,
+        "formation_energy_eV_atom": -0.4958933068601623
+      },
+      "Al3Ni": {
+        "natoms": 16,
+        "n_Al": 12,
+        "n_Ni": 4,
+        "relaxed_energy_eV": -62.02117579344519,
+        "relaxed_volume_A3": 239.30621601323116,
+        "relaxed_volume_per_atom_A3": 14.956638500826948,
+        "formation_energy_eV_atom": -0.2442033291276382
+      }
+    }
+  },
+  "mishin_2002": {
+    "method": "mishin_2002",
+    "mu_Al_eV_atom": -3.3616911710092374,
+    "mu_Al_relaxed_a_A": 4.0646629457944385,
+    "mu_Ni_eV_atom": -4.4991279942024205,
+    "mu_Ni_relaxed_a_A": 3.4673492326400246,
+    "phases": {
+      "AlNi": {
+        "natoms": 2,
+        "n_Al": 1,
+        "n_Ni": 1,
+        "relaxed_energy_eV": -8.930494924983925,
+        "relaxed_volume_A3": 23.361149926647364,
+        "relaxed_volume_per_atom_A3": 11.680574963323682,
+        "formation_energy_eV_atom": -0.5348378798861337
+      },
+      "Al3Ni2": {
+        "natoms": 5,
+        "n_Al": 3,
+        "n_Ni": 2,
+        "relaxed_energy_eV": -20.943299163588996,
+        "relaxed_volume_A3": 68.96501800027778,
+        "relaxed_volume_per_atom_A3": 13.793003600055556,
+        "formation_energy_eV_atom": -0.3719939324312886
+      },
+      "AlNi3": {
+        "natoms": 4,
+        "n_Al": 1,
+        "n_Ni": 3,
+        "relaxed_energy_eV": -18.39999263868491,
+        "relaxed_volume_A3": 43.820012550996935,
+        "relaxed_volume_per_atom_A3": 10.955003137749234,
+        "formation_energy_eV_atom": -0.3852293712671031
+      },
+      "Al3Ni5": {
+        "natoms": 8,
+        "n_Al": 3,
+        "n_Ni": 5,
+        "relaxed_energy_eV": -36.05273593250303,
+        "relaxed_volume_A3": 93.15604852034512,
+        "relaxed_volume_per_atom_A3": 11.64450606504314,
+        "formation_energy_eV_atom": -0.4340028060579022
+      },
+      "Al3Ni": {
+        "natoms": 16,
+        "n_Al": 12,
+        "n_Ni": 4,
+        "relaxed_energy_eV": -62.62404212126747,
+        "relaxed_volume_A3": 235.60134724317444,
+        "relaxed_volume_per_atom_A3": 14.725084202698403,
+        "formation_energy_eV_atom": -0.2679522557716838
+      }
+    }
+  }
+}

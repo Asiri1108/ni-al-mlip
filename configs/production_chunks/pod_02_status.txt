@@ -1,0 +1,9 @@
+DATASET-100 GPU POD STATUS
+Updated UTC: 2026-08-12T11:19:08Z
+Pod ID: 02
+Chunk ID: chunk_02
+Current config: NONE
+Current state: COMPLETE
+QE binary SHA256: 66b7ea9f173b006854fc9e27dc9982c332dad295384803d612da7dad3edc7f8e
+Al pseudopotential SHA256: fd7b78921e6d0939095b681c328732668eaefd1dee6882fdbc03be463550cc97
+Ni pseudopotential SHA256: f76b86ce60cde3d83dfcc8df79ba05478db573d158289f1b226919442d977d25

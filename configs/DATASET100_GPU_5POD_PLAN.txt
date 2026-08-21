@@ -1,0 +1,14 @@
+DATASET-100 GPU 5-POD EXECUTION PLAN
+State: READY; POD 01 AUTHORIZED FOR CURRENT MACHINE
+Canonical 10-chunk plan unchanged; individual configurations not repartitioned.
+
+POD 01: chunk_06 -> chunk_01 | 5418.70 s | 90.31 min | 1.505 h | PENDING
+POD 02: chunk_07 -> chunk_02 | 5418.70 s | 90.31 min | 1.505 h | PENDING
+POD 03: chunk_04 -> chunk_08 | 5348.42 s | 89.14 min | 1.486 h | PENDING
+POD 04: chunk_05 -> chunk_09 | 5348.42 s | 89.14 min | 1.486 h | PENDING
+POD 05: chunk_10 -> chunk_03 | 5313.95 s | 88.57 min | 1.476 h | PENDING
+
+Verification: chunks 01-10 each assigned exactly once; duplicates=0; omissions=0.
+Total benchmark-estimated work: 26848.19 s = 7.458 serial GPU hours.
+Expected five-Pod wall time: 5418.70 s = 90.31 min = 1.505 h.
+Actual time may vary with SCF convergence behavior.

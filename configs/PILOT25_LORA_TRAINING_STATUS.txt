@@ -1,0 +1,128 @@
+NI-AL CANONICAL PILOT-25 LORA TRAINING STATUS
+=============================================
+Timestamp (UTC): 2026-08-11T07:55:31Z
+RUN = pilot25_matpes_pbe_lora_v1
+TRAINING COMPLETION STATUS = COMPLETE
+
+Scientific identity and data
+----------------------------
+Foundation = MACE-MATPES-PBE-0 PBE
+Foundation alias = mace-matpes-pbe-0
+Foundation local path = /workspace/ni_al/runs/pilot25_matpes_pbe_lora_v1/downloads/mace/MACEmatpespbeomatftmodel
+Foundation SHA256 = e618ad582b84239905b9c3b77ce6e9ce111b0ecd1533223a1a6aac7a696b8aa0
+Foundation size = 79471284 bytes
+Training set = canonical 15, USED FOR OPTIMIZATION
+  /workspace/ni_al/data/datasets/ni_al_pilot_train_15.extxyz
+  SHA256 b7f3711d565e912f3da12bc24ccddbca59ecdbb7c6cfdced8a7ef09892951c6a
+Validation set = canonical 5, USED FOR VALIDATION/MODEL SELECTION
+  /workspace/ni_al/data/datasets/ni_al_pilot_val_5.extxyz
+  SHA256 f09e54eceddba7b7d445b46f243f70af328061266773c727a13009718889392d
+Frozen test = canonical 5, NOT USED AND NOT EVALUATED
+  /workspace/ni_al/data/datasets/ni_al_pilot_test_5.extxyz
+  SHA256 fff925984d04f51cfc0d8add614a8287605c2539b14b72e0784e65ca6c132705
+MACE log dataset counts = train 15, valid 5, tests=[]
+
+Properties and loss
+-------------------
+Energy = used (15 train / 5 validation labels)
+Forces = used (15 train / 5 validation labels)
+Stress = used (15 train / 5 validation labels)
+Property keys = energy, forces, stress
+E0s = estimated from foundation predictions on canonical TRAIN-15
+Loss = WeightedEnergyForcesStressLoss
+Weights = energy 1.0, forces 10.0, stress 1.0
+
+Method and hyperparameters
+--------------------------
+LoRA = true; rank = 4; alpha = 1.0
+Multihead replay = false
+Default dtype = float64
+Device = CUDA
+GPU = NVIDIA GeForce RTX 4090
+MACE = 0.3.16
+PyTorch = 2.8.0+cu128; PyTorch CUDA = 12.8
+Seed = 20260811
+Optimizer = Adam; AMSGrad = true
+Learning rate = 0.001; weight decay = 0.0
+Batch size = 2; validation batch size = 2
+Maximum epochs = 100; patience = 20; evaluation interval = 1
+EMA = true; EMA decay = 0.995
+Gradient clip = 10.0
+
+Training outcome
+----------------
+Epochs completed = 100 (epochs 0 through 99)
+Early stopping = NO; maximum epoch count completed
+No NaN/Inf, CUDA OOM, traceback, or training error occurred.
+Best/selected validation epoch = 88
+Epoch 88 validation monitoring:
+  loss 0.00132548
+  energy RMSE 2.77 meV/atom
+  force RMSE 15.72 meV/A
+  stress RMSE 2.28 meV/A^3
+Final epoch 99 validation monitoring:
+  loss 0.00132806
+  energy RMSE 2.38 meV/atom
+  force RMSE 15.73 meV/A
+  stress RMSE 2.25 meV/A^3
+Selected-model final error table (TRAIN/VALID only):
+  TRAIN: energy RMSE 3.0 meV/atom; force RMSE 1.5 meV/A;
+         relative force RMSE 8.46%; stress RMSE 3.1 meV/A^3
+  VALID: energy RMSE 2.8 meV/atom; force RMSE 15.7 meV/A;
+         relative force RMSE 6.69%; stress RMSE 2.3 meV/A^3
+Runtime from MACE VERIFYING SETTINGS to Done = approximately 4 min 17 s
+Peak GPU memory observed during monitoring = approximately 1344 MiB
+
+Final model
+-----------
+Primary model path = /workspace/ni_al/models/pilot25_matpes_pbe_lora_v1/pilot25_matpes_pbe_lora_v1.model
+Size = 12211781 bytes
+SHA256 = 94d8d4dade7322077d6d2343820a32678eafd7499d1762ee7f180b4ce4fc7719
+Compiled model path = /workspace/ni_al/models/pilot25_matpes_pbe_lora_v1/pilot25_matpes_pbe_lora_v1_compiled.model
+Compiled size = 12313172 bytes
+Compiled SHA256 = 14250acc539e6f76e2ebc34cebeefa53009a3fec6dfe23cc675c64a31dcdd9b1
+Load check = PASS as CPU float64 ASE MACECalculator without inference
+Implemented calculator properties include energy, forces, and stress.
+No TEST configuration was loaded for this check.
+
+Checkpoints
+-----------
+Checkpoint artifact count = 68
+Checkpoint total size = 887387962 bytes
+Selected checkpoint = /workspace/ni_al/checkpoints/pilot25_matpes_pbe_lora_v1/pilot25_matpes_pbe_lora_v1_run-20260811_epoch-88.pt
+Selected checkpoint size = 13062362 bytes
+Newest checkpoint artifact = /workspace/ni_al/checkpoints/pilot25_matpes_pbe_lora_v1/pilot25_matpes_pbe_lora_v1_run-20260811.model
+Newest checkpoint artifact size = 12213158 bytes
+Checkpoint retention followed keep_checkpoints=true; MACE retained improvement
+checkpoints rather than every epoch.
+
+Warnings
+--------
+- cuequivariance/cuequivariance_torch are unavailable; optional acceleration
+  was disabled. This is not a validity failure.
+- PyTorch emitted trusted-model weights_only warnings; the official/local MACE
+  model was loaded with TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1.
+- MACE warned that literal ASE keys energy/forces/stress are not recommended for
+  general MACE-ASE communication. The immutable canonical files actually use
+  these keys, and both dry-run and real logs explicitly counted every expected
+  energy/forces/stress label (15 train, 5 validation), so CLI mapping was used
+  without rewriting scientific data.
+- TorchScript emitted annotation warnings during compilation; compilation and
+  subsequent calculator loading completed.
+- The MACE MATPES checkpoint emitted its Academic Software License notice.
+
+Integrity and persistence
+-------------------------
+All run outputs are under /workspace/ni_al.
+Previous model directories were not modified or overwritten.
+data/raw_dft was not modified.
+Frozen TEST SHA256 remained unchanged after training.
+Frozen TEST evaluation = NOT PERFORMED.
+Configuration generation 26-100 = NOT STARTED.
+Quantum ESPRESSO and LAMMPS = NOT RUN.
+Active canonical training process after completion = NONE.
+sync status = COMPLETED before this report; a final sync follows report write.
+
+Final status
+------------
+CANONICAL PILOT25 LORA TRAINING COMPLETE

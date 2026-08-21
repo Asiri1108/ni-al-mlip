@@ -1,0 +1,37 @@
+AL3NI REMEDIATION QE PARAMETER COMPATIBILITY STATUS
+
+Generated UTC: 2026-08-14T15:00:02.093382+00:00
+Comparison table: /workspace/ni_al/results/al3ni_remediation_dft_validation_v1/qe_parameter_compatibility.csv
+Audit mode: READ ONLY; no DFT output modified; no confirmation labels unsealed; no retraining performed
+
+SCOPE
+Rows compared: 29 total (19 Dataset-100 Al3Ni production configs cfg026-cfg044, 10 Al3Ni remediation configs cfg101-cfg110).
+Every field below was parsed from each config's ACTUAL pw.x qe.out parameter echo (and execution.in K_POINTS/CELL_PARAMETERS block, and the pseudopotential bytes actually saved into that run's own tmp/*.save directory) -- not from the frozen design/manifest CSVs.
+
+BYTE-IDENTICAL FIELD CHECK
+Fields checked: qe_version, exchange_correlation, ecutwfc_echo_Ry, ecutrho_echo_Ry, k_grid, k_shift, smearing_type, degauss_echo_Ry, nspin_starting_mag, pseudo_files, pseudo_sha256
+
+RESULT: all 11 fields are byte-identical across all 29 rows.
+  qe_version = 'v.7.6'  (uniform across all 29 configs)
+  exchange_correlation = 'SLA  PW   PBX  PBC'  (uniform across all 29 configs)
+  ecutwfc_echo_Ry = '90.0000'  (uniform across all 29 configs)
+  ecutrho_echo_Ry = '720.0000'  (uniform across all 29 configs)
+  k_grid = '10x8x8'  (uniform across all 29 configs)
+  k_shift = '0x0x0'  (uniform across all 29 configs)
+  smearing_type = 'Marzari-Vanderbilt'  (uniform across all 29 configs)
+  degauss_echo_Ry = '0.0100'  (uniform across all 29 configs)
+  nspin_starting_mag = 'DEFAULT(nspin=1,no starting_magnetization)'  (uniform across all 29 configs)
+  pseudo_files = 'Al:Al.pbe-n-kjpaw_psl.1.0.0.UPF;Ni:ni_pbe_v1.4.uspp.F.UPF'  (uniform across all 29 configs)
+  pseudo_sha256 = 'Al.pbe-n-kjpaw_psl.1.0.0.UPF=fd7b78921e6d0939095b681c328732668eaefd1dee6882fdbc03be463550cc97;ni_pbe_v1.4.uspp.F.UPF=f76b86ce60cde3d83dfcc8df79ba05478db573d158289f1b226919442d977d25'  (uniform across all 29 configs)
+
+K-SPACING (derived, informational -- k_grid itself is a byte-identical field above)
+k-spacing_i = 2*pi*|b_i| / n_i (A^-1), computed per config from the actual CELL_PARAMETERS (angstrom) in execution.in and the actual K_POINTS automatic grid divisions, using general triclinic reciprocal-lattice vectors (valid for sheared cells too).
+  Dataset-100 Al3Ni k-spacing range: 0.12581 - 0.13423 A^-1 (x-axis); full x/y/z pooled range 0.10279 - 0.13423 A^-1
+  Remediation cfg101-110 k-spacing pooled x/y/z range: 0.10229 - 0.13563 A^-1
+  Combined pooled range (all 29 configs, all axes): 0.10229 - 0.13563 A^-1 (spread 0.03334 A^-1)
+
+CRITERION PER ROW: for every one of the 29 configs, k_grid = '10x8x8' and k_shift = '0x0x0' byte-identically (see BYTE-IDENTICAL FIELD CHECK above), so every row satisfies the k-GRID-identical criterion, not merely the k-spacing-within-tolerance criterion. The spacing values above vary only because cell dimensions vary with strain state -- this is the expected, correct behavior of a fixed 10x8x8 grid applied to differently strained cells, not evidence of a differing electronic-structure setup.
+NOTE: no numeric k-spacing tolerance is documented anywhere in this project's configs/scripts/docs. Because the k-GRID is byte-identical for all 29 rows, this gap does not affect the compatibility verdict here, but it should be formalized (e.g. as a stated A^-1 tolerance) before it is relied on for any future config whose k-grid is NOT held fixed across strain states.
+
+FINAL VERDICT
+QE PARAMETER COMPATIBILITY: MATCH -- all 11 checked fields are byte-identical across all 29 rows (cfg101-cfg110 vs actual Dataset-100 Al3Ni production outputs cfg026-cfg044).

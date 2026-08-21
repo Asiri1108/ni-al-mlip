@@ -1,0 +1,37 @@
+VS CODE / GIT SYNCHRONIZATION PLAN
+Generated UTC: 2026-08-11T08:44:08.833913+00:00
+Local RunPod project: /workspace/ni_al
+Git metadata in /workspace/ni_al: NOT PRESENT; destination repository path/remote must be supplied during the later transfer step.
+
+COPY TO CANONICAL REPOSITORY
+Generation and validation code:
+- scripts/generate_dataset100_expansion.py
+- scripts/prepare_dataset100_expansion_reports.py
+- scripts/validate_and_split_pilot25.py
+- scripts/qe_to_extxyz.py
+Evaluation/training reproducibility:
+- scripts/evaluate_pilot25_test_v1.py
+- configs/pilot25_matpes_pbe_lora_v1.yaml
+- configs/pilot25_matpes_pbe_lora_v1_PROVENANCE.txt
+Manifests and plans:
+- data/expansion_026_100/manifests/configs_026_100_design.csv
+- data/expansion_026_100/validation/STRUCTURE_VALIDATION_REPORT.txt
+- data/expansion_026_100/gpu_benchmark/*.txt
+- data/expansion_026_100/team_assignments/TEAM_DISTRIBUTION_TEMPLATE.csv
+Status/provenance:
+- configs/PILOT25_FINAL_ARTIFACTS_MANIFEST.txt
+- configs/PILOT25_LORA_TRAINING_STATUS.txt
+- configs/PILOT25_TEST_EVALUATION_STATUS.txt
+- configs/DATASET100_EXPANSION_PREPARATION.txt
+- configs/VSCODE_SYNC_PLAN.txt
+- results/pilot25_test_evaluation_v1/*.csv
+
+COPY OR ARCHIVE OUTSIDE NORMAL GIT AS SCIENTIFIC DATA
+- generated EXTXYZ structures and QE input files (75 each), subject to repository data policy
+- canonical Pilot EXTXYZ datasets and result plots if repository policy permits
+
+DO NOT COMMIT AS NORMAL GIT FILES
+- envs/, downloads/caches, checkpoints/, large *.model binaries, QE scratch/output directories, credentials or authentication state
+
+TRANSFER SAFETY
+Verify destination branch and repository first; preserve paths; compare SHA256 after transfer; never overwrite a divergent canonical file silently. No external transfer was performed in this task.

@@ -1,0 +1,33 @@
+AL3NI ROUND2 (cfg111-cfg115) DATASET ASSEMBLY STATUS
+
+Generated UTC: 2026-08-15T13:43:32.550871+00:00
+All 5:   /workspace/ni_al/data/datasets/ni_al_round2_dft.extxyz  sha256=77c2821b95ea17bffa6d31d71bd7a3f819d060a54abebeda1fbcd1cac115fd1f
+TRAIN 4: /workspace/ni_al/data/datasets/ni_al_round2_train_4.extxyz  sha256=2a23fa153f8b1aafc704aec57f42d1b3eeb469e83bc97fc0856178a60ac9dd41
+VALID 1: /workspace/ni_al/data/datasets/ni_al_round2_validation_1.extxyz  sha256=f34f498dc273e44d0fbd777a70a342b252300ce19bfcf4cdccd5a9953c2b25b9
+Manifest: /workspace/ni_al/data/datasets/ni_al_round2_dft_manifest.csv
+
+Extraction convention: scripts/extract_dataset75.py (QE data-file-schema.xml; Hartree->eV, Bohr->Angstrom; QE positive-compression stress flipped to ASE positive-tension convention). Same units as Dataset-100/Pilot-25: eV, Angstrom, eV/Angstrom, eV/Angstrom^3.
+
+ROUND-TRIP COUNTS
+Structures: 5/5
+Energies: 5/5
+Force arrays: 5/5
+Stress tensors: 5/5
+
+LABEL RANGES
+Total energy eV: min=-25136.803263596081 max=-25136.178405755651
+Max per-frame |force| eV/Angstrom: min=0.058343148612574898 max=0.26933746547128623
+ASE Voigt stress norm eV/Angstrom^3: min=0.12310508043991789 max=0.1400339543999253
+
+MEMBERSHIP
+TRAIN (4): cfg111_Al3Ni_iso_expansion, cfg112_Al3Ni_volume_rattle_expansion, cfg113_Al3Ni_iso_expansion, cfg114_Al3Ni_volume_rattle_expansion
+VALIDATION (1): cfg115_Al3Ni_iso_expansion
+
+SCOPE / NOT DONE HERE
+This assembles ONLY cfg111-cfg115 into their own new dataset files under data/datasets/.
+It does NOT modify ni_al_dataset100_train_65.extxyz, ni_al_dataset100_validation_15.extxyz, or any other existing Dataset-100 file. It does NOT touch cfg101-cfg108 (never assembled into a labeled dataset this session) or cfg109/cfg110 (sealed, untouched, geometry only ever read). Merging round2 into a combined training/validation/test split for the actual next training run is a separate, explicit step.
+
+STATUS
+AL3NI ROUND2 DATASET ASSEMBLY COMPLETE
+CONFIGS: 5/5
+READY FOR: explicit merge decision into the combined train/validation/test split

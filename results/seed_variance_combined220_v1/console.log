@@ -1,0 +1,90 @@
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Evaluating seed 20260811 (al3ni_combined220_lora_v1.model)...
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+Evaluating seed 20260812 (al3ni_combined220_seed20260812_lora_v1.model)...
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+Evaluating seed 20260813 (al3ni_combined220_seed20260813_lora_v1.model)...
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+
+====================================================================================================
+PER-CONFIG SEED VARIANCE (abs relative-energy error, meV/atom)
+====================================================================================================
+
+cfg109_Al3Ni_iso_expansion
+  seed 20260811: 3.7671
+  seed 20260812: 3.3371
+  seed 20260813: 3.5517
+  spread(max-min)=0.4300  std(population)=0.1755  std(sample,n-1)=0.2150
+
+cfg110_Al3Ni_volume_rattle_expansion
+  seed 20260811: 3.7320
+  seed 20260812: 3.2972
+  seed 20260813: 3.5107
+  spread(max-min)=0.4348  std(population)=0.1775  std(sample,n-1)=0.2174
+
+cfg043_Al3Ni_volume_rattle_expansion
+  seed 20260811: 3.0402
+  seed 20260812: 2.6286
+  seed 20260813: 2.8155
+  spread(max-min)=0.4115  std(population)=0.1682  std(sample,n-1)=0.2061
+
+====================================================================================================
+RESERVED-20: per-config abs relative-energy error across seeds
+====================================================================================================
+  Al3Ni2_shear015_rattle002 (Al3Ni2): seed811=0.0679 seed812=0.0520 seed813=0.0639 spread=0.0159 std=0.0067
+  Al3Ni5_shear015_rattle002 (Al3Ni5): seed811=0.0968 seed812=0.1027 seed813=0.1386 spread=0.0418 std=0.0185
+  Al3Ni_shear015_rattle002 (Al3Ni): seed811=0.1446 seed812=0.1512 seed813=0.1250 spread=0.0262 std=0.0111
+  AlNi3_shear015_rattle002 (AlNi3): seed811=0.0353 seed812=0.0197 seed813=0.0128 spread=0.0225 std=0.0094
+  AlNi_shear015_rattle002 (AlNi): seed811=0.0604 seed812=0.0602 seed813=0.0414 spread=0.0190 std=0.0089
+  cfg041_Al3Ni_uniaxial_z_compression (Al3Ni): seed811=1.1086 seed812=0.9399 seed813=1.3707 spread=0.4308 std=0.1773
+  cfg042_Al3Ni_shear_xz_negative (Al3Ni): seed811=0.0197 seed812=0.0163 seed813=0.0020 spread=0.0177 std=0.0077
+  cfg043_Al3Ni_volume_rattle_expansion (Al3Ni): seed811=3.0402 seed812=2.6286 seed813=2.8155 spread=0.4115 std=0.1682
+  cfg044_Al3Ni_shear_rattle_xy_negative (Al3Ni): seed811=0.2252 seed812=0.2510 seed813=0.2148 spread=0.0362 std=0.0152
+  cfg058_Al3Ni5_biaxial_xz_compression (Al3Ni5): seed811=0.9034 seed812=0.8804 seed813=1.0291 spread=0.1487 std=0.0654
+  cfg059_Al3Ni5_shear_yz_negative (Al3Ni5): seed811=0.9370 seed812=1.1797 seed813=0.9717 spread=0.2427 std=0.1072
+  cfg060_Al3Ni5_volume_rattle_expansion (Al3Ni5): seed811=2.3865 seed812=2.8249 seed813=2.2722 spread=0.5527 std=0.2382
+  cfg061_Al3Ni5_rattle_xlarge (Al3Ni5): seed811=0.3173 seed812=0.2716 seed813=0.2725 spread=0.0457 std=0.0214
+  cfg073_Al3Ni2_biaxial_xy_compression (Al3Ni2): seed811=1.4400 seed812=1.9362 seed813=1.7824 spread=0.4963 std=0.2074
+  cfg074_Al3Ni2_shear_xz_negative (Al3Ni2): seed811=0.0589 seed812=0.0879 seed813=0.0715 spread=0.0291 std=0.0119
+  cfg075_Al3Ni2_volume_rattle_expansion (Al3Ni2): seed811=2.1938 seed812=3.0802 seed813=1.4820 spread=1.5982 std=0.6538
+  cfg087_AlNi_biaxial_xz_compression (AlNi): seed811=0.6458 seed812=0.6554 seed813=0.8457 spread=0.1999 std=0.0921
+  cfg088_AlNi_shear_rattle_yz_negative (AlNi): seed811=0.0776 seed812=0.0801 seed813=0.1213 spread=0.0437 std=0.0200
+  cfg099_AlNi3_biaxial_yz_expansion (AlNi3): seed811=0.2524 seed812=0.2148 seed813=0.4846 spread=0.2697 std=0.1193
+  cfg100_AlNi3_shear_rattle_xz_negative (AlNi3): seed811=0.2474 seed812=0.2535 seed813=0.2932 spread=0.0458 std=0.0203
+
+====================================================================================================
+RESERVED-20 AGGREGATE PER SEED
+====================================================================================================
+  seed 20260811: RMSE=1.1289  MAE=0.7129  MAX=3.0402 (at cfg043_Al3Ni_volume_rattle_expansion)
+  seed 20260812: RMSE=1.2631  MAE=0.7843  MAX=3.0802 (at cfg075_Al3Ni2_volume_rattle_expansion)
+  seed 20260813: RMSE=1.0854  MAE=0.7205  MAX=2.8155 (at cfg043_Al3Ni_volume_rattle_expansion)
+
+  RESERVED-20 MAX spread across seeds: 0.2647 meV/atom (std=0.1165)
+  RESERVED-20 RMSE spread across seeds: 0.1777 meV/atom (std=0.0756)
+  MAX held by same config across all 3 seeds: False (['cfg043_Al3Ni_volume_rattle_expansion', 'cfg075_Al3Ni2_volume_rattle_expansion', 'cfg043_Al3Ni_volume_rattle_expansion'])
+
+====================================================================================================
+FAILURE MARGIN VS THRESHOLD (2.3865 meV/atom), per seed
+====================================================================================================
+  cfg109_Al3Ni_iso_expansion seed 20260811: |error|=3.7671  margin_over_threshold=+1.3806  FAIL
+  cfg109_Al3Ni_iso_expansion seed 20260812: |error|=3.3371  margin_over_threshold=+0.9506  FAIL
+  cfg109_Al3Ni_iso_expansion seed 20260813: |error|=3.5517  margin_over_threshold=+1.1652  FAIL
+  cfg110_Al3Ni_volume_rattle_expansion seed 20260811: |error|=3.7320  margin_over_threshold=+1.3455  FAIL
+  cfg110_Al3Ni_volume_rattle_expansion seed 20260812: |error|=3.2972  margin_over_threshold=+0.9107  FAIL
+  cfg110_Al3Ni_volume_rattle_expansion seed 20260813: |error|=3.5107  margin_over_threshold=+1.1242  FAIL
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+SEED SPREAD CFG109: 0.4300 meV/atom
+SEED SPREAD CFG110: 0.4348 meV/atom
+SEED SPREAD CFG043: 0.4115 meV/atom
+RESERVED-20 MAX PER SEED: seed20260811=3.0402, seed20260812=3.0802, seed20260813=2.8155
+RESERVED-20 RMSE PER SEED: seed20260811=1.1289, seed20260812=1.2631, seed20260813=1.0854
+Original (seed 20260811) failure margins: cfg109=+1.3806  cfg110=+1.3455
+FAILURE MARGIN VS NOISE FLOOR: margin exceeds noise

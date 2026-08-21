@@ -1,0 +1,46 @@
+# in.nvt_stability -- Stage D worker fragment: NVT production MD.
+#
+# NOT standalone-runnable via `lmp -in in.nvt_stability`: pair_style mliap
+# unified EXISTS requires a Python-side lammps.mliap.load_unified_kokkos()
+# call before any script containing that command is read. Confirmed
+# empirically 2026-08-19: a bare `lmp -k on g 1 -sf kk -pk kokkos neigh half
+# newton on -in <script with pair_style mliap unified EXISTS>` fails with
+#   ValueError: No unified model loaded
+#   (mliap_unified_couple_kokkos.pyx, mliap_unified_connect_kokkos)
+#   ERROR: Running mliappy unified module failure.
+#     (src/KOKKOS/mliap_unified_kokkos.cpp:248)
+# -- i.e. the input-script-only route does not work, matching Stage A/B/C's
+# finding. Load THIS file via lmp.file() from a Python driver (see
+# lammps_stage_d_run_phase.py) AFTER, in order:
+#   1. read_data (units/atom_style/atom_modify/boundary/read_data issued)
+#   2. torch.load(model) + lammps.mliap.load_unified_kokkos(unified)
+#   3. pair_style/pair_coeff/neighbor already issued (setup_pair(), same
+#      helper as Stage B/C)
+#   4. box/relax tri pre-equilibration to THIS model's own zero-stress cell
+#      already done (matching Stage B/C -- MD should start from the model's
+#      own PES minimum, not the raw DFT cell, so any instability seen here
+#      is attributable to thermal/dynamical behavior, not a cold start)
+#
+# Driver must set these LAMMPS variables before lmp.file()'ing this script:
+#   temp          target temperature, K
+#   seed          velocity-seed RNG integer
+#   tdamp         Nose-Hoover thermostat damping time, ps
+#   nvt_steps     number of 1-fs steps to run
+#   thermo_every  thermo/log sampling interval, steps
+#   final_data    path to write the post-NVT LAMMPS data file (provenance)
+
+timestep 0.001
+
+velocity all create ${temp} ${seed} mom yes rot yes dist gaussian
+
+thermo ${thermo_every}
+thermo_style custom step temp pe ke etotal press pxx pyy pzz pxy pxz pyz lx ly lz xy xz yz vol
+thermo_modify flush yes
+
+print "=== STAGE D NVT PRODUCTION START ==="
+fix mdintegrate all nvt temp ${temp} ${temp} ${tdamp}
+run ${nvt_steps}
+print "=== STAGE D NVT PRODUCTION END ==="
+unfix mdintegrate
+
+write_data ${final_data} nocoeff

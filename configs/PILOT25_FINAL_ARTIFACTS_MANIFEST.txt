@@ -1,0 +1,26 @@
+PILOT-25 FINAL ARTIFACTS MANIFEST
+Generated UTC: 2026-08-11T08:44:08.833913+00:00
+Hostname: e376e8543d5f
+Policy: immutable scientific record; do not alter, delete, or overwrite listed artifacts.
+Pilot TEST-5 status: historical diagnostic test; inspected once; not the Dataset-100 blind publication holdout.
+
+PATH|SIZE_BYTES|MTIME_UTC|SHA256
+/workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz|28755|2026-08-10T12:52:40+00:00|35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+/workspace/ni_al/data/datasets/ni_al_pilot_train_15.extxyz|16530|2026-08-10T13:02:23+00:00|b7f3711d565e912f3da12bc24ccddbca59ecdbb7c6cfdced8a7ef09892951c6a
+/workspace/ni_al/data/datasets/ni_al_pilot_val_5.extxyz|6042|2026-08-10T13:02:23+00:00|f09e54eceddba7b7d445b46f243f70af328061266773c727a13009718889392d
+/workspace/ni_al/data/datasets/ni_al_pilot_test_5.extxyz|6183|2026-08-10T13:02:23+00:00|fff925984d04f51cfc0d8add614a8287605c2539b14b72e0784e65ca6c132705
+/workspace/ni_al/models/pilot25_matpes_pbe_lora_v1/pilot25_matpes_pbe_lora_v1.model|12211781|2026-08-11T07:49:03+00:00|94d8d4dade7322077d6d2343820a32678eafd7499d1762ee7f180b4ce4fc7719
+/workspace/ni_al/models/pilot25_matpes_pbe_lora_v1/pilot25_matpes_pbe_lora_v1_compiled.model|12313172|2026-08-11T07:49:06+00:00|14250acc539e6f76e2ebc34cebeefa53009a3fec6dfe23cc675c64a31dcdd9b1
+/workspace/ni_al/checkpoints/pilot25_matpes_pbe_lora_v1/pilot25_matpes_pbe_lora_v1_run-20260811_epoch-88.pt|13062362|2026-08-11T07:48:38+00:00|901e404b61ec507dff6949b54329c6443f26c249aa86d722c394baf82426292f
+/workspace/ni_al/configs/pilot25_matpes_pbe_lora_v1.yaml|1220|2026-08-11T07:37:21+00:00|5dd53a04176277302d8494b48912d49893a3ee8fade389dd933e9d186b54c631
+/workspace/ni_al/configs/pilot25_matpes_pbe_lora_v1_PROVENANCE.txt|4134|2026-08-11T07:41:24+00:00|21c667f6a5925c8947c52e0c499610508261501b42fb24929b9535ad8bb85a13
+/workspace/ni_al/configs/PILOT25_LORA_TRAINING_STATUS.txt|5581|2026-08-11T07:57:26+00:00|c0469099d488ec59e7496dd814653b6e5dc3b4bfabb41ede9f1e14b42af038d3
+/workspace/ni_al/configs/PILOT25_TEST_EVALUATION_STATUS.txt|8006|2026-08-11T08:16:04+00:00|2af9bc0b15bcaf40db6ab7ba5ffc41689bf3d2516329627958ab321a5935a0eb
+/workspace/ni_al/results/pilot25_test_evaluation_v1/pilot25_test_per_config.csv|2880|2026-08-11T08:13:43+00:00|c068bdebe4662e99f413c4ccbd390b02ccf032bf34317bb4f860f903ebdda8b2
+/workspace/ni_al/results/pilot25_test_evaluation_v1/pilot25_test_summary.csv|526|2026-08-11T08:13:43+00:00|e21fc862e4b3dd36ae315b70d07bf4d18951845b5d02e0637892018575b2e758
+/workspace/ni_al/results/pilot25_test_evaluation_v1/pilot25_test_force_before_after.png|30702|2026-08-11T08:13:44+00:00|150b8a5339aaca0f97d4cff58932408e06f89556f34de434d770a3136846eae6
+/workspace/ni_al/results/pilot25_test_evaluation_v1/pilot25_test_stress_before_after.png|32442|2026-08-11T08:13:44+00:00|afddfef08db88d8daaa3b334e1055902c5abc3badaac331f3f4d4a012b56add2
+/workspace/ni_al/results/pilot25_test_evaluation_v1/pilot25_test_relative_energy_before_after.png|38145|2026-08-11T08:13:44+00:00|111ef40b29d0313edf4fa37740a997f395b0b9a831c46c32cd856d06ec824b38
+/workspace/ni_al/results/pilot25_test_evaluation_v1/pilot25_test_metric_improvement.png|47111|2026-08-11T08:13:45+00:00|9927031c4ed47a62e2a047c1e81b56c3e95bbe3d55bf04871bb2cec34e182b58
+
+Missing expected artifacts: 0

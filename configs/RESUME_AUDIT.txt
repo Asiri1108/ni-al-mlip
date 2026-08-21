@@ -1,0 +1,234 @@
+NI-AL MATERIALS DISCOVERY RESUME AUDIT
+======================================
+
+Timestamp (UTC): 2026-08-11T07:07:35Z
+Hostname: e376e8543d5f
+Project root: /workspace/ni_al
+Audit scope: Resume audit only; no training or TEST evaluation performed.
+
+Persistence and mount
+---------------------
+Working directory: /workspace
+/workspace source: mfs#euro.runpod.net:9421[/networkvolumes/rxseq7it2p]
+Filesystem: fuse
+Mount options: rw,nosuid,nodev,relatime,user_id=0,group_id=0,allow_other
+Capacity at audit: 2.3P total, 1.7P used, 566T available, 76% used
+Interpretation: /workspace is the expected persistent Network Volume and the
+project files survived Pod termination.
+
+Project size
+------------
+A current `du -sh /workspace/ni_al` was attempted twice with bounded 45/60
+second timeouts; the FUSE traversal did not finish. The immediately preceding
+SAFE_TERMINATION_CHECK recorded 3.4G on 2026-08-10. This is a reporting warning,
+not evidence of missing data.
+
+Previous termination report
+---------------------------
+Path: /workspace/ni_al/configs/SAFE_TERMINATION_CHECK.txt
+Report timestamp: 2026-08-10T13:25:06+00:00
+File mtime: 2026-08-10 13:27:06 UTC
+Final decision: SAFE TO TERMINATE
+
+Project structure
+-----------------
+Present: data, data/raw_dft, data/processed, data/datasets, models,
+checkpoints, logs, scripts, configs, envs, tools, inbox.
+Missing requested directories: NONE.
+No files under data/raw_dft were modified.
+
+Canonical Pilot-25 dataset verification
+---------------------------------------
+Full dataset:
+  Path: /workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz
+  Size: 28755 bytes
+  SHA256: 35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+  ASE configurations: 25
+  Config types: relaxed, iso_m02, iso_p02, rattle_003,
+                shear015_rattle002
+  Phases: AlNi, Al3Ni, Al3Ni2, Al3Ni5, AlNi3
+  Canonical expected hash: MATCH
+  Canonical expected size: MATCH
+
+TRAIN:
+  Path: /workspace/ni_al/data/datasets/ni_al_pilot_train_15.extxyz
+  Size: 16530 bytes
+  SHA256: b7f3711d565e912f3da12bc24ccddbca59ecdbb7c6cfdced8a7ef09892951c6a
+  ASE configurations: 15
+  Config types: relaxed, iso_m02, iso_p02
+  Phases: AlNi, Al3Ni, Al3Ni2, Al3Ni5, AlNi3
+
+VALIDATION:
+  Path: /workspace/ni_al/data/datasets/ni_al_pilot_val_5.extxyz
+  Size: 6042 bytes
+  SHA256: f09e54eceddba7b7d445b46f243f70af328061266773c727a13009718889392d
+  ASE configurations: 5
+  Config types: rattle_003
+  Phases: AlNi, Al3Ni, Al3Ni2, Al3Ni5, AlNi3
+
+TEST:
+  Path: /workspace/ni_al/data/datasets/ni_al_pilot_test_5.extxyz
+  Size: 6183 bytes
+  SHA256: fff925984d04f51cfc0d8add614a8287605c2539b14b72e0784e65ca6c132705
+  ASE configurations: 5
+  Config types: shear015_rattle002
+  Phases: AlNi, Al3Ni, Al3Ni2, Al3Ni5, AlNi3
+
+Split verification:
+  TRAIN=15, VAL=5, TEST=5
+  Unique config_ids across union: 25
+  Missing config_ids: 0
+  TRAIN/VAL overlap: NONE
+  TRAIN/TEST overlap: NONE
+  VAL/TEST overlap: NONE
+  Split union equals canonical full set: YES
+
+Environment status
+------------------
+Environment: /workspace/ni_al/envs/mace-py312-cu128
+Python: 3.12.3
+Python executable: /workspace/ni_al/envs/mace-py312-cu128/bin/python
+Resolved interpreter: /usr/bin/python3.12
+mace_run_train: /workspace/ni_al/envs/mace-py312-cu128/bin/mace_run_train
+PyTorch: 2.8.0+cu128
+CUDA available: True
+GPU: NVIDIA GeForce RTX 4090
+MACE: 0.3.16
+cuequivariance installed/importable: NO
+cuequivariance_torch installed/importable: NO
+Environment is usable; missing cuequivariance disables optional acceleration
+but does not invalidate the existing runs. No reinstall was performed.
+
+Models found
+------------
+pilot01_smoke_v1 (smoke/pipeline test):
+  /workspace/ni_al/models/pilot01_smoke_v1/pilot01_smoke_v1.model
+    611675 bytes; mtime 2026-08-10 11:55:10 UTC
+  /workspace/ni_al/models/pilot01_smoke_v1/pilot01_smoke_v1_compiled.model
+    701978 bytes; mtime 2026-08-10 11:55:11 UTC
+  Final and compiled models were produced. The compiled model loaded on CPU as
+  a TorchScript RecursiveScriptModule without running inference.
+
+pilot01_mpa_lora_v1 (earlier Pilot-01 MPA LoRA proof run, not canonical
+Pilot-25 training):
+  /workspace/ni_al/models/pilot01_mpa_lora_v1/pilot01_mpa_lora_v1.model
+    6238786 bytes; mtime 2026-08-10 12:01:50 UTC
+  /workspace/ni_al/models/pilot01_mpa_lora_v1/pilot01_mpa_lora_v1_compiled.model
+    6338181 bytes; mtime 2026-08-10 12:01:51 UTC
+  Final LoRA-merged and compiled models were produced. The compiled model loaded
+  on CPU as a TorchScript RecursiveScriptModule without running inference.
+
+No /workspace/ni_al/models/pilot25_mpa_lora_v1 directory exists.
+
+Checkpoint status
+-----------------
+Checkpoint file count: 4
+Total checkpoint size: 14816189 bytes
+Newest checkpoint artifact:
+  /workspace/ni_al/checkpoints/pilot01_mpa_lora_v1/
+  pilot01_mpa_lora_v1_run-20260810.model
+  6241123 bytes; mtime 2026-08-10 12:01:50 UTC
+
+pilot01_smoke_v1:
+  selected epoch checkpoint: epoch 1, 1367799 bytes, 11:55:03 UTC
+  saved run model: 613560 bytes, 11:55:10 UTC
+pilot01_mpa_lora_v1:
+  selected epoch checkpoint: epoch 14, 6593707 bytes, 12:01:47 UTC
+  saved run model: 6241123 bytes, 12:01:50 UTC
+The final model mtimes follow and are consistent with checkpoint selection.
+
+Training status
+---------------
+pilot01_smoke_v1: COMPLETED NORMALLY.
+  Epochs logged: 0 through 29 (30 epochs).
+  Selected checkpoint: epoch 1.
+  Data: earlier temporary Pilot-01 split; train=13 used, valid=5, tests=[].
+  Labels used: energy and forces; stress count was 0.
+  Device: CUDA; dtype details were not needed to classify this smoke run.
+
+pilot01_mpa_lora_v1: COMPLETED NORMALLY AS AN EARLIER PROOF RUN.
+  Foundation model: medium-mpa-0 (MACE-MPA-0 medium).
+  LoRA: enabled, rank 4, alpha 1.0; weights merged into final base model.
+  Epochs logged: 0 through 19 (20 epochs).
+  Selected checkpoint: epoch 14.
+  Train file: /workspace/ni_al/data/datasets/pilot01_ft_train.extxyz
+  Validation file: /workspace/ni_al/data/datasets/pilot01_ft_valid.extxyz
+  Test file: NONE; log reports tests=[].
+  Configurations actually used: train=13, valid=5.
+  Labels actually used: energy and forces. Stress was NOT used
+  (compute_stress=False and stress count=0), despite reference stress keys.
+  Device: CUDA device 0; dtype: float32 after foundation-model conversion.
+  Normal termination evidence: `Training complete`, final checkpoint load,
+  LoRA merge, model compile, TRAIN/VALID table, and `Done`.
+
+Canonical Pilot-25 training: NOT STARTED.
+  configs/pilot25_mpa_lora_v1.yaml and scripts/run_pilot25_mpa_lora_v1.sh are
+  explicitly marked PROPOSED ONLY. PROJECT_STATUS.md says no Pilot-25 training
+  was launched. No canonical Pilot-25 model/log/checkpoint/run directory exists.
+  The proposal names canonical train-15 and val-5 and deliberately omits TEST.
+  It requests energy, forces, stress; CUDA; float32; medium-mpa-0; rank-4 LoRA.
+
+Warnings affecting interpretation
+---------------------------------
+1. The older pilot01_mpa_lora_v1 run is pipeline evidence only and must not be
+   mistaken for the canonical Pilot-25 fine-tune.
+2. The older proof run omitted stress training and used only 13 temporary
+   training configurations, not the canonical 15.
+3. Its log warns about multihead fine-tuning without a pretraining file even
+   though it completed; this reinforces that it is not the final scientific run.
+4. Float64 foundation weights were converted to float32.
+5. cuequivariance acceleration is unavailable; this is performance-only.
+6. Canonical validation previously flagged four plausible outliers for source
+   DFT review; no data was removed. This should be considered when interpreting
+   future errors but does not invalidate the verified split.
+7. Current project-size traversal timed out on FUSE; all requested structures
+   and scientific artifacts were directly readable.
+
+Evaluation status
+-----------------
+No completed comparison was found between MACE-MATPES-PBE-0 zero-shot and a
+canonical Pilot-25 fine-tuned model on the frozen TEST set. No fine-tuned TEST
+energy, relative-energy, force, or stress MAE/RMSE; per-phase/per-config-type
+metrics; evaluation CSV; parity plot; or result table was found. Existing MACE
+tables cover only temporary TRAIN and VALID splits. Therefore fixed-TEST
+evaluation has NOT been done. No evaluation was run during this audit.
+
+Known zero-shot baseline retained for the future comparison
+------------------------------------------------------------
+Relative-energy MAE: 4.023 meV/atom
+Relative-energy RMSE: 6.634 meV/atom
+Force MAE: 0.015641 eV/A
+Force RMSE: 0.023627 eV/A
+Stress MAE: 0.871511 GPa
+Stress RMSE: 1.234327 GPa
+
+Active processes
+----------------
+Active mace_run_train: NONE
+Active Ni-Al Python/training/conversion job: NONE
+Active rsync/scp/cp/download job targeting the project: NONE
+Active GPU compute process: NONE
+Some long-lived executables reside under tools/nvm; they are infrastructure,
+not scientific project jobs.
+
+Exact stopping-point classification
+-----------------------------------
+STATE B: Smoke training completed, but actual canonical Pilot-25 LoRA training
+was not completed (and verified evidence says it was never launched).
+
+Evidence: both earlier Pilot-01 proof models and logs completed; the canonical
+25-frame dataset and fixed 15/5/5 split were subsequently finalized; the only
+Pilot-25 training config/launcher are marked proposed-only; no Pilot-25 model,
+checkpoint, log, or run exists; and PROJECT_STATUS.md explicitly records that
+Pilot-25 training has not started.
+
+Exact next action
+-----------------
+Start the actual canonical Pilot-25 MACE-MPA-0 rank-4 LoRA fine-tuning using
+the frozen train-15 and validation-5 files, keeping TEST excluded; before launch,
+confirm the proposal's MACE 0.3.16 key handling actually ingests stress because
+the earlier proof run did not. Do not overwrite the completed Pilot-01 models.
+
+RESUME AUDIT COMPLETE
+STATE: B
+NEXT ACTION: Start the canonical Pilot-25 LoRA fine-tune with train-15 and validation-5 while keeping the frozen TEST set excluded.

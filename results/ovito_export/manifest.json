@@ -1,0 +1,534 @@
+[
+  {
+    "directory": "dft",
+    "basename": "AlNi_dft_relaxed",
+    "phase": "AlNi",
+    "state": "DFT relaxed (0 K)",
+    "natoms": 2,
+    "cellpar": [
+      2.89400823875214,
+      2.89400823875214,
+      2.89400823875214,
+      90.0,
+      90.0,
+      90.0
+    ],
+    "vol_per_atom_A3": 12.119069994534936,
+    "extxyz": "AlNi_dft_relaxed.extxyz",
+    "data": null,
+    "note": ""
+  },
+  {
+    "directory": "dft",
+    "basename": "Al3Ni_dft_relaxed",
+    "phase": "Al3Ni",
+    "state": "DFT relaxed (0 K)",
+    "natoms": 16,
+    "cellpar": [
+      4.8255045200653575,
+      6.623033906816824,
+      7.38249111020279,
+      90.0,
+      90.0,
+      90.0
+    ],
+    "vol_per_atom_A3": 14.746286086534473,
+    "extxyz": "Al3Ni_dft_relaxed.extxyz",
+    "data": null,
+    "note": ""
+  },
+  {
+    "directory": "dft",
+    "basename": "Al3Ni2_dft_relaxed",
+    "phase": "Al3Ni2",
+    "state": "DFT relaxed (0 K)",
+    "natoms": 5,
+    "cellpar": [
+      4.044922628503966,
+      4.044921214044837,
+      4.907862377146373,
+      90.0,
+      90.0,
+      120.00001156757612
+    ],
+    "vol_per_atom_A3": 13.908274020388848,
+    "extxyz": "Al3Ni2_dft_relaxed.extxyz",
+    "data": null,
+    "note": ""
+  },
+  {
+    "directory": "dft",
+    "basename": "Al3Ni5_dft_relaxed",
+    "phase": "Al3Ni5",
+    "state": "DFT relaxed (0 K)",
+    "natoms": 8,
+    "cellpar": [
+      3.762306544370215,
+      5.011782345193003,
+      5.011783868062717,
+      96.47808217093237,
+      90.0,
+      90.0
+    ],
+    "vol_per_atom_A3": 11.7372648430733,
+    "extxyz": "Al3Ni5_dft_relaxed.extxyz",
+    "data": null,
+    "note": ""
+  },
+  {
+    "directory": "dft",
+    "basename": "AlNi3_dft_relaxed",
+    "phase": "AlNi3",
+    "state": "DFT relaxed (0 K)",
+    "natoms": 4,
+    "cellpar": [
+      3.5672608213836416,
+      3.5673856755123903,
+      3.5673856755123903,
+      90.0,
+      90.0,
+      90.0
+    ],
+    "vol_per_atom_A3": 11.349454836381343,
+    "extxyz": "AlNi3_dft_relaxed.extxyz",
+    "data": null,
+    "note": ""
+  },
+  {
+    "directory": "lammps_0K",
+    "basename": "Al3Ni_lammps_0K_primitive",
+    "phase": "Al3Ni",
+    "state": "LAMMPS 0K relaxed (primitive)",
+    "natoms": 16,
+    "cellpar": [
+      4.815502911128163,
+      6.599934106646205,
+      7.426738879905793,
+      90.00000000023519,
+      90.0000000005586,
+      90.00000000036697
+    ],
+    "vol_per_atom_A3": 14.752289326266068,
+    "extxyz": "Al3Ni_lammps_0K_primitive.extxyz",
+    "data": "Al3Ni_lammps_0K_primitive.data",
+    "note": "DIRECTLY comparable to dft/ (same atom count, primitive cell)"
+  },
+  {
+    "directory": "lammps_0K",
+    "basename": "Al3Ni5_lammps_0K_primitive",
+    "phase": "Al3Ni5",
+    "state": "LAMMPS 0K relaxed (primitive)",
+    "natoms": 8,
+    "cellpar": [
+      3.7983533327824874,
+      5.003499474405759,
+      5.003499474299535,
+      98.27876732062528,
+      90.00000000001855,
+      90.00000000001229
+    ],
+    "vol_per_atom_A3": 11.76260889603143,
+    "extxyz": "Al3Ni5_lammps_0K_primitive.extxyz",
+    "data": "Al3Ni5_lammps_0K_primitive.data",
+    "note": "DIRECTLY comparable to dft/ (same atom count, primitive cell)"
+  },
+  {
+    "directory": "lammps_0K",
+    "basename": "AlNi_lammps_0K_supercell",
+    "phase": "AlNi",
+    "state": "LAMMPS 0K relaxed (supercell)",
+    "natoms": 128,
+    "cellpar": [
+      11.581784319823878,
+      11.581784319823878,
+      11.581784319823878,
+      90.0,
+      90.0,
+      90.0
+    ],
+    "vol_per_atom_A3": 12.137142462541316,
+    "extxyz": "AlNi_lammps_0K_supercell.extxyz",
+    "data": "AlNi_lammps_0K_supercell.data",
+    "note": "NOT directly comparable to dft/ (supercell, different atom count -- geometry/symmetry comparison only)"
+  },
+  {
+    "directory": "lammps_0K",
+    "basename": "AlNi3_lammps_0K_supercell",
+    "phase": "AlNi3",
+    "state": "LAMMPS 0K relaxed (supercell)",
+    "natoms": 108,
+    "cellpar": [
+      10.702162388921039,
+      10.702162388985233,
+      10.702162388985215,
+      89.99999999999775,
+      90.00000000000001,
+      89.99999999999996
+    ],
+    "vol_per_atom_A3": 11.349869128192074,
+    "extxyz": "AlNi3_lammps_0K_supercell.extxyz",
+    "data": "AlNi3_lammps_0K_supercell.data",
+    "note": "NOT directly comparable to dft/ (supercell, different atom count -- geometry/symmetry comparison only)"
+  },
+  {
+    "directory": "lammps_0K",
+    "basename": "Al3Ni2_lammps_0K_supercell",
+    "phase": "Al3Ni2",
+    "state": "LAMMPS 0K relaxed (supercell)",
+    "natoms": 135,
+    "cellpar": [
+      12.154604135200245,
+      12.154604135332542,
+      14.6928635448779,
+      90.00000000037323,
+      89.99999999933748,
+      120.00000000497478
+    ],
+    "vol_per_atom_A3": 13.924671103745375,
+    "extxyz": "Al3Ni2_lammps_0K_supercell.extxyz",
+    "data": "Al3Ni2_lammps_0K_supercell.data",
+    "note": "NOT directly comparable to dft/ (supercell, different atom count -- geometry/symmetry comparison only)"
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "AlNi_stageD_post_nvt",
+    "phase": "AlNi",
+    "state": "300K NVT endpoint (t=15ps, primitive)",
+    "natoms": 2,
+    "cellpar": [
+      2.8954460799559705,
+      2.8954460799559696,
+      2.8954460799559705,
+      90.0,
+      90.00000000000001,
+      90.00000000000001
+    ],
+    "vol_per_atom_A3": 12.137142462541332,
+    "extxyz": "AlNi_stageD_post_nvt.extxyz",
+    "data": "AlNi_stageD_post_nvt.data",
+    "note": ""
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "AlNi_stageD_post_npt",
+    "phase": "AlNi",
+    "state": "300K NPT endpoint (t=30ps, primitive)",
+    "natoms": 2,
+    "cellpar": [
+      2.835614274359819,
+      2.89430158944095,
+      3.1142284611449087,
+      89.56772086553603,
+      83.53039323092143,
+      89.53514930871776
+    ],
+    "vol_per_atom_A3": 12.697344835082443,
+    "extxyz": "AlNi_stageD_post_npt.extxyz",
+    "data": "AlNi_stageD_post_npt.data",
+    "note": ""
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "Al3Ni_stageD_post_nvt",
+    "phase": "Al3Ni",
+    "state": "300K NVT endpoint (t=15ps, primitive)",
+    "natoms": 16,
+    "cellpar": [
+      4.815502911128836,
+      6.599934106646661,
+      7.426738879906709,
+      90.00000000015963,
+      90.00000000055935,
+      90.00000000036763
+    ],
+    "vol_per_atom_A3": 14.752289326270969,
+    "extxyz": "Al3Ni_stageD_post_nvt.extxyz",
+    "data": "Al3Ni_stageD_post_nvt.data",
+    "note": ""
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "Al3Ni_stageD_post_npt",
+    "phase": "Al3Ni",
+    "state": "300K NPT endpoint (t=30ps, primitive)",
+    "natoms": 16,
+    "cellpar": [
+      4.8620417192266565,
+      6.70057903065796,
+      7.298688453229734,
+      91.57005776052391,
+      89.92183752962359,
+      90.33994678438741
+    ],
+    "vol_per_atom_A3": 14.855416157241281,
+    "extxyz": "Al3Ni_stageD_post_npt.extxyz",
+    "data": "Al3Ni_stageD_post_npt.data",
+    "note": ""
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "Al3Ni2_stageD_post_nvt",
+    "phase": "Al3Ni2",
+    "state": "300K NVT endpoint (t=15ps, primitive)",
+    "natoms": 5,
+    "cellpar": [
+      4.051534711733416,
+      4.051534711777513,
+      4.89762118162597,
+      90.00000000037323,
+      89.99999999933746,
+      120.00000000497484
+    ],
+    "vol_per_atom_A3": 13.924671103745373,
+    "extxyz": "Al3Ni2_stageD_post_nvt.extxyz",
+    "data": "Al3Ni2_stageD_post_nvt.data",
+    "note": ""
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "Al3Ni2_stageD_post_npt",
+    "phase": "Al3Ni2",
+    "state": "300K NPT endpoint (t=30ps, primitive)",
+    "natoms": 5,
+    "cellpar": [
+      3.9760689504528615,
+      4.068194975530663,
+      5.006088810818706,
+      86.76047459135913,
+      91.30558736303485,
+      121.5654855653009
+    ],
+    "vol_per_atom_A3": 13.776440432801115,
+    "extxyz": "Al3Ni2_stageD_post_npt.extxyz",
+    "data": "Al3Ni2_stageD_post_npt.data",
+    "note": ""
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "Al3Ni5_stageD_post_nvt",
+    "phase": "Al3Ni5",
+    "state": "300K NVT endpoint (t=15ps, primitive)",
+    "natoms": 8,
+    "cellpar": [
+      3.7983533327816748,
+      5.003499474405926,
+      5.0034994742997245,
+      98.27876732056863,
+      89.99999999995981,
+      89.9999999999719
+    ],
+    "vol_per_atom_A3": 11.762608896031441,
+    "extxyz": "Al3Ni5_stageD_post_nvt.extxyz",
+    "data": "Al3Ni5_stageD_post_nvt.data",
+    "note": ""
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "Al3Ni5_stageD_post_npt",
+    "phase": "Al3Ni5",
+    "state": "300K NPT endpoint (t=30ps, primitive)",
+    "natoms": 8,
+    "cellpar": [
+      3.939693665660215,
+      5.007713925563971,
+      4.926478659376432,
+      97.00968856929543,
+      89.83768759720905,
+      89.79638998653017
+    ],
+    "vol_per_atom_A3": 12.058274780017816,
+    "extxyz": "Al3Ni5_stageD_post_npt.extxyz",
+    "data": "Al3Ni5_stageD_post_npt.data",
+    "note": ""
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "AlNi3_stageD_post_nvt",
+    "phase": "AlNi3",
+    "state": "300K NVT endpoint (t=15ps, primitive)",
+    "natoms": 4,
+    "cellpar": [
+      3.5673874629736804,
+      3.567387462995076,
+      3.567387462995072,
+      89.99999999999775,
+      90.00000000000003,
+      89.99999999999999
+    ],
+    "vol_per_atom_A3": 11.349869128192063,
+    "extxyz": "AlNi3_stageD_post_nvt.extxyz",
+    "data": "AlNi3_stageD_post_nvt.data",
+    "note": ""
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "AlNi3_stageD_post_npt",
+    "phase": "AlNi3",
+    "state": "300K NPT endpoint (t=30ps, primitive)",
+    "natoms": 4,
+    "cellpar": [
+      3.4905998376939396,
+      3.6977335508835534,
+      3.570412950153076,
+      92.4745536477805,
+      90.78023348793131,
+      90.27512693287413
+    ],
+    "vol_per_atom_A3": 11.509126802503275,
+    "extxyz": "AlNi3_stageD_post_npt.extxyz",
+    "data": "AlNi3_stageD_post_npt.data",
+    "note": ""
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "AlNi_stageD2_post_npt_supercell",
+    "phase": "AlNi",
+    "state": "300K NPT endpoint (t=15ps, supercell)",
+    "natoms": 128,
+    "cellpar": [
+      11.63270740988526,
+      11.625718048173107,
+      11.584130532947638,
+      90.06615745927172,
+      89.90090246513489,
+      89.90340955742286
+    ],
+    "vol_per_atom_A3": 12.239185187981434,
+    "extxyz": "AlNi_stageD2_post_npt_supercell.extxyz",
+    "data": "AlNi_stageD2_post_npt_supercell.data",
+    "note": ""
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "AlNi3_stageD2_post_npt_supercell",
+    "phase": "AlNi3",
+    "state": "300K NPT endpoint (t=15ps, supercell)",
+    "natoms": 108,
+    "cellpar": [
+      10.755446947871341,
+      10.725993376008416,
+      10.744349041113647,
+      89.81510830079792,
+      90.21160901080003,
+      90.17869940676303
+    ],
+    "vol_per_atom_A3": 11.476646908848302,
+    "extxyz": "AlNi3_stageD2_post_npt_supercell.extxyz",
+    "data": "AlNi3_stageD2_post_npt_supercell.data",
+    "note": ""
+  },
+  {
+    "directory": "md_endpoints",
+    "basename": "Al3Ni2_stageD2_post_npt_supercell",
+    "phase": "Al3Ni2",
+    "state": "300K NPT endpoint (t=15ps, supercell)",
+    "natoms": 135,
+    "cellpar": [
+      12.124260985719202,
+      12.254962257848668,
+      14.7172524727825,
+      90.15370911995035,
+      89.7756856379041,
+      119.86612475313447
+    ],
+    "vol_per_atom_A3": 14.046614548794327,
+    "extxyz": "Al3Ni2_stageD2_post_npt_supercell.extxyz",
+    "data": "Al3Ni2_stageD2_post_npt_supercell.data",
+    "note": ""
+  },
+  {
+    "directory": "supercells",
+    "basename": "AlNi_supercell_0K",
+    "phase": "AlNi",
+    "state": "LAMMPS 0K relaxed (supercell)",
+    "natoms": 128,
+    "cellpar": [
+      11.581784319823878,
+      11.581784319823878,
+      11.581784319823878,
+      90.0,
+      90.0,
+      90.0
+    ],
+    "vol_per_atom_A3": 12.137142462541316,
+    "extxyz": "AlNi_supercell_0K.extxyz",
+    "data": "AlNi_supercell_0K.data",
+    "note": ""
+  },
+  {
+    "directory": "supercells",
+    "basename": "AlNi3_supercell_0K",
+    "phase": "AlNi3",
+    "state": "LAMMPS 0K relaxed (supercell)",
+    "natoms": 108,
+    "cellpar": [
+      10.702162388921039,
+      10.702162388985233,
+      10.702162388985215,
+      89.99999999999775,
+      90.00000000000001,
+      89.99999999999996
+    ],
+    "vol_per_atom_A3": 11.349869128192074,
+    "extxyz": "AlNi3_supercell_0K.extxyz",
+    "data": "AlNi3_supercell_0K.data",
+    "note": ""
+  },
+  {
+    "directory": "supercells",
+    "basename": "Al3Ni2_supercell_0K",
+    "phase": "Al3Ni2",
+    "state": "LAMMPS 0K relaxed (supercell)",
+    "natoms": 135,
+    "cellpar": [
+      12.154604135200245,
+      12.154604135332542,
+      14.6928635448779,
+      90.00000000037323,
+      89.99999999933748,
+      120.00000000497478
+    ],
+    "vol_per_atom_A3": 13.924671103745375,
+    "extxyz": "Al3Ni2_supercell_0K.extxyz",
+    "data": "Al3Ni2_supercell_0K.data",
+    "note": ""
+  },
+  {
+    "directory": "supercells",
+    "basename": "Al3Ni5_supercell_0K",
+    "phase": "Al3Ni5",
+    "state": "LAMMPS 0K relaxed (supercell)",
+    "natoms": 144,
+    "cellpar": [
+      11.395059998347463,
+      15.010498423217276,
+      10.00699894859907,
+      98.27876732062528,
+      90.00000000001855,
+      90.00000000001229
+    ],
+    "vol_per_atom_A3": 11.762608896031416,
+    "extxyz": "Al3Ni5_supercell_0K.extxyz",
+    "data": "Al3Ni5_supercell_0K.data",
+    "note": ""
+  },
+  {
+    "directory": "supercells",
+    "basename": "Al3Ni_supercell_0K",
+    "phase": "Al3Ni",
+    "state": "LAMMPS 0K relaxed (supercell)",
+    "natoms": 128,
+    "cellpar": [
+      9.631005822256325,
+      13.19986821329241,
+      14.853477759811586,
+      90.00000000023519,
+      90.0000000005586,
+      90.00000000036697
+    ],
+    "vol_per_atom_A3": 14.752289326266059,
+    "extxyz": "Al3Ni_supercell_0K.extxyz",
+    "data": "Al3Ni_supercell_0K.data",
+    "note": ""
+  }
+]

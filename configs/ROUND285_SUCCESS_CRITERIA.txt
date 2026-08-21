@@ -1,0 +1,91 @@
+ROUND285 SUCCESS CRITERIA -- PRE-REGISTERED BEFORE ANY DFT EXISTS
+
+Written UTC: 2026-08-18 (pre-registration pass, before pw.x has been run on
+any round285 structure). This file is written before any DFT output exists
+for cfg287/288/289/290/292/293/294 (TRAIN) or cfg297/cfg299 (SEALED), so
+none of the criteria below can be shaped by seeing a result first.
+
+BACKGROUND
+cfg109/cfg110 were unsealed 2026-08-17 against al3ni_combined220_lora_v1
+and FAILED the locked 2.3865 meV/atom threshold: cfg109 |error|=3.767
+meV/atom (+1.3806 over), cfg110 |error|=3.732 (+1.3455 over)
+(configs/AL3NI_FINAL_UNSEALING_RESULT.txt). Two falsification checks ruled
+out simpler explanations before round285 was designed: seed variance
+(retrain, seed only changed: 20260812/20260813) measured a cfg109/cfg110
+noise floor of 0.43 meV/atom; LoRA rank capacity (rank 8/16, seed fixed)
+showed no benefit -- rank 8 indistinguishable from noise, rank 16 measurably
+worse. Round285 densifies the Al3Ni high-expansion regime (+3.0%..+5.0%,
+iso_expansion + volume_rattle_expansion) on the theory that this is a
+data-density gap, not a model or noise artifact.
+
+Round285's own confirmation-holdout pair (cfg297_Al3Ni_iso_expansion,
+s=3.5%; cfg299_Al3Ni_volume_rattle_expansion, s=3.6%) is the test vehicle
+for evaluating whether the fix worked, at the future unsealing event that
+follows retraining on the merged dataset. cfg109/cfg110 themselves are
+consumed and cannot be re-evaluated as a fresh test (their own future
+error under a retrained model is still informative context, but is not
+what determines these criteria -- cfg297/cfg299 are the real reserved test
+this round produces).
+
+METRIC (same relative-energy formula used throughout this project):
+(E_pred(config) - E_pred(phase_relaxed)) / natoms, vs the DFT-derived
+equivalent, |error| in meV/atom. NOISE_FLOOR = 0.43 meV/atom (measured,
+not assumed -- see configs/project_knowledge.md Section 5 and the seed-
+variance evaluation console log, results/seed_variance_combined220_v1/).
+THRESHOLD = 2.4 meV/atom (this file's operating threshold; note the
+locked acceptance threshold elsewhere in this project is 2.3865 -- 2.4 is
+used here as a round, slightly looser pre-registered bar specific to this
+round's success/partial/failure grading, not a replacement for the locked
+acceptance criterion).
+
+WHAT IS BEING MEASURED: cfg109 and cfg110's |relative-energy error| under
+whatever model is retrained on combined-227 (combined-220 + round285's 7
+new TRAIN structures), using the same frozen relaxed-phase references and
+formula as every prior evaluation in this project. This is legitimate to
+re-measure (their DFT labels are already read/consumed; re-evaluating them
+under a new checkpoint costs nothing further and was explicitly stated as
+acceptable in this round's own design brief).
+
+VERDICT RULES (pre-registered, to be applied verbatim once the retrained
+model exists -- not revised after seeing the result, same discipline as
+AL3NI_REMEDIATION_ACCEPTANCE_CRITERION.txt):
+
+SUCCESS:
+  Both cfg109 AND cfg110 |relative-energy error| < 2.4 meV/atom, AND the
+  improvement from their combined-220 baseline (cfg109: 3.767, cfg110:
+  3.732) exceeds the 0.43 meV/atom noise floor for BOTH configs
+  individually (i.e. combined220_error - round285_error > 0.43 for each).
+  Interpretation: the fix worked, by a margin larger than what seed noise
+  alone could produce.
+
+PARTIAL:
+  Improvement (combined220_error - round285_error) exceeds 0.43 meV/atom
+  for at least one of cfg109/cfg110, but at least one config's
+  |relative-energy error| remains >= 2.4 meV/atom.
+  Interpretation: density is the right lever -- real, above-noise
+  improvement is occurring -- but this batch (7 structures) was too small
+  to fully close the gap. Recommend a further densification round on the
+  same theory, not a change of approach.
+
+FAILURE:
+  Improvement for BOTH cfg109 and cfg110 stays within the 0.43 meV/atom
+  noise floor (i.e. combined220_error - round285_error <= 0.43 for both,
+  including the case where error does not improve or gets worse).
+  Interpretation: density is NOT the cause of the original FAIL. Having
+  already ruled out seed variance and model capacity (see BACKGROUND), a
+  data-density fix that also fails to move the needle beyond noise would
+  point at an intrinsic MACE limitation in this high-expansion regime
+  (e.g. the foundation model's own representational ceiling for this
+  strain range) that more Al3Ni expansion data will not fix. Recommend
+  pausing further Al3Ni-expansion-specific data generation and
+  investigating the model side (different foundation model, full
+  fine-tune instead of LoRA, or accepting this as a documented model
+  limitation) rather than continuing to add structures on this same axis.
+
+WHAT THIS FILE DOES NOT DO: it does not change or supersede the locked
+2.3865 meV/atom acceptance threshold in
+AL3NI_REMEDIATION_ACCEPTANCE_CRITERION.txt, does not authorize merging
+round285's structures into any split (a separate, later step), and does
+not authorize retraining (also separate). It exists solely so the
+post-hoc interpretation of round285's eventual result is fixed before
+that result exists.

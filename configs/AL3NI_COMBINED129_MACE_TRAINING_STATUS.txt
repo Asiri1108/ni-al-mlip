@@ -1,0 +1,65 @@
+AL3NI COMBINED-129 MACE TRAINING STATUS
+
+Timestamp UTC: 2026-08-16T11:07:19Z
+Run: al3ni_combined129_lora_v1
+Training completion status: COMPLETE
+
+DATA AND LEAKAGE CONTROL
+TRAIN: /workspace/ni_al/data/datasets/ni_al_combined129_train_91.extxyz
+TRAIN SHA256: 4b5c68de598fe45153531e31bc67a5bbab123204cda123c6a40b558f1a85d86c
+TRAIN configurations: 91/91 (combined-127 TRAIN-89 + round4 2 (cfg143 Al3Ni5, cfg145 AlNi3), both TRAIN role)
+VALIDATION: /workspace/ni_al/data/datasets/ni_al_combined129_validation_18.extxyz
+VALIDATION SHA256: 079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff
+VALIDATION configurations: 18/18 (unchanged from combined-127; round4 has no VALIDATION members)
+TEST passed to MACE: NO
+BLIND HOLDOUT passed to MACE: NO
+cfg109/cfg110 (sealed CONFIRMATION_HOLDOUT) passed to MACE: NO -- never read, geometry or labels
+
+METHOD
+Foundation: MACE-MATPES-PBE-0 / mace-matpes-pbe-0
+Foundation SHA256: e618ad582b84239905b9c3b77ce6e9ce111b0ecd1533223a1a6aac7a696b8aa0
+Prior model (combined-127 baseline, preserved unchanged): /workspace/ni_al/models/al3ni_combined127_lora_v1/al3ni_combined127_lora_v1.model
+Prior model SHA256: dd50128d79985224faf0db393eba50b3fb2cd1753287b62f06c1794d9e59032c
+LoRA: true; rank=4; alpha=1.0; multihead replay=false
+Loss: WeightedEnergyForcesStressLoss
+Weights: energy=1.0; forces=10.0; stress=1.0
+Units: eV, Angstrom, eV/Angstrom, eV/Angstrom^3
+Precision/device: float64 / CUDA
+Optimizer: Adam; lr=0.001; weight_decay=0.0; AMSGrad=true
+Batch sizes: train=2; validation=2
+Epoch policy: max=100; patience=20; eval_interval=1
+EMA: true; decay=0.995; clip_grad=10.0
+E0s: estimated from combined-129 TRAIN-91 only
+Random seed: 20260811 (same as every prior checkpoint run, for comparability)
+
+COMMAND AND SOFTWARE
+Config: /workspace/ni_al/configs/al3ni_combined129_lora_v1.yaml
+Config SHA256: c6f7a45c5a5026a76f273c593014b73071356b00c715ef9474e46ae6786234f1
+Exact command: env XDG_CACHE_HOME=/workspace/ni_al/runs/dataset100_matpes_pbe_lora_v1/downloads TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1 /workspace/ni_al/envs/mace-py312-cu128/bin/mace_run_train --config=/workspace/ni_al/configs/al3ni_combined129_lora_v1.yaml
+Python: 3.12.3
+GPU: 0, NVIDIA GeForce RTX 4090, GPU-54d38414-1935-3188-1e77-b2edab20608b, 570.172.08, 24564 MiB
+GPU utilization this run: mean 17.3%, max 39%; peak memory 2043 MiB
+Execution: background (foreground-equivalent, no tmux)
+Wall time: ~790 seconds (11:06:09Z - 11:07:19Z region; started 1786877569 UTC epoch)
+
+TRAINING AND SELECTION
+Last epoch: 99
+Selected validation checkpoint epoch: 99
+Selected checkpoint: /workspace/ni_al/checkpoints/al3ni_combined129_lora_v1/al3ni_combined129_lora_v1_run-20260811_epoch-99.pt
+
+FINAL ERROR TABLE (full train/valid set evaluation, not per-epoch running average)
+train_Default: RMSE_E=1.6 meV/atom, RMSE_F=3.2 meV/A (rel 2.96%), RMSE_stress=2.6 meV/A^3
+valid_Default: RMSE_E=1.7 meV/atom, RMSE_F=5.6 meV/A (rel 3.01%), RMSE_stress=2.1 meV/A^3
+
+COMPARISON TO COMBINED-127 (89 TRAIN / 18 VALIDATION, epoch 99 selected)
+combined-127 validation: RMSE_E=1.6 meV/atom, RMSE_F=5.5 meV/A (rel 2.99%), RMSE_stress=2.0 meV/A^3
+This run's validation is essentially flat vs. combined-127 (RMSE_E +0.1, RMSE_F +0.1 meV/A,
+RMSE_stress +0.1 meV/A^3 -- all within normal run-to-run noise for a 2-structure addition to
+TRAIN). Same 18-structure VALIDATION set both times. Not itself a pass/fail signal -- see
+interim gate below for the project's designated non-sealed progress check. Two new TRAIN
+points closing previously-zero-support buckets (Al3Ni5/biaxial, AlNi3/biaxial) would not be
+expected to move a global, cross-phase VALIDATION metric much on their own; their value is in
+coverage (see AL3NI_COMBINED129_MERGE_STATUS.txt), not in this aggregate number.
+
+STATUS
+AL3NI COMBINED-129 MACE TRAINING COMPLETE

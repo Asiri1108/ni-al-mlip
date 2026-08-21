@@ -1,0 +1,69 @@
+AL3NI REMEDIATION V1 DESIGN STATUS
+
+Generated UTC: 2026-08-13T10:12:27.114088+00:00
+Root: /workspace/ni_al/data/al3ni_remediation_v1
+State: FROZEN BEFORE DFT
+
+COUNTS
+TRAIN = 6
+VALIDATION = 2
+CONFIRMATION = 2
+TOTAL = 10
+
+EXACT MEMBERSHIP
+TRAIN:
+  cfg101_Al3Ni_iso_compression
+  cfg102_Al3Ni_iso_compression
+  cfg103_Al3Ni_iso_expansion
+  cfg104_Al3Ni_volume_rattle_compression
+  cfg105_Al3Ni_volume_rattle_expansion
+  cfg106_Al3Ni_rattle_020
+VALIDATION:
+  cfg107_Al3Ni_volume_rattle_compression
+  cfg108_Al3Ni_rattle_030
+CONFIRMATION_HOLDOUT:
+  cfg109_Al3Ni_iso_expansion
+  cfg110_Al3Ni_volume_rattle_expansion
+
+FROZEN GOVERNING ARTIFACTS
+Manifest: /workspace/ni_al/data/al3ni_remediation_v1/remediation_manifest.csv
+Manifest SHA256: 53ad131882494d526c5daa99404e05eaf515d44c593634507c6fc162d4ae973e
+Split manifest: /workspace/ni_al/data/al3ni_remediation_v1/split_membership_manifest.csv
+Split manifest SHA256: e51afe7df4e15e55bc76222ccd31fcc74a7bfb2310ee99de59f8c3e5424c6599
+Seed manifest: /workspace/ni_al/data/al3ni_remediation_v1/rattle_seed_manifest.csv
+Seed manifest SHA256: 34ebcf4bbeb9040f62eed1359ecca879332b19739df7513aafd7ff16e93449bf
+Artifact hash manifest: /workspace/ni_al/data/al3ni_remediation_v1/artifact_sha256.csv
+Artifact hash manifest SHA256: a76cd1dd1d2f3cff6290a8b2369dfa9799dc4ccbfd1052bf8972f3a93c498d15
+Generation metadata: /workspace/ni_al/data/al3ni_remediation_v1/generation_metadata.json
+Generation metadata SHA256: d10761288469a1f8f1c89bbf1fc02ae249100c3d15875f7121f59b7cde8011b8
+Provenance: /workspace/ni_al/data/al3ni_remediation_v1/PROVENANCE.txt
+Provenance SHA256: 019ce50d456461b9940eaa66f4493ed576e49ef312ff5119b0113a1001bcbe6e
+
+FINAL AUDIT
+NEW CONFIGS: 10/10
+All Al3Ni (Al12Ni4, 16 atoms): YES
+DUPLICATE STRUCTURES: 0
+OVERLAP WITH DATASET-100: 0
+OVERLAP WITH CURRENT BLIND STRUCTURES: 0
+CURRENT DATASET-100 BLIND HOLDOUT MODIFIED: NO
+ALL CONFIG IDS FROZEN: YES
+ALL RATTLE SEEDS FROZEN: YES
+ALL STRUCTURE HASHES FROZEN: YES
+ALL QE INPUT HASHES FROZEN: YES
+ALL SPLIT MEMBERSHIP FROZEN: YES
+Confirmation label-access policy frozen: YES
+DFT STARTED: NO
+RETRAINING STARTED: NO
+LAMMPS STARTED: NO
+
+NOTE
+cfg102/cfg103 are scientifically near the historical Pilot +/-0.02 isotropic controls, but exact geometry hashes do not overlap; this is recorded in generation_metadata.json.
+
+AL3NI REMEDIATION DESIGN FROZEN
+NEW CONFIGS: 10
+TRAIN: 6
+VALIDATION: 2
+CONFIRMATION HOLDOUT: 2
+DFT STARTED: NO
+CURRENT BLIND HOLDOUT MODIFIED: NO
+READY FOR TARGETED DFT ACQUISITION

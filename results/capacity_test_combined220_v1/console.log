@@ -1,0 +1,82 @@
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Evaluating rank4_seed811 (al3ni_combined220_lora_v1.model)...
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+Evaluating rank4_seed812 (al3ni_combined220_seed20260812_lora_v1.model)...
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+Evaluating rank4_seed813 (al3ni_combined220_seed20260813_lora_v1.model)...
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+Evaluating rank8_seed811 (al3ni_combined220_rank8_lora_v1.model)...
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+Evaluating rank16_seed811 (al3ni_combined220_rank16_lora_v1.model)...
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+
+====================================================================================================
+PER-CONFIG BY CHECKPOINT (abs relative-energy error, meV/atom)
+====================================================================================================
+
+cfg109_Al3Ni_iso_expansion
+  rank4_seed811: 3.7671
+  rank4_seed812: 3.3371
+  rank4_seed813: 3.5517
+  rank8_seed811: 3.9974
+  rank16_seed811: 4.6961
+
+cfg110_Al3Ni_volume_rattle_expansion
+  rank4_seed811: 3.7320
+  rank4_seed812: 3.2972
+  rank4_seed813: 3.5107
+  rank8_seed811: 3.9445
+  rank16_seed811: 4.6484
+
+cfg043_Al3Ni_volume_rattle_expansion
+  rank4_seed811: 3.0402
+  rank4_seed812: 2.6286
+  rank4_seed813: 2.8155
+  rank8_seed811: 3.1800
+  rank16_seed811: 3.7114
+
+====================================================================================================
+RESERVED-20 AGGREGATE BY CHECKPOINT
+====================================================================================================
+  rank4_seed811: RMSE=1.1289  MAE=0.7129  MAX=3.0402
+  rank4_seed812: RMSE=1.2631  MAE=0.7843  MAX=3.0802
+  rank4_seed813: RMSE=1.0854  MAE=0.7205  MAX=2.8155
+  rank8_seed811: RMSE=1.3028  MAE=0.8108  MAX=3.1800
+  rank16_seed811: RMSE=1.4442  MAE=0.8740  MAX=3.7114
+
+====================================================================================================
+FAILURE MARGIN VS THRESHOLD (2.3865 meV/atom)
+====================================================================================================
+  cfg109_Al3Ni_iso_expansion rank4_seed811: |error|=3.7671  margin=+1.3806  FAIL
+  cfg109_Al3Ni_iso_expansion rank4_seed812: |error|=3.3371  margin=+0.9506  FAIL
+  cfg109_Al3Ni_iso_expansion rank4_seed813: |error|=3.5517  margin=+1.1652  FAIL
+  cfg109_Al3Ni_iso_expansion rank8_seed811: |error|=3.9974  margin=+1.6109  FAIL
+  cfg109_Al3Ni_iso_expansion rank16_seed811: |error|=4.6961  margin=+2.3096  FAIL
+  cfg110_Al3Ni_volume_rattle_expansion rank4_seed811: |error|=3.7320  margin=+1.3455  FAIL
+  cfg110_Al3Ni_volume_rattle_expansion rank4_seed812: |error|=3.2972  margin=+0.9107  FAIL
+  cfg110_Al3Ni_volume_rattle_expansion rank4_seed813: |error|=3.5107  margin=+1.1242  FAIL
+  cfg110_Al3Ni_volume_rattle_expansion rank8_seed811: |error|=3.9445  margin=+1.5580  FAIL
+  cfg110_Al3Ni_volume_rattle_expansion rank16_seed811: |error|=4.6484  margin=+2.2619  FAIL
+
+====================================================================================================
+NOISE-FLOOR-GATED RANK COMPARISON (baseline = rank4_seed811)
+Seed noise floor: cfg109=0.43, cfg110=0.4348 meV/atom
+====================================================================================================
+  cfg109_Al3Ni_iso_expansion: rank8_seed811 vs rank4_seed811: delta=+0.2302 (|delta|=0.2302 vs floor 0.43) -> WITHIN NOISE, NOT ATTRIBUTABLE TO RANK
+  cfg109_Al3Ni_iso_expansion: rank16_seed811 vs rank4_seed811: delta=+0.9290 (|delta|=0.9290 vs floor 0.43) -> BEYOND NOISE
+  cfg110_Al3Ni_volume_rattle_expansion: rank8_seed811 vs rank4_seed811: delta=+0.2125 (|delta|=0.2125 vs floor 0.4348) -> WITHIN NOISE, NOT ATTRIBUTABLE TO RANK
+  cfg110_Al3Ni_volume_rattle_expansion: rank16_seed811 vs rank4_seed811: delta=+0.9164 (|delta|=0.9164 vs floor 0.4348) -> BEYOND NOISE
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+CFG109 BY CHECKPOINT: rank4_seed811=3.7671, rank4_seed812=3.3371, rank4_seed813=3.5517, rank8_seed811=3.9974, rank16_seed811=4.6961
+CFG110 BY CHECKPOINT: rank4_seed811=3.7320, rank4_seed812=3.2972, rank4_seed813=3.5107, rank8_seed811=3.9445, rank16_seed811=4.6484
+RESERVED-20 RMSE BY CHECKPOINT: rank4_seed811=1.1289, rank4_seed812=1.2631, rank4_seed813=1.0854, rank8_seed811=1.3028, rank16_seed811=1.4442

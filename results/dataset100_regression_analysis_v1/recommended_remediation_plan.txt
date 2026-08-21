@@ -1,0 +1,34 @@
+RECOMMENDED REMEDIATION PLAN
+
+Primary classification: F. MIXED — dominated by A. DATA COVERAGE ISSUE, with a secondary B/C training-objective and model-selection issue.
+
+EVIDENCE
+- The Al3Ni volume+rattle expansion frame alone increases absolute relative-energy error by 6.5751565109621879 meV/atom.
+- Al3Ni TRAIN has one coupled volume+rattle configuration, compression only (strain -0.025, rattle sigma 0.020 A); VALIDATION has none.
+- Al3Ni TRAIN pure isotropic strains cover +/-0.01 and +/-0.03 and pure rattles 0.010/0.040 A; this does not constrain coupled expansion+rattle cross-curvature.
+- The failing point combines positive volume strain and atomic displacement. Its forces improved, while energy and stress worsened, consistent with an underconstrained coupled energy surface rather than a globally defective model.
+- All DFT labels passed prior scientific validation; there is no current evidence for D. LABEL ISSUE.
+- Correct DFT energy ordering is preserved for the four Al3Ni blind modes (shear_xz_negative < uniaxial_z_compression < shear_rattle_xy_negative < volume_rattle_expansion); the failure is magnitude at the large combined expansion point, not an ordering inversion.
+- A single combined expansion point cannot distinguish a globally wrong volume slope from wrong curvature. Pure expansion and compression blind points do not exist in this subset, so slope/curvature claims beyond the observed local outlier would be overinterpretation.
+
+CONTROLLED DEVELOPMENT ACTION BEFORE NEW DFT
+1. Using TRAIN/VALIDATION only, rescore retained Dataset-100 checkpoints with a preregistered composite validation table that includes existing absolute energy/force/stress metrics plus phase-referenced relative-energy MAE/RMSE computed from VALIDATION configurations against TRAIN relaxed references.
+2. Do not select a checkpoint using TEST/BLIND results. If an existing checkpoint materially improves validation relative energy without unacceptable force/stress regression, freeze it as a development candidate only.
+3. This analysis does not authorize replacing the already evaluated frozen model or rechecking the current blind set repeatedly.
+
+SMALL TARGETED DFT ACQUISITION (10 Al3Ni configurations; proposal only)
+Derive new structures independently from the training-side Al3Ni relaxed parent with new deterministic seeds:
+- 4 pure isotropic controls: strain -0.02, +0.02, -0.04, +0.04; no rattle.
+- 4 coupled volume+rattle controls: strain -0.02, +0.02, -0.04, +0.04 with rattle sigma 0.015 A; independent seeds.
+- 2 pure rattle controls: sigma 0.020 and 0.030 A; independent seeds.
+This symmetric factorial-style mini-grid estimates volume slope, curvature, displacement curvature, and their coupling without copying any blind structure. Allocate these new points between a new development TRAIN/VALIDATION design before DFT, preserve the current blind holdout unchanged, and define a new untouched confirmation holdout before any retraining.
+
+RETRAINING PLAN AFTER DESIGN FREEZE
+- First controlled arm: unchanged LoRA/model/optimizer, but checkpoint selection additionally reports preregistered validation relative-energy metrics; do not alter loss yet.
+- Second arm only if validation evidence warrants: add an explicitly documented relative-energy/difference objective or modestly increase energy emphasis, changing one factor at a time while retaining force/stress safeguards.
+- Compare arms only on development validation. Never optimize against the already revealed blind outcomes.
+
+NEW DFT REQUIRED: YES
+RETRAINING REQUIRED: YES
+BLIND HOLDOUT MODIFIED: NO
+LAMMPS APPROVED: NO

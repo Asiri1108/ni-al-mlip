@@ -1,0 +1,67 @@
+NI-AL FINAL PILOT 25 PROVENANCE
+================================
+
+Date (UTC): 2026-08-10
+Validation result: PASS
+
+Canonical file
+--------------
+Path: /workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz
+SHA256: 35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+Size: 28755 bytes
+Configurations: 25
+
+Uploaded source copies retained for provenance
+----------------------------------------------
+/workspace/ni_al/inbox/pilot25_upload/ni_al_pilot_dft_25_copy1.extxyz
+/workspace/ni_al/inbox/pilot25_upload/ni_al_pilot_dft_25_copy2.extxyz
+
+Each source copy is 28755 bytes and has SHA256:
+35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+The copies were verified byte-for-byte identical with cmp. The canonical copy
+was created without changing its content and independently re-hashed.
+
+Dataset design
+--------------
+Phases (5 configurations each): AlNi, Al3Ni, Al3Ni2, Al3Ni5, AlNi3
+Configuration types (5 entries each): relaxed, iso_m02, iso_p02,
+rattle_003, shear015_rattle002
+
+Fixed split policy
+------------------
+TRAIN (15): relaxed, iso_m02, iso_p02
+VALIDATION (5): rattle_003
+TEST (5): shear015_rattle002
+
+Every split contains all five phases. The test set is reserved and must remain
+unseen during model selection and hyperparameter tuning.
+
+Generated split artifacts
+-------------------------
+TRAIN: /workspace/ni_al/data/datasets/ni_al_pilot_train_15.extxyz
+  Size: 16530 bytes
+  SHA256: b7f3711d565e912f3da12bc24ccddbca59ecdbb7c6cfdced8a7ef09892951c6a
+VALIDATION: /workspace/ni_al/data/datasets/ni_al_pilot_val_5.extxyz
+  Size: 6042 bytes
+  SHA256: f09e54eceddba7b7d445b46f243f70af328061266773c727a13009718889392d
+TEST: /workspace/ni_al/data/datasets/ni_al_pilot_test_5.extxyz
+  Size: 6183 bytes
+  SHA256: fff925984d04f51cfc0d8add614a8287605c2539b14b72e0784e65ca6c132705
+
+Reference-data keys observed through ASE
+-----------------------------------------
+energy, forces, stress
+
+Software used for validation
+----------------------------
+Python 3.12
+ASE 3.29.0
+MACE 0.3.16
+PyTorch 2.8.0+cu128
+CUDA available: True
+
+Validation artifacts
+--------------------
+Script: /workspace/ni_al/scripts/validate_and_split_pilot25.py
+Report: /workspace/ni_al/data/processed/pilot25_validation_report.txt
+

@@ -1,0 +1,54 @@
+# in.npt_trajectory -- Stage D-3 worker fragment: single-stage NPT
+# production MD WITH trajectory dump output for OVITO animation, on a
+# ~100-150 atom supercell (AlNi 128 atoms, Al3Ni5 144 atoms).
+#
+# NOT standalone-runnable -- same reason as Stage D/D-2's fragments:
+# pair_style mliap unified EXISTS requires the Python-side
+# lammps.mliap.load_unified_kokkos() call before this file is read
+# (confirmed empirically, see in.nvt_stability's header for the exact
+# error). Load via lmp.file() from lammps_stage_d3_trajectory_run_phase.py
+# AFTER read_data/model-load/pair setup on the SUPERCELL.
+#
+# dump fields are `id element xu yu zu`: "element" (not numeric type,
+# resolved via dump_modify's element mapping below) and xu/yu/zu are
+# LAMMPS-computed UNWRAPPED coordinates -- both explicitly requested, so
+# atoms don't "teleport" across the periodic boundary between animated
+# frames, and the dump file has real chemical symbols rather than numeric
+# type codes needing a separate lookup table. Native LAMMPS dump text
+# format is one of OVITO's most robust/native importers.
+#
+# Driver must set these LAMMPS variables before lmp.file()'ing this script:
+#   temp          target temperature, K
+#   seed          velocity-seed RNG integer
+#   tdamp         Nose-Hoover thermostat damping time, ps
+#   pdamp         barostat damping time, ps
+#   pressure      target external pressure, bar (0.0 = ambient)
+#   npt_steps     number of 1-fs steps to run
+#   thermo_every  thermo/log sampling interval, steps
+#   dump_every    trajectory dump interval, steps
+#   dump_file     path to write the LAMMPS custom dump trajectory
+#   final_data    path to write the post-NPT LAMMPS data file (provenance)
+#
+# Element order (fixed project-wide, ELEMENT_ORDER=["Al","Ni"], set by the
+# driver's pair_coeff before this file runs): type 1 = Al, type 2 = Ni --
+# dump_modify's element mapping below reuses this directly.
+
+timestep 0.001
+
+velocity all create ${temp} ${seed} mom yes rot yes dist gaussian
+
+thermo ${thermo_every}
+thermo_style custom step temp pe ke etotal press pxx pyy pzz pxy pxz pyz lx ly lz xy xz yz vol
+thermo_modify flush yes
+
+dump traj all custom ${dump_every} ${dump_file} id element xu yu zu
+dump_modify traj element Al Ni sort id
+
+print "=== STAGE D-3 NPT TRAJECTORY START ==="
+fix mdintegrate all npt temp ${temp} ${temp} ${tdamp} tri ${pressure} ${pressure} ${pdamp}
+run ${npt_steps}
+print "=== STAGE D-3 NPT TRAJECTORY END ==="
+unfix mdintegrate
+undump traj
+
+write_data ${final_data} nocoeff

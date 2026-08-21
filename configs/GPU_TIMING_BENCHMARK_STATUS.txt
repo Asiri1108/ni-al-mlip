@@ -1,0 +1,180 @@
+GPU TIMING BENCHMARK STATUS — PERMANENT REPORT
+Updated UTC: 2026-08-12T06:55:01Z
+Overall status: GPU TIMING BENCHMARKS COMPLETE
+Timing source: canonical Pilot-25 only
+Pilot-25 ML split: 15 TRAIN / 5 VALIDATION / 5 TEST — previously completed
+TMUX session: ni_al_gpu_timing
+Current case: COMPLETE
+GPU-QE validation: PASS
+GPU production approved: YES
+Production configs run: 0/75
+QE executable: /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x
+QE SHA256: 66b7ea9f173b006854fc9e27dc9982c332dad295384803d612da7dad3edc7f8e
+Pseudopotential SHA256 Al: fd7b78921e6d0939095b681c328732668eaefd1dee6882fdbc03be463550cc97
+Pseudopotential SHA256 Ni: f76b86ce60cde3d83dfcc8df79ba05478db573d158289f1b226919442d977d25
+Topology: MPI ranks=1; OpenMP threads=8; QE pools=1; OMP_PROC_BIND=close; OMP_PLACES=cores
+Canonical Pilot-25 dataset: /workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz
+Canonical Pilot-25 SHA256: 35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+
+SELECTED CASES (deterministic canonical iso_m02 representative; all TRAIN split)
+CASE AlNi_iso_m02
+  Pilot split: TRAIN
+  Phase: AlNi
+  Atom count: 2
+  Canonical source structure: /workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz entry AlNi_iso_m02
+  Canonical CPU input: /workspace/ni_al/data/raw_dft/diverse_pilot_01/AlNi/iso_m02/AlNi_iso_m02.in
+  Canonical CPU output: /workspace/ni_al/data/raw_dft/diverse_pilot_01/AlNi/iso_m02/AlNi_iso_m02.out
+  Timing directory: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/AlNi_iso_m02
+  Timing input/output: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/AlNi_iso_m02/gpu.in | /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/AlNi_iso_m02/gpu.out
+  GPU monitoring log: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/AlNi_iso_m02/nvidia_smi.csv
+  State: COMPLETE
+  Source input SHA256: a2c6f95e689247959a0d51533a42dac97a923b8272177bb166fc09e35e63e5cd
+  Timing input SHA256: 32c175ee5cc0c0fd92e73c61f447fb627a0ba1fe44e011dee36cec3a0a7dce9d
+  Source structure SHA256: 35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+  Launch command: env CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=8 OMP_PROC_BIND=close OMP_PLACES=cores /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x -in /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/AlNi_iso_m02/gpu.in
+  MPI ranks / OpenMP threads / QE pools: 1 / 8 / 1
+  OMP_PROC_BIND / OMP_PLACES: close / cores
+  Start / finish: 2026-08-12T06:29:37Z / 2026-08-12T06:30:36Z
+  Exit code: 0
+  JOB DONE / SCF convergence: YES / YES
+  QE wall / external seconds:  PWSCF : 24.96s CPU 51.77s WALL / 59
+  GPU avg/active/peak: 29.7%/40.8%/66%
+  GPU peak memory: 1184_MiB
+  GPU avg/peak power: 71.5/87.9_W
+  Safe to reuse: YES
+
+CASE Al3Ni2_iso_m02
+  Pilot split: TRAIN
+  Phase: Al3Ni2
+  Atom count: 5
+  Canonical source structure: /workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz entry Al3Ni2_iso_m02
+  Canonical CPU input: /workspace/ni_al/data/raw_dft/diverse_pilot_01/Al3Ni2/iso_m02/Al3Ni2_iso_m02.in
+  Canonical CPU output: /workspace/ni_al/data/raw_dft/diverse_pilot_01/Al3Ni2/iso_m02/Al3Ni2_iso_m02.out
+  Timing directory: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni2_iso_m02
+  Timing input/output: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni2_iso_m02/gpu.in | /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni2_iso_m02/gpu.out
+  GPU monitoring log: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni2_iso_m02/nvidia_smi.csv
+  State: COMPLETE
+  Source input SHA256: e07c8cafc96cdf16759b6ddc6b29ffb5e7414b5f631cb60020e35db3a9031f99
+  Timing input SHA256: d83bdc77542c141f6009bd867d71c51c6c3cc74085e3c59f2008665aabdcbb61
+  Source structure SHA256: 35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+  Launch command: env CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=8 OMP_PROC_BIND=close OMP_PLACES=cores /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x -in /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni2_iso_m02/gpu.in
+  MPI ranks / OpenMP threads / QE pools: 1 / 8 / 1
+  OMP_PROC_BIND / OMP_PLACES: close / cores
+  Start / finish: 2026-08-11T18:52:05Z / 2026-08-11T18:56:37Z
+  Exit code: 0
+  JOB DONE / SCF convergence: YES / YES
+  QE wall / external seconds:  PWSCF : 1m46.85s CPU 4m21.99s WALL / 272
+  GPU avg/active/peak: 33.8%/52.3%/85%
+  GPU peak memory: 1604_MiB
+  GPU avg/peak power: 78.0/106.5_W
+  Safe to reuse: YES
+
+CASE AlNi3_iso_m02
+  Pilot split: TRAIN
+  Phase: AlNi3
+  Atom count: 4
+  Canonical source structure: /workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz entry AlNi3_iso_m02
+  Canonical CPU input: /workspace/ni_al/data/raw_dft/diverse_pilot_01/AlNi3/iso_m02/AlNi3_iso_m02.in
+  Canonical CPU output: /workspace/ni_al/data/raw_dft/diverse_pilot_01/AlNi3/iso_m02/AlNi3_iso_m02.out
+  Timing directory: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/AlNi3_iso_m02
+  Timing input/output: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/AlNi3_iso_m02/gpu.in | /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/AlNi3_iso_m02/gpu.out
+  GPU monitoring log: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/AlNi3_iso_m02/nvidia_smi.csv
+  State: COMPLETE
+  Source input SHA256: bd4308dbdc2120a4d970d376003ee9fe68868c4eccad03dd38cfaafdf7a5431b
+  Timing input SHA256: 2ffd5b022da0eee03e793ec1abd95b457b39357818e8b87dc3d74298b85b902b
+  Source structure SHA256: 35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+  Launch command: env CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=8 OMP_PROC_BIND=close OMP_PLACES=cores /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x -in /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/AlNi3_iso_m02/gpu.in
+  MPI ranks / OpenMP threads / QE pools: 1 / 8 / 1
+  OMP_PROC_BIND / OMP_PLACES: close / cores
+  Start / finish: 2026-08-12T06:30:56Z / 2026-08-12T06:36:26Z
+  Exit code: 0
+  JOB DONE / SCF convergence: YES / YES
+  QE wall / external seconds:  PWSCF : 3m59.50s CPU 5m29.13s WALL / 330
+  GPU avg/active/peak: 61.7%/69.3%/89%
+  GPU peak memory: 1422_MiB
+  GPU avg/peak power: 91.6/113.7_W
+  Safe to reuse: YES
+
+CASE Al3Ni5_iso_m02
+  Pilot split: TRAIN
+  Phase: Al3Ni5
+  Atom count: 8
+  Canonical source structure: /workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz entry Al3Ni5_iso_m02
+  Canonical CPU input: /workspace/ni_al/data/raw_dft/diverse_pilot_01/Al3Ni5/iso_m02/Al3Ni5_iso_m02.in
+  Canonical CPU output: /workspace/ni_al/data/raw_dft/diverse_pilot_01/Al3Ni5/iso_m02/Al3Ni5_iso_m02.out
+  Timing directory: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni5_iso_m02/attempt_002
+  Timing input/output: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni5_iso_m02/attempt_002/gpu.in | /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni5_iso_m02/attempt_002/gpu.out
+  GPU monitoring log: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni5_iso_m02/attempt_002/nvidia_smi.csv
+  State: COMPLETE
+  Source input SHA256: 3c03c51acc3c67ec6d1e9e037437cb2f06c8978d017a2b54d59ae3e58ab98a7f
+  Timing input SHA256: 80026d8a844e48f5ca6db433ceade81d1de7aed22ef8eab63d72bc595a297d04
+  Source structure SHA256: 35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+  Launch command: env CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=8 OMP_PROC_BIND=close OMP_PLACES=cores /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x -in /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni5_iso_m02/attempt_002/gpu.in
+  MPI ranks / OpenMP threads / QE pools: 1 / 8 / 1
+  OMP_PROC_BIND / OMP_PLACES: close / cores
+  Start / finish: 2026-08-12T06:36:47Z / 2026-08-12T06:44:27Z
+  Exit code: 0
+  JOB DONE / SCF convergence: YES / YES
+  QE wall / external seconds:  PWSCF : 6m12.79s CPU 7m31.78s WALL / 460
+  GPU avg/active/peak: 73.5%/80.4%/97%
+  GPU peak memory: 1900_MiB
+  GPU avg/peak power: 110.7/144.7_W
+  Safe to reuse: YES
+
+CASE Al3Ni_iso_m02
+  Pilot split: TRAIN
+  Phase: Al3Ni
+  Atom count: 16
+  Canonical source structure: /workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz entry Al3Ni_iso_m02
+  Canonical CPU input: /workspace/ni_al/data/raw_dft/diverse_pilot_01/Al3Ni/iso_m02/Al3Ni_iso_m02.in
+  Canonical CPU output: /workspace/ni_al/data/raw_dft/diverse_pilot_01/Al3Ni/iso_m02/Al3Ni_iso_m02.out
+  Timing directory: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni_iso_m02
+  Timing input/output: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni_iso_m02/gpu.in | /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni_iso_m02/gpu.out
+  GPU monitoring log: /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni_iso_m02/nvidia_smi.csv
+  State: COMPLETE
+  Source input SHA256: 2b803337ebecfba1e9a0cd8c7875d6afa5465047c261e384408974e7ac324d10
+  Timing input SHA256: 253775a30979a23c18f152f48324692a985a151d0e6bee0a3373cfbb6bb46521
+  Source structure SHA256: 35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b
+  Launch command: env CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=8 OMP_PROC_BIND=close OMP_PLACES=cores /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x -in /workspace/ni_al/data/expansion_026_100/gpu_benchmark/pilot25_timing/Al3Ni_iso_m02/gpu.in
+  MPI ranks / OpenMP threads / QE pools: 1 / 8 / 1
+  OMP_PROC_BIND / OMP_PLACES: close / cores
+  Start / finish: 2026-08-12T06:44:55Z / 2026-08-12T06:54:35Z
+  Exit code: 0
+  JOB DONE / SCF convergence: YES / YES
+  QE wall / external seconds:  PWSCF : 8m43.06s CPU 9m32.50s WALL / 580
+  GPU avg/active/peak: 83.1%/88.1%/98%
+  GPU peak memory: 3634_MiB
+  GPU avg/peak power: 136.8/165.6_W
+  Safe to reuse: YES
+
+Interrupted Al3Ni5 attempt 001 preserved at pilot25_timing/Al3Ni5_iso_m02 (exit 143; not reusable).
+
+GPU TIMING BENCHMARKS COMPLETE
+SAFE TO DISCONNECT AND RESUME LATER
+
+FINAL PRODUCTION ESTIMATE
+AlNi: 13 configs x 51.77 s = 673.01 s (0.187 h)
+Al3Ni2: 14 configs x 261.99 s = 3667.86 s (1.019 h)
+AlNi3: 12 configs x 329.13 s = 3949.56 s (1.097 h)
+Al3Ni5: 17 configs x 451.78 s = 7680.26 s (2.133 h)
+Al3Ni: 19 configs x 572.50 s = 10877.50 s (3.022 h)
+TOTAL: 75 configs = 26848.19 s = 7.458 h = 0.311 days serial GPU time
+
+FINAL INTEGRITY GATE: PASS
+Pilot-25 canonical dataset and 15/5/5 split hashes match manifest.
+Pilot-25 fine-tuned model and test-evaluation artifact hashes match manifest.
+Dataset-100 manifest unchanged: 75 NOT_RUN; 50 TRAIN_CANDIDATE, 10 VALIDATION, 15 BLIND_HOLDOUT.
+Prepared structures: 75/75. Prepared QE inputs: 75/75.
+Production configs run: 0/75. New MACE training: NO. LAMMPS: NO.
+
+FINAL RESULTS SUMMARY
+AlNi_iso_m02 | TRAIN | AlNi | 2 atoms | 51.77 s | avg/active/peak 29.7%/40.8%/66% | 1184 MiB
+Al3Ni2_iso_m02 | TRAIN | Al3Ni2 | 5 atoms | 261.99 s | avg/active/peak 33.8%/52.3%/85% | 1604 MiB
+AlNi3_iso_m02 | TRAIN | AlNi3 | 4 atoms | 329.13 s | avg/active/peak 61.7%/69.3%/89% | 1422 MiB
+Al3Ni5_iso_m02 attempt_002 | TRAIN | Al3Ni5 | 8 atoms | 451.78 s | avg/active/peak 73.5%/80.4%/97% | 1900 MiB
+Al3Ni_iso_m02 | TRAIN | Al3Ni | 16 atoms | 572.50 s | avg/active/peak 83.1%/88.1%/98% | 3634 MiB
+
+TMUX PROTECTION: USED
+CHECKPOINT STATUS: SAFE
+PRODUCTION CONFIGS RUN: 0/75
+SAFE TO DISCONNECT AND RESUME LATER

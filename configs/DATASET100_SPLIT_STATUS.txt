@@ -1,0 +1,182 @@
+Ni-Al CANONICAL DATASET-100 FROZEN SPLIT STATUS
+
+Canonical dataset: /workspace/ni_al/data/datasets/ni_al_dataset100_dft.extxyz
+Canonical dataset SHA256: 12fabd203b91e31e9a602bbaa3a2a3f14341e6fa366b128903099e196b59a3aa
+Canonical manifest: /workspace/ni_al/data/datasets/ni_al_dataset100_dft_manifest.csv
+Canonical manifest SHA256: 02f5427933a31a2a38936d431be41ada75e754f11ab184e89aa36408824fa0f6
+
+DESIGN AUTHORITY
+Expansion design: /workspace/ni_al/data/expansion_026_100/manifests/configs_026_100_design.csv
+Expansion design SHA256: 8352f0597ce6d43fa5321121a9a1aa9674ca71c087c5bd3b2ade29919ce7f998
+Blind-holdout definition: /workspace/ni_al/configs/DATASET100_EXPANSION_PREPARATION.txt
+Policy: exact pre-DFT expansion target_role assignments; historical Pilot 15/5/5 unchanged.
+Pilot TEST-5 remains historical TEST; the 15 expansion BLIND_HOLDOUT frames remain untouched final holdout.
+
+FROZEN MANIFESTS
+TRAIN: /workspace/ni_al/data/datasets/ni_al_dataset100_train_manifest.csv
+  count: 65
+  manifest SHA256: 87e3b96ebddc95beb910665985821a4df58919351d6f58df7cda8a355ac2047d
+  ordered membership SHA256: e2ab3e5a12c6baacec54cec67f3d48638b8e39c7851dea5f3f30df28a45f772d
+VALIDATION: /workspace/ni_al/data/datasets/ni_al_dataset100_validation_manifest.csv
+  count: 15
+  manifest SHA256: 87fc9debed6a93a8b8b823d188ff43444148a65c855e173c31da264c621bd42f
+  ordered membership SHA256: 6722152db4f82df3faa098f38ff15a594e597e40569464eded5e74ad10348659
+TEST: /workspace/ni_al/data/datasets/ni_al_dataset100_test_manifest.csv
+  count: 5
+  manifest SHA256: 88af05d9bc39658683d940d45fad96422e214d2710af3783c1cdb69f8483e2e3
+  ordered membership SHA256: 954a75e6f687a878d5b5f3f7c4315114565799187d6db421769065aff74811fc
+BLIND_HOLDOUT: /workspace/ni_al/data/datasets/ni_al_dataset100_blind_holdout_manifest.csv
+  count: 15
+  manifest SHA256: e7814eda578b09694da546eebc60f3398c7ca85f86763d9b514c0de056fb75bf
+  ordered membership SHA256: 96251e45ce6b332f5569fa975c7f4a5f8ec8f02d393103a597a4929553486c19
+
+AUDIT RESULTS
+Overlap: 0
+Unassigned intended structures: 0
+Historical Pilot TEST membership changed: NO
+TEST in training/validation: NO
+BLIND_HOLDOUT in training/validation/test: NO
+Exact duplicate geometries: 0
+Expansion (phase, config_family) relationship groups crossing roles: 0
+Source records duplicated: 0
+Missing energy/force/stress labels: 0
+
+TRAIN DISTRIBUTION
+  phase: Al3Ni=16; Al3Ni2=12; Al3Ni5=14; AlNi=12; AlNi3=11
+  composition: Al12Ni4=16; Al1Ni1=12; Al1Ni3=11; Al3Ni2=12; Al3Ni5=14
+  provenance: Expansion-75=50; Pilot-25=15
+  perturbation families: iso_compression=10; iso_expansion=10; iso_m02=5; iso_p02=5; orthorhombic_xy=1; orthorhombic_yz=1; rattle_large=5; rattle_small=5; relaxed=5; shear_rattle_yz=1; shear_xy_negative=5; shear_xz_positive=1; shear_yz_positive=1; uniaxial_x_compression=1; uniaxial_x_expansion=1; uniaxial_y_compression=2; uniaxial_y_expansion=1; uniaxial_z_expansion=1; volume_rattle_compression=4
+
+VALIDATION DISTRIBUTION
+  phase: Al3Ni=3; Al3Ni2=3; Al3Ni5=3; AlNi=3; AlNi3=3
+  composition: Al12Ni4=3; Al1Ni1=3; Al1Ni3=3; Al3Ni2=3; Al3Ni5=3
+  provenance: Expansion-75=10; Pilot-25=5
+  perturbation families: biaxial_xy_expansion=1; orthorhombic_xy=1; orthorhombic_xz=1; orthorhombic_yz=1; rattle_003=5; rattle_medium=1; shear_rattle_xz_positive=2; shear_rattle_yz_positive=1; uniaxial_x_expansion=1; volume_rattle_compression=1
+
+TEST DISTRIBUTION
+  phase: Al3Ni=1; Al3Ni2=1; Al3Ni5=1; AlNi=1; AlNi3=1
+  composition: Al12Ni4=1; Al1Ni1=1; Al1Ni3=1; Al3Ni2=1; Al3Ni5=1
+  provenance: Pilot-25=5
+  perturbation families: shear015_rattle002=5
+
+BLIND_HOLDOUT DISTRIBUTION
+  phase: Al3Ni=4; Al3Ni2=3; Al3Ni5=4; AlNi=2; AlNi3=2
+  composition: Al12Ni4=4; Al1Ni1=2; Al1Ni3=2; Al3Ni2=3; Al3Ni5=4
+  provenance: Expansion-75=15
+  perturbation families: biaxial_xy_compression=1; biaxial_xz_compression=2; biaxial_yz_expansion=1; rattle_xlarge=1; shear_rattle_xy_negative=1; shear_rattle_xz_negative=1; shear_rattle_yz_negative=1; shear_xz_negative=2; shear_yz_negative=1; uniaxial_z_compression=1; volume_rattle_expansion=3
+
+EXACT CONFIGURATION IDS
+TRAIN (65):
+  AlNi_iso_m02
+  AlNi_iso_p02
+  Al3Ni2_iso_m02
+  Al3Ni2_iso_p02
+  AlNi3_iso_m02
+  AlNi3_iso_p02
+  Al3Ni5_iso_m02
+  Al3Ni5_iso_p02
+  Al3Ni_iso_m02
+  Al3Ni_iso_p02
+  AlNi_relaxed
+  Al3Ni2_relaxed
+  AlNi3_relaxed
+  Al3Ni5_relaxed
+  Al3Ni_relaxed
+  cfg026_Al3Ni_iso_compression
+  cfg027_Al3Ni_iso_expansion
+  cfg045_Al3Ni5_iso_compression
+  cfg046_Al3Ni5_iso_expansion
+  cfg089_AlNi3_iso_compression
+  cfg062_Al3Ni2_iso_compression
+  cfg028_Al3Ni_iso_compression
+  cfg029_Al3Ni_iso_expansion
+  cfg047_Al3Ni5_iso_compression
+  cfg048_Al3Ni5_iso_expansion
+  cfg090_AlNi3_iso_expansion
+  cfg063_Al3Ni2_iso_expansion
+  cfg030_Al3Ni_uniaxial_x_compression
+  cfg031_Al3Ni_uniaxial_y_expansion
+  cfg049_Al3Ni5_uniaxial_y_compression
+  cfg050_Al3Ni5_orthorhombic_yz
+  cfg091_AlNi3_iso_compression
+  cfg064_Al3Ni2_iso_compression
+  cfg032_Al3Ni_orthorhombic_xy
+  cfg033_Al3Ni_shear_xy_negative
+  cfg051_Al3Ni5_shear_xy_negative
+  cfg052_Al3Ni5_shear_yz_positive
+  cfg065_Al3Ni2_iso_expansion
+  cfg066_Al3Ni2_uniaxial_z_expansion
+  cfg076_AlNi_iso_compression
+  cfg077_AlNi_iso_expansion
+  cfg034_Al3Ni_shear_xz_positive
+  cfg035_Al3Ni_rattle_small
+  cfg053_Al3Ni5_rattle_small
+  cfg054_Al3Ni5_rattle_large
+  cfg067_Al3Ni2_shear_xy_negative
+  cfg068_Al3Ni2_rattle_small
+  cfg078_AlNi_iso_compression
+  cfg079_AlNi_iso_expansion
+  cfg036_Al3Ni_rattle_large
+  cfg037_Al3Ni_volume_rattle_compression
+  cfg055_Al3Ni5_volume_rattle_compression
+  cfg092_AlNi3_iso_expansion
+  cfg093_AlNi3_uniaxial_y_compression
+  cfg069_Al3Ni2_rattle_large
+  cfg070_Al3Ni2_volume_rattle_compression
+  cfg038_Al3Ni_shear_rattle_yz
+  cfg094_AlNi3_shear_xy_negative
+  cfg095_AlNi3_rattle_small
+  cfg096_AlNi3_rattle_large
+  cfg080_AlNi_uniaxial_x_expansion
+  cfg081_AlNi_shear_xy_negative
+  cfg082_AlNi_rattle_small
+  cfg083_AlNi_rattle_large
+  cfg084_AlNi_volume_rattle_compression
+VALIDATION (15):
+  AlNi_rattle_003
+  Al3Ni2_rattle_003
+  AlNi3_rattle_003
+  Al3Ni5_rattle_003
+  Al3Ni_rattle_003
+  cfg039_Al3Ni_biaxial_xy_expansion
+  cfg056_Al3Ni5_uniaxial_x_expansion
+  cfg071_Al3Ni2_orthorhombic_xy
+  cfg072_Al3Ni2_shear_rattle_yz_positive
+  cfg040_Al3Ni_rattle_medium
+  cfg057_Al3Ni5_shear_rattle_xz_positive
+  cfg097_AlNi3_orthorhombic_xz
+  cfg098_AlNi3_volume_rattle_compression
+  cfg085_AlNi_orthorhombic_yz
+  cfg086_AlNi_shear_rattle_xz_positive
+TEST (5):
+  AlNi_shear015_rattle002
+  Al3Ni2_shear015_rattle002
+  AlNi3_shear015_rattle002
+  Al3Ni5_shear015_rattle002
+  Al3Ni_shear015_rattle002
+BLIND_HOLDOUT (15):
+  cfg041_Al3Ni_uniaxial_z_compression
+  cfg073_Al3Ni2_biaxial_xy_compression
+  cfg042_Al3Ni_shear_xz_negative
+  cfg043_Al3Ni_volume_rattle_expansion
+  cfg058_Al3Ni5_biaxial_xz_compression
+  cfg099_AlNi3_biaxial_yz_expansion
+  cfg074_Al3Ni2_shear_xz_negative
+  cfg044_Al3Ni_shear_rattle_xy_negative
+  cfg059_Al3Ni5_shear_yz_negative
+  cfg060_Al3Ni5_volume_rattle_expansion
+  cfg061_Al3Ni5_rattle_xlarge
+  cfg100_AlNi3_shear_rattle_xz_negative
+  cfg075_Al3Ni2_volume_rattle_expansion
+  cfg087_AlNi_biaxial_xz_compression
+  cfg088_AlNi_shear_rattle_yz_negative
+
+DATASET-100 SPLIT AUDIT COMPLETE
+TRAIN: 65
+VALIDATION: 15
+TEST: 5
+BLIND HOLDOUT: 15
+OVERLAP: 0
+DATA LEAKAGE: NONE
+SPLITS FROZEN
+READY FOR MACE TRAINING

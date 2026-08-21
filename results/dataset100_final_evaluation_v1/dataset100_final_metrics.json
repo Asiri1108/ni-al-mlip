@@ -1,0 +1,583 @@
+{
+  "models": {
+    "pilot25": "/workspace/ni_al/models/pilot25_matpes_pbe_lora_v1/pilot25_matpes_pbe_lora_v1.model",
+    "pilot25_sha256": "94d8d4dade7322077d6d2343820a32678eafd7499d1762ee7f180b4ce4fc7719",
+    "dataset100": "/workspace/ni_al/models/dataset100_matpes_pbe_lora_v1/dataset100_matpes_pbe_lora_v1.model",
+    "dataset100_sha256": "745f02582e604fed390d567198e4e4dfa783c71a61d749c58419659bc784a0d9"
+  },
+  "splits": {
+    "TEST": 5,
+    "BLIND_HOLDOUT": 15
+  },
+  "overall": {
+    "group_type": "overall",
+    "group": "TEST+BLIND",
+    "count": 20,
+    "pilot25_energy_mae_mev_atom": 2.706387307143814,
+    "dataset100_energy_mae_mev_atom": 1.1860919815603665,
+    "improvement_percent_energy_mae_mev_atom": 56.174344358268925,
+    "pilot25_energy_rmse_mev_atom": 3.1401326223860977,
+    "dataset100_energy_rmse_mev_atom": 1.6661108966063491,
+    "improvement_percent_energy_rmse_mev_atom": 46.941384426613205,
+    "pilot25_energy_max_abs_mev_atom": 7.146994207505486,
+    "dataset100_energy_max_abs_mev_atom": 5.4823282002871565,
+    "improvement_percent_energy_max_abs_mev_atom": 23.29183372599021,
+    "pilot25_relative_energy_mae_mev_atom": 0.9553050626141157,
+    "dataset100_relative_energy_mae_mev_atom": 1.0210022805608787,
+    "improvement_percent_relative_energy_mae_mev_atom": -6.877093037378845,
+    "pilot25_relative_energy_rmse_mev_atom": 1.4637247119732628,
+    "dataset100_relative_energy_rmse_mev_atom": 1.8884381219893103,
+    "improvement_percent_relative_energy_rmse_mev_atom": -29.015934932429115,
+    "pilot25_relative_energy_max_abs_mev_atom": 3.4192521502518503,
+    "dataset100_relative_energy_max_abs_mev_atom": 6.598510805361002,
+    "improvement_percent_relative_energy_max_abs_mev_atom": -92.9811115239038,
+    "pilot25_force_mae_evA": 0.007746804307048655,
+    "dataset100_force_mae_evA": 0.004322198973955396,
+    "improvement_percent_force_mae_evA": 44.20668442569645,
+    "pilot25_force_rmse_evA": 0.0125345113714341,
+    "dataset100_force_rmse_evA": 0.00707149877579726,
+    "improvement_percent_force_rmse_evA": 43.583769911342024,
+    "pilot25_force_max_component_error_evA": 0.10105638691246832,
+    "dataset100_force_max_component_error_evA": 0.04157152773657141,
+    "improvement_percent_force_max_component_error_evA": 58.86303774883691,
+    "pilot25_stress_mae_gpa": 0.2969301946152311,
+    "dataset100_stress_mae_gpa": 0.2567646107858044,
+    "improvement_percent_stress_mae_gpa": 13.526944904163138,
+    "pilot25_stress_rmse_gpa": 0.46024059637040166,
+    "dataset100_stress_rmse_gpa": 0.4329742862411609,
+    "improvement_percent_stress_rmse_gpa": 5.9243600725949035,
+    "pilot25_stress_max_component_error_gpa": 1.3499951550123002,
+    "dataset100_stress_max_component_error_gpa": 1.3213502955045324,
+    "improvement_percent_stress_max_component_error_gpa": 2.1218490600810154
+  },
+  "test": {
+    "group_type": "split",
+    "group": "TEST",
+    "count": 5,
+    "pilot25_energy_mae_mev_atom": 2.5919561556747794,
+    "dataset100_energy_mae_mev_atom": 0.7225552144882386,
+    "improvement_percent_energy_mae_mev_atom": 72.1231698728279,
+    "pilot25_energy_rmse_mev_atom": 2.6865375390069572,
+    "dataset100_energy_rmse_mev_atom": 0.8365124724591948,
+    "improvement_percent_energy_rmse_mev_atom": 68.8628035040076,
+    "pilot25_energy_max_abs_mev_atom": 3.876298971590586,
+    "dataset100_energy_max_abs_mev_atom": 1.2498228052209015,
+    "improvement_percent_energy_max_abs_mev_atom": 67.75731659552426,
+    "pilot25_relative_energy_mae_mev_atom": 0.20969935816538054,
+    "dataset100_relative_energy_mae_mev_atom": 0.06799927061365452,
+    "improvement_percent_relative_energy_mae_mev_atom": 67.57297151094448,
+    "pilot25_relative_energy_rmse_mev_atom": 0.23339204779228126,
+    "dataset100_relative_energy_rmse_mev_atom": 0.09600445964284635,
+    "improvement_percent_relative_energy_rmse_mev_atom": 58.86558237481585,
+    "pilot25_relative_energy_max_abs_mev_atom": 0.4009210797448759,
+    "dataset100_relative_energy_max_abs_mev_atom": 0.1657791558500321,
+    "improvement_percent_relative_energy_max_abs_mev_atom": 58.65042667361745,
+    "pilot25_force_mae_evA": 0.009448280821636353,
+    "dataset100_force_mae_evA": 0.004701812070111939,
+    "improvement_percent_force_mae_evA": 50.23632173014063,
+    "pilot25_force_rmse_evA": 0.012267442009548104,
+    "dataset100_force_rmse_evA": 0.0067025239013270505,
+    "improvement_percent_force_rmse_evA": 45.36331293752778,
+    "pilot25_force_max_component_error_evA": 0.04582321296019139,
+    "dataset100_force_max_component_error_evA": 0.021708351966387707,
+    "improvement_percent_force_max_component_error_evA": 52.62586238715584,
+    "pilot25_stress_mae_gpa": 0.25782580413298073,
+    "dataset100_stress_mae_gpa": 0.21122511444036032,
+    "improvement_percent_stress_mae_gpa": 18.074486318128507,
+    "pilot25_stress_rmse_gpa": 0.38830382070026553,
+    "dataset100_stress_rmse_gpa": 0.3456949222700271,
+    "improvement_percent_stress_rmse_gpa": 10.973082457287619,
+    "pilot25_stress_max_component_error_gpa": 1.1612339277649677,
+    "dataset100_stress_max_component_error_gpa": 0.9307168143814559,
+    "improvement_percent_stress_max_component_error_gpa": 19.851048774228385
+  },
+  "blind_holdout": {
+    "group_type": "split",
+    "group": "BLIND_HOLDOUT",
+    "count": 15,
+    "pilot25_energy_mae_mev_atom": 2.7445310243001586,
+    "dataset100_energy_mae_mev_atom": 1.3406042372510758,
+    "improvement_percent_energy_mae_mev_atom": 51.153613299273125,
+    "pilot25_energy_rmse_mev_atom": 3.2774099324619126,
+    "dataset100_energy_rmse_mev_atom": 1.8622521278084998,
+    "improvement_percent_energy_rmse_mev_atom": 43.1791516415641,
+    "pilot25_energy_max_abs_mev_atom": 7.146994207505486,
+    "dataset100_energy_max_abs_mev_atom": 5.4823282002871565,
+    "improvement_percent_energy_max_abs_mev_atom": 23.29183372599021,
+    "pilot25_relative_energy_mae_mev_atom": 1.2038402974303608,
+    "dataset100_relative_energy_mae_mev_atom": 1.3386699505432869,
+    "improvement_percent_relative_energy_mae_mev_atom": -11.199961772398272,
+    "pilot25_relative_energy_rmse_mev_atom": 1.6847836935140141,
+    "dataset100_relative_energy_rmse_mev_atom": 2.179875937300006,
+    "improvement_percent_relative_energy_rmse_mev_atom": -29.386101354848716,
+    "pilot25_relative_energy_max_abs_mev_atom": 3.4192521502518503,
+    "dataset100_relative_energy_max_abs_mev_atom": 6.598510805361002,
+    "improvement_percent_relative_energy_max_abs_mev_atom": -92.9811115239038,
+    "pilot25_force_mae_evA": 0.007262644323222889,
+    "dataset100_force_mae_evA": 0.004214178987244185,
+    "improvement_percent_force_mae_evA": 41.97459217754877,
+    "pilot25_force_rmse_evA": 0.012609472961668687,
+    "dataset100_force_rmse_evA": 0.007173023688742452,
+    "improvement_percent_force_rmse_evA": 43.11400872544318,
+    "pilot25_force_max_component_error_evA": 0.10105638691246832,
+    "dataset100_force_max_component_error_evA": 0.04157152773657141,
+    "improvement_percent_force_max_component_error_evA": 58.86303774883691,
+    "pilot25_stress_mae_gpa": 0.3099649914426479,
+    "dataset100_stress_mae_gpa": 0.2719444429009524,
+    "improvement_percent_stress_mae_gpa": 12.26607829637121,
+    "pilot25_stress_rmse_gpa": 0.4818387589983147,
+    "dataset100_stress_rmse_gpa": 0.4583891908632849,
+    "improvement_percent_stress_rmse_gpa": 4.866683656536607,
+    "pilot25_stress_max_component_error_gpa": 1.3499951550123002,
+    "dataset100_stress_max_component_error_gpa": 1.3213502955045324,
+    "improvement_percent_stress_max_component_error_gpa": 2.1218490600810154
+  },
+  "regressions": [
+    {
+      "group_type": "overall",
+      "group": "TEST+BLIND",
+      "count": 20,
+      "metric": "relative_energy_mae_mev_atom",
+      "pilot25": 0.9553050626141157,
+      "dataset100": 1.0210022805608787,
+      "change_percent": 6.877093037378845
+    },
+    {
+      "group_type": "overall",
+      "group": "TEST+BLIND",
+      "count": 20,
+      "metric": "relative_energy_rmse_mev_atom",
+      "pilot25": 1.4637247119732628,
+      "dataset100": 1.8884381219893103,
+      "change_percent": 29.015934932429115
+    },
+    {
+      "group_type": "overall",
+      "group": "TEST+BLIND",
+      "count": 20,
+      "metric": "relative_energy_max_abs_mev_atom",
+      "pilot25": 3.4192521502518503,
+      "dataset100": 6.598510805361002,
+      "change_percent": 92.9811115239038
+    },
+    {
+      "group_type": "split",
+      "group": "BLIND_HOLDOUT",
+      "count": 15,
+      "metric": "relative_energy_mae_mev_atom",
+      "pilot25": 1.2038402974303608,
+      "dataset100": 1.3386699505432869,
+      "change_percent": 11.199961772398272
+    },
+    {
+      "group_type": "split",
+      "group": "BLIND_HOLDOUT",
+      "count": 15,
+      "metric": "relative_energy_rmse_mev_atom",
+      "pilot25": 1.6847836935140141,
+      "dataset100": 2.179875937300006,
+      "change_percent": 29.386101354848716
+    },
+    {
+      "group_type": "split",
+      "group": "BLIND_HOLDOUT",
+      "count": 15,
+      "metric": "relative_energy_max_abs_mev_atom",
+      "pilot25": 3.4192521502518503,
+      "dataset100": 6.598510805361002,
+      "change_percent": 92.9811115239038
+    },
+    {
+      "group_type": "phase",
+      "group": "TEST:Al3Ni",
+      "count": 1,
+      "metric": "stress_mae_gpa",
+      "pilot25": 0.15798851885731954,
+      "dataset100": 0.17015223709837027,
+      "change_percent": 7.69911530852179
+    },
+    {
+      "group_type": "phase",
+      "group": "TEST:Al3Ni2",
+      "count": 1,
+      "metric": "stress_mae_gpa",
+      "pilot25": 0.3625892258106577,
+      "dataset100": 0.37846086739034807,
+      "change_percent": 4.377306453109678
+    },
+    {
+      "group_type": "phase",
+      "group": "TEST:Al3Ni2",
+      "count": 1,
+      "metric": "stress_rmse_gpa",
+      "pilot25": 0.51393949953531,
+      "dataset100": 0.517889514219032,
+      "change_percent": 0.7685758123851949
+    },
+    {
+      "group_type": "phase",
+      "group": "BLIND_HOLDOUT:Al3Ni",
+      "count": 4,
+      "metric": "energy_rmse_mev_atom",
+      "pilot25": 2.3260101953104324,
+      "dataset100": 2.883356407608377,
+      "change_percent": 23.96146901770395
+    },
+    {
+      "group_type": "phase",
+      "group": "BLIND_HOLDOUT:Al3Ni",
+      "count": 4,
+      "metric": "energy_max_abs_mev_atom",
+      "pilot25": 3.25519452098888,
+      "dataset100": 5.4823282002871565,
+      "change_percent": 68.41783693533947
+    },
+    {
+      "group_type": "phase",
+      "group": "BLIND_HOLDOUT:Al3Ni",
+      "count": 4,
+      "metric": "relative_energy_mae_mev_atom",
+      "pilot25": 0.506983160960317,
+      "dataset100": 1.8587217646768295,
+      "change_percent": 266.6239646216409
+    },
+    {
+      "group_type": "phase",
+      "group": "BLIND_HOLDOUT:Al3Ni",
+      "count": 4,
+      "metric": "relative_energy_rmse_mev_atom",
+      "pilot25": 0.690303010760443,
+      "dataset100": 3.31587190556529,
+      "change_percent": 380.3502018501267
+    },
+    {
+      "group_type": "phase",
+      "group": "BLIND_HOLDOUT:Al3Ni",
+      "count": 4,
+      "metric": "relative_energy_max_abs_mev_atom",
+      "pilot25": 1.2281580495709932,
+      "dataset100": 6.598510805361002,
+      "change_percent": 437.2688643506365
+    },
+    {
+      "group_type": "phase",
+      "group": "BLIND_HOLDOUT:Al3Ni",
+      "count": 4,
+      "metric": "stress_mae_gpa",
+      "pilot25": 0.1430515162389375,
+      "dataset100": 0.2239690141053302,
+      "change_percent": 56.56528500630293
+    },
+    {
+      "group_type": "phase",
+      "group": "BLIND_HOLDOUT:Al3Ni",
+      "count": 4,
+      "metric": "stress_rmse_gpa",
+      "pilot25": 0.2171444291835783,
+      "dataset100": 0.38050763838460744,
+      "change_percent": 75.23251221099417
+    },
+    {
+      "group_type": "phase",
+      "group": "BLIND_HOLDOUT:Al3Ni",
+      "count": 4,
+      "metric": "stress_max_component_error_gpa",
+      "pilot25": 0.45101268306763853,
+      "dataset100": 1.1388365032206917,
+      "change_percent": 152.50653606339935
+    },
+    {
+      "group_type": "phase",
+      "group": "BLIND_HOLDOUT:Al3Ni2",
+      "count": 3,
+      "metric": "stress_mae_gpa",
+      "pilot25": 0.3428520281236864,
+      "dataset100": 0.4213708183464049,
+      "change_percent": 22.901655461227787
+    },
+    {
+      "group_type": "phase",
+      "group": "BLIND_HOLDOUT:Al3Ni2",
+      "count": 3,
+      "metric": "stress_rmse_gpa",
+      "pilot25": 0.49720619989446174,
+      "dataset100": 0.6318841852946311,
+      "change_percent": 27.086948117050117
+    },
+    {
+      "group_type": "phase",
+      "group": "BLIND_HOLDOUT:Al3Ni2",
+      "count": 3,
+      "metric": "stress_max_component_error_gpa",
+      "pilot25": 0.9657118757032838,
+      "dataset100": 1.3213502955045324,
+      "change_percent": 36.82655549226351
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:biaxial_xy_compression",
+      "count": 1,
+      "metric": "relative_energy_mae_mev_atom",
+      "pilot25": 3.0466568292467855,
+      "dataset100": 3.0632033020083327,
+      "change_percent": 0.543102610136696
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:biaxial_xy_compression",
+      "count": 1,
+      "metric": "relative_energy_rmse_mev_atom",
+      "pilot25": 3.0466568292467855,
+      "dataset100": 3.0632033020083327,
+      "change_percent": 0.543102610136696
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:biaxial_xy_compression",
+      "count": 1,
+      "metric": "relative_energy_max_abs_mev_atom",
+      "pilot25": 3.0466568292467855,
+      "dataset100": 3.0632033020083327,
+      "change_percent": 0.543102610136696
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:biaxial_xy_compression",
+      "count": 1,
+      "metric": "force_mae_evA",
+      "pilot25": 0.0013288747182208613,
+      "dataset100": 0.0019697896805243417,
+      "change_percent": 48.22990109718975
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:biaxial_xy_compression",
+      "count": 1,
+      "metric": "force_rmse_evA",
+      "pilot25": 0.002971455128059072,
+      "dataset100": 0.003941492384145152,
+      "change_percent": 32.64519281903811
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:biaxial_xy_compression",
+      "count": 1,
+      "metric": "force_max_component_error_evA",
+      "pilot25": 0.007895196708485389,
+      "dataset100": 0.009435617246368003,
+      "change_percent": 19.510856977471406
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:biaxial_xy_compression",
+      "count": 1,
+      "metric": "stress_mae_gpa",
+      "pilot25": 0.42303423720937877,
+      "dataset100": 0.5406419038436067,
+      "change_percent": 27.80098069840587
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:biaxial_xy_compression",
+      "count": 1,
+      "metric": "stress_rmse_gpa",
+      "pilot25": 0.6100884463372936,
+      "dataset100": 0.7685619996032376,
+      "change_percent": 25.975504734985623
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:biaxial_xy_compression",
+      "count": 1,
+      "metric": "stress_max_component_error_gpa",
+      "pilot25": 0.9657118757032838,
+      "dataset100": 1.1595262572279998,
+      "change_percent": 20.06958663354636
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:shear_rattle_xy_negative",
+      "count": 1,
+      "metric": "stress_mae_gpa",
+      "pilot25": 0.1534465901302409,
+      "dataset100": 0.18259390822925595,
+      "change_percent": 18.99509013154067
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:shear_rattle_xz_negative",
+      "count": 1,
+      "metric": "relative_energy_mae_mev_atom",
+      "pilot25": 0.26170083719989634,
+      "dataset100": 0.30540947318513645,
+      "change_percent": 16.70175626983337
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:shear_rattle_xz_negative",
+      "count": 1,
+      "metric": "relative_energy_rmse_mev_atom",
+      "pilot25": 0.26170083719989634,
+      "dataset100": 0.30540947318513645,
+      "change_percent": 16.70175626983337
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:shear_rattle_xz_negative",
+      "count": 1,
+      "metric": "relative_energy_max_abs_mev_atom",
+      "pilot25": 0.26170083719989634,
+      "dataset100": 0.30540947318513645,
+      "change_percent": 16.70175626983337
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:shear_xz_negative",
+      "count": 2,
+      "metric": "stress_mae_gpa",
+      "pilot25": 0.2885384214431537,
+      "dataset100": 0.2938688335074587,
+      "change_percent": 1.8473838033924108
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:shear_yz_negative",
+      "count": 1,
+      "metric": "force_mae_evA",
+      "pilot25": 0.0003228174665784971,
+      "dataset100": 0.0006191037661375138,
+      "change_percent": 91.78137190013878
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:shear_yz_negative",
+      "count": 1,
+      "metric": "force_rmse_evA",
+      "pilot25": 0.0006303232977503675,
+      "dataset100": 0.0011095234880482358,
+      "change_percent": 76.02450869389413
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:shear_yz_negative",
+      "count": 1,
+      "metric": "force_max_component_error_evA",
+      "pilot25": 0.0015445756930238877,
+      "dataset100": 0.0024459781445107026,
+      "change_percent": 58.35922807525848
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:uniaxial_z_compression",
+      "count": 1,
+      "metric": "relative_energy_mae_mev_atom",
+      "pilot25": 0.6070035774428106,
+      "dataset100": 0.6372870782342943,
+      "change_percent": 4.989015207960098
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:uniaxial_z_compression",
+      "count": 1,
+      "metric": "relative_energy_rmse_mev_atom",
+      "pilot25": 0.6070035774428106,
+      "dataset100": 0.6372870782342943,
+      "change_percent": 4.989015207960098
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:uniaxial_z_compression",
+      "count": 1,
+      "metric": "relative_energy_max_abs_mev_atom",
+      "pilot25": 0.6070035774428106,
+      "dataset100": 0.6372870782342943,
+      "change_percent": 4.989015207960098
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:uniaxial_z_compression",
+      "count": 1,
+      "metric": "stress_max_component_error_gpa",
+      "pilot25": 0.305025239695539,
+      "dataset100": 0.3088004326911405,
+      "change_percent": 1.237665774599401
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:volume_rattle_expansion",
+      "count": 3,
+      "metric": "energy_mae_mev_atom",
+      "pilot25": 2.8856034212973705,
+      "dataset100": 3.0890646598588014,
+      "change_percent": 7.050907864184419
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:volume_rattle_expansion",
+      "count": 3,
+      "metric": "energy_rmse_mev_atom",
+      "pilot25": 3.5705192888334363,
+      "dataset100": 3.5728311539829454,
+      "change_percent": 0.06474870915105548
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:volume_rattle_expansion",
+      "count": 3,
+      "metric": "relative_energy_mae_mev_atom",
+      "pilot25": 2.237169323461785,
+      "dataset100": 3.86167053866302,
+      "change_percent": 72.61413779299859
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:volume_rattle_expansion",
+      "count": 3,
+      "metric": "relative_energy_rmse_mev_atom",
+      "pilot25": 2.7311504215268796,
+      "dataset100": 4.341737546531625,
+      "change_percent": 58.9710150092842
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:volume_rattle_expansion",
+      "count": 3,
+      "metric": "relative_energy_max_abs_mev_atom",
+      "pilot25": 3.4192521502518503,
+      "dataset100": 6.598510805361002,
+      "change_percent": 92.9811115239038
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:volume_rattle_expansion",
+      "count": 3,
+      "metric": "stress_mae_gpa",
+      "pilot25": 0.27934429704691,
+      "dataset100": 0.3663618410007405,
+      "change_percent": 31.150642727894216
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:volume_rattle_expansion",
+      "count": 3,
+      "metric": "stress_rmse_gpa",
+      "pilot25": 0.40003873868057443,
+      "dataset100": 0.5719297095588655,
+      "change_percent": 42.96858135420322
+    },
+    {
+      "group_type": "perturbation_family",
+      "group": "BLIND_HOLDOUT:volume_rattle_expansion",
+      "count": 3,
+      "metric": "stress_max_component_error_gpa",
+      "pilot25": 1.0568194054766935,
+      "dataset100": 1.3213502955045324,
+      "change_percent": 25.03085093413084
+    }
+  ],
+  "material_overall_regressions": [
+    "relative_energy_mae_mev_atom",
+    "relative_energy_rmse_mev_atom"
+  ],
+  "verdict": "REVIEW REQUIRED"
+}

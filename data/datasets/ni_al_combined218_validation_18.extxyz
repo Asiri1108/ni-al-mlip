@@ -1,0 +1,189 @@
+2
+Lattice="2.89400823875214 0.0 -0.0 -0.0 2.89400823875214 -0.0 0.0 -0.0 2.89400823875214" Properties=species:S:1:pos:R:3:forces:R:3 config_id=AlNi_rattle_003 phase=AlNi config_type=rattle_003 source=QE_7.6_PBE dataset_origin=Pilot-25 source_record=Pilot-25:AlNi_rattle_003 original_dataset=/workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz original_dataset_sha256=35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b provenance=/workspace/ni_al/configs/PILOT25_PROVENANCE.txt qe_output_sha256=historical_not_recorded canonical_input=historical_not_recorded canonical_input_sha256=historical_not_recorded energy=-5209.280878520931 stress="-0.005211462623872088 0.001115561502467334 0.0008189965927579109 0.001115561502467334 -0.003290676892874835 -0.004294223166287836 0.0008189965927579109 -0.004294223166287836 -0.004211588980919885" pbc="T T T"
+Al       1.45467932       1.40579952       1.41709570      -0.09073140       0.47654471       0.34958416
+Ni       2.88633304       0.04120460       0.02990842       0.09073140      -0.47654471      -0.34958416
+5
+Lattice="4.044922628503966 0.0 0.0 -2.022461314251983 3.5030041193501473 -0.0 -0.0 -0.0 4.907862377146373" Properties=species:S:1:pos:R:3:forces:R:3 config_id=Al3Ni2_rattle_003 phase=Al3Ni2 config_type=rattle_003 source=QE_7.6_PBE dataset_origin=Pilot-25 source_record=Pilot-25:Al3Ni2_rattle_003 original_dataset=/workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz original_dataset_sha256=35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b provenance=/workspace/ni_al/configs/PILOT25_PROVENANCE.txt qe_output_sha256=historical_not_recorded canonical_input=historical_not_recorded canonical_input_sha256=historical_not_recorded energy=-10956.48157842554 stress="-0.0011183159753129321 -0.0013643822161863851 0.00043979749768053737 -0.0013643822161863851 0.002915150428258259 0.0006647461134044031 0.00043979749768053737 0.0006647461134044031 -0.0033981013338531705" pbc="T T T"
+Al       2.02344463       3.49420520       4.88634582       0.03816520       0.08090876       0.09372031
+Al      -0.02426630       2.32622691       3.18934585       0.18239843       0.08224316       0.06540604
+Al       2.02504076       1.19389410       1.71369053      -0.02968364      -0.19465076       0.11333706
+Ni       0.01174929       2.33096595       0.77654667      -0.07797333       0.05844426      -0.61606589
+Ni       2.03141232       1.16372181       4.15765786      -0.11290665      -0.02694542       0.34360248
+4
+Lattice="3.5672608213836416 0.0 -0.0 0.0 3.5673856755123903 0.0 0.0 0.0 3.5673856755123903" Properties=species:S:1:pos:R:3:forces:R:3 config_id=AlNi3_rattle_003 phase=AlNi3 config_type=rattle_003 source=QE_7.6_PBE dataset_origin=Pilot-25 source_record=Pilot-25:AlNi3_rattle_003 original_dataset=/workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz original_dataset_sha256=35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b provenance=/workspace/ni_al/configs/PILOT25_PROVENANCE.txt qe_output_sha256=historical_not_recorded canonical_input=historical_not_recorded canonical_input_sha256=historical_not_recorded energy=-14550.816738366631 stress="-0.0025074884471097026 -0.00048570537844050995 0.0001083425985935353 -0.00048570537844050995 -0.002376191908136181 0.0010898530892417492 0.0001083425985935353 0.0010898530892417492 -0.002513915550416099" pbc="T T T"
+Al       0.01582473       0.03575965       3.54666310      -0.17973142      -0.47462333       0.28484326
+Ni       3.56598160       1.75521040       1.80738551      -0.05966245       0.44281004      -0.32977535
+Ni       1.77732100       0.01276223       1.78990915       0.11050293      -0.33482037      -0.17284704
+Ni       1.77539432       1.76365304       3.55819534       0.12889094       0.36663365       0.21777912
+8
+Lattice="3.762306544370215 0.0 0.0 0.0 4.98132396319852 -0.5517008693599039 0.0 -0.01383023885710491 5.011764785449018" Properties=species:S:1:pos:R:3:forces:R:3 config_id=Al3Ni5_rattle_003 phase=Al3Ni5 config_type=rattle_003 source=QE_7.6_PBE dataset_origin=Pilot-25 source_record=Pilot-25:Al3Ni5_rattle_003 original_dataset=/workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz original_dataset_sha256=35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b provenance=/workspace/ni_al/configs/PILOT25_PROVENANCE.txt qe_output_sha256=historical_not_recorded canonical_input=historical_not_recorded canonical_input_sha256=historical_not_recorded energy=-24969.569102172714 stress="-0.003136426413521327 0.00015149600650790954 -0.0003452272633149938 0.00015149600650790954 -0.0008529684245202907 -0.000827260011294706 -0.0003452272633149938 -0.000827260011294706 -0.0031382627287517262" pbc="T T T"
+Al       0.00620254       2.50336503       2.20835167      -0.03303713      -0.27545025       0.07757198
+Al       1.90481103       1.05572730       3.78130845      -0.30887974       0.25683032       0.01226236
+Al       1.90593860       3.84240831       0.63142114      -0.33117891       0.35269159       0.42572198
+Ni       3.73795991       0.04373606       0.03741238       0.32958534      -0.16598322      -0.11674557
+Ni       3.74479715       2.51255108       4.71647414       0.24215601      -0.27689007       0.00915184
+Ni       3.75194854       4.95581816       1.98587482       0.17089069       0.13928411      -0.19168808
+Ni       1.89113542       1.37316702       1.23637068      -0.12588018      -0.05257623       0.04472511
+Ni       1.86873917       3.58320420       3.24303488       0.05634418       0.02209400      -0.26099962
+16
+Lattice="4.8255045200653575 0.0 0.0 0.0 6.623033906816824 0.0 0.0 0.0 7.38249111020279" Properties=species:S:1:pos:R:3:forces:R:3 config_id=Al3Ni_rattle_003 phase=Al3Ni config_type=rattle_003 source=QE_7.6_PBE dataset_origin=Pilot-25 source_record=Pilot-25:Al3Ni_rattle_003 original_dataset=/workspace/ni_al/data/processed/ni_al_pilot_dft_25.extxyz original_dataset_sha256=35b2b65fe77d181b5da30dd23bbb7ff9fc4f41c0c0f603738172e2f833ab5b0b provenance=/workspace/ni_al/configs/PILOT25_PROVENANCE.txt qe_output_sha256=historical_not_recorded canonical_input=historical_not_recorded canonical_input_sha256=historical_not_recorded energy=-25138.049826355193 stress="0.00013221469658872105 0.0012606304056688473 0.00025524781702544757 0.0012606304056688473 -0.002835270715735907 -0.0005123319492812941 0.00025524781702544757 -0.0005123319492812941 -0.0013102109168896176" pbc="T T T"
+Al       4.43548070       0.04476814       1.83546027      -0.19585070       0.01405288      -0.01739737
+Al       1.71472276       1.14160242       3.33296970       0.24411133       0.05262303      -0.18080717
+Al       1.72342797       1.10595352       0.44161908       0.45516316       0.12289745      -0.36208769
+Al       4.16164587       2.18697800       4.09145119      -0.10704377      -0.03571082      -0.11735518
+Al       0.63666452       4.49077568       3.29703079       0.17111000      -0.19092086      -0.24222929
+Al       3.02448147       5.45746562       6.95687775       0.36503803      -0.02370583       0.00280842
+Al       0.66304169       4.40866152       0.40075670      -0.13026417       0.22795349       0.02091464
+Al       3.04649494       5.53466742       4.09395176       0.25093118      -0.36063399       0.04437133
+Al       4.18093293       2.18285364       6.94166728      -0.05974267      -0.11506972       0.24000040
+Al       2.83398840       3.39980776       1.80437147       0.05506814      -0.24845213       0.18485538
+Al       0.41372139       6.60309830       5.56028988      -0.19581779      -0.27118556      -0.01863098
+Al       2.01062463       3.23564844       5.58240758       0.04629837      -0.02895036      -0.21878725
+Ni       2.13553233       5.79012336       1.83531116      -0.01229836      -0.22476661       0.14816856
+Ni       0.32757986       2.43987497       1.83224600      -0.49104959       0.30693752       0.17098890
+Ni       2.70744727       0.81332962       5.55372092      -0.07806692       0.44475508       0.02610647
+Ni       4.58826100       4.14865079       5.49981087      -0.31758652       0.33017618       0.31908033
+16
+Lattice="4.883410571176137 0.0 0.0 0.0 6.702510309403247 0.0 0.0 0.0 7.382491105471437" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg039_Al3Ni_biaxial_xy_expansion phase=Al3Ni config_type=biaxial_xy_expansion source=QE_7.6_PBE provenance=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_07/cfg039_Al3Ni_biaxial_xy_expansion/attempt_001/qe.out qe_output_sha256=b889d46dee8989e4bf1d632be20fce46c403273f0e29ba284671ef1b859274f9 canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg039_Al3Ni_biaxial_xy_expansion.in canonical_input_sha256=ffce39af4662712e6c1d8c23f4bf1b21e0c3dae9e3e9bace6e755eac4bb1634d dataset_origin=Expansion-75 source_record=Expansion-75:b889d46dee8989e4bf1d632be20fce46c403273f0e29ba284671ef1b859274f9 original_dataset=/workspace/ni_al/data/processed/ni_al_expansion_dft_75.extxyz original_dataset_sha256=ff69c2bfed14bfcf48931949647d8f1b3c9353a89c20378c9113155940792137 energy=-25138.122429061823 stress="0.018394512733062435 -0.0 -0.0 -0.0 0.019191896883824104 -0.0 -0.0 -0.0 0.010077425716423206" pbc="T T T"
+Al       4.47332666       0.05031768       1.84562326       0.01499187       0.01835838       0.00000000
+Al       1.77804637       1.14828028       3.28334421      -0.01363440      -0.00720926      -0.02517966
+Al       1.77804637       1.14828028       0.40790231      -0.01363440      -0.00720926       0.02517966
+Al       4.21975313       2.20297537       4.09914738      -0.01363440       0.00720926       0.02517966
+Al       0.66365891       4.49953348       3.28334566       0.01363440      -0.00720926      -0.02517966
+Al       3.10536567       5.55422856       6.97459073       0.01363440       0.00720926      -0.02517966
+Al       0.66365891       4.49953348       0.40790086       0.01363440      -0.00720926       0.02517966
+Al       3.10536567       5.55422856       4.09914835       0.01363440       0.00720926       0.02517966
+Al       4.21975313       2.20297537       6.97459170      -0.01363440       0.00720926      -0.02517966
+Al       2.85178969       3.40157039       1.84562326      -0.01499187       0.01835838       0.00000000
+Al       0.41008538       6.65219116       5.53686978      -0.01499187      -0.01835838       0.00000000
+Al       2.03162235       3.30093845       5.53686978       0.01499187      -0.01835838       0.00000000
+Ni       2.16369858       5.83357430       1.84562326       0.01070848      -0.00449046       0.00000000
+Ni       0.27800768       2.48231914       1.84562326      -0.01070848      -0.00449046       0.00000000
+Ni       2.71971345       0.86893454       5.53686978      -0.01070848       0.00449046       0.00000000
+Ni       4.60540435       4.22018970       5.53686978       0.01070848       0.00449046       0.00000000
+8
+Lattice="3.830028059714269 0.0 0.0 0.0 4.9813239600063834 -0.5517008690064054 0.0 -0.013830238848135959 5.011764782236874" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg056_Al3Ni5_uniaxial_x_expansion phase=Al3Ni5 config_type=uniaxial_x_expansion source=QE_7.6_PBE provenance=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_07/cfg056_Al3Ni5_uniaxial_x_expansion/attempt_001/qe.out qe_output_sha256=20ac5a3b00aa7c7fd325f3d0e64fdbfdc56ea82e6bfd90d70cb2d593b7c78b98 canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg056_Al3Ni5_uniaxial_x_expansion.in canonical_input_sha256=b8c5a040932c7851de840976e28acd26ce78c83a9afd7a689c0fe44e1871b38b dataset_origin=Expansion-75 source_record=Expansion-75:20ac5a3b00aa7c7fd325f3d0e64fdbfdc56ea82e6bfd90d70cb2d593b7c78b98 original_dataset=/workspace/ni_al/data/processed/ni_al_expansion_dft_75.extxyz original_dataset_sha256=ff69c2bfed14bfcf48931949647d8f1b3c9353a89c20378c9113155940792137 energy=-24969.603300633946 stress="0.02893307828741965 -0.0 -0.0 -0.0 0.012763783384353956 0.0018579032604517777 -0.0 0.0018579032604517777 0.012362987746922155" pbc="T T T"
+Al       0.00000000       2.48374724       2.23003083       0.00000000       0.00000000       0.00000000
+Al       1.91501403       1.08762639       3.78500153       0.00000000      -0.01350040       0.01504646
+Al       1.91501403       3.87986771       0.67506051       0.00000000       0.01350040      -0.01504646
+Ni       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000
+Ni       0.00000000       2.47683212       4.73591359       0.00000000       0.00000000       0.00000000
+Ni       0.00000000       4.97440884       1.95418152       0.00000000       0.00000000       0.00000000
+Ni       1.91501403       1.37310155       1.23285556       0.00000000       0.05548772       0.04975709
+Ni       1.91501403       3.59439255       3.22720648       0.00000000      -0.05548772      -0.04975709
+5
+Lattice="4.10964138792606 0.0 0.0 -2.05482069396303 3.4469560512317865 0.0 0.0 0.0 4.907862374000466" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg071_Al3Ni2_orthorhombic_xy phase=Al3Ni2 config_type=orthorhombic_xy source=QE_7.6_PBE provenance=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_07/cfg071_Al3Ni2_orthorhombic_xy/attempt_001/qe.out qe_output_sha256=fb8b58c4dbc763e41813f1c08d2fcc427beb10dfc86765ae7c5b82c2501db3bf canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg071_Al3Ni2_orthorhombic_xy.in canonical_input_sha256=8ba508d92225a3fc5cb76f0e8c39c3e189b4c8f36d3b7f54527a6f295ade8892 dataset_origin=Expansion-75 source_record=Expansion-75:fb8b58c4dbc763e41813f1c08d2fcc427beb10dfc86765ae7c5b82c2501db3bf original_dataset=/workspace/ni_al/data/processed/ni_al_expansion_dft_75.extxyz original_dataset_sha256=ff69c2bfed14bfcf48931949647d8f1b3c9353a89c20378c9113155940792137 energy=-10956.493817794915 stress="0.017109703127454686 -0.0 -0.0 -0.0 -0.01881820617460997 -0.0010086043579687993 -0.0 -0.0010086043579687993 -0.0007014985235556419" pbc="T T T"
+Al       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000
+Al      -0.00000288       2.29797230       3.17789306       0.00000000      -0.12062274      -0.00711864
+Al       2.05482234       1.14898416       1.72996891       0.00000000       0.12062274       0.00711864
+Ni      -0.00000288       2.29797230       0.71968598       0.00000000       0.02514230       0.00140124
+Ni       2.05482234       1.14898416       4.18817639       0.00000000      -0.02514230      -0.00140124
+5
+Lattice="4.044922625911538 0.0 0.0 -2.022461312955769 3.503004117104864 0.0 0.0 0.08834152273238037 4.907862374000466" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg072_Al3Ni2_shear_rattle_yz_positive phase=Al3Ni2 config_type=shear_rattle_yz_positive source=QE_7.6_PBE provenance=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_07/cfg072_Al3Ni2_shear_rattle_yz_positive/attempt_001/qe.out qe_output_sha256=da6da6e4c7c4f6671857ed5fa215888994404bb97bcef711fb151d0b550b8029 canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg072_Al3Ni2_shear_rattle_yz_positive.in canonical_input_sha256=f572177fcce0c3e1b37bc9806d3029f429e3903830c8529ed85cf50562184dca dataset_origin=Expansion-75 source_record=Expansion-75:da6da6e4c7c4f6671857ed5fa215888994404bb97bcef711fb151d0b550b8029 original_dataset=/workspace/ni_al/data/processed/ni_al_expansion_dft_75.extxyz original_dataset_sha256=ff69c2bfed14bfcf48931949647d8f1b3c9353a89c20378c9113155940792137 energy=-10956.469778575054 stress="-0.005051900962892559 -0.0018111580258172331 0.0008367314890039679 -0.0018111580258172331 -0.0018705666734572682 0.008551415035876907 0.0008367314890039679 0.008551415035876907 4.10124522713125e-05" pbc="T T T"
+Al       2.01500287       3.49814755       0.04071305       0.12380547      -0.01465255      -0.21582545
+Al      -0.01481429       2.38503434       3.15021305       0.09082570       0.12590197       0.18716840
+Al       2.03527858       1.24235076       1.72205308      -0.07540045      -0.35025673       0.20505141
+Ni       0.02009543       2.30843312       0.68451658      -0.19663476       0.33985896       0.26603586
+Ni       2.01181893       1.25173043       4.21822857       0.05740404      -0.10085165      -0.44243022
+16
+Lattice="4.825504516972251 0.0 0.0 0.0 6.623033902572181 0.0 0.0 0.0 7.382491105471437" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg040_Al3Ni_rattle_medium phase=Al3Ni config_type=rattle_medium source=QE_7.6_PBE provenance=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_08/cfg040_Al3Ni_rattle_medium/attempt_001/qe.out qe_output_sha256=ddbdb84a91ea5268231ec28cd45906575c2e137b41b9a3a22f92141d01c83f02 canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg040_Al3Ni_rattle_medium.in canonical_input_sha256=0912a4cbef4fe76b82699b7143a8e0a8d8985464ea02a503a5a202b9d5a11587 dataset_origin=Expansion-75 source_record=Expansion-75:ddbdb84a91ea5268231ec28cd45906575c2e137b41b9a3a22f92141d01c83f02 original_dataset=/workspace/ni_al/data/processed/ni_al_expansion_dft_75.extxyz original_dataset_sha256=ff69c2bfed14bfcf48931949647d8f1b3c9353a89c20378c9113155940792137 energy=-25138.05763330159 stress="-0.0043619991203631804 0.00018103368183169046 0.0005499030398087198 0.00018103368183169046 0.001536157076120729 -0.0004639189013697008 0.0005499030398087198 -0.0004639189013697008 -0.0012546031716633192" pbc="T T T"
+Al       4.37871701       0.08813181       1.79014601       0.26756575      -0.15213810       0.23379512
+Al       1.73736378       1.15227226       3.28793952       0.17855061      -0.25648799       0.08826115
+Al       1.76859599       1.12096369       0.47374230      -0.06348191       0.06370281      -0.59816671
+Al       4.19094282       2.14014808       4.09569769      -0.19408010       0.25246235       0.06312729
+Al       0.65243177       4.43565694       3.30010760       0.11207359       0.10549888      -0.24281888
+Al       3.09298947       5.46701691       7.01344957      -0.14194500       0.14323690      -0.44492835
+Al       0.66062402       4.48773940       0.39842374       0.05836196      -0.24796785       0.22281011
+Al       3.08069751       5.47783779       4.07464579      -0.03604537       0.08945073       0.23306709
+Al       4.13618122       2.18331337       6.95302859       0.32325173       0.11328857       0.27574427
+Al       2.80875504       3.32354060       1.82383087      -0.03210120       0.27757878       0.12157340
+Al       0.41851015       6.59345492       5.54132300      -0.02982512      -0.12143604       0.04969393
+Al       1.98681696       3.23592017       5.52808634       0.07526097       0.18998427       0.02223510
+Ni       2.17152536       5.78599357       1.83835385      -0.35436176      -0.40440699       0.24288992
+Ni       0.26124155       2.42673095       1.86166531       0.04525335       0.40466624      -0.26000349
+Ni       2.70037947       0.88511729       5.52224352      -0.13774813      -0.40293074       0.21150915
+Ni       4.55827564       4.18042190       5.55725961      -0.07072938      -0.05450183      -0.21878911
+8
+Lattice="3.7623065419586723 0.0 0.0 -0.009930615641635296 4.9813239600063834 -0.5517008690064054 0.09021176608018171 -0.013830238848135959 5.011764782236874" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg057_Al3Ni5_shear_rattle_xz_positive phase=Al3Ni5 config_type=shear_rattle_xz_positive source=QE_7.6_PBE provenance=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_08/cfg057_Al3Ni5_shear_rattle_xz_positive/attempt_001/qe.out qe_output_sha256=3cbf08351a54553cafbe7ec08f53349875c1d045e517410281dbb17352d8a735 canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg057_Al3Ni5_shear_rattle_xz_positive.in canonical_input_sha256=cd4dbaac3cafaab2e9226c1d04f0bb8fbf1193a8aa9fd4babea7c36d293a7d96 dataset_origin=Expansion-75 source_record=Expansion-75:3cbf08351a54553cafbe7ec08f53349875c1d045e517410281dbb17352d8a735 original_dataset=/workspace/ni_al/data/processed/ni_al_expansion_dft_75.extxyz original_dataset_sha256=ff69c2bfed14bfcf48931949647d8f1b3c9353a89c20378c9113155940792137 energy=-24969.55129194036 stress="-0.0031380749313312866 -0.000964259470424415 0.009575096578443411 -0.000964259470424415 -0.00018557878538136795 0.00042754050570535234 0.009575096578443411 0.00042754050570535234 -0.003423276902182333" pbc="T T T"
+Al       3.77723584       2.43832677       2.24946633       0.64026781       0.38123652      -0.15685291
+Al       1.95895103       1.13776243       3.78846111      -0.18718695      -0.48134244      -0.04338297
+Al       1.85826208       3.87101574       0.68077342       0.22767423       0.17831464      -0.00790481
+Ni       3.83631952      -0.00951327       4.98582908       0.13566732      -0.09751488       0.24001984
+Ni       0.08929716       2.46207339       4.72621248       0.02784631       0.26944054       0.15380612
+Ni       3.79138598       4.96126426       1.95809925       0.06243993      -0.04514244      -0.10614631
+Ni       1.95560440       1.40371044       1.22110360      -0.56185695      -0.36378034       0.07365693
+Ni       1.95581296       3.59150639       3.24206952      -0.34485170       0.15878840      -0.15319590
+4
+Lattice="3.6243369922030997 0.0 0.0 0.0 3.567385673225601 0.0 0.0 0.0 3.510307502454183" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg097_AlNi3_orthorhombic_xz phase=AlNi3 config_type=orthorhombic_xz source=QE_7.6_PBE provenance=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_08/cfg097_AlNi3_orthorhombic_xz/attempt_001/qe.out qe_output_sha256=e09361e2a84416c6b170a574af97162789b8e9640deccb4fe36139e31acbed39 canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg097_AlNi3_orthorhombic_xz.in canonical_input_sha256=dcd640426eb18bd5b04d05cd14184d8a90287066b80202b73a9d0f68586e982a dataset_origin=Expansion-75 source_record=Expansion-75:e09361e2a84416c6b170a574af97162789b8e9640deccb4fe36139e31acbed39 original_dataset=/workspace/ni_al/data/processed/ni_al_expansion_dft_75.extxyz original_dataset_sha256=ff69c2bfed14bfcf48931949647d8f1b3c9353a89c20378c9113155940792137 energy=-14550.841931579858 stress="0.009589848640315793 -0.0 -0.0 -0.0 -0.0014268469002544414 -0.0 -0.0 -0.0 -0.00991357879711021" pbc="T T T"
+Al       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000
+Ni       0.00000000       1.78369248       1.75515304       0.00000000       0.00000000       0.00000000
+Ni       1.81216850       0.00000000       1.75515304       0.00000000       0.00000000       0.00000000
+Ni       1.81216850       1.78369248       0.00000000       0.00000000       0.00000000       0.00000000
+4
+Lattice="3.4780792986198388 0.0 0.0 0.0 3.478201031395761 0.0 0.0 0.0 3.478201031395761" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg098_AlNi3_volume_rattle_compression phase=AlNi3 config_type=volume_rattle_compression source=QE_7.6_PBE provenance=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_09/cfg098_AlNi3_volume_rattle_compression/attempt_001/qe.out qe_output_sha256=cc1fa587d179abb2086626ba0c44c3e5107194fe3047432315b4344eea9e69ab canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg098_AlNi3_volume_rattle_compression.in canonical_input_sha256=b15fb4b02f5f93ab1c6504d76634e0ec2d5d637594a65d08b5463a94bb441cbd dataset_origin=Expansion-75 source_record=Expansion-75:cc1fa587d179abb2086626ba0c44c3e5107194fe3047432315b4344eea9e69ab original_dataset=/workspace/ni_al/data/processed/ni_al_expansion_dft_75.extxyz original_dataset_sha256=ff69c2bfed14bfcf48931949647d8f1b3c9353a89c20378c9113155940792137 energy=-14550.680652230983 stress="-0.1036605867550364 -0.0004035763120972028 0.0002468060412471456 -0.0004035763120972028 -0.10371654132725477 -0.00010893791271631021 0.0002468060412471456 -0.00010893791271631021 -0.10340331620511554" pbc="T T T"
+Al       0.01475152       0.01269968       0.00187511      -0.24203305      -0.12835418      -0.06487776
+Ni       0.00224092       1.74339118       1.73106727      -0.13898708      -0.05087480       0.13893826
+Ni       1.74154911       3.46675876       1.73929597       0.06339008       0.11609986       0.04385607
+Ni       1.71953775       1.73355174       0.00596128       0.31763006       0.06312912      -0.11791657
+2
+Lattice="2.89400823689718 0.0 0.0 0.0 2.940312368687503 0.0 0.0 0.0 2.8477041051068572" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg085_AlNi_orthorhombic_yz phase=AlNi config_type=orthorhombic_yz source=QE_7.6_PBE provenance=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_09/cfg085_AlNi_orthorhombic_yz/attempt_001/qe.out qe_output_sha256=4cc84a1613eefe617d570d341d0862ad6e001f53e6177b191c7dc26612177e02 canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg085_AlNi_orthorhombic_yz.in canonical_input_sha256=067c33c3950d74d202abade3fd1948dbd840f7a33e881bc2a53446723577e6e5 dataset_origin=Expansion-75 source_record=Expansion-75:4cc84a1613eefe617d570d341d0862ad6e001f53e6177b191c7dc26612177e02 original_dataset=/workspace/ni_al/data/processed/ni_al_expansion_dft_75.extxyz original_dataset_sha256=ff69c2bfed14bfcf48931949647d8f1b3c9353a89c20378c9113155940792137 energy=-5209.308450335551 stress="0.0007107560638042981 -0.0 -0.0 -0.0 0.006776880669088026 -0.0 -0.0 -0.0 -0.009656106188499866" pbc="T T T"
+Al       1.44700412       1.47015618       1.42385205       0.00000000       0.00000000       0.00000000
+Ni       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000
+2
+Lattice="2.89400823689718 0.0 0.0 0.0 2.89400823689718 0.0 0.05209214826461324 0.0 2.89400823689718" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg086_AlNi_shear_rattle_xz_positive phase=AlNi config_type=shear_rattle_xz_positive source=QE_7.6_PBE provenance=/workspace/ni_al/data/expansion_026_100/production_gpu/chunk_10/cfg086_AlNi_shear_rattle_xz_positive/attempt_001/qe.out qe_output_sha256=a17005f9f37cab9a27bb7b7fe77bc2cc599252bce7df8e9423f2bc3cf2ddf9a7 canonical_input=/workspace/ni_al/data/expansion_026_100/qe_inputs/cfg086_AlNi_shear_rattle_xz_positive.in canonical_input_sha256=baff1d80209b26089f7107b97947cf848c2b77b768fbf82fe12fd680966e3a10 dataset_origin=Expansion-75 source_record=Expansion-75:a17005f9f37cab9a27bb7b7fe77bc2cc599252bce7df8e9423f2bc3cf2ddf9a7 original_dataset=/workspace/ni_al/data/processed/ni_al_expansion_dft_75.extxyz original_dataset_sha256=ff69c2bfed14bfcf48931949647d8f1b3c9353a89c20378c9113155940792137 energy=-5209.294928610144 stress="-0.0025317838625841652 8.033177698503819e-05 0.012170680943534592 8.033177698503819e-05 -0.0027524249849831075 0.0005327965688125425 0.012170680943534592 0.0005327965688125425 -0.0015566565909622527" pbc="T T T"
+Al       1.46569030       1.45147361       1.41241647       0.05181585      -0.05197786       0.38902791
+Ni       0.00735989       2.88953875       0.03458765      -0.05181585       0.05197786      -0.38902791
+16
+Lattice="4.6324843362939605 0.0 0.0 0.0 6.358112546468973 0.0 0.0 0.0 7.087191461252698" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg107_Al3Ni_volume_rattle_compression phase=Al3Ni config_type=volume_rattle_compression target_role=VALIDATION strain_type=isotropic strain_value=-0.04 rattle_sigma_A=0.015 random_seed=20261107 source=QE_7.6_PBE source_structure=Al3Ni_relaxed design_round=v1_cfg101-108 provenance=/workspace/ni_al/data/al3ni_remediation_v1/production_dft/cfg107_Al3Ni_volume_rattle_compression/attempt_001/qe.out qe_output_sha256=aa6ad5501c43cf052e8e3a8570720b8254cf135d874c430fa9df29b8fc607078 canonical_input=/workspace/ni_al/data/al3ni_remediation_v1/qe_inputs/cfg107_Al3Ni_volume_rattle_compression.in canonical_input_sha256=6bbc7ec40344ef38c3d465a70754138722397c9f8cf7cb0520470f2982b3335d energy=-25136.729873890665 stress="-0.11161651377276013 0.0003603919437782513 0.0006223190244578794 0.0003603919437782513 -0.1144194863539223 0.000805831662783666 0.0006223190244578794 0.000805831662783666 -0.11818678045671702" pbc="T T T"
+Al       4.24681929       0.03253942       1.77470803       0.01057009       0.19479330      -0.07485971
+Al       1.67845408       1.08771692       3.14815347       0.11810411       0.11535348       0.17680010
+Al       1.69666667       1.10085118       0.37603866      -0.23755470       0.03390545       0.28820219
+Al       4.00281149       2.09765845       3.93403586      -0.10179107      -0.19283472       0.13893817
+Al       0.62895619       4.26427519       3.14486186      -0.04602608       0.13102181       0.19165005
+Al       2.95747717       5.29408865       6.67666815      -0.14119363      -0.38805634       0.42892703
+Al       0.65418760       4.25581440       0.40665552      -0.16864133       0.09529748      -0.18894749
+Al       2.95506926       5.28556920       3.92648688      -0.03135978      -0.27990616       0.13913668
+Al       3.98676570       2.07679604       6.68333869       0.23162489       0.10271098       0.22186013
+Al       2.71532488       3.21602591       1.78083552       0.00601236       0.19459436      -0.03193768
+Al       0.37172549       6.30773772       5.31243263       0.17585473      -0.02545297      -0.00534102
+Al       1.91004009       3.13710307       5.28856169       0.22885712      -0.13028389       0.11209785
+Ni       2.04554318       5.54584654       1.79811147       0.16301522      -0.08201379      -0.50172029
+Ni       0.27271674       2.35469279       1.78546401      -0.13627647      -0.07166859      -0.29527659
+Ni       2.55726042       0.80663757       5.32681729       0.10340289       0.31672119      -0.38040170
+Ni       4.38006758       4.00153622       5.33437585      -0.17459834      -0.01418160      -0.21912773
+16
+Lattice="4.825504516972251 0.0 0.0 0.0 6.623033902572181 0.0 0.0 0.0 7.382491105471437" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg108_Al3Ni_rattle_030 phase=Al3Ni config_type=rattle_030 target_role=VALIDATION strain_type=none strain_value=0 rattle_sigma_A=0.03 random_seed=20261108 source=QE_7.6_PBE source_structure=Al3Ni_relaxed design_round=v1_cfg101-108 provenance=/workspace/ni_al/data/al3ni_remediation_v1/production_dft/cfg108_Al3Ni_rattle_030/attempt_001/qe.out qe_output_sha256=684fc2bdc3ccf4e39c7fbdf4ad795d73498feb670bbabfa2a6c566d5278788b5 canonical_input=/workspace/ni_al/data/al3ni_remediation_v1/qe_inputs/cfg108_Al3Ni_rattle_030.in canonical_input_sha256=181322f9dcac76ecbdbcf2f51ff61dc3c39ae7e6c39839c3f715509b60f7cf6a energy=-25138.050115129652 stress="0.0005951530646584453 0.0015131449090949023 1.9440841772131776e-05 0.0015131449090949023 -0.0025608806130994815 -2.2711719307704898e-05 1.9440841772131776e-05 -2.2711719307704898e-05 -0.002861949897187296" pbc="T T T"
+Al       4.38866846       0.03673643       1.84744713       0.32929770       0.18723487       0.03597861
+Al       1.75275886       1.12908778       3.28846724       0.01091030       0.06415491       0.06621236
+Al       1.74563897       1.10543755       0.41698110       0.02719850       0.15831197      -0.05765193
+Al       4.18886992       2.16216752       4.02950032      -0.37442900       0.04603196       0.61275273
+Al       0.64062549       4.41831588       3.26046300       0.14329497       0.38575985       0.32037140
+Al       3.08469894       5.49247754       6.97492613      -0.06469474      -0.04626667       0.07222369
+Al       0.66332152       4.43121260       0.41839262       0.05158495       0.20231764      -0.11872294
+Al       3.05691426       5.48762995       4.10273051       0.05304899      -0.08130602       0.07840562
+Al       4.20518429       2.13486255       6.98991980      -0.25115905       0.22053404      -0.03869869
+Al       2.80423981       3.34794784       1.82734236       0.05721504       0.10530565       0.02032265
+Al       0.34112099       0.02721973       5.52061315       0.30313826      -0.43866207       0.00023906
+Al       2.05543466       3.29167662       5.53657569      -0.09584716      -0.18785700       0.03099247
+Ni       2.14816818       5.81171877       1.86333873      -0.23166249      -0.55720030      -0.13394598
+Ni       0.28868845       2.49250823       1.87072835      -0.01430910      -0.45690982      -0.46270349
+Ni       2.68062522       0.85374460       5.55089508       0.05683923       0.16182607      -0.15545354
+Ni       4.55908970       4.13848215       5.56162211      -0.00042641       0.23672492      -0.27032202
+16
+Lattice="5.081256256372335 0.0 0.0 0.0 6.974054699408209 0.0 0.0 0.0 7.77376313406166" Properties=species:S:1:pos:R:3:forces:R:3 config_id=cfg115_Al3Ni_iso_expansion phase=Al3Ni config_type=iso_expansion target_role=VALIDATION strain_type=isotropic strain_value=0.053 rattle_sigma_A=0.0 random_seed=NONE source=QE_7.6_PBE source_structure=Al3Ni_relaxed design_round=round2_cfg111-115 provenance=/workspace/ni_al/data/al3ni_remediation_v1/round2_production_dft/cfg115_Al3Ni_iso_expansion/attempt_001/qe.out qe_output_sha256=31cf652fc742e0dd32b754985c19137dbb6f42c80938870e3630fea383ecb923 canonical_input=/workspace/ni_al/data/al3ni_remediation_v1/round2_qe_inputs/cfg115_Al3Ni_iso_expansion.in canonical_input_sha256=947eb701b642e1e2890b4f21c9680621ece52c0bfd3276a9cbaf9e174e2d10e7 energy=-25136.39557985407 stress="0.07529627495045657 -0.0 -0.0 -0.0 0.0783777375374424 -0.0 -0.0 -0.0 0.08064946378457977" pbc="T T T"
+Al       4.65455827       0.05235624       1.94344129       0.01472011      -0.03892443       0.00000000
+Al       1.85008185       1.19480152       3.45736145      -0.03319127      -0.05301102      -0.01601723
+Al       1.85008185       1.19480152       0.42952113      -0.03319127      -0.05301102       0.01601723
+Al       4.39071150       2.29222634       4.31640219      -0.03319127       0.05301102       0.01601723
+Al       0.69054628       4.68182683       3.45736298       0.03319127      -0.05301102      -0.01601723
+Al       3.23117593       5.77925166       7.34424403       0.03319127       0.05301102      -0.01601723
+Al       0.69054628       4.68182683       0.42951961       0.03319127      -0.05301102       0.01601723
+Al       3.23117593       5.77925166       4.31640321       0.03319127       0.05301102       0.01601723
+Al       4.39071150       2.29222634       7.34424506      -0.03319127       0.05301102      -0.01601723
+Al       2.96732662       3.53938105       1.94344129      -0.01472011      -0.03892443       0.00000000
+Al       0.42669951       6.92169693       5.83032387      -0.01472011       0.03892443       0.00000000
+Al       2.11393116       3.43467212       5.83032387       0.01472011       0.03892443       0.00000000
+Ni       2.25135831       6.06991477       1.94344129      -0.01311426      -0.03675682       0.00000000
+Ni       0.28927084       2.58288741       1.94344129       0.01311426      -0.03675682       0.00000000
+Ni       2.82989947       0.90413841       5.83032387       0.01311426       0.03675682       0.00000000
+Ni       4.79198694       4.39116577       5.83032387      -0.01311426       0.03675682       0.00000000

@@ -1,0 +1,26 @@
+AL3NI INTERIM GATE STATUS -- COMBINED-218 CHECKPOINT (round212/213/214 merged in)
+
+NOT a pass/fail gate. No threshold. Progress signal only.
+
+OLD model (prior checkpoint): /workspace/ni_al/models/al3ni_combined211_lora_v1/al3ni_combined211_lora_v1.model
+NEW model (this checkpoint):  /workspace/ni_al/models/al3ni_combined218_lora_v1/al3ni_combined218_lora_v1.model
+
+DFT relative energy, cfg043_Al3Ni_volume_rattle_expansion: 53.383058 meV/atom
+DFT relative energy, cfg115_Al3Ni_iso_expansion: 111.229904 meV/atom
+
+=== combined211 (OLD) ===
+cfg043_Al3Ni_volume_rattle_expansion: pred_relative=55.429195 meV/atom  relative_energy_error=2.046136 meV/atom  (raw energy error=1.212389 meV/atom)
+cfg115_Al3Ni_iso_expansion: pred_relative=115.762746 meV/atom  relative_energy_error=4.532842 meV/atom  (raw energy error=3.699095 meV/atom)
+
+=== combined218 (NEW) ===
+cfg043_Al3Ni_volume_rattle_expansion: pred_relative=56.063811 meV/atom  relative_energy_error=2.680752 meV/atom  (raw energy error=1.745220 meV/atom)
+cfg115_Al3Ni_iso_expansion: pred_relative=116.688804 meV/atom  relative_energy_error=5.458900 meV/atom  (raw energy error=4.523368 meV/atom)
+
+=== CHANGE (combined218 - combined211), negative = improvement ===
+cfg043_Al3Ni_volume_rattle_expansion relative_energy_error change: 0.634616 meV/atom
+cfg115_Al3Ni_iso_expansion relative_energy_error change: 0.926058 meV/atom
+
+cfg109/cfg110 NOT evaluated -- sealed, no labels read.
+
+STATUS
+AL3NI INTERIM GATE EVALUATION COMPLETE (combined-218 checkpoint)

@@ -1,0 +1,23 @@
+{
+  "AlNi3": {
+    "returncode": 0,
+    "json_exists": true,
+    "ok": true,
+    "elapsed_s": 706.578094959259,
+    "atoms": 108
+  },
+  "AlNi": {
+    "returncode": 0,
+    "json_exists": true,
+    "ok": true,
+    "elapsed_s": 683.5638029575348,
+    "atoms": 128
+  },
+  "Al3Ni2": {
+    "returncode": 0,
+    "json_exists": true,
+    "ok": true,
+    "elapsed_s": 657.5861909389496,
+    "atoms": 135
+  }
+}

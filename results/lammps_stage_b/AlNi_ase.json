@@ -1,0 +1,19 @@
+{
+  "phase": "AlNi",
+  "natoms": 2,
+  "energy_eV": -5209.3082609181865,
+  "fmax_final_eV_per_A": 1.3158066641201985e-09,
+  "converged": true,
+  "n_steps": 3,
+  "cellpar": [
+    2.895446079257433,
+    2.895446079257438,
+    2.895446079257434,
+    89.99999999999991,
+    90.0,
+    90.0
+  ],
+  "volume_per_atom_A3": 12.137142453756962,
+  "spacegroup_symbol": "Pm-3m",
+  "spacegroup_number": 221
+}

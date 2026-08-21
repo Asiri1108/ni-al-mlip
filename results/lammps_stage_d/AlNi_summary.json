@@ -1,0 +1,62 @@
+{
+  "phase": "AlNi",
+  "natoms": 2,
+  "protocol": {
+    "temp_K": 300.0,
+    "seed": 20260819,
+    "tdamp_ps": 0.1,
+    "pdamp_ps": 1.0,
+    "pressure_bar": 0.0,
+    "timestep_ps": 0.001,
+    "nvt_steps": 15000,
+    "npt_steps": 15000,
+    "thermo_every": 25
+  },
+  "pre_md_relax": {
+    "fmax_eV_per_A": 1.9654871069947694e-09,
+    "cellpar": [
+      2.8954460799559705,
+      2.8954460799559696,
+      2.8954460799559705,
+      90.0,
+      90.00000000000001,
+      90.00000000000001
+    ],
+    "volume_per_atom_A3": 12.137142462541332,
+    "spacegroup_symbol": "Pm-3m",
+    "spacegroup_number": 221
+  },
+  "post_nvt": {
+    "temp_K": 6.74948939277942,
+    "pe_eV": -5209.244166279695,
+    "press_bar": 14274.306343066346,
+    "cellpar": [
+      2.8954460799559705,
+      2.8954460799559696,
+      2.8954460799559705,
+      90.0,
+      90.00000000000001,
+      90.00000000000001
+    ],
+    "volume_per_atom_A3": 12.137142462541332,
+    "spacegroup_symbol": "R3m",
+    "spacegroup_number": 160
+  },
+  "post_npt": {
+    "temp_K": 202.27718081173353,
+    "pe_eV": -5209.159323076453,
+    "press_bar": -32879.39671569366,
+    "cellpar": [
+      2.835614274359819,
+      2.89430158944095,
+      3.1142284611449087,
+      89.56772086553603,
+      83.53039323092143,
+      89.53514930871776
+    ],
+    "volume_per_atom_A3": 12.697344835082443,
+    "spacegroup_symbol": "P1",
+    "spacegroup_number": 1
+  },
+  "log_file": "/workspace/ni_al/logs/lammps_stage_d/AlNi.log"
+}

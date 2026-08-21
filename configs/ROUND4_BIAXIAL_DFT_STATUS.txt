@@ -1,0 +1,22 @@
+ROUND4 BIAXIAL PRODUCTION DFT STATUS
+
+Updated UTC: 2026-08-16T10:46:19Z
+State: COMPLETE
+tmux session: ni_al_round4_biaxial
+Production root: /workspace/ni_al/data/al3ni_remediation_v1/round4_production_dft
+Source: data/al3ni_remediation_v1/round4_biaxial_manifest.csv (gate-passed candidates only)
+QE binary: /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x
+QE binary SHA256: 66b7ea9f173b006854fc9e27dc9982c332dad295384803d612da7dad3edc7f8e
+
+PER-CONFIG TECHNICAL STATUS
+cfg143_Al3Ni5_biaxial_xz_compression | COMPLETE
+cfg145_AlNi3_biaxial_yz_expansion | COMPLETE
+
+PROTECTION ASSERTIONS
+round1/round2/round3 production trees modified: NO
+cfg109/cfg110 sealed confirmation data touched: NO
+
+FINAL ACQUISITION AUDIT
+TOTAL EXPECTED: 2
+COMPLETED: 2
+FAILED: 0

@@ -1,0 +1,8 @@
+config_id,phase,has_rattle,estimated_seconds,pod
+cfg276_Al3Ni5_rattle_xxlarge,Al3Ni5,True,795,A
+cfg280_AlNi_shear_xy_positive,AlNi,False,173,A
+cfg281_AlNi_shear_yz_positive,AlNi,False,173,A
+cfg273_Al3Ni_shear_xy_negative,Al3Ni,False,623,B
+cfg282_AlNi_volume_rattle_iso_negative,AlNi,True,476,B
+cfg275_Al3Ni5_shear_yz_negative,Al3Ni5,False,506,C
+cfg279_Al3Ni2_shear_xy_negative_sweep,Al3Ni2,False,244,C

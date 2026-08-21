@@ -1,0 +1,22 @@
+AL3NI V1 (cfg101-cfg108) DATASET ASSEMBLY STATUS
+
+Generated UTC: 2026-08-15T14:03:25.035700+00:00
+All 8:   /workspace/ni_al/data/datasets/ni_al_v1_dft.extxyz  sha256=fb44bea70f2bbf5a9ff229ffceefff4cb2617565519370ca595956599b215ba3
+TRAIN 6: /workspace/ni_al/data/datasets/ni_al_v1_train_6.extxyz  sha256=c8e7a0f3b6bc7d0c10aa300b18e97defed533d43e71f700d955b40b1d99b1618
+VALID 2: /workspace/ni_al/data/datasets/ni_al_v1_validation_2.extxyz  sha256=957d741396d28dd5a0b68a4a556017846ee96b6ff96d57b8b77ef3cfddff8359
+Manifest: /workspace/ni_al/data/datasets/ni_al_v1_dft_manifest.csv
+
+Extraction convention: identical to round2 (scripts/extract_dataset75.py method).
+cfg109/cfg110 NOT included -- sealed, untouched.
+
+ROUND-TRIP COUNTS
+Structures: 8/8
+Energies: 8/8
+Force arrays: 8/8
+Stress tensors: 8/8
+
+Energy range eV: min=-25138.114570696609 max=-25136.729873890665
+
+STATUS
+AL3NI V1 (cfg101-108) DATASET ASSEMBLY COMPLETE
+CONFIGS: 8/8

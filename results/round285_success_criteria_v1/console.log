@@ -1,0 +1,38 @@
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Evaluating combined220...
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+Evaluating combined227...
+/workspace/ni_al/envs/mace-py312-cu128/lib/python3.12/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+
+====================================================================================================
+RESULTS
+====================================================================================================
+
+combined220:
+  cfg109 |error| = 3.7671 meV/atom
+  cfg110 |error| = 3.7320 meV/atom
+  cfg043 |error| = 3.0402 meV/atom
+  reserved-20 RMSE = 1.1289  MAE = 0.7129  MAX = 3.0402 (at cfg043_Al3Ni_volume_rattle_expansion)
+
+combined227:
+  cfg109 |error| = 2.2674 meV/atom
+  cfg110 |error| = 2.2420 meV/atom
+  cfg043 |error| = 1.8260 meV/atom
+  reserved-20 RMSE = 1.0013  MAE = 0.6721  MAX = 2.5232 (at cfg060_Al3Ni5_volume_rattle_expansion)
+
+====================================================================================================
+DELTA (combined220_error - combined227_error; positive = improvement)
+====================================================================================================
+cfg109: 3.7671 -> 2.2674  delta=+1.4997
+cfg110: 3.7320 -> 2.2420  delta=+1.4900
+
+====================================================================================================
+VERDICT (per configs/ROUND285_SUCCESS_CRITERIA.txt, applied verbatim)
+====================================================================================================
+cfg109 < 2.4: True   cfg110 < 2.4: True
+cfg109 delta > 0.43: True   cfg110 delta > 0.43: True
+VERDICT: SUCCESS

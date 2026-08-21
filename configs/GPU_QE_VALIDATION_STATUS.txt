@@ -1,0 +1,96 @@
+GPU-QE VALIDATION STATUS
+Resume timestamp UTC: 2026-08-11T17:21:43Z
+Completion timestamp UTC: 2026-08-11T18:17:21Z
+Hostname: e376e8543d5f
+STATUS: GPU-QE VALIDATION COMPLETE
+CPU↔GPU EQUIVALENCE: PASS
+GPU production approved: YES
+Production configs run: 0/75
+
+PLATFORM AND TOOLCHAIN
+GPU: NVIDIA GeForce RTX 4090
+Compute capability: 8.9 (sm_89)
+Live NVIDIA driver: 580.126.20 (paused record was 580.173.02; current host value recorded)
+NVIDIA-reported maximum CUDA API compatibility: 13.0
+NVIDIA HPC SDK: 26.5 (nvfortran/nvc 26.5-0)
+Build CUDA toolchain: 12.9
+NVHPC_CUDA_HOME: /workspace/ni_al/tools/qe_gpu/nvhpc/Linux_x86_64/26.5/cuda/12.9
+Quantum ESPRESSO: 7.6, tag qe-7.6, commit 9f93ddec
+QE binary: /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x
+QE binary SHA256: 66b7ea9f173b006854fc9e27dc9982c332dad295384803d612da7dad3edc7f8e
+Build target: -gpu=cc89,cuda12.9 -acc
+Runtime linkage: required NVIDIA/OpenACC/CUDA libraries resolved; no not-found library
+
+PSEUDOPOTENTIAL IDENTITY
+/workspace/ni_al/tools/qe_pseudos/Al.pbe-n-kjpaw_psl.1.0.0.UPF | 1762723 bytes | SHA256 fd7b78921e6d0939095b681c328732668eaefd1dee6882fdbc03be463550cc97
+/workspace/ni_al/tools/qe_pseudos/ni_pbe_v1.4.uspp.F.UPF | 612014 bytes | SHA256 f76b86ce60cde3d83dfcc8df79ba05478db573d158289f1b226919442d977d25
+
+METHODOLOGY
+Unchanged from CPU references: PBE; exact pseudopotential bytes; ecutwfc=90 Ry; ecutrho=720 Ry; phase-specific k points; Marzari-Vanderbilt smearing; degauss=0.010 Ry; conv_thr=1e-10; established spin/magnetization and all other input settings.
+GPU input copies differ from immutable CPU inputs only in pseudo_dir and outdir execution paths.
+
+CASE AlNi_iso_m02 | phase AlNi | 2 atoms
+CPU input SHA256: a2c6f95e689247959a0d51533a42dac97a923b8272177bb166fc09e35e63e5cd
+GPU input SHA256: 2ef65bc24aff99b77f865a02ccc19b1d2b469a405abcf3c731496521ab22ffbb
+GPU output SHA256: 6516a630d18acd880daf2317e0afbb4bd8117d341be504e293cf08f5ee02a559
+Complete: YES; JOB DONE: YES; SCF converged: YES (22 iterations)
+CPU energy: -382.87390925 Ry; GPU energy: -382.87390925 Ry
+DeltaE: 0.00000000 Ry; 0.00000000 eV; 0.00000000 meV/atom
+Forces (all 2x3 components): MAE 0; RMSE 0; max 0 eV/A
+Stress (six independent components): MAE 2.52493363e-05; RMSE 3.57079538e-05; max 5.04986725e-05 eV/A^3
+Stress: MAE 0.00404539; RMSE 0.00572104; max 0.00809078 GPa
+GPU wall time: 1m58.11s
+Historical topology: MPI ranks 1; OpenMP threads 4; pools 1 (no split)
+Historical utilization: resident-window average 8.9%; nonzero-sample average 19.1%; peak 40%; peak memory 1184 MiB; power not captured.
+Investigation note: max stress delta 5.5e-7 Ry/bohr^3 exceeds the conservative 1e-7 investigation trigger but is only 0.00809 GPa; energy/forces match, CPU XML is unavailable, and this is negligible relative to DFT labels and MLIP accuracy.
+
+CASE Al3Ni_iso_m02 | phase Al3Ni | 16 atoms
+CPU input SHA256: 2b803337ebecfba1e9a0cd8c7875d6afa5465047c261e384408974e7ac324d10
+GPU input SHA256: 8cbfff10f51df6cf5986c878ac16a9614654331ab02380f856394b1e7f6fd00a
+GPU output SHA256: cd227b92b257d2bad773909d3ec608705f0f6efb65cddab3bcddbfdd0f3438b4
+Complete: YES; JOB DONE: YES; SCF converged: YES (24 iterations); exit code 0
+CPU energy: -1847.59812698 Ry; GPU energy: -1847.59812698 Ry
+DeltaE: 0.00000000 Ry; 0.00000000 eV; 0.00000000 meV/atom
+Forces (all 16x3 components): MAE 6.74914636e-07; RMSE 1.50744297e-06; max 4.11376540e-06 eV/A
+Stress (six independent components): MAE 3.06052561e-07; RMSE 5.30098585e-07; max 9.18157682e-07 eV/A^3
+Stress: MAE 4.90350258e-05; RMSE 8.49311560e-05; max 1.47105077e-04 GPa
+GPU QE wall time: 13m33.47s; runner elapsed: 827s
+Topology: MPI ranks 1; OpenMP threads 8; pools 1 (no -nk split); CUDA_VISIBLE_DEVICES=0; OMP_PROC_BIND=close; OMP_PLACES=cores
+Launch: env CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=8 OMP_PROC_BIND=close OMP_PLACES=cores /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x -in /workspace/ni_al/data/expansion_026_100/gpu_benchmark/cpu_gpu_equivalence/Al3Ni_iso_m02/gpu.in
+GPU utilization: resident-window average 58.7%; nonzero-sample average 78.6%; peak 99%; peak memory 3634 MiB; average/peak power 110.7/152.7 W.
+Utilization improved beyond historical approximately 33%: YES.
+
+CASE AlNi3_iso_m02 | phase AlNi3 | 4 atoms
+CPU input SHA256: bd4308dbdc2120a4d970d376003ee9fe68868c4eccad03dd38cfaafdf7a5431b
+GPU input SHA256: 2d727180bb571619ca9e28cf5b30f2c4ba0d8009982e27f4fe739bfab5707cef
+GPU output SHA256: cf401c0f2e9685ab598bb22bf2dafb34657cb192d3b8c4b7ad3734126d33b5f8
+Complete: YES; JOB DONE: YES; SCF converged: YES (21 iterations); exit code 0
+CPU energy: -1069.46024652 Ry; GPU energy: -1069.46024652 Ry
+DeltaE: 0.00000000 Ry; 0.00000000 eV; 0.00000000 meV/atom
+Forces (all 4x3 components): MAE 0; RMSE 0; max 0 eV/A
+Stress (six independent components): MAE 8.41644542e-06; RMSE 1.19065854e-05; max 1.74449960e-05 eV/A^3
+Stress: MAE 0.00134846; RMSE 0.00190765; max 0.00279500 GPa
+GPU QE wall time: 10m18.60s; runner elapsed: 630s
+Topology: MPI ranks 1; OpenMP threads 8; pools 1 (no -nk split); CUDA_VISIBLE_DEVICES=0; OMP_PROC_BIND=close; OMP_PLACES=cores
+Launch: env CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=8 OMP_PROC_BIND=close OMP_PLACES=cores /workspace/ni_al/tools/qe_gpu/builds/sm_89_autoconf/PW/src/pw.x -in /workspace/ni_al/data/expansion_026_100/gpu_benchmark/cpu_gpu_equivalence/AlNi3_iso_m02/gpu.in
+GPU utilization: resident-window average 31.9%; nonzero-sample average 48.8%; peak 85%; peak memory 1422 MiB; average/peak power 72.6/101.3 W.
+Utilization improved beyond historical approximately 33%: peak and active-kernel average YES; sustained resident average NO due small-cell kernel duty cycle.
+Workload limitation: the 4-atom cell cannot keep an RTX 4090 continuously occupied; no science was changed and no concurrent/artificial work was used.
+
+SCIENTIFIC DECISION
+CPU↔GPU EQUIVALENCE: PASS
+All differences are negligible relative to the 1e-10 Ry SCF convergence target, label magnitudes, and accuracy required for the Ni-Al MLIP dataset. Thresholds were not loosened.
+GPU PRODUCTION APPROVED: YES, subject to completing the separately prepared five per-phase timing benchmarks before production.
+
+INTEGRITY GATE
+Canonical Pilot-25 artifacts: all manifest SHA256 values match; unchanged.
+Dataset-100 design: 75 rows unchanged in status; TRAIN_CANDIDATE 50, VALIDATION 10, BLIND_HOLDOUT 15.
+Prepared structures: 75/75 present.
+Prepared QE inputs: 75/75 present; all 75 SHA256 values match manifest.
+Blind holdout: 15 identities unchanged.
+Production QE outputs: empty; 75/75 configurations remain NOT_RUN.
+MACE training started: NO. LAMMPS started: NO.
+Timing benchmarks run in this task: 0/5.
+Production configs run: 0/75
+
+NEXT ACTION: Run the five prepared per-phase GPU timing benchmarks before starting Dataset-100 production DFT.

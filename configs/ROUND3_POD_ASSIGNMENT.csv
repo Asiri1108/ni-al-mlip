@@ -1,0 +1,15 @@
+config_id,pod_number,status
+cfg117_Al3Ni2_biaxial_xy_compression,1,PENDING
+cfg118_AlNi3_volume_rattle_compression,2,PENDING
+cfg119_AlNi3_volume_rattle_compression,3,PENDING
+cfg121_Al3Ni5_uniaxial_x_expansion,4,PENDING
+cfg123_Al3Ni_biaxial_xy_expansion,5,PENDING
+cfg125_AlNi_biaxial_xz_compression,6,PENDING
+cfg127_Al3Ni2_shear_rattle_yz_positive,7,PENDING
+cfg129_Al3Ni5_shear_rattle_xz_positive,8,PENDING
+cfg131_AlNi_shear_rattle_xz_positive,9,PENDING
+cfg133_AlNi_shear_rattle_yz_negative,10,PENDING
+cfg135_AlNi3_shear_rattle_xz_negative,1,PENDING
+cfg137_Al3Ni2_orthorhombic_xy,2,PENDING
+cfg139_AlNi_orthorhombic_yz,3,PENDING
+cfg141_AlNi3_orthorhombic_xz,4,PENDING

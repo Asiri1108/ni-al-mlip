@@ -1,0 +1,31 @@
+AL3NI COMBINED-129 MERGE STATUS (combined-127 + round4 cfg143,cfg145)
+
+Generated UTC: 2026-08-16T10:51:07.801014+00:00
+
+SOURCES (all read-only, none modified)
+  combined-127 all/train/val: ni_al_combined127_dft.extxyz (127) / ni_al_combined127_train_89.extxyz (89) / ni_al_combined127_validation_18.extxyz (18)
+  round4 (cfg143 Al3Ni5, cfg145 AlNi3, both TRAIN role): round4_dft.extxyz (2)
+  cfg109/cfg110 (sealed): EXCLUDED, untouched -- geometry-only duplicate check performed, labels never read
+
+INTEGRITY CHECKS
+  config_id collision vs combined-127: NONE
+  geometry duplicate vs combined-127: NONE
+  geometry duplicate vs sealed cfg109/cfg110: NONE
+  internal round4 geometry duplicate: NONE
+
+OUTPUT
+  All 129:      /workspace/ni_al/data/datasets/ni_al_combined129_dft.extxyz  sha256=1a061565e64b8f489ed2089985ad585eb83b4452cd37db072acbe09ed146d7ae
+  TRAIN 91:     /workspace/ni_al/data/datasets/ni_al_combined129_train_91.extxyz  sha256=4b5c68de598fe45153531e31bc67a5bbab123204cda123c6a40b558f1a85d86c
+  VALIDATION 18: /workspace/ni_al/data/datasets/ni_al_combined129_validation_18.extxyz  sha256=079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff
+
+Round-trip: 129/129 all, 91/91 train, 18/18 validation
+Phase composition (all 129): {'AlNi': 22, 'Al3Ni2': 22, 'AlNi3': 22, 'Al3Ni5': 25, 'Al3Ni': 38}
+TEST/BLIND_HOLDOUT (Dataset-100's 20): UNCHANGED, not merged, referenced from original Dataset-100 files only.
+
+COVERAGE IMPACT
+Al3Ni5/biaxial and AlNi3/biaxial (the last two Tier-1 zero-TRAIN-support buckets
+after round3) now each have exactly 1 TRAIN member -- INFO_LOW_TRAIN_COUNT territory,
+not fully resolved, but no longer EXTRAPOLATION_NO_TRAIN_SUPPORT.
+
+STATUS
+AL3NI COMBINED-129 MERGE COMPLETE

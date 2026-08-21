@@ -1,0 +1,36 @@
+{
+  "phase": "Al3Ni5",
+  "natoms": 144,
+  "starting_data": "/workspace/ni_al/results/lammps_stage_d2/Al3Ni5_supercell_0K.data",
+  "protocol": {
+    "temp_K": 300.0,
+    "seed": 20260819,
+    "tdamp_ps": 0.1,
+    "pdamp_ps": 1.0,
+    "pressure_bar": 0.0,
+    "timestep_ps": 0.001,
+    "npt_steps": 15000,
+    "thermo_every": 25,
+    "dump_every": 100
+  },
+  "n_frames_expected": 151,
+  "dump_file": "/workspace/ni_al/results/lammps_stage_d3/Al3Ni5_trajectory.dump",
+  "dump_size_bytes": 716254,
+  "post_npt": {
+    "temp_K": 287.3815920459369,
+    "pe_eV": -449447.62229613215,
+    "press_bar": -8031.85156587575,
+    "cellpar": [
+      11.499769377134896,
+      15.02788997385174,
+      10.065680973866618,
+      98.25795625276946,
+      89.93037230472622,
+      89.56779250922018
+    ],
+    "volume_per_atom_A3": 11.954399575071564,
+    "spacegroup_symbol": "P1",
+    "spacegroup_number": 1
+  },
+  "log_file": "/workspace/ni_al/logs/lammps_stage_d3/Al3Ni5.log"
+}

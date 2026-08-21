@@ -1,0 +1,64 @@
+LAMMPS STAGE B -- 5-PHASE RELAXATION vs DFT (LAMMPS mliap unified, Kokkos build)
+
+=== AlNi (2 atoms) ===
+  DFT reference:    a=2.89401 b=2.89401 c=2.89401  alpha=90.0000 beta=90.0000 gamma=90.0000  V/atom=12.11907 A^3  spacegroup=Pm-3m (#221)
+  LAMMPS relaxed:   a=2.89545 b=2.89545 c=2.89545  alpha=90.0000 beta=90.0000 gamma=90.0000  V/atom=12.13714 A^3  spacegroup=Pm-3m (#221)
+  LAMMPS vs DFT %%: a=+0.0497%  b=+0.0497%  c=+0.0497%  alpha=+0.0000%  beta=+0.0000%  gamma=+0.0000%
+  LAMMPS vs DFT volume/atom: +0.1491%
+  Symmetry preserved (spacegroup # match): Y
+  Convergence: Stopping criterion = force tolerance (fmax=1.965e-09 eV/A, press=0.000 bar)
+  ASE/MACE direct:  a=2.89545 b=2.89545 c=2.89545  alpha=90.0000 beta=90.0000 gamma=90.0000  V/atom=12.13714 A^3  spacegroup=Pm-3m (#221)  vs DFT volume/atom: +0.1491%  (converged=True, 3 steps, fmax=1.32e-09)
+  LAMMPS vs ASE/MACE (should be ~0, both use the same model -- Stage A confirmed identical single-point energies): volume/atom +0.00000%, max |lattice param diff| 0.00000%
+
+=== Al3Ni (16 atoms) ===
+  DFT reference:    a=4.82550 b=6.62303 c=7.38249  alpha=90.0000 beta=90.0000 gamma=90.0000  V/atom=14.74629 A^3  spacegroup=Pnma (#62)
+  LAMMPS relaxed:   a=4.81550 b=6.59993 c=7.42674  alpha=90.0000 beta=90.0000 gamma=90.0000  V/atom=14.75229 A^3  spacegroup=Pnma (#62)
+  LAMMPS vs DFT %%: a=-0.2073%  b=-0.3488%  c=+0.5994%  alpha=+0.0000%  beta=+0.0000%  gamma=+0.0000%
+  LAMMPS vs DFT volume/atom: +0.0407%
+  Symmetry preserved (spacegroup # match): Y
+  Convergence: Stopping criterion = force tolerance (fmax=2.157e-09 eV/A, press=0.000 bar)
+  ASE/MACE direct:  a=4.81550 b=6.59993 c=7.42674  alpha=90.0000 beta=90.0000 gamma=90.0000  V/atom=14.75229 A^3  spacegroup=Pnma (#62)  vs DFT volume/atom: +0.0407%  (converged=True, 61 steps, fmax=8.44e-09)
+  LAMMPS vs ASE/MACE (should be ~0, both use the same model -- Stage A confirmed identical single-point energies): volume/atom +0.00000%, max |lattice param diff| 0.00000%
+
+=== Al3Ni2 (5 atoms) ===
+  DFT reference:    a=4.04492 b=4.04492 c=4.90786  alpha=90.0000 beta=90.0000 gamma=120.0000  V/atom=13.90827 A^3  spacegroup=P-3m1 (#164)
+  LAMMPS relaxed:   a=4.05153 b=4.05153 c=4.89762  alpha=90.0000 beta=90.0000 gamma=120.0000  V/atom=13.92467 A^3  spacegroup=P-3m1 (#164)
+  LAMMPS vs DFT %%: a=+0.1635%  b=+0.1635%  c=-0.2087%  alpha=+0.0000%  beta=-0.0000%  gamma=-0.0000%
+  LAMMPS vs DFT volume/atom: +0.1179%
+  Symmetry preserved (spacegroup # match): Y
+  Convergence: Stopping criterion = force tolerance (fmax=5.321e-10 eV/A, press=0.000 bar)
+  ASE/MACE direct:  a=4.05153 b=4.05153 c=4.89762  alpha=90.0000 beta=90.0000 gamma=120.0000  V/atom=13.92467 A^3  spacegroup=P-3m1 (#164)  vs DFT volume/atom: +0.1179%  (converged=True, 24 steps, fmax=5.63e-09)
+  LAMMPS vs ASE/MACE (should be ~0, both use the same model -- Stage A confirmed identical single-point energies): volume/atom -0.00000%, max |lattice param diff| 0.00000%
+
+=== Al3Ni5 (8 atoms) ===
+  DFT reference:    a=3.76231 b=5.01178 c=5.01178  alpha=96.4781 beta=90.0000 gamma=90.0000  V/atom=11.73726 A^3  spacegroup=Cmmm (#65)
+  LAMMPS relaxed:   a=3.79835 b=5.00350 c=5.00350  alpha=98.2788 beta=90.0000 gamma=90.0000  V/atom=11.76261 A^3  spacegroup=Cmmm (#65)
+  LAMMPS vs DFT %%: a=+0.9581%  b=-0.1653%  c=-0.1653%  alpha=+1.8664%  beta=-0.0000%  gamma=-0.0000%
+  LAMMPS vs DFT volume/atom: +0.2159%
+  Symmetry preserved (spacegroup # match): Y
+  Convergence: Stopping criterion = force tolerance (fmax=2.480e-09 eV/A, press=-0.000 bar)
+  ASE/MACE direct:  a=3.79835 b=5.00350 c=5.00350  alpha=98.2788 beta=90.0000 gamma=90.0000  V/atom=11.76261 A^3  spacegroup=Cmmm (#65)  vs DFT volume/atom: +0.2159%  (converged=True, 51 steps, fmax=5.82e-09)
+  LAMMPS vs ASE/MACE (should be ~0, both use the same model -- Stage A confirmed identical single-point energies): volume/atom +0.00000%, max |lattice param diff| 0.00000%
+
+=== AlNi3 (4 atoms) ===
+  DFT reference:    a=3.56726 b=3.56739 c=3.56739  alpha=90.0000 beta=90.0000 gamma=90.0000  V/atom=11.34945 A^3  spacegroup=Pm-3m (#221)
+  LAMMPS relaxed:   a=3.56739 b=3.56739 c=3.56739  alpha=90.0000 beta=90.0000 gamma=90.0000  V/atom=11.34987 A^3  spacegroup=Pm-3m (#221)
+  LAMMPS vs DFT %%: a=+0.0036%  b=+0.0001%  c=+0.0001%  alpha=-0.0000%  beta=-0.0000%  gamma=-0.0000%
+  LAMMPS vs DFT volume/atom: +0.0037%
+  Symmetry preserved (spacegroup # match): Y
+  Convergence: Stopping criterion = force tolerance (fmax=7.345e-11 eV/A, press=0.000 bar)
+  ASE/MACE direct:  a=3.56739 b=3.56739 c=3.56739  alpha=90.0000 beta=90.0000 gamma=90.0000  V/atom=11.34987 A^3  spacegroup=Pm-3m (#221)  vs DFT volume/atom: +0.0037%  (converged=True, 14 steps, fmax=4.79e-09)
+  LAMMPS vs ASE/MACE (should be ~0, both use the same model -- Stage A confirmed identical single-point energies): volume/atom -0.00000%, max |lattice param diff| 0.00000%
+
+==============================================================================
+SUMMARY TABLE (LAMMPS vs DFT)
+phase       vol/atom % err   max |lattice %|  symmetry    status
+AlNi              +0.1491%           0.0497%         Y        OK
+Al3Ni             +0.0407%           0.5994%         Y        OK
+Al3Ni2            +0.1179%           0.2087%         Y        OK
+Al3Ni5            +0.2159%           1.8664%         Y        OK
+AlNi3             +0.0037%           0.0036%         Y        OK
+
+Max |volume/atom error| (LAMMPS vs DFT, over completed phases): 0.2159%
+Symmetry preserved: 5/5
+Phases completed: 5/5

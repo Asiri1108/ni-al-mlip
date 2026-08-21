@@ -1,0 +1,9 @@
+config_id,nearest_neighbour_dataset100,descriptor_distance,threshold_5th_pct_intra_ds100,flag,d_shape_rmsd_A,d_volume_per_atom_A3,d_strain_frobenius,volume_per_atom_A3
+cfg101_Al3Ni_iso_compression,cfg028_Al3Ni_iso_compression,1.292135,0.794907,OK,0.033827,0.411967,0.016714,13.046570
+cfg102_Al3Ni_iso_compression,cfg037_Al3Ni_volume_rattle_compression,0.967950,0.794907,OK,0.035029,0.211353,0.008465,13.879086
+cfg103_Al3Ni_iso_expansion,cfg027_Al3Ni_iso_expansion,1.352170,0.794907,OK,0.033827,0.455763,0.017580,15.648877
+cfg104_Al3Ni_volume_rattle_compression,cfg037_Al3Ni_volume_rattle_compression,0.773982,0.794907,REDUNDANT,0.024569,0.211353,0.008465,13.879086
+cfg105_Al3Ni_volume_rattle_expansion,cfg027_Al3Ni_iso_expansion,1.347859,0.794907,OK,0.033508,0.455763,0.017580,15.648877
+cfg106_Al3Ni_rattle_020,cfg035_Al3Ni_rattle_small,0.360781,0.794907,REDUNDANT,0.015497,0.000000,0.000000,14.746286
+cfg107_Al3Ni_volume_rattle_compression,cfg028_Al3Ni_iso_compression,1.438447,0.794907,OK,0.043375,0.411967,0.016714,13.046570
+cfg108_Al3Ni_rattle_030,cfg040_Al3Ni_rattle_medium,0.517941,0.794907,REDUNDANT,0.022247,0.000000,0.000000,14.746286

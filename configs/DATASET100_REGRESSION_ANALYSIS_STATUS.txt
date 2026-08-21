@@ -1,0 +1,51 @@
+DATASET-100 RELATIVE-ENERGY REGRESSION ROOT-CAUSE ANALYSIS
+
+Generated UTC: 2026-08-13T09:59:08.102825+00:00
+Source evaluation SHA256: edacecca4ebb31535258661be3d351ddcedc76ad26e37cd9a93bdcbf10a9f1da
+Blind holdout membership modified: NO
+Retraining performed: NO
+LAMMPS run: NO
+
+Blind MAE change: 0.13482965311292597 meV/atom
+Blind RMSE: Pilot=1.6847836935140141, Dataset100=2.1798759373000056 meV/atom
+Net squared-error increase: 28.70044512133282 (meV/atom)^2
+
+AL3NI ROOT CAUSE
+DFT ordering: shear_xz_negative < uniaxial_z_compression < shear_rattle_xy_negative < volume_rattle_expansion
+Pilot ordering: shear_xz_negative < uniaxial_z_compression < shear_rattle_xy_negative < volume_rattle_expansion
+Dataset-100 ordering: shear_xz_negative < uniaxial_z_compression < shear_rattle_xy_negative < volume_rattle_expansion
+Dominant configuration: cfg043_Al3Ni_volume_rattle_expansion
+Dominant absolute-error change: 6.5751565109621879 meV/atom
+Interpretation: isolated high-amplitude coupled expansion+rattle magnitude error; ordering preserved. Insufficient blind points to claim a general volume slope or curvature defect.
+
+ATTRIBUTION BY PHASE
+Al3Ni: MAE contribution=0.36046362765773665 meV/atom; net share=267.34744126044137%; SSE share=146.5968656999531%
+Al3Ni2: MAE contribution=-0.088799019552728467 meV/atom; net share=-65.860155761400094%; SSE share=-23.580952240230737%
+Al3Ni5: MAE contribution=-0.028736544057513431 meV/atom; net share=-21.313222569404125%; SSE share=-10.915054479302125%
+AlNi: MAE contribution=-0.046529660115387138 meV/atom; net share=-34.509960562174278%; SSE share=-7.9493669399084697%
+AlNi3: MAE contribution=-0.061568750819181638 meV/atom; net share=-45.664102367462888%; SSE share=-4.151492040511779%
+
+ATTRIBUTION BY SCIENTIFIC FAMILY CATEGORY
+volume_isotropic_strain: count=0; MAE contribution=0 meV/atom; net share=0%; SSE share=0%
+rattle: count=1; MAE contribution=-0.015467926762842884 meV/atom; net share=-11.472199479655851%; SSE share=-0.52938247135783012%
+shear: count=3; MAE contribution=-0.038605586529835513 meV/atom; net share=-28.632860530688735%; SSE share=-4.5020402887742375%
+combined_perturbations: count=6; MAE contribution=0.25667191393040412 meV/atom; net share=190.36755491422178%; SSE share=113.99543696772433%
+other_established_families: count=5; MAE contribution=-0.067768747524799736 meV/atom; net share=-50.262494903877212%; SSE share=-8.9640142075922462%
+
+TRAINING COVERAGE CONCLUSION
+Al3Ni coverage is broad for separate strain, rattle, and shear modes but sparse for coupled volume+rattle: one compression-side TRAIN point and zero VALIDATION points. Expansion-side coupling is unbracketed.
+
+METHODOLOGY CONCLUSION
+Pilot-25 and Dataset-100 hyperparameters/objective are identical. Absolute energy only; no explicit relative-energy loss. Aggregate weighted validation loss selected epoch 98 and did not protect phase-relative energy differences.
+
+PRIMARY FAILURE MODE: F. MIXED (A. DATA COVERAGE dominant; B/C secondary)
+
+RECOMMENDED NEXT ACTION:
+Freeze a new development design, acquire the proposed symmetric 10-point Al3Ni strain/rattle mini-grid, define a new untouched confirmation holdout, then run controlled TRAIN/VALIDATION-only checkpoint/objective comparisons. Do not reuse the current blind set for selection.
+
+NEW DFT REQUIRED: YES
+RETRAINING REQUIRED: YES
+BLIND HOLDOUT MODIFIED: NO
+LAMMPS APPROVED: NO
+
+DATASET-100 REGRESSION ROOT-CAUSE ANALYSIS COMPLETE

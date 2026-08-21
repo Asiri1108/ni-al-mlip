@@ -1,0 +1,53 @@
+DATASET-100 EXPANSION PREPARATION
+Generated UTC: 2026-08-11T08:44:08.833913+00:00
+Hostname: e376e8543d5f
+
+PILOT-25 FROZEN STATE
+The canonical 25 configurations, 15/5/5 split, epoch-88-selected LoRA model, training provenance/status, and one-time TEST evaluation are preserved and hashed in configs/PILOT25_FINAL_ARTIFACTS_MANIFEST.txt. Pilot TEST-5 remains a historical diagnostic test, not the Dataset-100 final holdout. No Pilot artifact was changed.
+
+SCIENTIFIC RATIONALE
+Pilot fine-tuning clearly improved held-out energy, force, and stress errors. Expansion emphasizes Al3Ni force/relative-energy coverage, Al3Ni5 stress, and controlled volume/shear response across all phases. Defects, surfaces, and large supercells are deferred until bulk/strain coverage is mature.
+
+EXACT PHASE ALLOCATION
+Al3Ni=19; Al3Ni5=17; Al3Ni2=14; AlNi=13; AlNi3=12; total=75.
+Al3Ni receives the largest allocation because its force behavior remains the principal Pilot weakness. Al3Ni5 receives the second-largest allocation and additional strain/shear structures because its stress error remains important.
+
+TARGET ROLES
+TRAIN_CANDIDATE=50; VALIDATION=10; BLIND_HOLDOUT=15.
+The 15 new blind-holdout identities are frozen in the design manifest before Dataset-100 training and must never be used for optimization, early stopping, hyperparameter tuning, or data-selection decisions. Validation and blind roles use distinct perturbation parameters/families to reduce near-duplicate leakage.
+
+CONFIGURATION FAMILY ALLOCATION (stable manifest labels)
+biaxial_xy_compression=1; biaxial_xy_expansion=1; biaxial_xz_compression=2; biaxial_yz_expansion=1; iso_compression=10; iso_expansion=10; orthorhombic_xy=2; orthorhombic_xz=1; orthorhombic_yz=2; rattle_large=5; rattle_medium=1; rattle_small=5; rattle_xlarge=1; shear_rattle_xy_negative=1; shear_rattle_xz_negative=1; shear_rattle_xz_positive=2; shear_rattle_yz=1; shear_rattle_yz_negative=1; shear_rattle_yz_positive=1; shear_xy_negative=5; shear_xz_negative=2; shear_xz_positive=1; shear_yz_negative=1; shear_yz_positive=1; uniaxial_x_compression=1; uniaxial_x_expansion=2; uniaxial_y_compression=2; uniaxial_y_expansion=1; uniaxial_z_compression=1; uniaxial_z_expansion=1; volume_rattle_compression=5; volume_rattle_expansion=3
+These labels span isotropic compression/expansion, uniaxial/biaxial/orthorhombic strain, signed shear, independent deterministic rattles, volume+rattle, and shear+rattle combinations. Random seeds are unique and recorded.
+
+PREPARATION RESULTS
+Design manifest rows: 75 (configurations 026-100)
+Generated structures: 75
+Validated structures: 75/75
+QE static-SCF inputs: 75/75, prepared and NOT RUN
+DFT runs started: 0
+Minimum interatomic distance: 2.281594 A
+Exact duplicate structures: 0
+Raw DFT modified: NO
+
+QE METHODOLOGY PRESERVED
+QE 7.6; PBE; ecutwfc=90 Ry; ecutrho=720 Ry; Marzari-Vanderbilt smearing; degauss=0.010 Ry; conv_thr=1e-10; electron_maxstep=200; mixing_beta=0.30; david diagonalization; phase-specific k meshes; AlNi3 nspin=2 and Ni starting magnetization=0.60. Inputs reference Al.pbe-n-kjpaw_psl.1.0.0.UPF and ni_pbe_v1.4.uspp.F.UPF.
+
+EXECUTION GATES / REVIEW REQUIRED
+1. Exact pseudopotential files were not found under /workspace. Before any QE execution, stage the established files at /workspace/ni_al/pseudo and verify their hashes/identity; do not substitute.
+2. Build/validate GPU QE 7.6, then pass the three-case CPU-GPU equivalence plan.
+3. Benchmark one representative new configuration per phase.
+4. Finalize four-GPU assignments only from measured wall times; TEAM_DISTRIBUTION_TEMPLATE.csv intentionally contains no production assignment.
+5. Preserve BLIND_HOLDOUT identities and access discipline before future training.
+
+CPU-GPU EQUIVALENCE PLAN
+Prepared for completed CPU references AlNi_iso_m02, Al3Ni_iso_m02, and spin-relevant AlNi3_iso_m02. Exact input/output paths and hashes plus reference energy/stress are recorded. Not executed.
+
+GPU TIMING PLAN
+Prepared one TRAIN_CANDIDATE per phase. Workload balancing will use measured per-phase time and relative GPU speed, not equal configuration counts. Not executed.
+
+VS CODE SYNCHRONIZATION
+Plan written to configs/VSCODE_SYNC_PLAN.txt. No external transfer performed. Scripts/manifests/configs/status reports belong in source control; environments, caches, checkpoints, large models, and QE scratch do not.
+
+COMPLETION STATUS
+Scientifically consistent preparation complete. QE input text is ready, but production execution remains gated on exact pseudopotential staging and CPU-GPU equivalence. No DFT, MACE training, or LAMMPS was launched.

@@ -1,0 +1,21 @@
+AL3NI COMBINED-113 MERGE STATUS (Dataset-100 + v1 cfg101-108 + round2 cfg111-115)
+
+Generated UTC: 2026-08-15T14:04:08.561528+00:00
+
+SOURCES (all read-only, none modified -- verified separately)
+  Dataset-100 all/train/val: ni_al_dataset100_dft.extxyz (100) / ni_al_dataset100_train_65.extxyz (65) / ni_al_dataset100_validation_15.extxyz (15)
+  v1 (cfg101-108) all/train/val: ni_al_v1_dft.extxyz (8) / ni_al_v1_train_6.extxyz (6) / ni_al_v1_validation_2.extxyz (2)
+  round2 (cfg111-115) all/train/val: ni_al_round2_dft.extxyz (5) / ni_al_round2_train_4.extxyz (4) / ni_al_round2_validation_1.extxyz (1)
+  cfg109/cfg110 (sealed): EXCLUDED, untouched
+
+OUTPUT
+  All 113:       /workspace/ni_al/data/datasets/ni_al_combined113_dft.extxyz  sha256=3f0c07011c945b3b6068269bc032ac53f92828d3c6c1f75ff484f8a211ae5432
+  TRAIN 75:      /workspace/ni_al/data/datasets/ni_al_combined113_train_75.extxyz  sha256=86f1a844964bfcc83671dd204c8e7a28f95d87362f8c86d84ed770ce568afae1
+  VALIDATION 18: /workspace/ni_al/data/datasets/ni_al_combined113_validation_18.extxyz  sha256=079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff
+
+Round-trip: 113/113 all, 75/75 train, 18/18 validation
+Phase composition (all 113): {'AlNi': 18, 'Al3Ni2': 19, 'AlNi3': 17, 'Al3Ni5': 22, 'Al3Ni': 37}
+TEST/BLIND_HOLDOUT (Dataset-100's 20): UNCHANGED, not merged, referenced from original Dataset-100 files only.
+
+STATUS
+AL3NI COMBINED-113 MERGE COMPLETE
