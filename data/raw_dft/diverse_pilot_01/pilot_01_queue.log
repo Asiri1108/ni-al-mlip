@@ -1,0 +1,133 @@
+========== Diverse Pilot 01 ==========
+Started: Thu Aug  6 02:20:32 PM UTC 2026
+PW: /home/linuxuser/bin/pw.x
+MPI: 4, pools: 2
+
+========== AlNi / iso_m02 ==========
+Started: Thu Aug  6 02:20:32 PM UTC 2026
+COMPLETED: Thu Aug  6 02:21:14 PM UTC 2026
+!    total energy              =    -382.87390925 Ry
+
+========== AlNi / iso_p02 ==========
+Started: Thu Aug  6 02:21:14 PM UTC 2026
+COMPLETED: Thu Aug  6 02:21:55 PM UTC 2026
+!    total energy              =    -382.87440067 Ry
+
+========== AlNi / rattle_003 ==========
+Started: Thu Aug  6 02:21:55 PM UTC 2026
+COMPLETED: Thu Aug  6 02:28:09 PM UTC 2026
+!    total energy              =    -382.87511611 Ry
+
+========== AlNi / shear015_rattle002 ==========
+Started: Thu Aug  6 02:28:09 PM UTC 2026
+COMPLETED: Thu Aug  6 02:34:28 PM UTC 2026
+!    total energy              =    -382.87651078 Ry
+
+========== Al3Ni2 / iso_m02 ==========
+Started: Thu Aug  6 02:34:28 PM UTC 2026
+COMPLETED: Thu Aug  6 02:39:46 PM UTC 2026
+!    total energy              =    -805.28066679 Ry
+
+========== Al3Ni2 / iso_p02 ==========
+Started: Thu Aug  6 02:39:46 PM UTC 2026
+COMPLETED: Thu Aug  6 02:45:31 PM UTC 2026
+!    total energy              =    -805.28178441 Ry
+
+========== Al3Ni2 / rattle_003 ==========
+Started: Thu Aug  6 02:45:31 PM UTC 2026
+COMPLETED: Thu Aug  6 03:08:28 PM UTC 2026
+!    total energy              =    -805.28661332 Ry
+
+========== Al3Ni2 / shear015_rattle002 ==========
+Started: Thu Aug  6 03:08:28 PM UTC 2026
+COMPLETED: Thu Aug  6 03:30:06 PM UTC 2026
+!    total energy              =    -805.28644881 Ry
+
+========== AlNi3 / iso_m02 ==========
+Started: Thu Aug  6 03:30:06 PM UTC 2026
+COMPLETED: Thu Aug  6 03:37:51 PM UTC 2026
+!    total energy              =   -1069.46024652 Ry
+
+========== AlNi3 / iso_p02 ==========
+Started: Thu Aug  6 03:37:51 PM UTC 2026
+COMPLETED: Thu Aug  6 03:48:55 PM UTC 2026
+!    total energy              =   -1069.46140271 Ry
+
+========== AlNi3 / rattle_003 ==========
+Started: Thu Aug  6 03:48:55 PM UTC 2026
+COMPLETED: Thu Aug  6 04:44:27 PM UTC 2026
+!    total energy              =   -1069.46539803 Ry
+
+========== AlNi3 / shear015_rattle002 ==========
+Started: Thu Aug  6 04:44:27 PM UTC 2026
+COMPLETED: Thu Aug  6 05:38:13 PM UTC 2026
+!    total energy              =   -1069.46483813 Ry
+
+========== Al3Ni5 / iso_m02 ==========
+Started: Thu Aug  6 05:38:13 PM UTC 2026
+COMPLETED: Thu Aug  6 06:01:51 PM UTC 2026
+!    total energy              =   -1835.21948111 Ry
+
+========== Al3Ni5 / iso_p02 ==========
+Started: Thu Aug  6 06:01:51 PM UTC 2026
+COMPLETED: Thu Aug  6 06:27:37 PM UTC 2026
+!    total energy              =   -1835.22172421 Ry
+
+========== Al3Ni5 / rattle_003 ==========
+Started: Thu Aug  6 06:27:37 PM UTC 2026
+COMPLETED: Thu Aug  6 07:10:27 PM UTC 2026
+!    total energy              =   -1835.22963959 Ry
+
+========== Al3Ni5 / shear015_rattle002 ==========
+Started: Thu Aug  6 07:10:27 PM UTC 2026
+COMPLETED: Thu Aug  6 07:50:08 PM UTC 2026
+!    total energy              =   -1835.22957167 Ry
+
+========== Al3Ni / iso_m02 ==========
+Started: Thu Aug  6 07:50:08 PM UTC 2026
+COMPLETED: Thu Aug  6 08:28:19 PM UTC 2026
+!    total energy              =   -1847.59812698 Ry
+
+========== Al3Ni / iso_p02 ==========
+Started: Thu Aug  6 08:28:19 PM UTC 2026
+FAILED: pw.x returned an error
+     estimated scf accuracy    <     223.84554020 Ry
+
+     iteration #  2     ecut=    90.00 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations =  5.0
+
+     total cpu time spent up to now is      290.5 secs
+
+     total energy              =   -1848.74654263 Ry
+     estimated scf accuracy    <      97.73084149 Ry
+
+     iteration #  3     ecut=    90.00 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations =  2.0
+
+     total cpu time spent up to now is      384.7 secs
+
+     total energy              =   -1845.40682190 Ry
+     estimated scf accuracy    <      26.33663499 Ry
+
+     iteration #  4     ecut=    90.00 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations =  2.0
+
+     total cpu time spent up to now is      469.1 secs
+
+     total energy              =   -1848.65397652 Ry
+     estimated scf accuracy    <       1.90096085 Ry
+
+     iteration #  5     ecut=    90.00 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  1.76E-03,  avg # of iterations =  3.9
+
+     total cpu time spent up to now is      570.1 secs
+
+     total energy              =   -1847.35577584 Ry
+     estimated scf accuracy    <       6.01822895 Ry
+
+     iteration #  6     ecut=    90.00 Ry     beta= 0.30
+     Davidson diagonalization with overlap

@@ -1,0 +1,48 @@
+&CONTROL
+   calculation = 'scf',
+   restart_mode = 'from_scratch',
+   prefix = 'Al3Ni2_iso_p02',
+   pseudo_dir = '/home/linuxuser/ni_al_dft_work/cloud_static_inputs/pseudo',
+   outdir = '/home/linuxuser/ni_al_dft_work/cloud_static_inputs/diverse_pilot_01/Al3Ni2/iso_p02/tmp',
+   tprnfor = .true.,
+   tstress = .true.,
+   disk_io = 'low',
+/
+
+&SYSTEM
+   ibrav = 0,
+   nat = 5,
+   ntyp = 2,
+   input_dft = 'PBE',
+   ecutwfc = 90.0,
+   ecutrho = 720.0,
+   occupations = 'smearing',
+   smearing = 'mv',
+   degauss = 0.010,
+/
+
+&ELECTRONS
+   conv_thr = 1.0d-10,
+   electron_maxstep = 200,
+   mixing_beta = 0.30,
+   diagonalization = 'david',
+/
+
+ATOMIC_SPECIES
+Al  26.98153850  Al.pbe-n-kjpaw_psl.1.0.0.UPF
+Ni  58.69340000  ni_pbe_v1.4.uspp.F.UPF
+
+CELL_PARAMETERS angstrom
+    4.125821303940      0.000000015300      0.000000000000
+   -2.062911672480      3.573064840920     -0.000000000000
+   -0.000000000000     -0.000000000000      5.006019855060
+
+ATOMIC_POSITIONS crystal
+Al      0.000000000000      0.000000000000      0.000000000000
+Al      0.333332999867      0.666667000000      0.647510675637
+Al      0.666666999249      0.333332999715      0.352489323752
+Ni      0.333332999867      0.666667000000      0.146639400533
+Ni      0.666666999249      0.333332999715      0.853360598856
+
+K_POINTS automatic
+14 14 10 0 0 0

@@ -18,3 +18,6 @@ __pycache__/
 *.pt
 *.model
 .claude/
+.ipynb_checkpoints/
+*.swp
+input_tmp.in

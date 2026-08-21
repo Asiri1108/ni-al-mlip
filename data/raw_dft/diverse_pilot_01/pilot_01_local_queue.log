@@ -1,0 +1,134 @@
+==========================================
+Local WSL Pilot 01
+Started: Fri Aug  7 13:31:56 +03 2026
+PW: /home/abdulrahim/apps/qe-7.6/build/bin/pw.x
+MPI ranks: 4 | k-pools: 2
+==========================================
+
+========== AlNi / iso_m02 ==========
+Already COMPLETED - skipping.
+
+========== AlNi / iso_p02 ==========
+Already COMPLETED - skipping.
+
+========== AlNi / rattle_003 ==========
+Already COMPLETED - skipping.
+
+========== AlNi / shear015_rattle002 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni2 / iso_m02 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni2 / iso_p02 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni2 / rattle_003 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni2 / shear015_rattle002 ==========
+Already COMPLETED - skipping.
+
+========== AlNi3 / iso_m02 ==========
+Already COMPLETED - skipping.
+
+========== AlNi3 / iso_p02 ==========
+Already COMPLETED - skipping.
+
+========== AlNi3 / rattle_003 ==========
+Already COMPLETED - skipping.
+
+========== AlNi3 / shear015_rattle002 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni5 / iso_m02 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni5 / iso_p02 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni5 / rattle_003 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni5 / shear015_rattle002 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni / iso_m02 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni / iso_p02 ==========
+Saved incomplete output:
+/home/abdulrahim/ni_al_dft_work/cloud_static_inputs/diverse_pilot_01/Al3Ni/iso_p02/Al3Ni_iso_p02_interrupted_20260807_133156.out
+Started locally: Fri Aug  7 13:31:56 +03 2026
+COMPLETED: Fri Aug  7 14:28:43 +03 2026
+!    total energy              =   -1847.60112233 Ry
+     Total force =     0.003954     Total SCF correction =     0.000000
+     PWSCF        :  54m47.35s CPU  56m46.63s WALL
+
+========== Al3Ni / rattle_003 ==========
+Started locally: Fri Aug  7 14:28:43 +03 2026
+==========================================
+Local WSL Pilot 01
+Started: Fri Aug  7 17:07:42 +03 2026
+PW: /home/abdulrahim/apps/qe-7.6/build/bin/pw.x
+MPI ranks: 2 | k-pools: 2
+==========================================
+
+========== AlNi / iso_m02 ==========
+Already COMPLETED - skipping.
+
+========== AlNi / iso_p02 ==========
+Already COMPLETED - skipping.
+
+========== AlNi / rattle_003 ==========
+Already COMPLETED - skipping.
+
+========== AlNi / shear015_rattle002 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni2 / iso_m02 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni2 / iso_p02 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni2 / rattle_003 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni2 / shear015_rattle002 ==========
+Already COMPLETED - skipping.
+
+========== AlNi3 / iso_m02 ==========
+Already COMPLETED - skipping.
+
+========== AlNi3 / iso_p02 ==========
+Already COMPLETED - skipping.
+
+========== AlNi3 / rattle_003 ==========
+Already COMPLETED - skipping.
+
+========== AlNi3 / shear015_rattle002 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni5 / iso_m02 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni5 / iso_p02 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni5 / rattle_003 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni5 / shear015_rattle002 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni / iso_m02 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni / iso_p02 ==========
+Already COMPLETED - skipping.
+
+========== Al3Ni / rattle_003 ==========
+Saved incomplete output:
+/home/abdulrahim/ni_al_dft_work/cloud_static_inputs/diverse_pilot_01/Al3Ni/rattle_003/Al3Ni_rattle_003_interrupted_20260807_170743.out
+Started locally: Fri Aug  7 17:07:43 +03 2026

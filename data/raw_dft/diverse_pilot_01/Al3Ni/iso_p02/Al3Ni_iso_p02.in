@@ -1,0 +1,59 @@
+&CONTROL
+   calculation = 'scf',
+   restart_mode = 'from_scratch',
+   prefix = 'Al3Ni_iso_p02',
+   pseudo_dir = '/home/linuxuser/ni_al_dft_work/cloud_static_inputs/pseudo',
+   outdir = '/home/linuxuser/ni_al_dft_work/cloud_static_inputs/diverse_pilot_01/Al3Ni/iso_p02/tmp',
+   tprnfor = .true.,
+   tstress = .true.,
+   disk_io = 'low',
+/
+
+&SYSTEM
+   ibrav = 0,
+   nat = 16,
+   ntyp = 2,
+   input_dft = 'PBE',
+   ecutwfc = 90.0,
+   ecutrho = 720.0,
+   occupations = 'smearing',
+   smearing = 'mv',
+   degauss = 0.010,
+/
+
+&ELECTRONS
+   conv_thr = 1.0d-10,
+   electron_maxstep = 200,
+   mixing_beta = 0.30,
+   diagonalization = 'david',
+/
+
+ATOMIC_SPECIES
+Al  26.98153850  Al.pbe-n-kjpaw_psl.1.0.0.UPF
+Ni  58.69340000  ni_pbe_v1.4.uspp.F.UPF
+
+CELL_PARAMETERS angstrom
+    4.922014751160      0.000000444720      0.000000000000
+    0.000001516740      6.755492820540      0.000000000000
+    0.000000000000      0.000000000000      7.530142860000
+
+ATOMIC_POSITIONS crystal
+Al      0.916025139777      0.007507203541      0.250000000000
+Al      0.364099272463      0.171320948008      0.444747371924
+Al      0.364099272463      0.171320948008      0.055252626721
+Al      0.864099477003      0.328679206907      0.555252456047
+Al      0.135900521961      0.671320794150      0.444747543953
+Al      0.635900728573      0.828679051539      0.944747373279
+Al      0.135900521961      0.671320794150      0.055252456047
+Al      0.635900728573      0.828679051539      0.555252628076
+Al      0.864099477003      0.328679206907      0.944747543953
+Al      0.583974805757      0.507507062560      0.250000000000
+Al      0.083974861260      0.992492796006      0.750000000000
+Al      0.416025195279      0.492492938497      0.750000000000
+Ni      0.443070931915      0.870356820376      0.250000000000
+Ni      0.056928880759      0.370356742897      0.250000000000
+Ni      0.556929069121      0.129643179171      0.750000000000
+Ni      0.943071118204      0.629643256650      0.750000000000
+
+K_POINTS automatic
+10 8 8 0 0 0

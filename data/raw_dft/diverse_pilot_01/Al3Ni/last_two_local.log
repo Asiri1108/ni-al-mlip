@@ -1,0 +1,48 @@
+==========================================
+Last two Al3Ni calculations - Local WSL
+Started: Sat Aug  8 00:54:27 +03 2026
+MPI=2 | k-pools=2
+==========================================
+
+========== Al3Ni / rattle_003 ==========
+Saved old incomplete output:
+/home/abdulrahim/ni_al_dft_work/cloud_static_inputs/diverse_pilot_01/Al3Ni/rattle_003/Al3Ni_rattle_003_interrupted_20260808_005427.out
+Started: Sat Aug  8 00:54:27 +03 2026
+==========================================
+Last two Al3Ni calculations - Local WSL
+Started: Sat Aug  8 01:14:01 +03 2026
+MPI=4 | k-pools=2
+==========================================
+
+========== Al3Ni / rattle_003 ==========
+Saved old incomplete output:
+/home/abdulrahim/ni_al_dft_work/cloud_static_inputs/diverse_pilot_01/Al3Ni/rattle_003/Al3Ni_rattle_003_interrupted_20260808_011401.out
+Started: Sat Aug  8 01:14:01 +03 2026
+==========================================
+Last two Al3Ni calculations - Local WSL
+Started: Sat Aug  8 01:37:25 +03 2026
+MPI=4 | k-pools=2
+==========================================
+
+========== Al3Ni / rattle_003 ==========
+Saved old incomplete output:
+/home/abdulrahim/ni_al_dft_work/cloud_static_inputs/diverse_pilot_01/Al3Ni/rattle_003/Al3Ni_rattle_003_interrupted_20260808_013725.out
+Started: Sat Aug  8 01:37:25 +03 2026
+==========================================
+Last two Al3Ni calculations - Local WSL
+Started: Sat Aug  8 02:10:36 +03 2026
+MPI=4 | k-pools=2
+==========================================
+
+========== Al3Ni / rattle_003 ==========
+Saved old incomplete output:
+/home/abdulrahim/ni_al_dft_work/cloud_static_inputs/diverse_pilot_01/Al3Ni/rattle_003/Al3Ni_rattle_003_interrupted_20260808_021036.out
+Started: Sat Aug  8 02:10:36 +03 2026
+COMPLETED: Sat Aug  8 04:31:31 +03 2026
+!    total energy              =   -1847.61274550 Ry
+     Total force =     0.059322     Total SCF correction =     0.000004
+          total   stress  (Ry/bohr**3)                   (kbar)     P=        2.14
+     PWSCF        :      2h15m CPU      2h20m WALL
+
+========== Al3Ni / shear015_rattle002 ==========
+Started: Sat Aug  8 04:31:31 +03 2026

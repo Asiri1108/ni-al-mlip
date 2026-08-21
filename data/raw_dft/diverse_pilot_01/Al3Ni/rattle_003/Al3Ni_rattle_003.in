@@ -1,0 +1,59 @@
+&CONTROL
+   calculation = 'scf',
+   restart_mode = 'from_scratch',
+   prefix = 'Al3Ni_rattle_003',
+   pseudo_dir = '/home/linuxuser/ni_al_dft_work/cloud_static_inputs/pseudo',
+   outdir = '/home/linuxuser/ni_al_dft_work/cloud_static_inputs/diverse_pilot_01/Al3Ni/rattle_003/tmp',
+   tprnfor = .true.,
+   tstress = .true.,
+   disk_io = 'low',
+/
+
+&SYSTEM
+   ibrav = 0,
+   nat = 16,
+   ntyp = 2,
+   input_dft = 'PBE',
+   ecutwfc = 90.0,
+   ecutrho = 720.0,
+   occupations = 'smearing',
+   smearing = 'mv',
+   degauss = 0.010,
+/
+
+&ELECTRONS
+   conv_thr = 1.0d-10,
+   electron_maxstep = 200,
+   mixing_beta = 0.30,
+   diagonalization = 'david',
+/
+
+ATOMIC_SPECIES
+Al  26.98153850  Al.pbe-n-kjpaw_psl.1.0.0.UPF
+Ni  58.69340000  ni_pbe_v1.4.uspp.F.UPF
+
+CELL_PARAMETERS angstrom
+    4.825504658000      0.000000436000      0.000000000000
+    0.000001487000      6.623032177000      0.000000000000
+    0.000000000000      0.000000000000      7.382493000000
+
+ATOMIC_POSITIONS crystal
+Al      0.919174479693      0.006759402547      0.248623380403
+Al      0.355345711028      0.172368553071      0.451469433983
+Al      0.357149717916      0.166985936205      0.059819753996
+Al      0.862427042778      0.330207932152      0.554210007673
+Al      0.131937182125      0.678054343245      0.446601269299
+Al      0.626769717667      0.824013101870      0.942348036701
+Al      0.137403429739      0.665656092591      0.054284766633
+Al      0.631331681542      0.835669680822      0.554548671820
+Al      0.866423934952      0.329585215352      0.940287729198
+Al      0.587293582874      0.513330964262      0.244412216671
+Al      0.085736055688      0.996990261405      0.753172402208
+Al      0.416666028729      0.488544892861      0.756168396199
+Ni      0.442550866495      0.874240561137      0.248603178805
+Ni      0.067884990221      0.368392434743      0.248187957762
+Ni      0.561070267144      0.122803160132      0.752282633888
+Ni      0.950835313481      0.626397468512      0.744980164763
+
+K_POINTS automatic
+10 8 8 0 0 0
