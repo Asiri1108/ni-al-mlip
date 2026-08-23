@@ -1,0 +1,10 @@
+8
+Lattice="3.8227622054103514 0.0 0.0 -1.761662007638339e-11 4.967748325484777 0.0 -2.561336069146508e-11 -0.894475049778027 4.886556846129923" Properties=species:S:1:pos:R:3 config_id=Al3Ni5_lammps_0K_zeroshot_primitive phase=Al3Ni5 source="LAMMPS mliap unified (Kokkos), box/relax tri + minimize, MACE-MATPES-PBE-0 ZERO-SHOT foundation checkpoint, PRIMITIVE cell, directly atom-count-comparable to the dft/ entry for this phase" pbc="T T T"
+Al      -0.03022783       2.05865396       2.48989137
+Al       1.88115327       0.42871005       3.84855907
+Al       1.88115327       3.68859786       1.13122366
+Ni      -0.03022783       0.02201732       0.04661294
+Ni      -0.03022783       1.61141643       4.93316979
+Ni      -0.03022783       4.54252812       2.48989137
+Ni       1.88115327       1.15330153       1.40377321
+Ni       1.88115327       2.96400638       3.57600953

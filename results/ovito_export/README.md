@@ -1,6 +1,6 @@
 # OVITO export bundle -- Ni-Al MACE/LAMMPS structures and trajectories
 
-Generated this session (2026-08-19) from Stage A-D3 LAMMPS/MACE deployment validation work. Every structure file is real simulation output -- nothing here is synthetic or placeholder. OVITO desktop reads `.extxyz` and LAMMPS `.data`/dump text formats natively; no ovito install was performed on this machine (per instruction -- the user has OVITO desktop locally).
+Generated 2026-08-19 from Stage A-D3 LAMMPS/MACE deployment validation work; extended 2026-08-23 with `lammps_0K_zeroshot/` (MACE-MATPES-PBE-0 zero-shot Stage B structures) and the three-way DFT/zero-shot/fine-tuned comparison table. Every structure file is real simulation output -- nothing here is synthetic or placeholder. OVITO desktop reads `.extxyz` and LAMMPS `.data`/dump text formats natively; no ovito install was performed on this machine (per instruction -- the user has OVITO desktop locally).
 
 **Species labeling**: every LAMMPS `.data` file uses this project's fixed `ELEMENT_ORDER=["Al","Ni"]` convention (type 1 = Al, type 2 = Ni) throughout Stage A-D3. The `.extxyz` conversions carry real chemical symbols directly (via explicit `Z_of_type={1:13, 2:28}` on read-back) -- prefer the `.extxyz` file if your tool doesn't let you set a type-to-element mapping.
 
@@ -29,6 +29,22 @@ Source: `data/datasets/ni_al_combined227_dft.extxyz`, `{phase}_relaxed` configs.
 | Al3Ni5 | `Al3Ni5_lammps_0K_primitive.extxyz` + `Al3Ni5_lammps_0K_primitive.data` | LAMMPS 0K relaxed (primitive) | 8 | a=3.7984 b=5.0035 c=5.0035 alpha=98.279 beta=90.000 gamma=90.000 | DIRECTLY comparable to dft/ (same atom count, primitive cell) |
 | AlNi | `AlNi_lammps_0K_supercell.extxyz` + `AlNi_lammps_0K_supercell.data` | LAMMPS 0K relaxed (supercell) | 128 | a=11.5818 b=11.5818 c=11.5818 alpha=90.000 beta=90.000 gamma=90.000 | NOT directly comparable to dft/ (supercell, different atom count -- geometry/symmetry comparison only) |
 | AlNi3 | `AlNi3_lammps_0K_supercell.extxyz` + `AlNi3_lammps_0K_supercell.data` | LAMMPS 0K relaxed (supercell) | 108 | a=10.7022 b=10.7022 c=10.7022 alpha=90.000 beta=90.000 gamma=90.000 | NOT directly comparable to dft/ (supercell, different atom count -- geometry/symmetry comparison only) |
+
+## lammps_0K_zeroshot/ -- MACE-MATPES-PBE-0 ZERO-SHOT relaxed cells (5), added 2026-08-23
+
+Same relax recipe as `lammps_0K/` (LAMMPS mliap unified, Kokkos build, `box/relax tri` + `minimize`, starting from the DFT-relaxed geometry) but using the **zero-shot MACE-MATPES-PBE-0 foundation checkpoint** (`runs/pilot25_matpes_pbe_lora_v1/downloads/mace/MACEmatpespbeomatftmodel`, exported to mliap format as `models/mace_matpes_pbe_0_zeroshot-mliap_lammps.pt`, head="default") -- i.e. what the fine-tuned model started from **before** the Ni-Al fine-tuning that produced `lammps_0K/`'s structures.
+
+**All 5 phases are PRIMITIVE cells**, same atom count as their `dft/` counterpart in every case (unlike `lammps_0K/`, where only Al3Ni/Al3Ni5 are primitive) -- every phase here is directly, atom-count-comparable to `dft/` with no supercell caveat.
+
+| Phase | File(s) | State | Atoms | Cell parameters (A, deg) | Note |
+|---|---|---|---|---|---|
+| AlNi | `AlNi_lammps_0K_zeroshot_primitive.extxyz` + `.data` | LAMMPS 0K relaxed, zero-shot (primitive) | 2 | a=2.8681 b=2.8681 c=2.8681 alpha=90.000 beta=90.000 gamma=90.000 | DIRECTLY comparable to dft/ |
+| Al3Ni | `Al3Ni_lammps_0K_zeroshot_primitive.extxyz` + `.data` | LAMMPS 0K relaxed, zero-shot (primitive) | 16 | a=4.7497 b=6.6483 c=7.3968 alpha=90.000 beta=90.000 gamma=90.000 | DIRECTLY comparable to dft/ |
+| Al3Ni2 | `Al3Ni2_lammps_0K_zeroshot_primitive.extxyz` + `.data` | LAMMPS 0K relaxed, zero-shot (primitive) | 5 | a=4.0422 b=4.0422 c=4.8772 alpha=90.000 beta=90.000 gamma=120.000 | DIRECTLY comparable to dft/ |
+| Al3Ni5 | `Al3Ni5_lammps_0K_zeroshot_primitive.extxyz` + `.data` | LAMMPS 0K relaxed, zero-shot (primitive) | 8 | a=3.8228 b=4.9677 c=4.9677 alpha=100.373 beta=90.000 gamma=90.000 | DIRECTLY comparable to dft/ |
+| AlNi3 | `AlNi3_lammps_0K_zeroshot_primitive.extxyz` + `.data` | LAMMPS 0K relaxed, zero-shot (primitive) | 4 | a=3.5629 b=3.5629 c=3.5629 alpha=90.000 beta=90.000 gamma=90.000 | DIRECTLY comparable to dft/ |
+
+Structural before/after JSON summary and DFT-reference comparison: `results/lammps_stage_b_matpes_pbe0_zeroshot/`, `configs/LAMMPS_STAGE_B_MATPES_PBE0_ZEROSHOT_STATUS.txt`. **Stage C (elastic) and Stage D (MD) were NOT run for this zero-shot model -- out of scope for the task that produced this directory; `lammps_0K_zeroshot/` is a 0 K relax-only structure set.**
 
 ## md_endpoints/ -- MD snapshot endpoints (NOT trajectories)
 
@@ -115,6 +131,52 @@ g_AlAl(r), g_AlNi(r), g_NiNi(r) for all 5 phases, at TWO states each: the 0 K DF
 | Al3Ni5 | 0K DFT | 2.67 (2.88) | 9.33 (2.62) | 6.40 (2.73) |
 | Al3Ni5 | 300K MD | 2.11 (2.93) | 9.33 (2.83) | 6.76 (3.03) |
 
+## Three-way structural comparison: DFT vs zero-shot vs fine-tuned (added 2026-08-23)
+
+**The most compelling figure available in this bundle.** All 5 phases, all
+primitive cells, all atom-count-matched to `dft/` in every column -- the
+only 3-way structural comparison in the bundle with no supercell caveat
+anywhere. Zero-shot = `lammps_0K_zeroshot/` (MACE-MATPES-PBE-0 foundation
+checkpoint, no fine-tuning). Fine-tuned = `lammps_0K/` for Al3Ni/Al3Ni5
+(the two phases saved as primitive there); for AlNi/AlNi3/Al3Ni2, the
+fine-tuned lattice parameters/volume below are the values recorded in
+`configs/LAMMPS_STAGE_B_RELAXATION_STATUS.txt` (same primitive-cell relax,
+just not separately re-saved to a primitive `.extxyz`/`.data` pair in
+`lammps_0K/`, which only kept those 3 phases' pre-existing Stage D-2
+supercell files). % error is volume/atom vs the same `dft/` reference cell
+in both cases -- a genuine single-reference before/after (see the parent
+project's `configs/NI_AL_UNIFIED_COMPARISON.md` Section 10 for the full
+derivation and the elemental-coverage caveat behind why zero-shot
+undershoots here).
+
+| Phase | State | a (A) | b (A) | c (A) | alpha (deg) | V/atom (A^3) | Vol err vs DFT |
+|---|---|---:|---:|---:|---:|---:|---:|
+| AlNi | DFT | 2.89401 | 2.89401 | 2.89401 | 90.000 | 12.11907 | -- |
+| AlNi | Zero-shot | 2.86805 | 2.86805 | 2.86805 | 90.000 | 11.79590 | **-2.6666%** |
+| AlNi | Fine-tuned | 2.89545 | 2.89545 | 2.89545 | 90.000 | 12.13714 | **+0.1491%** |
+| Al3Ni | DFT | 4.82550 | 6.62303 | 7.38249 | 90.000 | 14.74629 | -- |
+| Al3Ni | Zero-shot | 4.74971 | 6.64830 | 7.39676 | 90.000 | 14.59819 | **-1.0043%** |
+| Al3Ni | Fine-tuned | 4.81550 | 6.59993 | 7.42674 | 90.000 | 14.75229 | **+0.0407%** |
+| Al3Ni2 | DFT | 4.04492 | 4.04492 | 4.90786 | 90.000 | 13.90827 | -- |
+| Al3Ni2 | Zero-shot | 4.04219 | 4.04219 | 4.87724 | 90.000 | 13.80283 | **-0.7581%** |
+| Al3Ni2 | Fine-tuned | 4.05153 | 4.05153 | 4.89762 | 90.000 | 13.92467 | **+0.1179%** |
+| Al3Ni5 | DFT | 3.76231 | 5.01178 | 5.01178 | 96.478 | 11.73726 | -- |
+| Al3Ni5 | Zero-shot | 3.82276 | 4.96775 | 4.96775 | 100.373 | 11.59978 | **-1.1713%** |
+| Al3Ni5 | Fine-tuned | 3.79835 | 5.00350 | 5.00350 | 98.279 | 11.76261 | **+0.2159%** |
+| AlNi3 | DFT | 3.56726 | 3.56739 | 3.56739 | 90.000 | 11.34945 | -- |
+| AlNi3 | Zero-shot | 3.56288 | 3.56288 | 3.56288 | 90.000 | 11.30688 | **-0.3751%** |
+| AlNi3 | Fine-tuned | 3.56739 | 3.56739 | 3.56739 | 90.000 | 11.34987 | **+0.0037%** |
+
+**Summary: max |volume/atom error| zero-shot 2.6666% (AlNi) vs fine-tuned
+0.2159% (Al3Ni5) -- a 12.3x reduction in worst-phase structural error from
+fine-tuning, on the identical QE/PBE DFT reference for every phase, every
+column.** Symmetry (spacegroup number) is preserved 5/5 in BOTH the
+zero-shot and fine-tuned relaxations -- fine-tuning's gain here is in
+volume/lattice accuracy, not in avoiding a symmetry break. Sign pattern:
+zero-shot under-contracts on all 5 phases (every error negative);
+fine-tuned over-expands on all 5 (every error positive) -- opposite bias
+directions, both small in the fine-tuned case.
+
 ## Directly comparable pairs (explicit)
 
 - **Al3Ni**: `dft/Al3Ni_dft_relaxed.extxyz` vs `lammps_0K/Al3Ni_lammps_0K_primitive.extxyz` -- same atom count (16), direct.
@@ -130,4 +192,5 @@ g_AlAl(r), g_AlNi(r), g_NiNi(r) for all 5 phases, at TWO states each: the 0 K DF
 - **AlNi/AlNi3/Al3Ni2 have no primitive-cell 0 K LAMMPS structure file** -- only their Stage D-2 supercell version exists; a true 1:1 primitive DFT-vs-LAMMPS comparison for these 3 phases would need a fresh (cheap) relax run, not done here (out of the scope actually requested this session).
 - **RESOLVED**: Al3Ni's chemical-order verdict was previously lower-confidence (only a 16-atom primitive-cell MD snapshot existed, no supercell run). A dedicated 128-atom (2x2x2) supercell trajectory closed this gap -- Al3Ni is now verified at the same confidence level as the other 4 phases (see the chemical-order table above). Not an open gap anymore.
 - **First-shell coordination numbers use a simple peak-then-first-local-minimum shell boundary** -- sensitive to thermal peak broadening (see Al3Ni2's CN shifts above, attributed to a widened integration window, not a chemistry change); treat CN as an approximate, not a rigorously-converged, number, especially at 300 K.
+- **RESOLVED (2026-08-23)**: this bundle originally had no MACE-MATPES-PBE-0 zero-shot structures (it was built before that Stage B run), blocking a direct DFT-vs-zero-shot-vs-fine-tuned visual comparison. `lammps_0K_zeroshot/` (5 primitive cells) now closes this -- see the "Three-way structural comparison" section above. Stage C (elastic) and Stage D (MD) were deliberately NOT run for the zero-shot model (out of scope), so no zero-shot equivalent of `md_endpoints/`/`trajectories/`/Stage C exists or is claimed here.
 

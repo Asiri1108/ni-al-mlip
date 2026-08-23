@@ -1,0 +1,21 @@
+{
+  "phase": "Al3Ni2",
+  "mode": "tri",
+  "model": "MACE-MATPES-PBE-0 (zero-shot foundation checkpoint)",
+  "natoms": 5,
+  "energy_eV": -25.073459460954446,
+  "fmax_final_eV_per_A": 2.306587754130618e-09,
+  "press_final_bar": -3.926126464406435e-05,
+  "stopping_criterion": "Stopping criterion = force tolerance",
+  "cellpar": [
+    4.042190443147056,
+    4.0421904426724975,
+    4.877237932972734,
+    89.99999999904708,
+    90.00000000207473,
+    119.9999999940336
+  ],
+  "volume_per_atom_A3": 13.802829142096595,
+  "spacegroup_symbol": "P-3m1",
+  "spacegroup_number": 164
+}

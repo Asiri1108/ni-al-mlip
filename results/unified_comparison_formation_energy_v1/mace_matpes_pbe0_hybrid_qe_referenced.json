@@ -1,0 +1,27 @@
+{
+  "method": "mace_matpes_pbe_0",
+  "mu_Al_QE": -537.4611518164136,
+  "mu_Ni_QE": -4670.5734564188815,
+  "mu_Al_model": -3.7316070875073937,
+  "mu_Ni_model": -5.473765158622092,
+  "delta_Al_meV_atom": 533729.5447289061,
+  "delta_Ni_meV_atom": 4665099.69126026,
+  "per_phase_hybrid_ef_eV_atom": {
+    "AlNi": 2598.7426780522896,
+    "Al3Ni2": 2185.6913817729833,
+    "AlNi3": 3631.7989059497127,
+    "Al3Ni5": 3115.260056075149,
+    "Al3Ni": 1566.1643142677772
+  },
+  "per_phase_signed_error_eV_atom": {
+    "AlNi": 2599.38107905229,
+    "Al3Ni2": 2186.287832772983,
+    "AlNi3": 3632.2154859497127,
+    "Al3Ni5": 3115.806894075149,
+    "Al3Ni": 1566.5610402677771
+  },
+  "mae_eV_atom": 2620.0504664235823,
+  "mean_signed_eV_atom": 2620.0504664235823,
+  "std_eV_atom": 716.7523532236321,
+  "note": "Hybrid treatment (model compound E + QE mu_Al/mu_Ni) does NOT transfer to this zero-shot foundation model: its raw total energies live on its own foundation-training absolute energy scale (different DFT code/pseudopotential/core-electron convention), not on QE's. delta_Al/delta_Ni are ~5-6 orders of magnitude larger than the fine-tuned model's (~45/113 meV/atom) -- confirms scale incompatibility, not a small elemental-extrapolation error."
+}

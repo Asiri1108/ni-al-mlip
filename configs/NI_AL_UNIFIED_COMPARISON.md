@@ -10,6 +10,16 @@ Windows-machine project, `inbox/`) — appears in one clearly separate
 section as a free cross-check, never merged into the QE/PBE-referenced
 numbers.
 
+**Updated 2026-08-23** (two follow-up gaps closed, no new DFT): Section 7
+applies Section 5's QE-referenced hybrid formation-energy correction to
+MACE-MP-0 Small and MACE-MATPES-PBE-0 zero-shot as well as the fine-tuned
+model, for a fair three-way comparison (finding: it does not transfer to
+the zero-shot models — scale mismatch, see Section 7). Section 10 runs
+LAMMPS Stage B structural relaxation for MACE-MATPES-PBE-0 zero-shot
+against this project's own QE/PBE reference, giving a clean
+single-DFT-reference structural before/after against the fine-tuned
+model's existing Stage B result.
+
 **Companion checksum file:** `configs/NI_AL_UNIFIED_COMPARISON.md.sha256`.
 
 ---
@@ -352,6 +362,127 @@ mixes MP DFT and QE/PBE references.
 
 ---
 
+## 7. Fairness fix — QE-referenced hybrid applied to ALL THREE MACE models (2026-08-23)
+
+**Motivation.** Section 5's hybrid correction (model compound energies + QE's
+own mu_Al/mu_Ni) was originally applied only to the fine-tuned model, taking
+its formation-energy MAE from 79.592 to 0.95 meV/atom, while the two
+zero-shot MACE models were left at their uncorrected pure-model MAE (58.689
+MP-0 Small, 25.094 MATPES-PBE-0) — a biased comparison, since all three
+models share the same "never saw isolated Al/Ni in training" property. This
+section applies the identical hybrid procedure to all three and reports the
+result, including the cases where it fails.
+
+**Method (identical to Section 5, same QE mu):** for each phase, `Hybrid E_f
+= E_compound(model) / n_atoms − (n_Al·mu_Al_QE + n_Ni·mu_Ni_QE) / n_atoms`,
+using each model's own relaxed compound energies (already in
+`results/unified_comparison_formation_energy_v1/mace_formation_energy.json`)
+and QE/PBE's mu_Al=−537.46115182, mu_Ni=−4670.57345642 eV/atom (Section 1a).
+No new DFT, no new model evaluation — pure recomputation.
+
+| Method | Pure-model E_f MAE (meV/atom) | Hybrid E_f MAE (meV/atom) | delta_Al (meV/atom) | delta_Ni (meV/atom) |
+|---|---:|---:|---:|---:|
+| MACE-MP-0 Small (zero-shot) | 58.689 | **2,619,894** | +533,751.9 | +4,664,841.8 |
+| MACE-MATPES-PBE-0 (zero-shot) | 25.094 | **2,620,050** | +533,729.5 | +4,665,099.7 |
+| **al3ni_combined227_lora_v1** (fine-tuned) | 79.592 | **0.950** | +44.9 | +113.0 |
+
+delta_Al/delta_Ni = model's own mu minus QE's own mu (Section 3 elemental
+references), in meV/atom.
+
+**Correction (2026-08-23): this is a scale mismatch, not a zero-shot model
+failure.** Pairing either zero-shot model's raw compound total energy with
+QE/PBE's mu blows the formation energy up to ~2,600 eV/atom — but this is
+not evidence those models are wrong or that the hybrid math misbehaves for
+them; it is the same **energy-zero mismatch** this project has documented
+since the move to per-atom QE totals (Section 3's own mu table already
+shows it side by side: QE mu_Al=−537.461 eV/atom vs MACE mu_Al≈−3.7
+eV/atom, QE mu_Ni=−4670.573 vs MACE mu_Ni≈−5.5 to −5.7 — different codes,
+different pseudopotential/core-electron conventions, hence different
+absolute energy zeros; e.g. a compound total energy of "−5209 eV" (QE,
+all-electron-equivalent core included) and "−10 eV" (MACE, its own
+foundation-training zero) describe the *same physical structure*, and only
+*relative* energies — differences within one method's own zero — are
+meaningfully comparable across the two). Verified directly: delta_Al for
+MP-0 = QE's mu_Al (−537.461152) minus **Phase 1's independently-recorded**
+MACE-MP-0 mu_Al (−3.709588, Section 3's cross-validation row) =
+**533.7516 eV/atom**, matching this section's own −3.709229-based
+533.7519 eV/atom to 0.0003 eV — the same offset, computed twice,
+independently, from two different sessions' zero-shot elemental
+evaluations. delta_Al/delta_Ni are not errors in MP-0 or MATPES-PBE-0; they
+are literally each model's energy zero minus QE's energy zero, restated in
+meV/atom.
+
+**Why the fine-tuned model's offset is small while the zero-shot models'
+are not.** The fine-tuned model's compound predictions were trained
+directly against this project's own QE total energies, so its energy zero
+was pulled onto QE's scale by construction — its ~45/113 meV/atom
+delta_Al/delta_Ni is a genuinely small *residual* miscalibration (Section
+5's "never saw isolated Al/Ni" story), not a zero mismatch. MACE-MP-0 Small
+and MACE-MATPES-PBE-0 were never trained on this project's QE energies at
+all, so their multi-hundred-thousand-meV/atom deltas are simply their own,
+untouched, foundation-training energy zeros — expected, not anomalous, and
+nearly identical to each other (~534,000/~4,665,000 meV/atom for both)
+because neither has any reason to be anywhere near QE's zero in the first
+place.
+
+**Conclusion — the original Section 5 framing stands, reframed rather than
+weakened.** The fine-tuned model's 0.95 meV/atom hybrid number is not an
+artifact of asymmetric treatment: the "fair," identical procedure applied
+to its zero-shot counterparts does not produce comparably small numbers for
+them, because the hybrid trick presupposes a compound energy already on
+QE's absolute scale — a precondition only fine-tuning-on-QE-data
+satisfies, not a defect discovered in the zero-shot models. **Pure-model
+E_f (Table 1/Section 4) remains the only apples-to-apples formation-energy
+comparison across all three MACE models side by side; the QE-referenced
+hybrid number is valid, and meaningful, for the fine-tuned model only.**
+Table 1/Section 4's pure-model MAE column (58.689 / 25.094 / 79.592) is
+confirmed as the correct basis for cross-model formation-energy comparison.
+
+Full numeric record: `results/unified_comparison_formation_energy_v1/macemp0_hybrid_qe_referenced.json`,
+`results/unified_comparison_formation_energy_v1/mace_matpes_pbe0_hybrid_qe_referenced.json`
+(fine-tuned unchanged: `finetuned_hybrid_qe_referenced.json`, Section 5).
+
+**Addition — the substantive finding this fairness check surfaces: an
+elemental-coverage trade-off from fine-tuning, not a compound-description
+weakness.** MACE-MATPES-PBE-0's pure-model formation-energy MAE (25.094
+meV/atom) beats the fine-tuned model's (79.592) even though the fine-tuned
+model is **4.3x better on relative energy** (0.960 vs 4.143 meV/atom,
+Table 1) and **17.2x better on forces** (0.00189 vs 0.03248 eV/Å, Table 1)
+— the opposite ranking from every other metric in this document. The
+reason is coverage, not capability: **MatPES, MACE-MATPES-PBE-0's
+foundation training set, includes elemental Al and Ni structures**, so its
+mu_Al/mu_Ni (Section 3) are genuine in-domain predictions, not
+extrapolation. Fine-tuning, by contrast, narrowed the model to this
+project's `combined-227` dataset — five Ni-Al compound phases only, no
+isolated Al or Ni (Section 5's root cause) — so the fine-tuned model's
+elemental predictions are **pure extrapolation outside its fine-tuning
+distribution**, even though MACE-MATPES-PBE-0 (its own starting checkpoint)
+had that exact information available before fine-tuning narrowed it away.
+Fine-tuning traded elemental-reference coverage for compound-description
+and force accuracy — a measured, specific accuracy/coverage trade-off, not
+a general regression. **Concrete remedy, unchanged from Section 5 but now
+motivated by a second, independent line of evidence:** add elemental Al and
+Ni structures to any future training round — the QE data already exists
+from this session's own STEP B (Section 1a: mu_Al=−537.46115182 eV/atom at
+its relaxed a=4.038351 Å, mu_Ni=−4670.57345642 eV/atom at a=3.517938 Å),
+so this requires no new DFT, only adding those two already-computed
+structures to the training set.
+
+**Volume-error sign difference between the two zero-shot foundation
+models.** MACE-MP-0 Small **over-expands** relative to its DFT reference
+(mean volume error +2.785%, vs Materials Project DFT —
+`configs/NI_AL_DATA_SHOWCASE.md`, `configs/NI_AL_FINAL_PROJECT_RECORD.md`),
+while MACE-MATPES-PBE-0 **under-contracts** (all 5 phases negative, mean
+−1.195%, vs this project's own QE/PBE — Section 10). The two zero-shot
+foundation models show opposite structural bias — one systematically too
+large, the other systematically too small — though this is reported as a
+qualitative sign observation only: the two percentages are measured against
+different DFT references (Materials Project vs QE/PBE, Section 0's
+carried-vs-new distinction) and are not on a common absolute footing with
+each other, only internally consistent within each own comparison.
+
+---
+
 ## 8. Table 2 — Reserved-20 held-out subset only
 
 Restricted to the 20 configs in `data/datasets/ni_al_dataset100_test_manifest.csv`
@@ -387,3 +518,72 @@ All entries NEW (this session), n=20.
 **Methods that failed to evaluate: none.** All 6 methods produced
 relative-energy, force, formation-energy, and volume numbers for all 227
 structures / 5 phases without error.
+
+- Fairness-fix hybrid results (Section 7): `results/unified_comparison_formation_energy_v1/macemp0_hybrid_qe_referenced.json`, `mace_matpes_pbe0_hybrid_qe_referenced.json`
+- Zero-shot Stage B (Section 10): `results/lammps_stage_b_matpes_pbe0_zeroshot/{phase}_lammps.json`, `logs/lammps_stage_b_matpes_pbe0_zeroshot/`, `configs/LAMMPS_STAGE_B_MATPES_PBE0_ZEROSHOT_STATUS.txt`, `models/mace_matpes_pbe_0_zeroshot-mliap_lammps.pt`
+- Scripts (2026-08-23 additions): `scripts/lammps_stage_b_relax_phase_matpes0_zeroshot.py`, `scripts/lammps_stage_b_run_all_matpes0_zeroshot.py`, `scripts/lammps_stage_b_report_matpes0_zeroshot.py`
+
+---
+
+## 10. Zero-shot MACE-MATPES-PBE-0 LAMMPS Stage B — single-reference before/after (2026-08-23)
+
+**Closes the caveat noted at the top of this document's Section 0 history:**
+the fine-tuned model's LAMMPS Stage B structural validation
+(`configs/LAMMPS_STAGE_B_RELAXATION_STATUS.txt`, Section 8's own predecessor
+work) was run against this project's QE/PBE relaxed cells, while the only
+zero-shot structural number on record before this section (MACE-MP-0's
++2.785% mean volume error, `configs/NI_AL_DATA_SHOWCASE.md`,
+`configs/NI_AL_FINAL_PROJECT_RECORD.md`) was computed against **Materials
+Project's** DFT reference — two different DFT references, not a clean
+before/after. This section runs the identical LAMMPS Stage B procedure
+(`fix box/relax tri` + `minimize`, mliap unified, Kokkos build, starting
+from the DFT-relaxed geometry) for MACE-MATPES-PBE-0 zero-shot against
+**this project's own QE/PBE relaxed cells** — the same reference the
+fine-tuned model was checked against — giving a genuine single-reference
+before/after. **Stage C and Stage D were deliberately not run for this
+zero-shot model — out of scope for this task.**
+
+Model: the exact MACE-MATPES-PBE-0 foundation checkpoint used as the
+fine-tuning starting point (`runs/pilot25_matpes_pbe_lora_v1/downloads/mace/MACEmatpespbeomatftmodel`,
+already independently labeled "exact zero-shot MACE-MATPES-PBE-0" by
+`scripts/evaluate_pilot25_test_v1.py`), exported to LAMMPS ML-IAP unified
+format via `scripts/export_lammps_mliap_model.py`'s method (head="default",
+lowercase — this foundation checkpoint's own head name, vs the fine-tuned
+model's "Default") → `models/mace_matpes_pbe_0_zeroshot-mliap_lammps.pt`.
+
+| Phase | QE/PBE V/atom (Å³) | Zero-shot LAMMPS V/atom (Å³) | Volume error (%) | Max |lattice %| | Symmetry preserved |
+|---|---:|---:|---:|---:|:---:|
+| AlNi | 12.11907 | 11.79590 | **−2.6666%** | 0.8969% | Y |
+| Al3Ni | 14.74629 | 14.59819 | −1.0043% | 1.5707% | Y |
+| Al3Ni2 | 13.90827 | 13.80283 | −0.7581% | 0.6240% | Y |
+| Al3Ni5 | 11.73726 | 11.59978 | −1.1713% | 4.0371% | Y |
+| AlNi3 | 11.34945 | 11.30688 | −0.3751% | 0.1264% | Y |
+
+**Max |volume/atom error|: 2.6666% (AlNi). Symmetry preserved: 5/5. Phases
+completed: 5/5.** Full log: `configs/LAMMPS_STAGE_B_MATPES_PBE0_ZEROSHOT_STATUS.txt`.
+
+**Cross-check against the existing ASE-based number.** The mean of this
+table's 5 volume errors is 1.195%, matching Table 1's independently-computed
+MACE-MATPES-PBE-0 zero-shot "Volume error (MAE, %)" of **1.196%** (ASE
+`FrechetCellFilter`+BFGS relax, Section 4) to within rounding — two
+different relaxation codepaths (LAMMPS mliap unified vs plain ASE/MACE) on
+the same model agree, the same cross-check Stage B already established for
+the fine-tuned model (`LAMMPS_STAGE_B_RELAXATION_STATUS.txt`'s "LAMMPS vs
+ASE/MACE" lines).
+
+**Clean single-reference before/after (the point of this section):**
+
+| | Max volume/atom error vs QE/PBE | Symmetry preserved |
+|---|---:|---|
+| MACE-MATPES-PBE-0 (zero-shot, this section) | **2.6666%** | 5/5 |
+| al3ni_combined227_lora_v1 (fine-tuned, recorded) | **0.2159%** | 5/5 |
+
+Fine-tuning improves the worst-phase structural volume error by **~12.3x**
+(2.6666% → 0.2159%) against the identical DFT reference on both sides — the
+prior +2.78%-vs-0.216% comparison (Section 0 caveat) mixed two DFT
+references and is superseded by this table for structural before/after
+purposes; it remains valid as a MACE-MP-0-vs-Materials-Project statement,
+just not as a same-reference zero-shot-vs-fine-tuned comparison. Both
+zero-shot models preserve symmetry in all 5 phases either way (5/5), so
+fine-tuning's structural gain here is in volume/lattice accuracy, not in
+avoiding a symmetry break.
