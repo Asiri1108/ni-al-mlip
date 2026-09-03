@@ -18,6 +18,14 @@ the local copies actually used. Full detail: `results/PROVENANCE_DIFF.md`.
 The ten missing are all model checkpoints; every dataset, split, config and status
 file is public and identical.
 
+> **Update 2026-09-03, after this measurement was taken.** All ten of those
+> checkpoints have since been published and verified byte-identical to the copies
+> this validation loaded - see *RELEASE_TODO* at the end of this report, where the
+> count is now 13 of 13 published, 0 remaining. The paragraph above, and the
+> *"NOT reproducible by a third party"* section that follows, record the state at
+> the time of measurement and are **superseded** by that section. They are kept,
+> not rewritten, because the numbers in them were measured, not asserted.
+
 ### The CRLF trap
 
 A plain `git clone` on Windows reports **32 of 43 artifacts as DIFFERENT**. That is
@@ -51,7 +59,15 @@ confirmable from public sources:
 The base model is likewise verifiable: `MACE-matpes-pbe-omat-ft.model`, `e618ad58...`,
 matching the pin in the public `pilot25_matpes_pbe_lora_v1_PROVENANCE.txt`.
 
-### NOT reproducible by a third party
+### NOT reproducible by a third party — SUPERSEDED 2026-09-03
+
+**This section is superseded.** All ten checkpoints named below were published on
+2026-09-03 and verified byte-identical to the copies loaded here (*RELEASE_TODO*,
+end of report). Every result listed as un-re-derivable is now re-derivable from
+public artifacts: the 2.6183 threshold derivation, the seed noise floor, the full
+nine-point data-efficiency curve, the three-way comparison, and the VALIDATION-18
+anomaly breakdown. The text below is retained verbatim as the record of the state
+at measurement time.
 
 Ten checkpoints are unpublished. HuggingFace hosts exactly one model, and that
 repository's commit history confirms no other model was ever uploaded and later
@@ -90,6 +106,10 @@ one this validation confirms. A bitwise hash match would demonstrate less.
 The honest limit of that claim: the three-seed evidence is checkable only inside this
 validation, because two of the three seeds are unpublished. That is exactly why
 releasing them is the highest-value action in the list below.
+
+> **Update 2026-09-03: that limit no longer applies.** Both remaining seeds were
+> published and verified byte-identical, so the three-seed agreement is now
+> checkable from public artifacts alone.
 
 ## Seal status - read first
 
