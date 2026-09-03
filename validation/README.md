@@ -10,6 +10,9 @@ published ones.
 
 **Start here → [`results/VALIDATION_REPORT.md`](results/VALIDATION_REPORT.md)**
 
+For the project this validates — dataset lineage, training, sealed-holdout
+protocol, LAMMPS deployment — see the [repository README](../README.md).
+
 ## Before you use the model
 
 The report's *"Fit for"* and *"Not fit for, without further DFT"* sections are the
