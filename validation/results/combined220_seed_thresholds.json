@@ -1,0 +1,66 @@
+{
+  "recorded_combined220_threshold": 2.3865,
+  "per_seed_res19_max": {
+    "20260811": 2.3865104103606427,
+    "20260812": 3.08022662102303,
+    "20260813": 2.272212803745788
+  },
+  "per_seed_anchor": {
+    "20260811": "cfg060_Al3Ni5_volume_rattle_expansion",
+    "20260812": "cfg075_Al3Ni2_volume_rattle_expansion",
+    "20260813": "cfg060_Al3Ni5_volume_rattle_expansion"
+  },
+  "max_over_three_seeds": 3.08022662102303,
+  "seed20260811_alone": 2.3865104103606427,
+  "single_seed_reproduces_2_3865": true,
+  "three_seed_max_reproduces_2_3865": false,
+  "anchor_identical_across_seeds": false,
+  "cfg109_cfg110_unsealed_errors": {
+    "cfg109_Al3Ni_iso_expansion": 3.767116,
+    "cfg110_Al3Ni_volume_rattle_expansion": 3.732003
+  },
+  "fail_verdict_robustness": [
+    {
+      "basis": "locked single-seed max of reserved-19 (2.3865, the bar actually used)",
+      "threshold_meV_atom": 2.3865,
+      "cfg109_Al3Ni_iso_expansion": "FAIL",
+      "cfg110_Al3Ni_volume_rattle_expansion": "FAIL",
+      "overall": "FAIL"
+    },
+    {
+      "basis": "max INCLUDING cfg043, locked then corrected away same day",
+      "threshold_meV_atom": 3.0402,
+      "cfg109_Al3Ni_iso_expansion": "FAIL",
+      "cfg110_Al3Ni_volume_rattle_expansion": "FAIL",
+      "overall": "FAIL"
+    },
+    {
+      "basis": "max over three seeds, the round-285 method applied retrospectively",
+      "threshold_meV_atom": 3.0802,
+      "cfg109_Al3Ni_iso_expansion": "FAIL",
+      "cfg110_Al3Ni_volume_rattle_expansion": "FAIL",
+      "overall": "FAIL"
+    },
+    {
+      "basis": "documented fallback: p90 of reserved-19",
+      "threshold_meV_atom": 1.5907,
+      "cfg109_Al3Ni_iso_expansion": "FAIL",
+      "cfg110_Al3Ni_volume_rattle_expansion": "FAIL",
+      "overall": "FAIL"
+    }
+  ],
+  "fail_verdict_robust_to_all_candidate_thresholds": true,
+  "seed_spread_meV_atom": 0.8080138172772422,
+  "anchor_sequence_811_812_813": [
+    "cfg060",
+    "cfg075",
+    "cfg060"
+  ],
+  "recorded_seed_spread_in_ROUND285_criterion": 0.808,
+  "recorded_anchor_sequence_in_ROUND285_criterion": [
+    "cfg060",
+    "cfg075",
+    "cfg060"
+  ],
+  "reproduces_recorded_seed_variance_finding": true
+}

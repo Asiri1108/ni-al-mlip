@@ -1,0 +1,2 @@
+plane,status,natoms,area_A2,gamma_eV_A2,gamma_mJ_m2,residual_meV_atom,converged
+"(0, 0, 1)",OK,96,50.90318062008227,0.012324829531318702,197.46553730424245,1.3642420526593924e-09,True

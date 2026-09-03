@@ -1,0 +1,38 @@
+[
+  {
+    "application": "Vacancy migration barrier, AlNi3 (Ni-site, NEB CI, 5 images)",
+    "quantity": "migration barrier",
+    "value": 1.1683,
+    "unit": "eV",
+    "extra": "hop 2.522 A; endpoint asymmetry -0.0000 eV",
+    "supported_by": "Phase 3 (forces, MAE 0.0012 eV/A), Phase 9 (dynamical stability), Phase 10 (vacancy energetics converged to <10 meV with supercell)",
+    "NOT_supported_by": "No DFT ground truth exists for any vacancy quantity in this project (Phase 10). The saddle-point geometry is further from the training manifold than any training configuration of this type. Treat the barrier as indicative only; confirm with DFT before any diffusion or creep claim."
+  },
+  {
+    "application": "Antiphase boundary energy, AlNi3 (001), 1/2<110> shift",
+    "quantity": "APB energy",
+    "value": 197.5,
+    "unit": "mJ/m^2",
+    "extra": "gamma/gamma-prime proper is NOT computable: it requires pure Ni, which the composition gate rejects",
+    "supported_by": "Phase 3 (energetics on shear/shear_rattle families, MAE 0.26-0.30 meV/atom - the best-performing families), Phase 4 (AlNi3 relaxes exactly onto the DFT geometry)",
+    "NOT_supported_by": "No planar-defect configuration of any kind appears in the 227 training configurations. This is a NOVEL STRUCTURE TYPE by the Phase 14 criterion, so no calibrated error bar applies. The (111) APB, which dominates real gamma-prime slip, was not computed here."
+  },
+  {
+    "application": "Generalized stacking fault energy, AlNi3, (001) along 1/2<110>",
+    "quantity": "unstable fault energy (curve maximum)",
+    "value": 1347.0,
+    "unit": "mJ/m^2",
+    "extra": "11 points, 0 to b, maximum at f=0.50; full curve in gsfe_alni3_001_110.csv",
+    "supported_by": "Phase 3 shear families (lowest error of all families), Phase 8 (C44 = 130.7 GPa for AlNi3, cross-validated vs LAMMPS to 0.01 GPa)",
+    "NOT_supported_by": "No stacking-fault configuration appears in training. Rigid-shear geometries at large fault vector sit far outside the strain envelope where Phase 6 measured errors rising to 4.1 meV/atom mean. The technologically dominant (111) plane was not computed."
+  },
+  {
+    "application": "High-temperature structural probe, all 5 phases at 1200 K",
+    "quantity": "phases remaining structurally intact",
+    "value": "5/5",
+    "unit": "phases",
+    "extra": "derived from the Phase 11 NVT trajectories",
+    "supported_by": "Phase 11 (5 ps NVT, this run), Phase 9 (all phases dynamically stable at 0 K)",
+    "NOT_supported_by": "5 ps is far too short to observe a genuine phase transformation or to converge any transport property. Absence of transformation here is NOT evidence of stability."
+  }
+]

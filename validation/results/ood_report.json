@@ -1,0 +1,358 @@
+{
+  "composition_ood": [
+    {
+      "system": "pure Al fcc (QE-relaxed a=4.038351)",
+      "x_Ni": 0.0,
+      "E_mace_eV_atom": -537.4127146755554,
+      "E_qe_reference_eV_atom": -537.46115182,
+      "error_eV_atom": 0.04843714444461966,
+      "error_meV_atom": 48.43714444461966,
+      "max_force_eV_A": 1.3460369971407538e-16,
+      "finite": true
+    },
+    {
+      "system": "pure Ni fcc (QE-relaxed a=3.517938)",
+      "x_Ni": 1.0,
+      "E_mace_eV_atom": -4670.460912960507,
+      "E_qe_reference_eV_atom": -4670.57345642,
+      "error_eV_atom": 0.11254345949328126,
+      "error_meV_atom": 112.54345949328126,
+      "max_force_eV_A": 5.178529926493361e-16,
+      "finite": true
+    }
+  ],
+  "in_range_absolute_energy_error": [
+    {
+      "phase": "Al3Ni",
+      "x_Ni": 0.25,
+      "err_meV_atom": -1.0719474041707144
+    },
+    {
+      "phase": "Al3Ni2",
+      "x_Ni": 0.4,
+      "err_meV_atom": -0.7893347708886722
+    },
+    {
+      "phase": "AlNi",
+      "x_Ni": 0.5,
+      "err_meV_atom": 1.586899520134466
+    },
+    {
+      "phase": "Al3Ni5",
+      "x_Ni": 0.625,
+      "err_meV_atom": 0.26083519423991675
+    },
+    {
+      "phase": "AlNi3",
+      "x_Ni": 0.75,
+      "err_meV_atom": -0.2723445750234532
+    }
+  ],
+  "vacancy_clusters": [
+    {
+      "probe": "AlNi 3x3x3 vacancy cluster n=1",
+      "n_vac": 1,
+      "removed": "Al",
+      "E_cluster_formation_eV": 2.2253553600420446,
+      "E_per_vacancy_eV": 2.2253553600420446,
+      "max_force_eV_A": 0.3433968637816013,
+      "finite": true
+    },
+    {
+      "probe": "AlNi 3x3x3 vacancy cluster n=2",
+      "n_vac": 2,
+      "removed": "AlNi",
+      "E_cluster_formation_eV": 3.3359886208845637,
+      "E_per_vacancy_eV": 1.6679943104422819,
+      "max_force_eV_A": 0.3683082056316882,
+      "finite": true
+    },
+    {
+      "probe": "AlNi 3x3x3 vacancy cluster n=4",
+      "n_vac": 4,
+      "removed": "AlAlNiNi",
+      "E_cluster_formation_eV": 6.805720599366396,
+      "E_per_vacancy_eV": 1.701430149841599,
+      "max_force_eV_A": 0.5216867621225271,
+      "finite": true
+    },
+    {
+      "probe": "AlNi 3x3x3 vacancy cluster n=8",
+      "n_vac": 8,
+      "removed": "AlAlAlNiNiNiNiNi",
+      "E_cluster_formation_eV": 12.878859791115246,
+      "E_per_vacancy_eV": 1.6098574738894058,
+      "max_force_eV_A": 0.7278459167827265,
+      "finite": true
+    },
+    {
+      "probe": "AlNi 3x3x3 vacancy cluster n=16",
+      "n_vac": 16,
+      "removed": "AlAlAlAlAlAlAlAlNiNiNiNiNiNiNiNi",
+      "E_cluster_formation_eV": 29.46394744938152,
+      "E_per_vacancy_eV": 1.841496715586345,
+      "max_force_eV_A": 0.853918780377405,
+      "finite": true
+    }
+  ],
+  "configuration_ood": [
+    {
+      "probe": "AlNi isotropic V x0.80",
+      "kind": "extreme_strain",
+      "E_eV_atom": -2604.333079059013,
+      "max_force_eV_A": 7.095019249198087e-09,
+      "finite": true,
+      "min_dist_A": 2.3266285713242443,
+      "exception": null
+    },
+    {
+      "probe": "AlNi isotropic V x0.85",
+      "kind": "extreme_strain",
+      "E_eV_atom": -2604.491299282678,
+      "max_force_eV_A": 6.037322796584611e-09,
+      "finite": true,
+      "min_dist_A": 2.3741238446030684,
+      "exception": null
+    },
+    {
+      "probe": "AlNi isotropic V x0.90",
+      "kind": "extreme_strain",
+      "E_eV_atom": -2604.58781247435,
+      "max_force_eV_A": 5.100791727798842e-09,
+      "finite": true,
+      "min_dist_A": 2.4197912267309616,
+      "exception": null
+    },
+    {
+      "probe": "AlNi isotropic V x0.95",
+      "kind": "extreme_strain",
+      "E_eV_atom": -2604.6384831090913,
+      "max_force_eV_A": 4.286030759470538e-09,
+      "finite": true,
+      "min_dist_A": 2.463797043554125,
+      "exception": null
+    },
+    {
+      "probe": "AlNi isotropic V x1.05",
+      "kind": "extreme_strain",
+      "E_eV_atom": -2604.642106160398,
+      "max_force_eV_A": 2.9384112478283986e-09,
+      "finite": true,
+      "min_dist_A": 2.5473785898811356,
+      "exception": null
+    },
+    {
+      "probe": "AlNi isotropic V x1.10",
+      "kind": "extreme_strain",
+      "E_eV_atom": -2604.6076497824038,
+      "max_force_eV_A": 2.3985503722068202e-09,
+      "finite": true,
+      "min_dist_A": 2.587187810387425,
+      "exception": null
+    },
+    {
+      "probe": "AlNi isotropic V x1.15",
+      "kind": "extreme_strain",
+      "E_eV_atom": -2604.554658485992,
+      "max_force_eV_A": 1.9342025841216637e-09,
+      "finite": true,
+      "min_dist_A": 2.625808247635964,
+      "exception": null
+    },
+    {
+      "probe": "AlNi isotropic V x1.20",
+      "kind": "extreme_strain",
+      "E_eV_atom": -2604.486386842385,
+      "max_force_eV_A": 1.5257532988768863e-09,
+      "finite": true,
+      "min_dist_A": 2.663324862726373,
+      "exception": null
+    },
+    {
+      "probe": "AlNi isotropic V x1.30",
+      "kind": "extreme_strain",
+      "E_eV_atom": -2604.31626735376,
+      "max_force_eV_A": 8.102900096772572e-10,
+      "finite": true,
+      "min_dist_A": 2.7353412325984423,
+      "exception": null
+    },
+    {
+      "probe": "AlNi 3x3x3 rattle sigma=0.05 A",
+      "kind": "heavy_rattle",
+      "E_eV_atom": -2604.628766512904,
+      "max_force_eV_A": 1.355389893542109,
+      "finite": true,
+      "min_dist_A": 2.3256439802529183,
+      "exception": null
+    },
+    {
+      "probe": "AlNi 3x3x3 rattle sigma=0.1 A",
+      "kind": "heavy_rattle",
+      "E_eV_atom": -2604.5524391460117,
+      "max_force_eV_A": 2.667469808485171,
+      "finite": true,
+      "min_dist_A": 2.213848778138719,
+      "exception": null
+    },
+    {
+      "probe": "AlNi 3x3x3 rattle sigma=0.2 A",
+      "kind": "heavy_rattle",
+      "E_eV_atom": -2603.733794827099,
+      "max_force_eV_A": 32.10695672375731,
+      "finite": true,
+      "min_dist_A": 1.3769056973518763,
+      "exception": null
+    },
+    {
+      "probe": "AlNi 3x3x3 rattle sigma=0.4 A",
+      "kind": "heavy_rattle",
+      "E_eV_atom": -2599.9901782071324,
+      "max_force_eV_A": 156.89067048764912,
+      "finite": true,
+      "min_dist_A": 1.0001019691821564,
+      "exception": null
+    },
+    {
+      "probe": "AlNi 3x3x3 rattle sigma=0.6 A",
+      "kind": "heavy_rattle",
+      "E_eV_atom": -2593.6706772045127,
+      "max_force_eV_A": 575.5705305591964,
+      "finite": true,
+      "min_dist_A": 0.47032794257232213,
+      "exception": null
+    },
+    {
+      "probe": "AlNi 3x3x3 rattle sigma=1.0 A",
+      "kind": "heavy_rattle",
+      "E_eV_atom": -2584.3852817768984,
+      "max_force_eV_A": 390.2890893150342,
+      "finite": true,
+      "min_dist_A": 0.9149117184628022,
+      "exception": null
+    },
+    {
+      "probe": "Al-Ni dimer d=3.0 A",
+      "kind": "short_range_dimer",
+      "E_eV_atom": -2600.5986803150704,
+      "max_force_eV_A": 2.3369645079033283,
+      "finite": true,
+      "min_dist_A": 3.0,
+      "exception": null
+    },
+    {
+      "probe": "Al-Ni dimer d=2.5 A",
+      "kind": "short_range_dimer",
+      "E_eV_atom": -2601.137622906953,
+      "max_force_eV_A": 1.4946536544462274,
+      "finite": true,
+      "min_dist_A": 2.5,
+      "exception": null
+    },
+    {
+      "probe": "Al-Ni dimer d=2.0 A",
+      "kind": "short_range_dimer",
+      "E_eV_atom": -2601.176752494851,
+      "max_force_eV_A": 1.7052599109977993,
+      "finite": true,
+      "min_dist_A": 2.0,
+      "exception": null
+    },
+    {
+      "probe": "Al-Ni dimer d=1.5 A",
+      "kind": "short_range_dimer",
+      "E_eV_atom": -2598.948359077639,
+      "max_force_eV_A": 20.05818513746805,
+      "finite": true,
+      "min_dist_A": 1.5,
+      "exception": null
+    },
+    {
+      "probe": "Al-Ni dimer d=1.0 A",
+      "kind": "short_range_dimer",
+      "E_eV_atom": -2587.6238973624445,
+      "max_force_eV_A": 108.08722254328919,
+      "finite": true,
+      "min_dist_A": 1.0,
+      "exception": null
+    },
+    {
+      "probe": "Al-Ni dimer d=0.7 A",
+      "kind": "short_range_dimer",
+      "E_eV_atom": -2557.6040972276505,
+      "max_force_eV_A": 269.2266930090266,
+      "finite": true,
+      "min_dist_A": 0.7,
+      "exception": null
+    },
+    {
+      "probe": "Al-Ni dimer d=0.5 A",
+      "kind": "short_range_dimer",
+      "E_eV_atom": -2519.3132745720727,
+      "max_force_eV_A": 638.5002242110535,
+      "finite": true,
+      "min_dist_A": 0.5,
+      "exception": null
+    },
+    {
+      "probe": "Al-Ni dimer d=0.3 A",
+      "kind": "short_range_dimer",
+      "E_eV_atom": -2320.015866646426,
+      "max_force_eV_A": 5093.344834636731,
+      "finite": true,
+      "min_dist_A": 0.3,
+      "exception": null
+    }
+  ],
+  "descriptor": {
+    "z_scored_against": "TRAIN (189 configs)",
+    "spearman_distance_vs_abs_error_AS_SPECIFIED": 0.06810978757914934,
+    "spearman_distance_vs_abs_error_CORRECTED_2COMPONENT": 0.22717937667670188,
+    "spearman_per_component": {
+      "d_shape_z (shape-RMSD, z-scored)": -0.0544,
+      "d_vol_z (volume deviation, MEAN-CENTRED z-score)": 0.0225,
+      "d_strain_z (strain Frobenius, z-scored; == raw strain_frob)": 0.6684
+    },
+    "FINDING": "The 3-component equal-weight descriptor specified in the task is NOT predictive of model error (Spearman +0.068). Component-wise: strain-Frobenius carries essentially all of the signal (+0.668); the shape/rattle term is ANTI-correlated (-0.054) because the rattle family has the largest shape-RMSD and the smallest error (0.149 meV/atom); and the volume term AS Z-SCORED is inert (+0.0225), because mean-centring places its minimum at the training mean rather than at zero deviation. The strong +0.687 sometimes quoted for volume belongs to abs(dvol) on the RAW, un-mean-centred scale - it is NOT the z-scored component, and conflating the two was an error in an earlier draft of this report. PROVENANCE OF +0.709: that figure is form 'v3' - the 2-component (volume + strain) distance scaled by the TRAIN RMS of each component measured FROM THE RELAXED REFERENCE, with no mean-centring, so the reference structure sits at distance zero. It is reproducible and, by a 4000-sample bootstrap, genuinely higher than strain alone (mean difference +0.041, 95% CI [+0.017, +0.066]). It is NOT the same object as the mean-centred 2-component form 'v2', which scores only +0.227. ADOPTED: strain-Frobenius alone (+0.668). The +0.041 gain from v3 is small, and it is bought with a second fitted scale parameter; strain alone already captures isotropic volume change analytically (for F = sI, ||F-I||_F = sqrt(3)|s-1|), so the extra term is largely redundant. The screening tool uses strain alone.",
+    "n_matched_cell_pairs_found": 63,
+    "BLIND_SPOT": "The adopted metric uses cell strain only, so it CANNOT resolve rattle-only differences at all: two structures at identical strain but different internal displacement receive an identical distance. 63 matched-cell pairs exist in the dataset. This is a stronger version of the blind spot noted in the original design, and is unfixed.",
+    "n_matched_cell_pairs_example": [
+      [
+        "AlNi_rattle_003",
+        "AlNi_relaxed"
+      ],
+      [
+        "AlNi_rattle_003",
+        "cfg082_AlNi_rattle_small"
+      ],
+      [
+        "AlNi_rattle_003",
+        "cfg083_AlNi_rattle_large"
+      ],
+      [
+        "Al3Ni2_rattle_003",
+        "Al3Ni2_relaxed"
+      ],
+      [
+        "Al3Ni2_rattle_003",
+        "cfg068_Al3Ni2_rattle_small"
+      ],
+      [
+        "Al3Ni2_rattle_003",
+        "cfg069_Al3Ni2_rattle_large"
+      ]
+    ],
+    "components_as_specified": [
+      "shape_rmsd_A",
+      "dvol_A3_per_atom",
+      "strain_frob"
+    ],
+    "spearman_other_forms": {
+      "abs(dvol) raw, NOT mean-centred": 0.6872,
+      "task 3-component mean-centred z (AS SPECIFIED)": 0.0681,
+      "v2: 2-component (vol+strain) MEAN-CENTRED z": 0.2272,
+      "v3: 2-component (vol+strain) RMS-SCALED from the reference, no mean-centring": 0.7091
+    },
+    "ADOPTED_METRIC": "d_strain = strain Frobenius norm ||F - I||_F, used alone."
+  }
+}

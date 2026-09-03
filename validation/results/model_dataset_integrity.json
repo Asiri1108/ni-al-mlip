@@ -1,0 +1,276 @@
+{
+  "note": "Models and DFT data taken from the local Windows archive (the local ni_al_2/*.tar.gz archive), not re-downloaded from RunPod. The HuggingFace copy was cross-checked by hash.",
+  "models": {
+    "al3ni_combined227_lora_v1": {
+      "path": "work/archive/ni_al/models/al3ni_combined227_lora_v1/al3ni_combined227_lora_v1.model",
+      "bytes": 12211680,
+      "sha256": "e4fd54cc8a4a090fc9e32d6625269142824bfada8315433127b3aa3118c65cee",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534
+    },
+    "al3ni_combined227_seed20260812_lora_v1": {
+      "path": "work/archive/ni_al/models/al3ni_combined227_seed20260812_lora_v1/al3ni_combined227_seed20260812_lora_v1.model",
+      "bytes": 12212993,
+      "sha256": "4328154a37f55c1ba99c209e978ad76a0f36e5f3d8a41b25c107b27efefe17af",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534
+    },
+    "al3ni_combined227_seed20260813_lora_v1": {
+      "path": "work/archive/ni_al/models/al3ni_combined227_seed20260813_lora_v1/al3ni_combined227_seed20260813_lora_v1.model",
+      "bytes": 12212993,
+      "sha256": "f676d87f8463a8ffcd4fa7d6b81796b5d42b89602267109010316cbdb4c97e6a",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534
+    },
+    "pilot25_matpes_pbe_lora_v1": {
+      "path": "work/archive/ni_al/models/pilot25_matpes_pbe_lora_v1/pilot25_matpes_pbe_lora_v1.model",
+      "bytes": 12211781,
+      "sha256": "94d8d4dade7322077d6d2343820a32678eafd7499d1762ee7f180b4ce4fc7719",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534
+    },
+    "dataset100_matpes_pbe_lora_v1": {
+      "path": "work/archive/ni_al/models/dataset100_matpes_pbe_lora_v1/dataset100_matpes_pbe_lora_v1.model",
+      "bytes": 12212084,
+      "sha256": "745f02582e604fed390d567198e4e4dfa783c71a61d749c58419659bc784a0d9",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534
+    },
+    "al3ni_combined113_lora_v1": {
+      "path": "work/archive/ni_al/models/al3ni_combined113_lora_v1/al3ni_combined113_lora_v1.model",
+      "bytes": 12211680,
+      "sha256": "2530c549b654059e0e6561f72dd1fdf16db1004058b22167cbec317260baf9f3",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534
+    },
+    "al3ni_combined127_lora_v1": {
+      "path": "work/archive/ni_al/models/al3ni_combined127_lora_v1/al3ni_combined127_lora_v1.model",
+      "bytes": 12211680,
+      "sha256": "dd50128d79985224faf0db393eba50b3fb2cd1753287b62f06c1794d9e59032c",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534
+    },
+    "al3ni_combined129_lora_v1": {
+      "path": "work/archive/ni_al/models/al3ni_combined129_lora_v1/al3ni_combined129_lora_v1.model",
+      "bytes": 12211680,
+      "sha256": "772453cefb8a37997fb9842321e560b95a87131358248dc28270751695369c6a",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534
+    },
+    "al3ni_combined211_lora_v1": {
+      "path": "work/archive/ni_al/models/al3ni_combined211_lora_v1/al3ni_combined211_lora_v1.model",
+      "bytes": 12211680,
+      "sha256": "e859554a0e0cdd32c137c56be0ec5feebdaf466a01ce7b45b8a9177b67bdd46f",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534
+    },
+    "al3ni_combined218_lora_v1": {
+      "path": "work/archive/ni_al/models/al3ni_combined218_lora_v1/al3ni_combined218_lora_v1.model",
+      "bytes": 12211680,
+      "sha256": "5944a24de571d38b166e69ab90759991d3724af056f81f961132c841d88299fb",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534
+    },
+    "al3ni_combined220_lora_v1": {
+      "path": "work/archive/ni_al/models/al3ni_combined220_lora_v1/al3ni_combined220_lora_v1.model",
+      "bytes": 12211680,
+      "sha256": "1c39751f9b0cc5cb3ecd0687e1d2fb5c6ee9f174256654a90b3e66d79f2dc6ee",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534
+    },
+    "al3ni_combined220_seed20260812_lora_v1": {
+      "path": "work/archive/ni_al/models/al3ni_combined220_seed20260812_lora_v1/al3ni_combined220_seed20260812_lora_v1.model",
+      "bytes": 12212993,
+      "sha256": "3166409492adce575c5aefcb71dc9c4dcc5104a27402de2a4c63d35b45d53687",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534,
+      "registered": "2026-08-30 - present locally but omitted from the original manifest, which recorded only al3ni_combined220_lora_v1",
+      "note": "Combined-220 seed replicas. Uploaded to huggingface asiri1/al3ni-mace at commit 404a5206b7d7 by mistake, in place of the combined-227 seeds, then deleted at 5c5b78cf31cc / fcb5020e4865 and replaced with the correct files. A filename/selection error, NOT a byte-level rename: these are different models from the combined-227 seeds. Local hashes match the deleted HF blobs exactly.",
+      "hf_blob_sha256_at_revision_e68943868ab2": "3166409492adce575c5aefcb71dc9c4dcc5104a27402de2a4c63d35b45d53687",
+      "hf_hash_match": true,
+      "used_in_validation": false
+    },
+    "al3ni_combined220_seed20260813_lora_v1": {
+      "path": "work/archive/ni_al/models/al3ni_combined220_seed20260813_lora_v1/al3ni_combined220_seed20260813_lora_v1.model",
+      "bytes": 12212993,
+      "sha256": "78c316da04ee50ead05d6725e403d878b95df8b212a34d5bd422d12bcb46f29d",
+      "load": "OK",
+      "r_max": 6.0,
+      "n_params": 655534,
+      "registered": "2026-08-30 - present locally but omitted from the original manifest, which recorded only al3ni_combined220_lora_v1",
+      "note": "Combined-220 seed replicas. Uploaded to huggingface asiri1/al3ni-mace at commit 404a5206b7d7 by mistake, in place of the combined-227 seeds, then deleted at 5c5b78cf31cc / fcb5020e4865 and replaced with the correct files. A filename/selection error, NOT a byte-level rename: these are different models from the combined-227 seeds. Local hashes match the deleted HF blobs exactly.",
+      "hf_blob_sha256_at_revision_e68943868ab2": "78c316da04ee50ead05d6725e403d878b95df8b212a34d5bd422d12bcb46f29d",
+      "hf_hash_match": true,
+      "used_in_validation": false
+    },
+    "MACE-MATPES-PBE-0 (base)": {
+      "path": "work/base/MACE-matpes-pbe-omat-ft.model",
+      "bytes": 79471284,
+      "sha256": "e618ad582b84239905b9c3b77ce6e9ce111b0ecd1533223a1a6aac7a696b8aa0",
+      "expected_sha256": "e618ad582b84239905b9c3b77ce6e9ce111b0ecd1533223a1a6aac7a696b8aa0",
+      "expected_bytes": 79471284,
+      "provenance": "configs/pilot25_matpes_pbe_lora_v1_PROVENANCE.txt",
+      "hash_match": true,
+      "load": "OK"
+    }
+  },
+  "datasets": {
+    "ni_al_combined113_dft.extxyz": {
+      "n_configs": 113,
+      "sha256": "3f0c07011c945b3b6068269bc032ac53f92828d3c6c1f75ff484f8a211ae5432"
+    },
+    "ni_al_combined113_train_75.extxyz": {
+      "n_configs": 75,
+      "sha256": "86f1a844964bfcc83671dd204c8e7a28f95d87362f8c86d84ed770ce568afae1"
+    },
+    "ni_al_combined113_validation_18.extxyz": {
+      "n_configs": 18,
+      "sha256": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff"
+    },
+    "ni_al_combined127_dft.extxyz": {
+      "n_configs": 127,
+      "sha256": "1981fae5174c6ff057179c066103e5b6c62be71865ece4907c7168c383005832"
+    },
+    "ni_al_combined127_train_89.extxyz": {
+      "n_configs": 89,
+      "sha256": "1517e9dd13541eec7bc90f695a2b287863ca689ce3989b6dde8f88351aee6f29"
+    },
+    "ni_al_combined127_validation_18.extxyz": {
+      "n_configs": 18,
+      "sha256": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff"
+    },
+    "ni_al_combined129_dft.extxyz": {
+      "n_configs": 129,
+      "sha256": "1a061565e64b8f489ed2089985ad585eb83b4452cd37db072acbe09ed146d7ae"
+    },
+    "ni_al_combined129_train_91.extxyz": {
+      "n_configs": 91,
+      "sha256": "4b5c68de598fe45153531e31bc67a5bbab123204cda123c6a40b558f1a85d86c"
+    },
+    "ni_al_combined129_validation_18.extxyz": {
+      "n_configs": 18,
+      "sha256": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff"
+    },
+    "ni_al_combined211_dft.extxyz": {
+      "n_configs": 211,
+      "sha256": "ccca8cbb76576ebfcace5702d3763cc04b1f0fc2b45ab0ea4b921a49c813d4a9"
+    },
+    "ni_al_combined211_train_173.extxyz": {
+      "n_configs": 173,
+      "sha256": "c1ed24fd236c61a4752b5b6d999fab2dd65ce772f014360061b80bfb442fbe6b"
+    },
+    "ni_al_combined211_validation_18.extxyz": {
+      "n_configs": 18,
+      "sha256": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff"
+    },
+    "ni_al_combined218_dft.extxyz": {
+      "n_configs": 218,
+      "sha256": "54125b8966c2721212c936f3907fcd680ad839a7d2f72d00f1f18f000ef3f401"
+    },
+    "ni_al_combined218_train_180.extxyz": {
+      "n_configs": 180,
+      "sha256": "32da74200514506cf1f2f3eb9ec0a90f09d6c6281092e936fabeef76b293e6cf"
+    },
+    "ni_al_combined218_validation_18.extxyz": {
+      "n_configs": 18,
+      "sha256": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff"
+    },
+    "ni_al_combined220_dft.extxyz": {
+      "n_configs": 220,
+      "sha256": "ad2331f709c10212ce764894246ae006bc19518e6dabf0a3081c2f6f257fb150"
+    },
+    "ni_al_combined220_train_182.extxyz": {
+      "n_configs": 182,
+      "sha256": "65ced37b1c61eeda780cfb024d2b4947d4424ecd9d4cc42bf7394275c0976a6b"
+    },
+    "ni_al_combined220_validation_18.extxyz": {
+      "n_configs": 18,
+      "sha256": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff"
+    },
+    "ni_al_combined227_dft.extxyz": {
+      "n_configs": 227,
+      "sha256": "9051860ae83dea782d9e5e49e4bf68f992103eed703ad81ca1ded5ea98db29eb",
+      "recorded_sha256": "9051860ae83dea782d9e5e49e4bf68f992103eed703ad81ca1ded5ea98db29eb",
+      "hash_match": true
+    },
+    "ni_al_combined227_train_189.extxyz": {
+      "n_configs": 189,
+      "sha256": "41e4baf136bb430d39101acc3f3939c4390645fb355c509dd2b8e3ea310fe3f4",
+      "recorded_sha256": "41e4baf136bb430d39101acc3f3939c4390645fb355c509dd2b8e3ea310fe3f4",
+      "hash_match": true
+    },
+    "ni_al_combined227_validation_18.extxyz": {
+      "n_configs": 18,
+      "sha256": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "recorded_sha256": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "hash_match": true
+    }
+  },
+  "splits": {
+    "counts": {
+      "TRAIN": 189,
+      "VALIDATION": 18,
+      "RESERVED": 20
+    },
+    "reserved_20": [
+      "Al3Ni2_shear015_rattle002",
+      "Al3Ni5_shear015_rattle002",
+      "Al3Ni_shear015_rattle002",
+      "AlNi3_shear015_rattle002",
+      "AlNi_shear015_rattle002",
+      "cfg041_Al3Ni_uniaxial_z_compression",
+      "cfg042_Al3Ni_shear_xz_negative",
+      "cfg043_Al3Ni_volume_rattle_expansion",
+      "cfg044_Al3Ni_shear_rattle_xy_negative",
+      "cfg058_Al3Ni5_biaxial_xz_compression",
+      "cfg059_Al3Ni5_shear_yz_negative",
+      "cfg060_Al3Ni5_volume_rattle_expansion",
+      "cfg061_Al3Ni5_rattle_xlarge",
+      "cfg073_Al3Ni2_biaxial_xy_compression",
+      "cfg074_Al3Ni2_shear_xz_negative",
+      "cfg075_Al3Ni2_volume_rattle_expansion",
+      "cfg087_AlNi_biaxial_xz_compression",
+      "cfg088_AlNi_shear_rattle_yz_negative",
+      "cfg099_AlNi3_biaxial_yz_expansion",
+      "cfg100_AlNi3_shear_rattle_xz_negative"
+    ],
+    "sealed_pair_present_in_227": []
+  },
+  "seal_cross_check": {
+    "status_file_searched_for": "configs/ROUND285_CONFIRMATION_STATUS.txt",
+    "status_file_found": false,
+    "actual_file_on_disk": "configs/AL3NI_ROUND285_FINAL_UNSEALING_RESULT.txt",
+    "file_says": {
+      "cfg297_Al3Ni_iso_expansion_meV_atom": 1.84657,
+      "cfg299_Al3Ni_volume_rattle_expansion_meV_atom": 1.922083,
+      "threshold_meV_atom": 2.6183,
+      "verdict": "PASS (both)"
+    },
+    "prompt_alternative_claim": {
+      "cfg297": 1.1927,
+      "cfg299": 1.578
+    },
+    "resolution": "The on-disk unsealing record supports 1.847 / 1.922. The values 1.1927 / 1.5780 appear nowhere in any status/report document in the archive (they occur only as coincidental training-loss substrings in MACE train logs). FILE WINS: 1.846570 / 1.922083.",
+    "model_pin_in_unsealing_record": "e4fd54cc8a4a090fc9e32d6625269142824bfada8315433127b3aa3118c65cee",
+    "model_pin_matches_local_file": true
+  },
+  "chemical_potentials": {
+    "mu_Al_eV_per_atom": -537.46115182,
+    "mu_Ni_eV_per_atom": -4670.57345642,
+    "source": "configs/STEPB_ELEMENTAL_REFERENCES_STATUS.txt",
+    "method": "QE/PBE elemental references"
+  },
+  "_path_note": "Absolute local paths were replaced with repository-relative ones before publication. SHA256 values are untouched and are the authoritative record."
+}
