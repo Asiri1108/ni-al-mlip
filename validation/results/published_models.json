@@ -1,0 +1,60 @@
+{
+ "_note": "Publication state of the validated checkpoints. 'hf_sha256_verified' was read from the Hugging Face LFS blob page for each file and compared against the local SHA256 recorded in results/model_dataset_integrity.json. This file is DATA, not a claim: re-verify before relying on it.",
+ "repo": "https://huggingface.co/asiri1/al3ni-mace",
+ "verified_on": "2026-09-03",
+ "verification_method": "Hugging Face blob page SHA256 vs results/model_dataset_integrity.json",
+ "published": {
+  "al3ni_combined227_lora_v1": {
+   "hf_sha256_verified": "e4fd54cc8a4a090fc9e32d6625269142824bfada8315433127b3aa3118c65cee",
+   "matches_validated_local": true
+  },
+  "al3ni_combined227_seed20260812_lora_v1": {
+   "hf_sha256_verified": "4328154a37f55c1ba99c209e978ad76a0f36e5f3d8a41b25c107b27efefe17af",
+   "matches_validated_local": true
+  },
+  "al3ni_combined227_seed20260813_lora_v1": {
+   "hf_sha256_verified": "f676d87f8463a8ffcd4fa7d6b81796b5d42b89602267109010316cbdb4c97e6a",
+   "matches_validated_local": true
+  },
+  "pilot25_matpes_pbe_lora_v1": {
+   "hf_sha256_verified": "94d8d4dade7322077d6d2343820a32678eafd7499d1762ee7f180b4ce4fc7719",
+   "matches_validated_local": true
+  },
+  "dataset100_matpes_pbe_lora_v1": {
+   "hf_sha256_verified": "745f02582e604fed390d567198e4e4dfa783c71a61d749c58419659bc784a0d9",
+   "matches_validated_local": true
+  },
+  "al3ni_combined113_lora_v1": {
+   "hf_sha256_verified": "2530c549b654059e0e6561f72dd1fdf16db1004058b22167cbec317260baf9f3",
+   "matches_validated_local": true
+  },
+  "al3ni_combined127_lora_v1": {
+   "hf_sha256_verified": "dd50128d79985224faf0db393eba50b3fb2cd1753287b62f06c1794d9e59032c",
+   "matches_validated_local": true
+  },
+  "al3ni_combined129_lora_v1": {
+   "hf_sha256_verified": "772453cefb8a37997fb9842321e560b95a87131358248dc28270751695369c6a",
+   "matches_validated_local": true
+  },
+  "al3ni_combined211_lora_v1": {
+   "hf_sha256_verified": "e859554a0e0cdd32c137c56be0ec5feebdaf466a01ce7b45b8a9177b67bdd46f",
+   "matches_validated_local": true
+  },
+  "al3ni_combined218_lora_v1": {
+   "hf_sha256_verified": "5944a24de571d38b166e69ab90759991d3724af056f81f961132c841d88299fb",
+   "matches_validated_local": true
+  },
+  "al3ni_combined220_lora_v1": {
+   "hf_sha256_verified": "1c39751f9b0cc5cb3ecd0687e1d2fb5c6ee9f174256654a90b3e66d79f2dc6ee",
+   "matches_validated_local": true
+  },
+  "al3ni_combined220_seed20260812_lora_v1": {
+   "hf_sha256_verified": "3166409492adce575c5aefcb71dc9c4dcc5104a27402de2a4c63d35b45d53687",
+   "matches_validated_local": true
+  },
+  "al3ni_combined220_seed20260813_lora_v1": {
+   "hf_sha256_verified": "78c316da04ee50ead05d6725e403d878b95df8b212a34d5bd422d12bcb46f29d",
+   "matches_validated_local": true
+  }
+ }
+}

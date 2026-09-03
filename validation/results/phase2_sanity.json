@@ -1,0 +1,31 @@
+{
+  "LABEL": "LOADER SANITY ONLY - NOT EVIDENCE OF ACCURACY",
+  "phase2": {
+    "structure": "bulk Ni fcc a=3.52 (4 atoms)",
+    "E_eV": -18681.842663753057,
+    "E_per_atom_eV": -4670.460665938264,
+    "E_negative": true,
+    "max_abs_force_eV_A": 9.635895616743599e-16,
+    "forces_near_zero": true,
+    "exception": null
+  },
+  "phase2b": {
+    "structure": "AlNi_rattle_003 (from combined-227)",
+    "E_reference_eV": -5209.277651093574,
+    "determinism_dE_eV": 0.0,
+    "determinism_tol": 1e-08,
+    "determinism_PASS": true,
+    "rotation_45deg_x_dE_eV": 0.0,
+    "rotation_tol": 1e-06,
+    "rotation_PASS": true,
+    "translation_shift_A": [
+      0.48813503927324753,
+      2.151893663724195,
+      1.027633760716439
+    ],
+    "translation_dE_eV": 0.0,
+    "translation_tol": 1e-06,
+    "translation_PASS": true,
+    "ALL_PASS": true
+  }
+}

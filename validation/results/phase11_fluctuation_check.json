@@ -1,0 +1,422 @@
+[
+  {
+    "run": "Al3Ni2_1200K_NVT",
+    "natoms": 90,
+    "dof_used_by_ase": 269.9999083601177,
+    "T_mean": 1179.3982515393134,
+    "sigma_over_T": 0.08452335917008584,
+    "canonical_sqrt_2_over_3N": 0.08606629658238704,
+    "implied_N": 93.31581288304181,
+    "tau_int_fs": 31.139346434051472,
+    "n_eff": 63.906286672217924,
+    "z_vs_canonical": -0.20637560074860037,
+    "block_sigma_over_T": [
+      0.07662441016492724,
+      0.08528811164354423,
+      0.08705962509798722,
+      0.08872665168832009
+    ],
+    "block_se": 0.0026931954344543586,
+    "t_vs_canonical_blocks": -0.5729021342314137,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "Al3Ni2_300K_NVT",
+    "natoms": 90,
+    "dof_used_by_ase": 269.9999083600518,
+    "T_mean": 305.1113924995384,
+    "sigma_over_T": 0.07988880143190344,
+    "canonical_sqrt_2_over_3N": 0.08606629658238704,
+    "implied_N": 104.45685115769743,
+    "tau_int_fs": 27.923178170944258,
+    "n_eff": 71.26695921994705,
+    "z_vs_canonical": -0.923178368930314,
+    "block_sigma_over_T": [
+      0.08266695291238238,
+      0.07564771596235452,
+      0.06754257478461088,
+      0.08465137834646481
+    ],
+    "block_se": 0.0038768137007410973,
+    "t_vs_canonical_blocks": -1.5934464813985527,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "Al3Ni2_600K_NVT",
+    "natoms": 90,
+    "dof_used_by_ase": 269.99990836025864,
+    "T_mean": 595.9806317295153,
+    "sigma_over_T": 0.08172671156353137,
+    "canonical_sqrt_2_over_3N": 0.08606629658238704,
+    "implied_N": 99.81152515362645,
+    "tau_int_fs": 23.12846620657495,
+    "n_eff": 86.04115734377078,
+    "z_vs_canonical": -0.696549999506851,
+    "block_sigma_over_T": [
+      0.06660380858269786,
+      0.0774675187046861,
+      0.08263559020847533,
+      0.09219047542674857
+    ],
+    "block_se": 0.005331678107355971,
+    "t_vs_canonical_blocks": -0.8139247965604801,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "Al3Ni2_900K_NVT",
+    "natoms": 90,
+    "dof_used_by_ase": 269.99990836014535,
+    "T_mean": 915.2305051074284,
+    "sigma_over_T": 0.08124592890378195,
+    "canonical_sqrt_2_over_3N": 0.08606629658238704,
+    "implied_N": 100.99631404247003,
+    "tau_int_fs": 29.36412907773936,
+    "n_eff": 67.76976067403949,
+    "z_vs_canonical": -0.6907351090922276,
+    "block_sigma_over_T": [
+      0.06786259469044097,
+      0.07984594431060126,
+      0.08161693739174258,
+      0.08654708765357248
+    ],
+    "block_se": 0.00396400735986187,
+    "t_vs_canonical_blocks": -1.2160339880834796,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "Al3Ni5_1200K_NVT",
+    "natoms": 96,
+    "dof_used_by_ase": 287.99990225079205,
+    "T_mean": 1206.6829789326962,
+    "sigma_over_T": 0.08264554742893117,
+    "canonical_sqrt_2_over_3N": 0.08333333333333333,
+    "implied_N": 97.60449517124032,
+    "tau_int_fs": 32.11365291724567,
+    "n_eff": 61.96741320982922,
+    "z_vs_canonical": -0.09264681457407895,
+    "block_sigma_over_T": [
+      0.08648619719423468,
+      0.09005247850729513,
+      0.05977453071470971,
+      0.0909030570712631
+    ],
+    "block_se": 0.007405238713298984,
+    "t_vs_canonical_blocks": -0.09287828941516411,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "Al3Ni5_300K_NVT",
+    "natoms": 96,
+    "dof_used_by_ase": 287.99990225080296,
+    "T_mean": 293.0681072372351,
+    "sigma_over_T": 0.08395681102123478,
+    "canonical_sqrt_2_over_3N": 0.08333333333333333,
+    "implied_N": 94.57946925801434,
+    "tau_int_fs": 28.398861753573268,
+    "n_eff": 70.0732310072114,
+    "z_vs_canonical": 0.08791359733058257,
+    "block_sigma_over_T": [
+      0.085469994534221,
+      0.0737126017021124,
+      0.08527239735801238,
+      0.08406458114352315
+    ],
+    "block_se": 0.0028229036898380273,
+    "t_vs_canonical_blocks": 0.2208639600939518,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "Al3Ni5_600K_NVT",
+    "natoms": 96,
+    "dof_used_by_ase": 287.9999022509509,
+    "T_mean": 575.2914209989178,
+    "sigma_over_T": 0.08077145493160341,
+    "canonical_sqrt_2_over_3N": 0.08333333333333333,
+    "implied_N": 102.18635996642597,
+    "tau_int_fs": 47.10694691524948,
+    "n_eff": 42.24430005154498,
+    "z_vs_canonical": -0.29154101645610847,
+    "block_sigma_over_T": [
+      0.07284839974373751,
+      0.09072076731454254,
+      0.082776696094197,
+      0.0754759893198418
+    ],
+    "block_se": 0.0040148387811543155,
+    "t_vs_canonical_blocks": -0.6381024348363361,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "Al3Ni5_900K_NVT",
+    "natoms": 96,
+    "dof_used_by_ase": 287.9999022507647,
+    "T_mean": 910.3447082177581,
+    "sigma_over_T": 0.08361871355270949,
+    "canonical_sqrt_2_over_3N": 0.08333333333333333,
+    "implied_N": 95.34584617531323,
+    "tau_int_fs": 48.96776041639099,
+    "n_eff": 40.63898334492519,
+    "z_vs_canonical": 0.030768533758839527,
+    "block_sigma_over_T": [
+      0.0824867545702668,
+      0.07323481650693373,
+      0.09356775464545736,
+      0.07891045030391175
+    ],
+    "block_se": 0.004285767715412825,
+    "t_vs_canonical_blocks": 0.06658788770792463,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "Al3Ni_1200K_NVT",
+    "natoms": 128,
+    "dof_used_by_ase": 383.99986966772644,
+    "T_mean": 1189.1007012234338,
+    "sigma_over_T": 0.06326786321896435,
+    "canonical_sqrt_2_over_3N": 0.07216878364870322,
+    "implied_N": 166.54914474798332,
+    "tau_int_fs": 32.144081666135804,
+    "n_eff": 61.90875261795052,
+    "z_vs_canonical": -1.5654628875973788,
+    "block_sigma_over_T": [
+      0.06148323701297175,
+      0.06539000169400473,
+      0.06307513023731126,
+      0.060485320511059544
+    ],
+    "block_se": 0.0010696028608884098,
+    "t_vs_canonical_blocks": -8.32170589217177,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "Al3Ni_300K_NVT",
+    "natoms": 128,
+    "dof_used_by_ase": 383.9998696677652,
+    "T_mean": 305.8211869289209,
+    "sigma_over_T": 0.0733299247320573,
+    "canonical_sqrt_2_over_3N": 0.07216878364870322,
+    "implied_N": 123.9784671489439,
+    "tau_int_fs": 28.090386350690906,
+    "n_eff": 70.84274225196104,
+    "z_vs_canonical": 0.18848050298057242,
+    "block_sigma_over_T": [
+      0.0657649307890347,
+      0.07756576401254364,
+      0.07786245185024937,
+      0.07033243534891039
+    ],
+    "block_se": 0.002942440859784146,
+    "t_vs_canonical_blocks": 0.39461832495055077,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "Al3Ni_600K_NVT",
+    "natoms": 128,
+    "dof_used_by_ase": 383.99986966771877,
+    "T_mean": 600.0052836162274,
+    "sigma_over_T": 0.06524405866857992,
+    "canonical_sqrt_2_over_3N": 0.07216878364870322,
+    "implied_N": 156.612636870874,
+    "tau_int_fs": 26.183842272308702,
+    "n_eff": 76.00106887691454,
+    "z_vs_canonical": -1.3085382081354497,
+    "block_sigma_over_T": [
+      0.0632938850897748,
+      0.055282246293682565,
+      0.0713579204248919,
+      0.06562503693117501
+    ],
+    "block_se": 0.003332028477172656,
+    "t_vs_canonical_blocks": -2.0782310318065376,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "Al3Ni_900K_NVT",
+    "natoms": 128,
+    "dof_used_by_ase": 383.9998696677294,
+    "T_mean": 899.4262069483896,
+    "sigma_over_T": 0.0769103030256248,
+    "canonical_sqrt_2_over_3N": 0.07216878364870322,
+    "implied_N": 112.704094993071,
+    "tau_int_fs": 45.36115214741033,
+    "n_eff": 43.870137899784574,
+    "z_vs_canonical": 0.5774740922410647,
+    "block_sigma_over_T": [
+      0.07593871960506127,
+      0.06984792384432528,
+      0.06347468758838164,
+      0.08505273880245057
+    ],
+    "block_se": 0.004593773107706239,
+    "t_vs_canonical_blocks": 1.0321622913781894,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "AlNi3_1200K_NVT",
+    "natoms": 108,
+    "dof_used_by_ase": 323.9998900321753,
+    "T_mean": 1193.9287553646298,
+    "sigma_over_T": 0.07924061746509753,
+    "canonical_sqrt_2_over_3N": 0.07856742013183861,
+    "implied_N": 106.1727433141603,
+    "tau_int_fs": 28.044659129219077,
+    "n_eff": 70.95825236565867,
+    "z_vs_canonical": 0.10120710195218686,
+    "block_sigma_over_T": [
+      0.07342652483161562,
+      0.09737924610755752,
+      0.08042207541116837,
+      0.06172051850082051
+    ],
+    "block_se": 0.007456177377516666,
+    "t_vs_canonical_blocks": 0.09028719398345833,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "AlNi3_300K_NVT",
+    "natoms": 108,
+    "dof_used_by_ase": 323.99989003185965,
+    "T_mean": 300.0301960866637,
+    "sigma_over_T": 0.07462742716891889,
+    "canonical_sqrt_2_over_3N": 0.07856742013183861,
+    "implied_N": 119.7048653258709,
+    "tau_int_fs": 13.437823461011508,
+    "n_eff": 148.08945851787567,
+    "z_vs_canonical": -0.908602750722708,
+    "block_sigma_over_T": [
+      0.06982519332082687,
+      0.07667562332511142,
+      0.0658207580427742,
+      0.08616983429084975
+    ],
+    "block_se": 0.00445384718503821,
+    "t_vs_canonical_blocks": -0.8846268853038607,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "AlNi3_600K_NVT",
+    "natoms": 108,
+    "dof_used_by_ase": 323.999890032033,
+    "T_mean": 590.2489082280547,
+    "sigma_over_T": 0.07494171103341588,
+    "canonical_sqrt_2_over_3N": 0.07856742013183861,
+    "implied_N": 118.70295542246818,
+    "tau_int_fs": 21.235107619162708,
+    "n_eff": 93.7127343872847,
+    "z_vs_canonical": -0.6623440736472633,
+    "block_sigma_over_T": [
+      0.0787281902394846,
+      0.07012401406748206,
+      0.06668040342526689,
+      0.0822314779572842
+    ],
+    "block_se": 0.0036278411129295656,
+    "t_vs_canonical_blocks": -0.999412318665436,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "AlNi3_900K_NVT",
+    "natoms": 108,
+    "dof_used_by_ase": 323.9998900322229,
+    "T_mean": 916.5086663157999,
+    "sigma_over_T": 0.0807034972820599,
+    "canonical_sqrt_2_over_3N": 0.07856742013183861,
+    "implied_N": 102.35852768827466,
+    "tau_int_fs": 126.80929087072579,
+    "n_eff": 15.692856464505285,
+    "z_vs_canonical": 0.14828273172111053,
+    "block_sigma_over_T": [
+      0.06630263397723722,
+      0.0746387823445984,
+      0.07729508160955781,
+      0.07254956893943885
+    ],
+    "block_se": 0.002342052607194203,
+    "t_vs_canonical_blocks": 0.9120534456227823,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "AlNi_1200K_NVT",
+    "natoms": 128,
+    "dof_used_by_ase": 383.9998696676895,
+    "T_mean": 1207.5879295199297,
+    "sigma_over_T": 0.07128762326735659,
+    "canonical_sqrt_2_over_3N": 0.07216878364870322,
+    "implied_N": 131.183879405727,
+    "tau_int_fs": 59.44479604569421,
+    "n_eff": 33.47643750800862,
+    "z_vs_canonical": -0.10114058051620962,
+    "block_sigma_over_T": [
+      0.06632704588387595,
+      0.06703862730266269,
+      0.06726754128753576,
+      0.064997092247005
+    ],
+    "block_se": 0.0005110214900424675,
+    "t_vs_canonical_blocks": -1.7243117921976228,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "AlNi_300K_NVT",
+    "natoms": 128,
+    "dof_used_by_ase": 383.9998696675747,
+    "T_mean": 292.59128265516506,
+    "sigma_over_T": 0.07253550087007635,
+    "canonical_sqrt_2_over_3N": 0.07216878364870322,
+    "implied_N": 126.70901428528428,
+    "tau_int_fs": 33.914151836858515,
+    "n_eff": 58.67756945751573,
+    "z_vs_canonical": 0.05476861353959805,
+    "block_sigma_over_T": [
+      0.06566134115921497,
+      0.05905160842720173,
+      0.07169468740896362,
+      0.08820107716313375
+    ],
+    "block_se": 0.006241877070319531,
+    "t_vs_canonical_blocks": 0.05875111240445462,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "AlNi_600K_NVT",
+    "natoms": 128,
+    "dof_used_by_ase": 383.99986966769626,
+    "T_mean": 598.9575530404021,
+    "sigma_over_T": 0.0651046382454231,
+    "canonical_sqrt_2_over_3N": 0.07216878364870322,
+    "implied_N": 157.28412143250364,
+    "tau_int_fs": 39.80216778358819,
+    "n_eff": 49.997276802107905,
+    "z_vs_canonical": -1.0850153261543707,
+    "block_sigma_over_T": [
+      0.05987671961414343,
+      0.06188938396609794,
+      0.05998068833850136,
+      0.06266071280960232
+    ],
+    "block_se": 0.0006957137185258409,
+    "t_vs_canonical_blocks": -10.153810705714477,
+    "consistent_with_canonical_at_2sigma": true
+  },
+  {
+    "run": "AlNi_900K_NVT",
+    "natoms": 128,
+    "dof_used_by_ase": 383.9998696676571,
+    "T_mean": 901.2238518923311,
+    "sigma_over_T": 0.0730927547734376,
+    "canonical_sqrt_2_over_3N": 0.07216878364870322,
+    "implied_N": 124.78433833900293,
+    "tau_int_fs": 62.1858422356607,
+    "n_eff": 32.000853063285,
+    "z_vs_canonical": 0.10112996214003794,
+    "block_sigma_over_T": [
+      0.07504057064874654,
+      0.06959331760669388,
+      0.06753006479817812,
+      0.0628348966802883
+    ],
+    "block_se": 0.0025291492726699284,
+    "t_vs_canonical_blocks": 0.36532882211376294,
+    "consistent_with_canonical_at_2sigma": true
+  }
+]

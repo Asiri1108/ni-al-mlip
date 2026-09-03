@@ -1,0 +1,17 @@
+{
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "torch": "2.12.1+cpu",
+  "ase": "3.29.0",
+  "mace": "0.3.16",
+  "numpy": "2.4.4",
+  "pandas": "3.0.1",
+  "matplotlib": "3.11.0",
+  "huggingface_hub": "1.28.0",
+  "scipy": "1.18.0",
+  "e3nn": "0.4.4",
+  "torch_cuda_available": false,
+  "torch_device": "cpu",
+  "torch_threads": 8
+}

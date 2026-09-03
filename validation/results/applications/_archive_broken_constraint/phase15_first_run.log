@@ -1,0 +1,39 @@
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+=== 15.1 NEB vacancy migration in AlNi3 ===
+  migrating Ni index 13, hop distance 2.5223 A
+  E_i=-388200.8904  E_f=-388200.8905  barrier=1.1683 eV  (dE=-0.0000 eV)
+
+=== 15.2 Antiphase boundary in AlNi3 ===
+  NOTE: a true gamma/gamma-prime interface pairs Ni3Al with PURE Ni (x_Ni=1.0),
+  which this model's own composition gate marks UNRELIABLE (Phase 13.1:
+  pure Ni is wrong by +112.5 meV/atom). The in-range analogue is the APB
+  inside gamma-prime itself, which is also the quantity that governs
+  gamma-prime strengthening.
+  self-check: slab E/atom - bulk E/atom = 0.0000 meV/atom
+  negative control (full lattice shift): 0.000000 meV/atom
+  APB(0, 0, 1)  gamma = 0.0126 eV/A^2 = 202.3 mJ/m^2
+
+=== 15.3 GSFE curve, AlNi3 (001)<110> ===
+  self-check residual 0.0000 meV/atom
+    f=0.00  gamma=     0.0 mJ/m^2
+    f=0.10  gamma=     0.4 mJ/m^2
+    f=0.20  gamma=     0.1 mJ/m^2
+    f=0.30  gamma=     0.4 mJ/m^2
+    f=0.40  gamma=     0.1 mJ/m^2
+    f=0.50  gamma=     0.3 mJ/m^2
+    f=0.60  gamma=   202.4 mJ/m^2
+    f=0.70  gamma=   202.9 mJ/m^2
+    f=0.80  gamma=   203.5 mJ/m^2
+    f=0.90  gamma=   202.6 mJ/m^2
+    f=1.00  gamma=   202.3 mJ/m^2
+
+=== 15.4 High-T MD probe ===
+
+=== PHASE 15 SUMMARY ===
+                                                   application                              quantity   value   unit
+  Vacancy migration barrier, AlNi3 (Ni-site, NEB CI, 5 images)                     migration barrier  1.1683     eV
+        Antiphase boundary energy, AlNi3 (001), 1/2<110> shift                            APB energy   202.3 mJ/m^2
+Generalized stacking fault energy, AlNi3, (001) along 1/2<110> unstable fault energy (curve maximum)   203.5 mJ/m^2
+     High-temperature structural probe, all 5 phases at 1200 K  phases remaining structurally intact     5/5 phases
+
+PHASE 15 COMPLETE

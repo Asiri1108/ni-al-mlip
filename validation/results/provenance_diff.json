@@ -1,0 +1,486 @@
+{
+  "rows": [
+    {
+      "category": "model",
+      "artifact": "models/al3ni_combined227_lora_v1/al3ni_combined227_lora_v1.model",
+      "public_source": "huggingface asiri1/al3ni-mace",
+      "status": "IDENTICAL",
+      "local_sha": "e4fd54cc8a4a090fc9e32d6625269142824bfada8315433127b3aa3118c65cee",
+      "public_sha": "e4fd54cc8a4a090fc9e32d6625269142824bfada8315433127b3aa3118c65cee",
+      "phases": "3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16",
+      "note": ""
+    },
+    {
+      "category": "model",
+      "artifact": "models/al3ni_combined227_seed20260812_lora_v1/al3ni_combined227_seed20260812_lora_v1.model",
+      "public_source": "huggingface asiri1/al3ni-mace",
+      "status": "IDENTICAL",
+      "local_sha": "4328154a37f55c1ba99c209e978ad76a0f36e5f3d8a41b25c107b27efefe17af",
+      "public_sha": "4328154a37f55c1ba99c209e978ad76a0f36e5f3d8a41b25c107b27efefe17af",
+      "phases": "3 (multi-seed)",
+      "note": "published 2026-08-30; hashed from the public download and matched"
+    },
+    {
+      "category": "model",
+      "artifact": "models/al3ni_combined227_seed20260813_lora_v1/al3ni_combined227_seed20260813_lora_v1.model",
+      "public_source": "huggingface asiri1/al3ni-mace",
+      "status": "IDENTICAL",
+      "local_sha": "f676d87f8463a8ffcd4fa7d6b81796b5d42b89602267109010316cbdb4c97e6a",
+      "public_sha": "f676d87f8463a8ffcd4fa7d6b81796b5d42b89602267109010316cbdb4c97e6a",
+      "phases": "3 (multi-seed)",
+      "note": "published 2026-08-30; hashed from the public download and matched"
+    },
+    {
+      "category": "model",
+      "artifact": "models/pilot25_matpes_pbe_lora_v1/pilot25_matpes_pbe_lora_v1.model",
+      "public_source": "-",
+      "status": "MISSING FROM PUBLIC RELEASE",
+      "local_sha": "94d8d4dade7322077d6d2343820a32678eafd7499d1762ee7f180b4ce4fc7719",
+      "public_sha": "-",
+      "phases": "3 (three-way comparison), 16",
+      "note": ""
+    },
+    {
+      "category": "model",
+      "artifact": "models/dataset100_matpes_pbe_lora_v1/dataset100_matpes_pbe_lora_v1.model",
+      "public_source": "-",
+      "status": "MISSING FROM PUBLIC RELEASE",
+      "local_sha": "745f02582e604fed390d567198e4e4dfa783c71a61d749c58419659bc784a0d9",
+      "public_sha": "-",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "model",
+      "artifact": "models/al3ni_combined113_lora_v1/al3ni_combined113_lora_v1.model",
+      "public_source": "-",
+      "status": "MISSING FROM PUBLIC RELEASE",
+      "local_sha": "2530c549b654059e0e6561f72dd1fdf16db1004058b22167cbec317260baf9f3",
+      "public_sha": "-",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "model",
+      "artifact": "models/al3ni_combined127_lora_v1/al3ni_combined127_lora_v1.model",
+      "public_source": "-",
+      "status": "MISSING FROM PUBLIC RELEASE",
+      "local_sha": "dd50128d79985224faf0db393eba50b3fb2cd1753287b62f06c1794d9e59032c",
+      "public_sha": "-",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "model",
+      "artifact": "models/al3ni_combined129_lora_v1/al3ni_combined129_lora_v1.model",
+      "public_source": "-",
+      "status": "MISSING FROM PUBLIC RELEASE",
+      "local_sha": "772453cefb8a37997fb9842321e560b95a87131358248dc28270751695369c6a",
+      "public_sha": "-",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "model",
+      "artifact": "models/al3ni_combined211_lora_v1/al3ni_combined211_lora_v1.model",
+      "public_source": "-",
+      "status": "MISSING FROM PUBLIC RELEASE",
+      "local_sha": "e859554a0e0cdd32c137c56be0ec5feebdaf466a01ce7b45b8a9177b67bdd46f",
+      "public_sha": "-",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "model",
+      "artifact": "models/al3ni_combined218_lora_v1/al3ni_combined218_lora_v1.model",
+      "public_source": "-",
+      "status": "MISSING FROM PUBLIC RELEASE",
+      "local_sha": "5944a24de571d38b166e69ab90759991d3724af056f81f961132c841d88299fb",
+      "public_sha": "-",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "model",
+      "artifact": "models/al3ni_combined220_lora_v1/al3ni_combined220_lora_v1.model",
+      "public_source": "-",
+      "status": "MISSING FROM PUBLIC RELEASE",
+      "local_sha": "1c39751f9b0cc5cb3ecd0687e1d2fb5c6ee9f174256654a90b3e66d79f2dc6ee",
+      "public_sha": "-",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined227_dft.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "9051860ae83dea782d9e5e49e4bf68f992103eed703ad81ca1ded5ea98db29eb",
+      "public_sha": "9051860ae83dea782d9e5e49e4bf68f992103eed703ad81ca1ded5ea98db29eb",
+      "phases": "1, 3, 4, 5, 6, 7, 9, 10, 13, 14, 15, 16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined227_train_189.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "41e4baf136bb430d39101acc3f3939c4390645fb355c509dd2b8e3ea310fe3f4",
+      "public_sha": "41e4baf136bb430d39101acc3f3939c4390645fb355c509dd2b8e3ea310fe3f4",
+      "phases": "1, 3 (split derivation)",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined227_validation_18.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "public_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "phases": "1, 3, 16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined220_train_182.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "65ced37b1c61eeda780cfb024d2b4947d4424ecd9d4cc42bf7394275c0976a6b",
+      "public_sha": "65ced37b1c61eeda780cfb024d2b4947d4424ecd9d4cc42bf7394275c0976a6b",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined220_validation_18.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "public_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined218_train_180.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "32da74200514506cf1f2f3eb9ec0a90f09d6c6281092e936fabeef76b293e6cf",
+      "public_sha": "32da74200514506cf1f2f3eb9ec0a90f09d6c6281092e936fabeef76b293e6cf",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined218_validation_18.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "public_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined211_train_173.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "c1ed24fd236c61a4752b5b6d999fab2dd65ce772f014360061b80bfb442fbe6b",
+      "public_sha": "c1ed24fd236c61a4752b5b6d999fab2dd65ce772f014360061b80bfb442fbe6b",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined211_validation_18.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "public_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined129_train_91.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "4b5c68de598fe45153531e31bc67a5bbab123204cda123c6a40b558f1a85d86c",
+      "public_sha": "4b5c68de598fe45153531e31bc67a5bbab123204cda123c6a40b558f1a85d86c",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined129_validation_18.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "public_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined127_train_89.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "1517e9dd13541eec7bc90f695a2b287863ca689ce3989b6dde8f88351aee6f29",
+      "public_sha": "1517e9dd13541eec7bc90f695a2b287863ca689ce3989b6dde8f88351aee6f29",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined127_validation_18.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "public_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined113_train_75.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "86f1a844964bfcc83671dd204c8e7a28f95d87362f8c86d84ed770ce568afae1",
+      "public_sha": "86f1a844964bfcc83671dd204c8e7a28f95d87362f8c86d84ed770ce568afae1",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_combined113_validation_18.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "public_sha": "079459f075a871d830249e713bdd11c0343774ff651689c94421a0b357c22aff",
+      "phases": "16",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_dataset100_train_65.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "fe49d0130665bd8f28582ab32d0fa75da086fa8da93b36a3568ffcada94c025a",
+      "public_sha": "fe49d0130665bd8f28582ab32d0fa75da086fa8da93b36a3568ffcada94c025a",
+      "phases": "16, val18 contamination check",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_dataset100_validation_15.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "215e591a293fe802c5bc90d7f1dd041016fb5c75c1c94b44dab8a45af7250a95",
+      "public_sha": "215e591a293fe802c5bc90d7f1dd041016fb5c75c1c94b44dab8a45af7250a95",
+      "phases": "16, val18 contamination check",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_pilot_train_15.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "b7f3711d565e912f3da12bc24ccddbca59ecdbb7c6cfdced8a7ef09892951c6a",
+      "public_sha": "b7f3711d565e912f3da12bc24ccddbca59ecdbb7c6cfdced8a7ef09892951c6a",
+      "phases": "16, val18 contamination check",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_pilot_val_5.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "f09e54eceddba7b7d445b46f243f70af328061266773c727a13009718889392d",
+      "public_sha": "f09e54eceddba7b7d445b46f243f70af328061266773c727a13009718889392d",
+      "phases": "16, val18 contamination check",
+      "note": ""
+    },
+    {
+      "category": "dataset",
+      "artifact": "data/datasets/ni_al_pilot_test_5.extxyz",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "fff925984d04f51cfc0d8add614a8287605c2539b14b72e0784e65ca6c132705",
+      "public_sha": "fff925984d04f51cfc0d8add614a8287605c2539b14b72e0784e65ca6c132705",
+      "phases": "3 (zero-shot regime check)",
+      "note": ""
+    },
+    {
+      "category": "config",
+      "artifact": "configs/STEPB_ELEMENTAL_REFERENCES_STATUS.txt",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "f55f0a1589c36edfeffcc1d63c81b94a89a574c2282edc6ebf94601c77b2cae4",
+      "public_sha": "f55f0a1589c36edfeffcc1d63c81b94a89a574c2282edc6ebf94601c77b2cae4",
+      "phases": "7, 10, 13, 14",
+      "note": "SOLE SOURCE of mu_Al and mu_Ni"
+    },
+    {
+      "category": "config",
+      "artifact": "configs/AL3NI_ROUND285_FINAL_UNSEALING_RESULT.txt",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "414761f44c4ab8c9422a7f5490f13de5ddf8bdd60f03227595990f2f508ce83c",
+      "public_sha": "414761f44c4ab8c9422a7f5490f13de5ddf8bdd60f03227595990f2f508ce83c",
+      "phases": "1.6, 17",
+      "note": "cfg297/cfg299 values; the documented-conflict resolution"
+    },
+    {
+      "category": "config",
+      "artifact": "configs/ROUND285_SEALED_ACCEPTANCE_CRITERION.txt",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "7e4fc32a8efa49c0a3a322b2165ed62dde36ca56098c5f6d41af2ebaf949600e",
+      "public_sha": "7e4fc32a8efa49c0a3a322b2165ed62dde36ca56098c5f6d41af2ebaf949600e",
+      "phases": "3, 17",
+      "note": "derivation of the 2.6183 threshold"
+    },
+    {
+      "category": "config",
+      "artifact": "configs/AL3NI_COMBINED227_MERGE_STATUS.txt",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "d8c281eac1012ae3107208862ea1a3fab0dc0c310a2ef654cd8a31b02a6714cf",
+      "public_sha": "d8c281eac1012ae3107208862ea1a3fab0dc0c310a2ef654cd8a31b02a6714cf",
+      "phases": "1",
+      "note": "recorded dataset SHA256 used for the integrity check"
+    },
+    {
+      "category": "config",
+      "artifact": "configs/LAMMPS_STAGE_A_SINGLE_POINT_STATUS.txt",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "8f988fd179ac9cbf88cdf9f04629add218d831cfe01d77e6ae7ced5b3e1e9c57",
+      "public_sha": "8f988fd179ac9cbf88cdf9f04629add218d831cfe01d77e6ae7ced5b3e1e9c57",
+      "phases": "12",
+      "note": "SOLE EVIDENCE for the Phase 12 verdict"
+    },
+    {
+      "category": "config",
+      "artifact": "configs/LAMMPS_STAGE_B_AL3NI5_ALPHA_DIAGNOSTIC.txt",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "0001dab9a7f12bd91901f2fa02806298781ea96a2c7d2125e98ded89b0f39e95",
+      "public_sha": "0001dab9a7f12bd91901f2fa02806298781ea96a2c7d2125e98ded89b0f39e95",
+      "phases": "4",
+      "note": "independent alpha-angle corroboration"
+    },
+    {
+      "category": "config",
+      "artifact": "configs/LAMMPS_STAGE_C_ELASTIC_STATUS.txt",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "0e139bc720e56a5d13d359c518258b51e49fd18f86605d86ce8b8c5b76724257",
+      "public_sha": "0e139bc720e56a5d13d359c518258b51e49fd18f86605d86ce8b8c5b76724257",
+      "phases": "8",
+      "note": "elastic cross-check corroboration"
+    },
+    {
+      "category": "config",
+      "artifact": "configs/pilot25_matpes_pbe_lora_v1_PROVENANCE.txt",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "21c667f6a5925c8947c52e0c499610508261501b42fb24929b9535ad8bb85a13",
+      "public_sha": "21c667f6a5925c8947c52e0c499610508261501b42fb24929b9535ad8bb85a13",
+      "phases": "1",
+      "note": "base-model SHA256 pin"
+    },
+    {
+      "category": "config",
+      "artifact": "configs/al3ni_combined227_lora_v1.yaml",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "f68575b8d545501cb55c69dcc456304e6e1b01742165bbf6303d0b1e2e7cb66a",
+      "public_sha": "f68575b8d545501cb55c69dcc456304e6e1b01742165bbf6303d0b1e2e7cb66a",
+      "phases": "1",
+      "note": "training hyperparameters"
+    },
+    {
+      "category": "config",
+      "artifact": "configs/ROUND285_SUCCESS_CRITERIA.txt",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "01a5b57494757cb38c6b2aab20f90b8e833a060302a4a7ce9a5559f9898f6537",
+      "public_sha": "01a5b57494757cb38c6b2aab20f90b8e833a060302a4a7ce9a5559f9898f6537",
+      "phases": "17",
+      "note": "round-285 design record"
+    },
+    {
+      "category": "config",
+      "artifact": "configs/AL3NI_REMEDIATION_ACCEPTANCE_CRITERION.txt",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "8e38968a1ce2b2e1213a2ce3d5ad60cdb127b17f1e5c99e44f64a36defbefd6a",
+      "public_sha": "8e38968a1ce2b2e1213a2ce3d5ad60cdb127b17f1e5c99e44f64a36defbefd6a",
+      "phases": "17",
+      "note": "cfg109/cfg110 threshold"
+    },
+    {
+      "category": "config",
+      "artifact": "configs/AL3NI_FINAL_UNSEALING_RESULT.txt",
+      "public_source": "ni-al-mlip",
+      "status": "IDENTICAL",
+      "local_sha": "2f7120cd4a329691241076a5f5430fb797de24b0538ef369dd21dddb679dfe9a",
+      "public_sha": "2f7120cd4a329691241076a5f5430fb797de24b0538ef369dd21dddb679dfe9a",
+      "phases": "17",
+      "note": "cfg109/cfg110 result"
+    }
+  ],
+  "huggingface": {
+    "status": "IDENTICAL",
+    "repo_files": [
+      ".gitattributes",
+      "README.md",
+      "al3ni_combined227_lora_v1.model",
+      "al3ni_combined227_seed20260812_lora_v1.model",
+      "al3ni_combined227_seed20260813_lora_v1.model"
+    ],
+    "model_sha256_huggingface": "e4fd54cc8a4a090fc9e32d6625269142824bfada8315433127b3aa3118c65cee",
+    "model_sha256_local": "e4fd54cc8a4a090fc9e32d6625269142824bfada8315433127b3aa3118c65cee",
+    "revision": "fcb5020e4865a9d8e8874584687afc499515ad98",
+    "models_verified": {
+      "al3ni_combined227_lora_v1.model": {
+        "sha256_public": "e4fd54cc8a4a090fc9e32d6625269142824bfada8315433127b3aa3118c65cee",
+        "sha256_local": "e4fd54cc8a4a090fc9e32d6625269142824bfada8315433127b3aa3118c65cee",
+        "status": "IDENTICAL"
+      },
+      "al3ni_combined227_seed20260812_lora_v1.model": {
+        "sha256_public": "4328154a37f55c1ba99c209e978ad76a0f36e5f3d8a41b25c107b27efefe17af",
+        "sha256_local": "4328154a37f55c1ba99c209e978ad76a0f36e5f3d8a41b25c107b27efefe17af",
+        "status": "IDENTICAL"
+      },
+      "al3ni_combined227_seed20260813_lora_v1.model": {
+        "sha256_public": "f676d87f8463a8ffcd4fa7d6b81796b5d42b89602267109010316cbdb4c97e6a",
+        "sha256_local": "f676d87f8463a8ffcd4fa7d6b81796b5d42b89602267109010316cbdb4c97e6a",
+        "status": "IDENTICAL"
+      }
+    },
+    "published_then_deleted": {
+      "note": "Uploaded at 404a5206b7d7 and removed at 5c5b78cf31cc / fcb5020e4865. Explained 2026-08-30 by the uploader as a filename/selection error at upload time - the wrong two files were picked and were replaced by the intended combined-227 seeds. NOT a byte-level rename: combined-220 and combined-227 seed checkpoints are different models (TRAIN 182 vs TRAIN 189). Both files were subsequently located in the local archive, hashed (local copies match these blobs exactly), and registered in model_dataset_integrity.json. They were not consumed by this validation, so they are outside the 43-artifact diff scope below and do not change its counts.",
+      "identified": true,
+      "registered_in_integrity_manifest": true,
+      "used_in_validation": false,
+      "al3ni_combined220_seed20260812_lora_v1.model": "3166409492adce575c5aefcb71dc9c4dcc5104a27402de2a4c63d35b45d53687",
+      "al3ni_combined220_seed20260813_lora_v1.model": "78c316da04ee50ead05d6725e403d878b95df8b212a34d5bd422d12bcb46f29d",
+      "public_status": "NOT CURRENTLY PUBLISHED (deleted from the HF repo)"
+    },
+    "pilot25_published": false
+  },
+  "base_model": {
+    "artifact": "MACE-matpes-pbe-omat-ft.model",
+    "public_source": "github.com/ACEsuit/mace-foundations release mace_matpes_0",
+    "local_sha": "e618ad582b84239905b9c3b77ce6e9ce111b0ecd1533223a1a6aac7a696b8aa0",
+    "status": "IDENTICAL",
+    "note": "downloaded from the public upstream release during Phase 1; not hosted in either project repo"
+  },
+  "counts": {
+    "IDENTICAL": 35,
+    "MISSING FROM PUBLIC RELEASE": 8
+  },
+  "counts_note": "Updated 2026-08-30 after seeds 20260812/20260813 were published; previously 33 IDENTICAL / 10 MISSING."
+}

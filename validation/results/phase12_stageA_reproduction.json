@@ -1,0 +1,12 @@
+{
+  "Al3Ni_relaxed": {
+    "archive_ase_eV": -25138.19240948,
+    "this_machine_ase_eV": -25138.19240947604,
+    "diff_eV": 3.961758920922875e-09
+  },
+  "cfg036_Al3Ni_rattle_large": {
+    "archive_ase_eV": -25137.95768098,
+    "this_machine_ase_eV": -25137.957680977222,
+    "diff_eV": 2.775777829810977e-09
+  }
+}
